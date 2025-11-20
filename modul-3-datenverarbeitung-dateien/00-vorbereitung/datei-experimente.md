@@ -1,6 +1,6 @@
 # Datei-Experimente
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** Praktische Erfahrung mit Datei-Operationen sammeln
 
 ## 🎯 Aufgabe
@@ -22,13 +22,14 @@ Erstellen Sie eine Python-Datei, die:
 
 ```text
 Erstelle ein Python-Skript das:
+
 - Eine Text-Datei "notizen.txt" erstellt
 - 5 Zeilen mit verschiedenen Notizen schreibt
 - Die Datei wieder einliest
 - Jede Zeile nummeriert ausgibt
 
 Verwende with-Statement für sichere Datei-Operationen.
-```
+```text
 
 ### Dokumentation
 
@@ -36,13 +37,13 @@ Verwende with-Statement für sichere Datei-Operationen.
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Welche Fehler sind aufgetreten?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## Experiment 2: CSV-Daten lesen (15 Min.)
 
@@ -55,7 +56,7 @@ name,alter,stadt
 Anna,25,Zürich
 Bob,30,Bern
 Clara,28,Basel
-```
+```text
 
 Schreiben Sie dann ein Python-Skript, das:
 
@@ -69,12 +70,13 @@ Schreiben Sie dann ein Python-Skript, das:
 Ich habe eine CSV-Datei "personen.csv" mit Spalten: name, alter, stadt
 
 Erstelle ein Python-Skript das:
+
 - Die CSV-Datei mit dem csv-Modul einliest
 - Alle Personen über 25 Jahre filtert
 - Name und Stadt dieser Personen ausgibt
 
 Verwende DictReader für bessere Lesbarkeit.
-```
+```text
 
 ### Dokumentation
 
@@ -82,7 +84,7 @@ Verwende DictReader für bessere Lesbarkeit.
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## Experiment 3: JSON parsen (15 Min.)
 
@@ -100,7 +102,7 @@ Erstellen Sie eine JSON-Datei `config.json`:
     "port": 5432
   }
 }
-```
+```text
 
 Schreiben Sie ein Python-Skript, das:
 
@@ -120,7 +122,7 @@ Erstelle ein Python-Skript für JSON-Konfiguration:
 4. Speichert die Änderung zurück
 
 Verwende json.load() und json.dump() mit indent=2.
-```
+```text
 
 ### Dokumentation
 
@@ -128,7 +130,7 @@ Verwende json.load() und json.dump() mit indent=2.
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## Experiment 4: Fehler provozieren (15 Min.)
 
@@ -152,7 +154,7 @@ Erstelle ein Python-Skript das verschiedene Datei-Fehler demonstriert:
 3. JSONDecodeError - ungültiges JSON
 
 Fange jeden Fehler mit try/except ab und gib eine hilfreiche Nachricht aus.
-```
+```text
 
 ### Dokumentation
 
@@ -160,13 +162,13 @@ Fange jeden Fehler mit try/except ab und gib eine hilfreiche Nachricht aus.
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Wie behandelt man sie richtig?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## ✅ Checkliste
 

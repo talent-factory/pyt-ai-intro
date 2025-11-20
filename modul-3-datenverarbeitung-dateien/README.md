@@ -1,6 +1,6 @@
 # Modul 3: Datenverarbeitung & Dateien
 
-**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Modul 1 & 2 abgeschlossen
 
 ## 🎯 Lernziele
@@ -149,5 +149,5 @@ Nach diesem Modul beherrschen Sie:
 
 ---
 
-**Erstellt:** Oktober 2025  
+**Erstellt:** Oktober 2025
 **Version:** 1.0

@@ -14,10 +14,12 @@
 ### TDD-Cycle
 
 ```text
+
 1. RED: Test schreiben (schlägt fehl)
 2. GREEN: Minimale Implementierung (Test besteht)
 3. REFACTOR: Code verbessern (Tests bleiben grün)
-```
+
+```text
 
 ### Mit KI
 
@@ -30,7 +32,7 @@ Prompt 2: "Implementiere Calculator basierend auf Tests"
 
 Prompt 3: "Refactore für bessere Lesbarkeit"
 → Verbesserter Code
-```
+```text
 
 ### pytest Basics
 
@@ -51,7 +53,7 @@ def test_division_by_zero():
 ])
 def test_add_parametrized(a, b, expected):
     assert a + b == expected
-```
+```text
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -84,7 +86,7 @@ def test_divide_by_zero():
     calc = Calculator()
     with pytest.raises(ValueError):
         calc.divide(5, 0)
-```
+```text
 
 **Schritt 2: Implementierung**
 
@@ -93,25 +95,25 @@ def test_divide_by_zero():
 
 class Calculator:
     """Einfacher Taschenrechner."""
-    
+
     def add(self, a: float, b: float) -> float:
         """Addiert zwei Zahlen."""
         return a + b
-    
+
     def subtract(self, a: float, b: float) -> float:
         """Subtrahiert b von a."""
         return a - b
-    
+
     def multiply(self, a: float, b: float) -> float:
         """Multipliziert zwei Zahlen."""
         return a * b
-    
+
     def divide(self, a: float, b: float) -> float:
         """Dividiert a durch b."""
         if b == 0:
             raise ValueError("Division durch Null nicht erlaubt")
         return a / b
-```
+```text
 
 ## ✏️ Übung (15 Min.)
 

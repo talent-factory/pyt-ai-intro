@@ -1,6 +1,6 @@
 # Nachbearbeitung - Modul 2
 
-**Zeitaufwand:** 4-6 Stunden  
+**Zeitaufwand:** 4-6 Stunden
 **Deadline:** Vor Beginn von Modul 3
 
 ## 🎯 Ziel
@@ -11,35 +11,35 @@ Python-Grundlagen vertiefen und praktisch anwenden.
 
 ### [Aufgabe 1: Persönlicher Finanztracker](./aufgabe-1-finanztracker.md)
 
-**Zeitaufwand:** 120 Minuten  
+**Zeitaufwand:** 120 Minuten
 **Punkte:** 30%
 
 Entwickeln Sie ein vollständiges Programm zur Verwaltung von Einnahmen und Ausgaben.
 
 ### [Aufgabe 2: Code-Comprehension](./aufgabe-2-code-comprehension.md)
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Punkte:** 20%
 
 Analysieren Sie komplexen Python-Code und dokumentieren Sie Ihre Erkenntnisse.
 
 ### [Aufgabe 3: Algorithm Implementation](./aufgabe-3-algorithmen.md)
 
-**Zeitaufwand:** 90 Minuten  
+**Zeitaufwand:** 90 Minuten
 **Punkte:** 25%
 
 Implementieren Sie 3 klassische Algorithmen mit KI-Unterstützung.
 
 ### [Aufgabe 4: Real-World Mini-Projekt](./aufgabe-4-mini-projekt.md)
 
-**Zeitaufwand:** 90 Minuten  
+**Zeitaufwand:** 90 Minuten
 **Punkte:** 15%
 
 Wählen Sie ein Projekt: Password Manager, Quiz-Game oder Workout Tracker.
 
 ### [Persönliche Reflexion](./reflexion.md)
 
-**Zeitaufwand:** 30 Minuten  
+**Zeitaufwand:** 30 Minuten
 **Punkte:** 10%
 
 Beantworten Sie 6 Reflexionsfragen (mindestens 400 Wörter).
@@ -57,14 +57,14 @@ Beantworten Sie 6 Reflexionsfragen (mindestens 400 Wörter).
 
 ## 📤 Abgabe
 
-### Was einreichen?
+### Was einreichen
 
 1. **GitHub-Repository** mit allen Übungen
 2. **README.md** mit Projektübersicht
 3. **Reflexion** (Markdown oder PDF)
 4. **Code-Comprehension-Dokument**
 
-### Wo einreichen?
+### Wo einreichen
 
 - Über die Lernplattform
 - Oder per E-Mail an Dozenten

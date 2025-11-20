@@ -1,6 +1,6 @@
 # Nachbearbeitung - Modul 4
 
-**Zeitaufwand:** 6-8 Stunden  
+**Zeitaufwand:** 6-8 Stunden
 **Deadline:** Vor Beginn von Modul 5
 
 ## 🎯 Ziel
@@ -14,6 +14,7 @@ Agentic Coding in einem vollständigen Projekt anwenden.
 **Zeitaufwand:** 180 Minuten | **Punkte:** 35%
 
 Vollständiges Command-Line Tool mit:
+
 - Mehreren Commands
 - Tests
 - Dokumentation

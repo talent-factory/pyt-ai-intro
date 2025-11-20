@@ -27,23 +27,26 @@ Erstelle ein robustes Datei-Verarbeitungs-Programm:
 Funktion: process_files(file_list)
 
 Für jede Datei:
+
 1. Versuche zu öffnen und zu lesen
 2. Zähle Zeilen und Wörter
 3. Gib Statistik aus
 
 Exception Handling:
+
 - FileNotFoundError: "Datei nicht gefunden"
 - PermissionError: "Keine Leserechte"
 - UnicodeDecodeError: "Encoding-Problem"
 - Andere: Generische Fehlermeldung
 
 Nach allen Dateien:
+
 - Erfolgreiche: X
 - Fehler: Y
 - Gesamt: Z
 
 Verwende try/except/finally.
-```
+```text
 
 #### Test-Szenario
 
@@ -54,7 +57,7 @@ files = [
     "kein_zugriff.txt",   # PermissionError (simuliert)
     "binary.bin"          # UnicodeDecodeError
 ]
-```
+```text
 
 #### Erwartete Ausgabe
 
@@ -78,7 +81,7 @@ files = [
 Erfolgreich: 1
 Fehler: 3
 Gesamt: 4
-```
+```text
 
 ### Option B: Logging-System
 
@@ -97,12 +100,14 @@ Implementieren Sie ein Logging-System für Datei-Operationen:
 Erstelle ein Datei-Verarbeitungs-Programm mit Logging:
 
 Setup:
+
 - logging-Modul konfigurieren
 - Log-Datei: "app.log"
 - Format: "[ZEIT] LEVEL - Nachricht"
 - Level: INFO und höher
 
 Programm:
+
 - Liest mehrere CSV-Dateien
 - Loggt jeden Schritt:
   * INFO: "Verarbeite datei.csv"
@@ -111,9 +116,11 @@ Programm:
   * ERROR: "Fehler beim Lesen"
 
 Nach Verarbeitung:
+
 - Zeige Log-Datei-Inhalt
 - Statistik (INFO/WARNING/ERROR)
-```
+
+```text
 
 #### Erwartetes Log
 
@@ -125,7 +132,7 @@ Nach Verarbeitung:
 [2025-10-27 10:30:16] INFO - Verarbeite daten2.csv
 [2025-10-27 10:30:16] ERROR - Datei nicht gefunden: daten2.csv
 [2025-10-27 10:30:16] INFO - Verarbeitung abgeschlossen
-```
+```text
 
 ### Option C: Retry-Mechanismus
 
@@ -144,23 +151,26 @@ Implementieren Sie einen Retry-Mechanismus für fehleranfällige Operationen:
 Erstelle eine retry_operation Funktion:
 
 Parameter:
+
 - operation: Funktion die ausgeführt wird
 - max_retries: Maximale Versuche (default: 3)
 - delay: Start-Verzögerung in Sekunden (default: 1)
 
 Verhalten:
+
 - Versucht operation() auszuführen
 - Bei Fehler: Wartet delay Sekunden
 - Verdoppelt delay bei jedem Versuch (Exponential Backoff)
 - Nach max_retries: Wirft Exception
 
 Beispiel-Anwendung:
+
 - Datei von URL herunterladen
 - Bei Netzwerkfehler: Retry
 - Loggt jeden Versuch
 
 Verwende time.sleep() und Exception Handling.
-```
+```text
 
 #### Erwartetes Verhalten
 
@@ -173,7 +183,7 @@ Warte 2 Sekunden...
 
 Versuch 3/3: Erfolg!
 Datei heruntergeladen: 1.2 MB
-```
+```text
 
 ## 💡 Tipps
 

@@ -1,6 +1,6 @@
 # KI-Tool-Vergleich
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Ziel:** Verschiedene KI-Tools für Coding vergleichen
 
 ## 🎯 Aufgabe
@@ -22,34 +22,40 @@ Stellen Sie dieselbe Coding-Aufgabe:
 
 ```text
 Erstelle eine Python-Klasse für einen Shopping Cart mit:
+
 - add_item(item, quantity, price)
 - remove_item(item)
 - get_total()
 - apply_discount(percentage)
 - Mit Type Hints und Docstrings
-```
+
+```text
 
 ### Dokumentation
 
 **Qualität des Codes (1-5):**
+
 ```text
 [ ]
-```
+```text
 
 **Erklärungen (1-5):**
+
 ```text
 [ ]
-```
+```text
 
 **Stärken:**
+
 ```text
 [Was war gut?]
-```
+```text
 
 **Schwächen:**
+
 ```text
 [Was fehlte?]
-```
+```text
 
 ## Tool 2: GitHub Copilot
 
@@ -65,32 +71,40 @@ Erstelle eine Python-Klasse für einen Shopping Cart mit:
 Schreiben Sie Kommentare und lassen Sie Copilot generieren:
 
 ```python
+
 # Funktion die prüft ob eine Email-Adresse gültig ist
+
 # Verwendet regex Pattern
+
 # Gibt True/False zurück
-```
+
+```text
 
 ### Dokumentation
 
 **Qualität der Suggestions (1-5):**
+
 ```text
 [ ]
-```
+```text
 
 **Geschwindigkeit (1-5):**
+
 ```text
 [ ]
-```
+```text
 
 **Stärken:**
+
 ```text
 [Was war gut?]
-```
+```text
 
 **Schwächen:**
+
 ```text
 [Was fehlte?]
-```
+```text
 
 ## Tool 3: Cursor / Windsurf
 
@@ -107,32 +121,38 @@ Nutzen Sie Cursor für eine komplexere Aufgabe:
 
 ```text
 Refactore die Shopping Cart Klasse:
+
 - Füge Inventory-Management hinzu
 - Implementiere Persistence (JSON)
 - Erstelle Unit Tests
-```
+
+```text
 
 ### Dokumentation
 
 **Qualität (1-5):**
+
 ```text
 [ ]
-```
+```text
 
 **Kontext-Verständnis (1-5):**
+
 ```text
 [ ]
-```
+```text
 
 **Stärken:**
+
 ```text
 [Was war gut?]
-```
+```text
 
 **Schwächen:**
+
 ```text
 [Was fehlte?]
-```
+```text
 
 ## Vergleichstabelle
 
@@ -147,43 +167,43 @@ Refactore die Shopping Cart Klasse:
 
 ## 🎯 Empfehlungen
 
-### Wann ChatGPT/Claude?
+### Wann ChatGPT/Claude
 
 ```text
 [Ihre Empfehlung]
-```
+```text
 
-### Wann GitHub Copilot?
+### Wann GitHub Copilot
 
 ```text
 [Ihre Empfehlung]
-```
+```text
 
-### Wann Cursor?
+### Wann Cursor
 
 ```text
 [Ihre Empfehlung]
-```
+```text
 
 ## 💡 Learnings
 
-### Was haben Sie über KI-Tools gelernt?
+### Was haben Sie über KI-Tools gelernt
 
 ```text
 [Ihre Erkenntnisse]
-```
+```text
 
-### Welches Tool werden Sie nutzen?
+### Welches Tool werden Sie nutzen
 
 ```text
 [Ihre Wahl und warum]
-```
+```text
 
-### Kombination mehrerer Tools?
+### Kombination mehrerer Tools
 
 ```text
 [Ihre Strategie]
-```
+```text
 
 ## ✅ Checkliste
 

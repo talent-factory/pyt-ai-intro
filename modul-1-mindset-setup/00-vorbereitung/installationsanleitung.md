@@ -1,6 +1,6 @@
 # Installationsanleitung
 
-**Zeitaufwand:** ca. 90 Minuten  
+**Zeitaufwand:** ca. 90 Minuten
 **Ziel:** Eine vollständig funktionierende Entwicklungsumgebung
 
 ## 🎯 Was Sie installieren werden
@@ -23,44 +23,56 @@
 4. Installieren Sie Python
 
 **Testen:**
+
 ```bash
 python --version
+
 # Sollte ausgeben: Python 3.11.x oder höher
-```
+
+```text
 
 ### macOS
 
 **Option A: Mit Homebrew (empfohlen)**
+
 ```bash
+
 # Homebrew installieren (falls noch nicht vorhanden)
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Python installieren
+
 brew install python@3.11
-```
+```text
 
 **Option B: Von python.org**
+
 1. Besuchen Sie [python.org/downloads](https://www.python.org/downloads/)
 2. Laden Sie den macOS Installer herunter
 3. Führen Sie die Installation durch
 
 **Testen:**
+
 ```bash
 python3 --version
+
 # Sollte ausgeben: Python 3.11.x oder höher
-```
+
+```text
 
 ### Linux (Ubuntu/Debian)
 
 ```bash
 sudo apt update
 sudo apt install python3.11 python3.11-venv python3-pip
-```
+```text
 
 **Testen:**
+
 ```bash
 python3 --version
-```
+```text
 
 ---
 
@@ -75,31 +87,37 @@ python3 --version
 ### macOS
 
 ```bash
+
 # Mit Homebrew
+
 brew install git
 
 # ODER: Xcode Command Line Tools
+
 xcode-select --install
-```
+```text
 
 ### Linux
 
 ```bash
 sudo apt install git
-```
+```text
 
 ### Git konfigurieren (alle Systeme)
 
 ```bash
 git config --global user.name "Ihr Name"
 git config --global user.email "ihre.email@example.com"
-```
+```text
 
 **Testen:**
+
 ```bash
 git --version
+
 # Sollte ausgeben: git version 2.x.x
-```
+
+```text
 
 ---
 
@@ -130,6 +148,7 @@ git --version
    - Hilft bei der Einrückung
 
 **Testen:**
+
 - Öffnen Sie VS Code
 - Drücken Sie `Ctrl/Cmd+Shift+P`
 - Tippen Sie "Python: Select Interpreter"
@@ -145,13 +164,13 @@ git --version
 
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+```text
 
 ### macOS/Linux
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+```text
 
 ### Nach der Installation
 
@@ -159,8 +178,10 @@ Starten Sie Ihr Terminal neu und testen Sie:
 
 ```bash
 uv --version
+
 # Sollte ausgeben: uv x.x.x
-```
+
+```text
 
 ---
 
@@ -203,25 +224,29 @@ Führen Sie folgende Tests durch:
 
 ```bash
 python --version
+
 # oder
+
 python3 --version
-```
+```text
 
 ### Test 2: Git
 
 ```bash
 git --version
 git config --global user.name
-```
+```text
 
 ### Test 3: VS Code + Python
 
 1. Öffnen Sie VS Code
 2. Erstellen Sie eine neue Datei `test.py`
 3. Schreiben Sie:
+
    ```python
    print("Hello, World!")
-   ```
+```text
+
 4. Führen Sie die Datei aus (Play-Button oben rechts)
 5. Sie sollten "Hello, World!" in der Ausgabe sehen
 
@@ -229,7 +254,7 @@ git config --global user.name
 
 ```bash
 uv --version
-```
+```text
 
 ### Test 5: KI-Assistent
 
@@ -259,6 +284,7 @@ Erstellen Sie Screenshots von:
 **Problem:** `python` Befehl wird nicht erkannt
 
 **Lösung:**
+
 1. Python erneut installieren
 2. "Add Python to PATH" aktivieren
 3. ODER: Manuell zum PATH hinzufügen
@@ -268,15 +294,19 @@ Erstellen Sie Screenshots von:
 Falls Git ständig nach Passwort fragt:
 
 ```bash
+
 # Windows
+
 git config --global credential.helper wincred
 
 # macOS
+
 git config --global credential.helper osxkeychain
 
 # Linux
+
 git config --global credential.helper store
-```
+```text
 
 ### VS Code findet Python nicht
 
@@ -286,7 +316,7 @@ git config --global credential.helper store
 
 ---
 
-## 🎉 Geschafft!
+## 🎉 Geschafft
 
 Wenn alle Tests erfolgreich waren, sind Sie bereit für die nächsten Schritte!
 

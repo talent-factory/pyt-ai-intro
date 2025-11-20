@@ -7,18 +7,21 @@ Schnellreferenz für Python-Grundlagen aus Modul 2.
 ### Variablen deklarieren
 
 ```python
+
 # Variablen (ohne Typdeklaration)
+
 name = "Anna"
 alter = 25
 groesse = 1.75
 ist_student = True
 
 # Mit Type Hints (empfohlen)
+
 name: str = "Anna"
 alter: int = 25
 groesse: float = 1.75
 ist_student: bool = True
-```
+```text
 
 ### Datentypen
 
@@ -37,16 +40,20 @@ ist_student: bool = True
 ### Type Conversion
 
 ```python
+
 # String → Int/Float
+
 zahl = int("42")         # 42
 dezimal = float("3.14")  # 3.14
 
 # Int/Float → String
+
 text = str(42)           # "42"
 
 # List → Set (Duplikate entfernen)
+
 unique = set([1, 2, 2, 3])  # {1, 2, 3}
-```
+```text
 
 ## 🔢 Operatoren
 
@@ -60,7 +67,7 @@ a / b      # Division (ergibt float)
 a // b     # Ganzzahldivision
 a % b      # Modulo (Rest)
 a ** b     # Potenz
-```
+```text
 
 ### Vergleichsoperatoren
 
@@ -71,7 +78,7 @@ a < b      # Kleiner als
 a <= b     # Kleiner oder gleich
 a > b      # Grösser als
 a >= b     # Grösser oder gleich
-```
+```text
 
 ### Logische Operatoren
 
@@ -79,7 +86,7 @@ a >= b     # Grösser oder gleich
 a and b    # Logisches UND
 a or b     # Logisches ODER
 not a      # Logisches NICHT
-```
+```text
 
 ## 📝 Strings
 
@@ -96,12 +103,13 @@ text.split()               # Liste: ["Python", "ist", "toll!"]
 "".join(["a", "b", "c"])   # Verbinden: "abc"
 
 # String-Prüfungen
+
 text.startswith("  Py")    # True
 text.endswith("!  ")       # True
 "toll" in text             # True
 text.isdigit()             # False
 text.isalpha()             # False (wegen Leerzeichen)
-```
+```text
 
 ### String-Formatierung
 
@@ -110,16 +118,19 @@ name = "Anna"
 alter = 25
 
 # f-strings (modern, empfohlen)
+
 f"Hallo {name}, du bist {alter}"
 f"In 10 Jahren: {alter + 10}"
 f"Preis: {19.99:.2f} CHF"
 
 # format()
+
 "Hallo {}, du bist {}".format(name, alter)
 
 # % (veraltet)
+
 "Hallo %s, du bist %d" % (name, alter)
-```
+```text
 
 ### String-Slicing
 
@@ -133,7 +144,7 @@ text[:3]      # 'Pyt' (Anfang bis 3)
 text[3:]      # 'hon' (3 bis Ende)
 text[::2]     # 'Pto' (jedes 2. Zeichen)
 text[::-1]    # 'nohtyP' (rückwärts)
-```
+```text
 
 ## 🔀 Kontrollstrukturen
 
@@ -141,24 +152,33 @@ text[::-1]    # 'nohtyP' (rückwärts)
 
 ```python
 if bedingung1:
+
     # Code
+
 elif bedingung2:
+
     # Code
+
 else:
+
     # Code
 
 # Einzeiler (ternärer Operator)
+
 ergebnis = "Ja" if bedingung else "Nein"
-```
+```text
 
 ### for-Schleifen
 
 ```python
+
 # Liste durchlaufen
+
 for item in liste:
     print(item)
 
 # Range
+
 for i in range(5):          # 0, 1, 2, 3, 4
     print(i)
 
@@ -169,79 +189,99 @@ for i in range(0, 10, 2):   # 0, 2, 4, 6, 8
     print(i)
 
 # Mit Index (enumerate)
+
 for index, item in enumerate(liste):
     print(f"{index}: {item}")
 
 # Dictionary durchlaufen
+
 for key, value in dict.items():
     print(f"{key}: {value}")
-```
+```text
 
 ### while-Schleifen
 
 ```python
 while bedingung:
+
     # Code
+
     if abbruch_bedingung:
         break     # Schleife beenden
     if ueberspringen:
         continue  # Zur nächsten Iteration
-```
+```text
 
 ## 📚 Listen
 
 ### Listen erstellen und manipulieren
 
 ```python
+
 # Erstellen
+
 liste = [1, 2, 3, 4, 5]
 leer = []
 
 # Hinzufügen
+
 liste.append(6)           # Am Ende: [1, 2, 3, 4, 5, 6]
 liste.insert(0, 0)        # An Position 0: [0, 1, 2, 3, 4, 5, 6]
 liste.extend([7, 8])      # Mehrere: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 # Entfernen
+
 liste.remove(0)           # Wert entfernen: [1, 2, 3, 4, 5, 6, 7, 8]
 element = liste.pop()     # Letztes entfernen: element=8
 element = liste.pop(0)    # An Position 0: element=1
 del liste[0]              # An Position 0 löschen
 
 # Prüfen
+
 3 in liste                # True
 len(liste)                # Länge
 liste.index(5)            # Index von Wert 5
 liste.count(3)            # Anzahl des Werts 3
 
 # Sortieren
+
 liste.sort()              # In-place sortieren
 sortiert = sorted(liste)  # Neue sortierte Liste
 liste.reverse()           # Umkehren
-```
+```text
 
 ### List Comprehensions
 
 ```python
+
 # Grundform
+
 quadrate = [x**2 for x in range(5)]
+
 # [0, 1, 4, 9, 16]
 
 # Mit Bedingung
+
 gerade = [x for x in range(10) if x % 2 == 0]
+
 # [0, 2, 4, 6, 8]
 
 # Mit if-else
+
 kategorisiert = ["Gerade" if x % 2 == 0 else "Ungerade" for x in range(5)]
+
 # ['Gerade', 'Ungerade', 'Gerade', 'Ungerade', 'Gerade']
-```
+
+```text
 
 ## 📖 Dictionaries
 
 ### Dictionary erstellen und manipulieren
 
 ```python
+
 # Erstellen
+
 person = {
     "name": "Anna",
     "alter": 25,
@@ -250,56 +290,71 @@ person = {
 leer = {}
 
 # Zugriff
+
 name = person["name"]              # KeyError wenn nicht vorhanden
 name = person.get("name")          # None wenn nicht vorhanden
 name = person.get("name", "Unbekannt")  # Default-Wert
 
 # Hinzufügen/Ändern
+
 person["email"] = "anna@example.com"
 person["alter"] = 26
 
 # Entfernen
+
 del person["email"]
 wert = person.pop("stadt")         # Entfernen und Wert zurückgeben
 person.clear()                     # Alles löschen
 
 # Prüfen
+
 "name" in person                   # Key vorhanden?
 person.keys()                      # Alle Keys
 person.values()                    # Alle Values
 person.items()                     # Key-Value-Paare
 
 # Iteration
+
 for key, value in person.items():
     print(f"{key}: {value}")
-```
+```text
 
 ### Dictionary Comprehensions
 
 ```python
+
 # Grundform
+
 quadrate = {x: x**2 for x in range(5)}
+
 # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 
 # Mit Bedingung
+
 gerade = {x: x**2 for x in range(10) if x % 2 == 0}
+
 # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
-```
+
+```text
 
 ## 🔧 Funktionen
 
 ### Funktionen definieren
 
 ```python
+
 # Einfache Funktion
+
 def gruss(name):
     return f"Hallo {name}"
 
 # Mit Type Hints
+
 def addiere(a: int, b: int) -> int:
     return a + b
 
 # Mit Default-Werten
+
 def gruss(name: str, sprache: str = "DE") -> str:
     if sprache == "DE":
         return f"Hallo {name}"
@@ -307,14 +362,16 @@ def gruss(name: str, sprache: str = "DE") -> str:
         return f"Hello {name}"
 
 # Variable Anzahl Argumente
+
 def summe(*zahlen):
     return sum(zahlen)
 
 # Keyword Arguments
+
 def person(**infos):
     for key, value in infos.items():
         print(f"{key}: {value}")
-```
+```text
 
 ### Docstrings
 
@@ -335,7 +392,7 @@ def berechne_flaeche(laenge: float, breite: float) -> float:
         15.0
     """
     return laenge * breite
-```
+```text
 
 ## ⚠️ Fehlerbehandlung
 
@@ -343,54 +400,72 @@ def berechne_flaeche(laenge: float, breite: float) -> float:
 
 ```python
 try:
+
     # Code der Fehler verursachen könnte
+
     zahl = int(input("Zahl: "))
     ergebnis = 10 / zahl
 except ValueError:
+
     # Spezifischer Fehler
+
     print("Keine gültige Zahl!")
 except ZeroDivisionError:
+
     # Anderer spezifischer Fehler
+
     print("Division durch 0!")
 except Exception as e:
+
     # Alle anderen Fehler
+
     print(f"Fehler: {e}")
 else:
+
     # Wird ausgeführt wenn kein Fehler
+
     print(f"Ergebnis: {ergebnis}")
 finally:
+
     # Wird immer ausgeführt
+
     print("Fertig!")
-```
+```text
 
 ## 📁 File I/O
 
 ### Dateien lesen
 
 ```python
+
 # Methode 1: with (empfohlen)
+
 with open("datei.txt", "r") as datei:
     inhalt = datei.read()           # Alles lesen
     zeilen = datei.readlines()      # Als Liste
     zeile = datei.readline()        # Eine Zeile
 
 # Methode 2: Explizit schliessen
+
 datei = open("datei.txt", "r")
 inhalt = datei.read()
 datei.close()
-```
+```text
 
 ### Dateien schreiben
 
 ```python
+
 # Überschreiben
+
 with open("datei.txt", "w") as datei:
     datei.write("Hallo Welt\n")
 
 # Anhängen
+
 with open("datei.txt", "a") as datei:
     datei.write("Neue Zeile\n")
-```
+```text
 
 ### JSON
 
@@ -398,40 +473,49 @@ with open("datei.txt", "a") as datei:
 import json
 
 # Speichern
+
 data = {"name": "Anna", "alter": 25}
 with open("data.json", "w") as datei:
     json.dump(data, datei, indent=2)
 
 # Laden
+
 with open("data.json", "r") as datei:
     data = json.load(datei)
-```
+```text
 
 ## 📦 Module importieren
 
 ```python
+
 # Ganzes Modul
+
 import math
 print(math.pi)
 
 # Spezifische Funktionen
+
 from math import pi, sqrt
 print(pi)
 
 # Mit Alias
+
 import datetime as dt
 heute = dt.date.today()
 
 # Alles importieren (nicht empfohlen)
+
 from math import *
-```
+```text
 
 ## 💡 Best Practices
 
 ### PEP 8 Style Guide
 
 ```python
+
 # Naming Conventions
+
 variable_name = "snake_case"
 KONSTANTE = "UPPERCASE"
 def funktions_name():
@@ -440,10 +524,12 @@ class KlassenName:
     pass
 
 # Einrückung: 4 Leerzeichen
+
 if bedingung:
     code()
 
 # Leerzeilen
+
 def funktion1():
     pass
 
@@ -452,15 +538,18 @@ def funktion2():  # 2 Leerzeilen zwischen Top-Level-Funktionen
     pass
 
 # Leerzeichen um Operatoren
+
 x = 5
 y = x + 1
 z = x * 2 - y
 
 # Kommentare
+
 # Das ist ein Kommentar
 
 # Zeilenlänge: max. 79 Zeichen
-```
+
+```text
 
 ### Code-Organisation
 
@@ -470,21 +559,25 @@ Modul-Docstring am Anfang
 """
 
 # Imports
+
 import standard_library
 import third_party
 import local_module
 
 # Konstanten
+
 MAX_VERSUCHE = 3
 
 # Funktionen
+
 def funktion():
     pass
 
 # Hauptprogramm
+
 if __name__ == "__main__":
     funktion()
-```
+```text
 
 ---
 

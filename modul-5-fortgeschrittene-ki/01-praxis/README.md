@@ -6,7 +6,7 @@
 
 ### [Lektion 1: LLM APIs & Prompt Engineering](./lektion-1-llm-apis.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - OpenAI API Setup
@@ -23,7 +23,7 @@
 
 ### [Lektion 2: RAG-Systeme](./lektion-2-rag.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Embeddings erstellen
@@ -40,7 +40,7 @@
 
 ### [Lektion 3: AI Agents & Tool Use](./lektion-3-agents.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Agent-Architektur
@@ -57,7 +57,7 @@
 
 ### [Lektion 4: Production & Ethics](./lektion-4-production-ethics.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Error Handling

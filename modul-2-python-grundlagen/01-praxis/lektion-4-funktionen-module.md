@@ -1,6 +1,6 @@
 # Lektion 4: Funktionen & Module
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Ziel:** Wiederverwendbaren Code mit Funktionen und Modulen erstellen
 
 ## 🎯 Lernziele
@@ -26,8 +26,9 @@ def begruessung():
     print("Hallo Welt!")
 
 # Funktion aufrufen
+
 begruessung()
-```
+```text
 
 **Mit Parametern:**
 
@@ -37,7 +38,7 @@ def begruessung(name):
     print(f"Hallo {name}!")
 
 begruessung("Anna")  # "Hallo Anna!"
-```
+```text
 
 **Mit Rückgabewert:**
 
@@ -47,7 +48,7 @@ def addiere(a, b):
     return a + b
 
 ergebnis = addiere(5, 3)  # 8
-```
+```text
 
 **Mit Type Hints:**
 
@@ -55,7 +56,7 @@ ergebnis = addiere(5, 3)  # 8
 def addiere(a: int, b: int) -> int:
     """Addiert zwei Zahlen."""
     return a + b
-```
+```text
 
 ### Parameter-Varianten
 
@@ -66,14 +67,16 @@ def person_info(name, alter, stadt):
     return f"{name}, {alter} Jahre, aus {stadt}"
 
 info = person_info("Anna", 25, "Zürich")
-```
+```text
 
 **Keyword-Arguments:**
 
 ```python
+
 # Reihenfolge egal
+
 info = person_info(alter=25, stadt="Zürich", name="Anna")
-```
+```text
 
 **Default-Parameter:**
 
@@ -84,12 +87,14 @@ def begruessung(name, gruss="Hallo"):
 print(begruessung("Anna"))              # "Hallo Anna!"
 print(begruessung("Bob", "Hi"))         # "Hi Bob!"
 print(begruessung("Clara", gruss="Hey")) # "Hey Clara!"
-```
+```text
 
 **args und **kwargs:**
 
 ```python
+
 # *args - Variable Anzahl Positionsparameter
+
 def summe(*zahlen):
     return sum(zahlen)
 
@@ -97,12 +102,13 @@ print(summe(1, 2, 3))        # 6
 print(summe(1, 2, 3, 4, 5))  # 15
 
 # **kwargs - Variable Anzahl Keyword-Parameter
+
 def person_info(**daten):
     for key, value in daten.items():
         print(f"{key}: {value}")
 
 person_info(name="Anna", alter=25, stadt="Zürich")
-```
+```text
 
 ### Docstrings
 
@@ -110,14 +116,14 @@ person_info(name="Anna", alter=25, stadt="Zürich")
 def berechne_bmi(gewicht: float, groesse: float) -> float:
     """
     Berechnet den Body Mass Index.
-    
+
     Args:
         gewicht: Gewicht in Kilogramm
         groesse: Grösse in Metern
-    
+
     Returns:
         BMI als Float
-    
+
     Example:
         >>> berechne_bmi(75, 1.80)
         23.15
@@ -125,25 +131,31 @@ def berechne_bmi(gewicht: float, groesse: float) -> float:
     return gewicht / (groesse ** 2)
 
 # Docstring anzeigen
+
 print(berechne_bmi.__doc__)
 help(berechne_bmi)
-```
+```text
 
 ### Lambda-Funktionen
 
 ```python
+
 # Normale Funktion
+
 def quadrat(x):
     return x ** 2
 
 # Lambda (anonyme Funktion)
+
 quadrat = lambda x: x ** 2
 
 # Verwendung
+
 zahlen = [1, 2, 3, 4, 5]
 quadrate = list(map(lambda x: x ** 2, zahlen))
 
 # Mit sorted()
+
 personen = [
     {"name": "Bob", "alter": 30},
     {"name": "Anna", "alter": 25},
@@ -151,82 +163,98 @@ personen = [
 ]
 
 nach_alter = sorted(personen, key=lambda p: p["alter"])
-```
+```text
 
 ### Scope (Gültigkeitsbereich)
 
 ```python
+
 # Global
+
 x = 10
 
 def funktion():
+
     # Local
+
     y = 20
     print(x)  # Zugriff auf global: OK
     print(y)  # Zugriff auf local: OK
 
 funktion()
 print(x)  # OK
+
 # print(y)  # Fehler! y ist local
 
 # Global ändern
+
 def aendere_global():
     global x
     x = 100
 
 aendere_global()
 print(x)  # 100
-```
+```text
 
 ### Module importieren
 
 **Standard Library:**
 
 ```python
+
 # Ganzes Modul
+
 import math
 print(math.pi)
 print(math.sqrt(16))
 
 # Spezifische Funktionen
+
 from math import pi, sqrt
 print(pi)
 print(sqrt(16))
 
 # Mit Alias
+
 import math as m
 print(m.pi)
 
 # Alles importieren (nicht empfohlen)
+
 from math import *
-```
+```text
 
 **Häufige Module:**
 
 ```python
+
 # math - Mathematik
+
 import math
 math.ceil(4.2)   # 5
 math.floor(4.8)  # 4
 math.pow(2, 3)   # 8.0
 
 # random - Zufallszahlen
+
 import random
 random.randint(1, 10)      # Zufällige Zahl 1-10
 random.choice([1, 2, 3])   # Zufälliges Element
 random.shuffle(liste)      # Liste mischen
 
 # datetime - Datum und Zeit
+
 from datetime import datetime, timedelta
 jetzt = datetime.now()
 morgen = jetzt + timedelta(days=1)
 
 # os - Betriebssystem
+
 import os
 os.getcwd()           # Aktuelles Verzeichnis
 os.listdir('.')       # Dateien im Verzeichnis
 os.path.exists(datei) # Prüft ob Datei existiert
-```
+```text
 
 ### Eigene Module erstellen
 
@@ -244,18 +272,20 @@ def addiere(a, b):
     return a + b
 
 PI = 3.14159
-```
+```text
 
 **Verwendung:**
 
 ```python
+
 # In anderer Datei
+
 import mein_modul
 
 print(mein_modul.begruessung("Anna"))
 print(mein_modul.addiere(5, 3))
 print(mein_modul.PI)
-```
+```text
 
 ## 💻 Live-Demo (15 Min.)
 
@@ -274,11 +304,11 @@ def ist_passwort_sicher(passwort: str) -> bool:
     """Prüft ob Passwort sicher ist."""
     if len(passwort) < 8:
         return False
-    
+
     hat_gross = any(c.isupper() for c in passwort)
     hat_klein = any(c.islower() for c in passwort)
     hat_zahl = any(c.isdigit() for c in passwort)
-    
+
     return hat_gross and hat_klein and hat_zahl
 
 def ist_alter_gueltig(alter: int, min_alter: int = 0, max_alter: int = 150) -> bool:
@@ -286,6 +316,7 @@ def ist_alter_gueltig(alter: int, min_alter: int = 0, max_alter: int = 150) -> b
     return min_alter <= alter <= max_alter
 
 # Tests
+
 print(ist_email_gueltig("anna@example.com"))  # True
 print(ist_email_gueltig("ungueltig"))         # False
 
@@ -294,7 +325,7 @@ print(ist_passwort_sicher("schwach"))         # False
 
 print(ist_alter_gueltig(25))                  # True
 print(ist_alter_gueltig(200))                 # False
-```
+```text
 
 ### Demo 2: Mathematik-Utilities
 
@@ -330,19 +361,20 @@ def fibonacci(n: int) -> list[int]:
         return []
     elif n == 1:
         return [0]
-    
+
     fib = [0, 1]
     for i in range(2, n):
         fib.append(fib[i-1] + fib[i-2])
     return fib
 
 # Tests
+
 if __name__ == "__main__":
     print(f"10 ist gerade: {ist_gerade(10)}")
     print(f"17 ist Primzahl: {ist_primzahl(17)}")
     print(f"5! = {fakultaet(5)}")
     print(f"Fibonacci(10): {fibonacci(10)}")
-```
+```text
 
 ### Demo 3: Datums-Operationen
 
@@ -355,27 +387,33 @@ from datetime import datetime, timedelta
 def tage_bis_geburtstag(geburtstag: str) -> int:
     """
     Berechnet Tage bis zum nächsten Geburtstag.
-    
+
     Args:
         geburtstag: Datum im Format "DD.MM.YYYY"
-    
+
     Returns:
         Anzahl Tage bis Geburtstag
     """
+
     # Geburtstag parsen
+
     tag, monat, jahr = map(int, geburtstag.split("."))
-    
+
     # Aktuelles Datum
+
     heute = datetime.now()
-    
+
     # Nächster Geburtstag
+
     naechster_gb = datetime(heute.year, monat, tag)
-    
+
     # Falls schon vorbei, nächstes Jahr
+
     if naechster_gb < heute:
         naechster_gb = datetime(heute.year + 1, monat, tag)
-    
+
     # Differenz berechnen
+
     diff = naechster_gb - heute
     return diff.days
 
@@ -391,6 +429,7 @@ def formatiere_datum(datum: datetime, format: str = "DE") -> str:
         return str(datum)
 
 # Tests
+
 geburtstag = "15.06.1990"
 tage = tage_bis_geburtstag(geburtstag)
 print(f"Tage bis Geburtstag: {tage}")
@@ -399,7 +438,7 @@ jetzt = datetime.now()
 print(f"DE: {formatiere_datum(jetzt, 'DE')}")
 print(f"US: {formatiere_datum(jetzt, 'US')}")
 print(f"ISO: {formatiere_datum(jetzt, 'ISO')}")
-```
+```text
 
 ## ✏️ Übung (15 Min.)
 
@@ -442,25 +481,28 @@ Mein Utility-Modul
 def ist_palindrom(text: str) -> bool:
     """
     Prüft ob Text ein Palindrom ist.
-    
+
     Args:
         text: Zu prüfender Text
-    
+
     Returns:
         True wenn Palindrom, sonst False
-    
+
     Example:
         >>> ist_palindrom("anna")
         True
     """
+
     # Implementierung hier
+
     pass
 
 # Tests
+
 if __name__ == "__main__":
     print(ist_palindrom("anna"))  # True
     print(ist_palindrom("test"))  # False
-```
+```text
 
 ## 🎓 Zusammenfassung
 
@@ -501,18 +543,18 @@ if __name__ == "__main__":
 
 ### Häufige Fragen
 
-#### Frage 1: Wann Funktion erstellen?
+#### Frage 1: Wann Funktion erstellen
 
 - Code wird mehrfach genutzt
 - Logische Einheit
 - Bessere Lesbarkeit
 
-#### Frage 2: return vs. print?
+#### Frage 2: return vs. print
 
 - return: Wert zurückgeben (wiederverwendbar)
 - print: Nur ausgeben (nicht wiederverwendbar)
 
-#### Frage 3: Wann eigenes Modul?
+#### Frage 3: Wann eigenes Modul
 
 - Mehrere zusammenhängende Funktionen
 - Code in mehreren Dateien nutzen
@@ -526,5 +568,5 @@ if __name__ == "__main__":
 
 ---
 
-**Zurück zu:** [Lektion 3 - Listen & Dictionaries](./lektion-3-listen-dictionaries.md)  
+**Zurück zu:** [Lektion 3 - Listen & Dictionaries](./lektion-3-listen-dictionaries.md)
 **Zurück zur Übersicht:** [Praxis README](./README.md)

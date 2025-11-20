@@ -1,7 +1,7 @@
 # Übung 1: Einkaufsliste durchdenken
 
-**Dauer:** 15 Minuten  
-**Lektion:** 1  
+**Dauer:** 15 Minuten
+**Lektion:** 1
 **Sozialform:** Einzel → Gruppe → Plenum
 
 ## 🎯 Lernziel
@@ -47,7 +47,7 @@ Wie speichern Sie die Artikel?
 
 ```text
 [Hier notieren]
-```
+```text
 
 #### Frage 2: Artikel hinzufügen
 
@@ -57,7 +57,7 @@ Welche Schritte sind nötig?
 Schritt 1: ...
 Schritt 2: ...
 Schritt 3: ...
-```
+```text
 
 **Besondere Überlegungen:**
 
@@ -72,7 +72,7 @@ Welche Schritte sind nötig?
 Schritt 1: ...
 Schritt 2: ...
 Schritt 3: ...
-```
+```text
 
 **Besondere Überlegungen:**
 
@@ -86,7 +86,7 @@ Wie soll die Ausgabe aussehen?
 ```text
 Beispiel:
 [Ihre Idee hier]
-```
+```text
 
 ### Phase 2: Gruppenarbeit (5 Min.)
 
@@ -117,7 +117,7 @@ Bilden Sie 2er-Gruppen.
 
 ```python
 einkaufsliste = ["Milch", "Brot", "Eier"]
-```
+```text
 
 **Vorteile:**
 
@@ -133,7 +133,7 @@ einkaufsliste = ["Milch", "Brot", "Eier"]
 
 ```python
 einkaufsliste = {"Milch": 2, "Brot": 1, "Eier": 12}
-```
+```text
 
 **Vorteile:**
 
@@ -149,31 +149,37 @@ einkaufsliste = {"Milch": 2, "Brot": 1, "Eier": 12}
 **Artikel hinzufügen:**
 
 ```text
+
 1. Artikel-Name vom Benutzer einlesen
 2. Prüfen: Ist Artikel schon in Liste?
    - Ja: Menge erhöhen ODER Meldung "Schon vorhanden"
    - Nein: Artikel hinzufügen
 3. Bestätigung ausgeben
-```
+
+```text
 
 **Artikel entfernen:**
 
 ```text
+
 1. Artikel-Name vom Benutzer einlesen
 2. Prüfen: Ist Artikel in Liste?
    - Ja: Artikel entfernen
    - Nein: Fehlermeldung
 3. Bestätigung ausgeben
-```
+
+```text
 
 **Artikel anzeigen:**
 
 ```text
+
 1. Prüfen: Ist Liste leer?
    - Ja: "Liste ist leer"
    - Nein: Alle Artikel durchgehen und ausgeben
 2. Optional: Nummerierung, Formatierung
-```
+
+```text
 
 ## ✅ Checkliste
 

@@ -6,7 +6,7 @@
 
 ### [Lektion 1: Dateien lesen & schreiben](./lektion-1-dateien.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - File Modes (r, w, a, r+)
@@ -23,7 +23,7 @@
 
 ### [Lektion 2: CSV-Datenverarbeitung](./lektion-2-csv.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - csv-Modul (reader, writer, DictReader, DictWriter)
@@ -39,7 +39,7 @@
 
 ### [Lektion 3: JSON & APIs](./lektion-3-json-apis.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - json-Modul (loads, dumps, load, dump)
@@ -56,7 +56,7 @@
 
 ### [Lektion 4: Fehlerbehandlung & Logging](./lektion-4-fehlerbehandlung.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - try/except/finally

@@ -12,6 +12,7 @@ Mit Listen und Dictionaries arbeiten.
 Erstelle ein Python-Programm: Inventar-System
 
 Anforderungen:
+
 - Dictionary mit 3-5 Produkten
 - Jedes Produkt: {"name": str, "preis": float, "anzahl": int}
 - Funktionen: Produkt hinzufügen, anzeigen
@@ -23,7 +24,7 @@ inventar = {
     "maus": {"preis": 25, "anzahl": 20}
 }
 Gesamtwert: CHF 6495
-```
+```text
 
 ## Option B: Duplikat-Entferner
 
@@ -31,6 +32,7 @@ Gesamtwert: CHF 6495
 Erstelle ein Python-Programm: Duplikat-Entferner
 
 Anforderungen:
+
 - Liste mit Duplikaten einlesen
 - Duplikate entfernen
 - Sortierte Liste ausgeben
@@ -40,7 +42,7 @@ Beispiel:
 Eingabe: [1, 2, 2, 3, 3, 3, 4]
 Ausgabe: [1, 2, 3, 4]
 Entfernt: 3 Duplikate
-```
+```text
 
 ## Option C: Mini-Kontaktliste
 
@@ -48,6 +50,7 @@ Entfernt: 3 Duplikate
 Erstelle ein Python-Programm: Kontaktliste
 
 Anforderungen:
+
 - Liste von 2-3 Kontakt-Dictionaries
 - Jeder Kontakt: name, email, telefon
 - Funktion: Suche nach Namen
@@ -58,7 +61,7 @@ kontakte = [
     {"name": "Anna", "email": "anna@test.com", "telefon": "123"},
     {"name": "Bob", "email": "bob@test.com", "telefon": "456"}
 ]
-```
+```text
 
 ---
 

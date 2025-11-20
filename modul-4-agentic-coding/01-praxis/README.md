@@ -6,7 +6,7 @@
 
 ### [Lektion 1: Advanced Prompt Engineering](./lektion-1-prompt-engineering.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Prompt-Anatomie
@@ -23,7 +23,7 @@
 
 ### [Lektion 2: Test-Driven Development mit KI](./lektion-2-tdd.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - TDD-Prinzipien
@@ -40,7 +40,7 @@
 
 ### [Lektion 3: Code Review & Refactoring](./lektion-3-review-refactoring.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Code Review mit KI
@@ -57,7 +57,7 @@
 
 ### [Lektion 4: Dokumentation & Best Practices](./lektion-4-dokumentation.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Docstrings generieren

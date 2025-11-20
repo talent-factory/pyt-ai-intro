@@ -45,7 +45,7 @@ tests/
 docs/
   sample1.md
   sample2.md
-```
+```text
 
 ## Features
 

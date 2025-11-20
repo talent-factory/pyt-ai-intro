@@ -22,7 +22,7 @@ except IOError:
     print("Fehler beim Lesen")
 finally:
     datei.close()
-```
+```text
 
 ### Logging
 
@@ -38,7 +38,7 @@ logging.basicConfig(
 logging.info("Programm gestartet")
 logging.warning("Warnung")
 logging.error("Fehler aufgetreten")
-```
+```text
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -52,22 +52,22 @@ import logging
 def verarbeite_csv(datei: str) -> list:
     """Verarbeitet CSV mit Fehlerbehandlung."""
     logging.info(f"Verarbeite {datei}")
-    
+
     try:
         with open(datei, "r") as f:
             reader = csv.DictReader(f)
             daten = list(reader)
             logging.info(f"{len(daten)} Zeilen gelesen")
             return daten
-    
+
     except FileNotFoundError:
         logging.error(f"Datei {datei} nicht gefunden")
         return []
-    
+
     except Exception as e:
         logging.error(f"Unerwarteter Fehler: {e}")
         return []
-```
+```text
 
 ## ✏️ Übung (15 Min.)
 

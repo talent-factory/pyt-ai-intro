@@ -28,16 +28,18 @@ Sie entwickeln einen **AI-gestützten Bewerbungs-Screener**:
 [Ihre Analyse]
 
 Beispiele:
+
 - Gender Bias
 - Age Bias
 - Name-basierte Diskriminierung
-```
+
+```text
 
 **Wie verhindern Sie diese?**
 
 ```text
 [Ihre Massnahmen]
-```
+```text
 
 ### 2. Transparenz
 
@@ -47,10 +49,12 @@ Beispiele:
 [Ihre Strategie]
 
 Überlegungen:
+
 - Erklärbarkeit der Entscheidungen
 - Offenlegung der AI-Nutzung
 - Zugang zu Bewertungskriterien
-```
+
+```text
 
 ### 3. Datenschutz
 
@@ -58,13 +62,13 @@ Beispiele:
 
 ```text
 [Ihre Analyse]
-```
+```text
 
 **Wie schützen Sie Bewerberdaten?**
 
 ```text
 [Ihre Massnahmen]
-```
+```text
 
 ### 4. Verantwortung
 
@@ -72,13 +76,13 @@ Beispiele:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 **Wie korrigieren Sie Fehler?**
 
 ```text
 [Ihr Prozess]
-```
+```text
 
 ### 5. Fairness
 
@@ -86,7 +90,7 @@ Beispiele:
 
 ```text
 [Ihre Strategie]
-```
+```text
 
 ## Implementierungs-Empfehlungen
 
@@ -95,16 +99,21 @@ Basierend auf Ihrer Analyse:
 **Top 3 Must-Haves:**
 
 1. ```text
+
    [Ihre Empfehlung]
-   ```
+
+```text
 
 2. ```text
+
    [Ihre Empfehlung]
-   ```
+```text
 
 3. ```text
+
    [Ihre Empfehlung]
-   ```
+
+```text
 
 ## ✅ Erfolg
 

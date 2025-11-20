@@ -1,6 +1,6 @@
 # Leseauftrag - Modul 3
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** File I/O und Datenformate verstehen
 
 ## 📚 Aufgabe 1: Python File I/O (20 Min.)
@@ -34,19 +34,19 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Warum with Statement?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Was ist Encoding?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 📚 Aufgabe 2: CSV & JSON (20 Min.)
 
@@ -59,19 +59,19 @@ name,alter,stadt
 Anna,25,Zürich
 Bob,30,Bern
 Clara,28,Basel
-```
+```text
 
 **Vorteile:**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Nachteile:**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ### JSON (JavaScript Object Notation)
 
@@ -83,19 +83,19 @@ Clara,28,Basel
   "alter": 25,
   "stadt": "Zürich"
 }
-```
+```text
 
 **Vorteile:**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Nachteile:**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 📚 Aufgabe 3: Exception Handling (20 Min.)
 
@@ -118,13 +118,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Was macht finally?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 🤔 Reflexionsfragen
 
@@ -134,7 +134,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ### Frage 2
 
@@ -142,7 +142,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ### Frage 3
 
@@ -150,7 +150,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## ✅ Checkliste
 

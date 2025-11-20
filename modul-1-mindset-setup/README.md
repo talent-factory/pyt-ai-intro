@@ -1,6 +1,6 @@
 # Modul 1: Programmier-Mindset & KI-Tools Setup
 
-**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Keine
 
 ## 🎯 Lernziele
@@ -20,7 +20,7 @@ Nach diesem Modul können Sie:
 
 ### [00-vorbereitung/](./00-vorbereitung/)
 
-**Zeitaufwand:** 2-3 Stunden  
+**Zeitaufwand:** 2-3 Stunden
 Installieren Sie Ihre Entwicklungsumgebung und machen Sie sich mit den Grundkonzepten vertraut.
 
 - 📄 [Installationsanleitung](./00-vorbereitung/installationsanleitung.md)
@@ -46,6 +46,7 @@ Installieren Sie Ihre Entwicklungsumgebung und machen Sie sich mit den Grundkonz
 - 💪 [Übung 4: Einfacher Taschenrechner](./02-uebungen/uebung-4-taschenrechner/) (25 Min.)
 
 ### [03-nachbearbeitung/](./03-nachbearbeitung/)
+
 **Hausaufgaben vor Modul 2**
 
 - 📝 [Aufgabe 1: Prompt-Portfolio](./03-nachbearbeitung/aufgabe-1-prompt-portfolio.md)

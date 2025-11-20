@@ -1,6 +1,6 @@
 # Persönliche Reflexion - Modul 5
 
-**Zeitaufwand:** 30 Minuten | **Punkte:** 15%  
+**Zeitaufwand:** 30 Minuten | **Punkte:** 15%
 **Mindestlänge:** 400 Wörter
 
 ## Frage 1: LLM APIs (ca. 70 Wörter)
@@ -9,7 +9,7 @@
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## Frage 2: RAG vs. Fine-Tuning (ca. 70 Wörter)
 
@@ -17,7 +17,7 @@
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## Frage 3: AI Agents (ca. 70 Wörter)
 
@@ -25,7 +25,7 @@
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## Frage 4: Ethische Herausforderungen (ca. 70 Wörter)
 
@@ -33,7 +33,7 @@
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## Frage 5: Kosten & Skalierung (ca. 60 Wörter)
 
@@ -41,7 +41,7 @@
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## Frage 6: Zukunft (ca. 60 Wörter)
 
@@ -49,7 +49,7 @@
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## Selbsteinschätzung
 

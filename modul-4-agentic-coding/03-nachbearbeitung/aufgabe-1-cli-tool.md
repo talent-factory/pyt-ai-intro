@@ -27,18 +27,23 @@ Erstellen Sie ein vollständiges Command-Line Tool mit KI-Unterstützung.
 ## Beispiel-Tool: Task Manager CLI
 
 ```bash
+
 # Tasks erstellen
+
 task add "Code reviewen" --priority high
 
 # Tasks auflisten
+
 task list --status open
 
 # Task als erledigt markieren
+
 task complete 1
 
 # Statistik
+
 task stats
-```
+```text
 
 ## Prompt-Vorlage
 
@@ -46,6 +51,7 @@ task stats
 Erstelle ein vollständiges CLI-Tool: Task Manager
 
 Features:
+
 1. add <task> [--priority high|medium|low]
 2. list [--status open|done|all]
 3. complete <id>
@@ -53,6 +59,7 @@ Features:
 5. stats
 
 Technologie:
+
 - click für CLI
 - JSON für Storage
 - pytest für Tests
@@ -71,7 +78,7 @@ tests/
 README.md
 requirements.txt
 .github/workflows/test.yml
-```
+```text
 
 ## Bewertung
 

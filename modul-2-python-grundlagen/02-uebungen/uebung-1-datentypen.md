@@ -1,7 +1,7 @@
 # Übung 1: Variablen & Datentypen
 
-**Dauer:** 15 Minuten  
-**Lektion:** 1  
+**Dauer:** 15 Minuten
+**Lektion:** 1
 **Schwierigkeit:** ⭐☆☆
 
 ## 🎯 Ziel
@@ -28,7 +28,7 @@ Wählen Sie **EINE** der folgenden Optionen und implementieren Sie diese mit KI-
 Geburtsjahr: 1990
 Du bist 35 Jahre alt.
 Das sind ungefähr 12775 Tage!
-```
+```text
 
 ### Prompt-Vorlage
 
@@ -36,6 +36,7 @@ Das sind ungefähr 12775 Tage!
 Erstelle ein Python-Programm: Altersrechner
 
 Anforderungen:
+
 - Geburtsjahr vom Benutzer einlesen
 - Aktuelles Jahr: 2025
 - Alter in Jahren berechnen
@@ -44,15 +45,17 @@ Anforderungen:
 
 Beispiel:
 Eingabe: 1990
-Ausgabe: 
+Ausgabe:
   Du bist 35 Jahre alt.
   Das sind ungefähr 12775 Tage!
 
 Einschränkungen:
+
 - Type Hints verwenden
 - Kommentare auf Deutsch
 - Eingabe-Validierung (nur Zahlen)
-```
+
+```text
 
 ## Option B: Währungsrechner
 
@@ -68,7 +71,7 @@ Einschränkungen:
 ```text
 Betrag in EUR: 100
 100.00 EUR = 95.00 CHF
-```
+```text
 
 ### Prompt-Vorlage
 
@@ -76,6 +79,7 @@ Betrag in EUR: 100
 Erstelle ein Python-Programm: Währungsrechner EUR → CHF
 
 Anforderungen:
+
 - Betrag in EUR einlesen
 - Umrechnungskurs: 1 EUR = 0.95 CHF
 - Ergebnis auf 2 Dezimalstellen runden
@@ -86,10 +90,12 @@ Eingabe: 100
 Ausgabe: 100.00 EUR = 95.00 CHF
 
 Einschränkungen:
+
 - Type Hints verwenden
 - Kommentare auf Deutsch
 - Fehlerbehandlung für ungültige Eingaben
-```
+
+```text
 
 ## Option C: Textanalyse-Tool
 
@@ -107,7 +113,7 @@ Text: Hallo Welt
 Wörter: 2
 Zeichen (mit Leerzeichen): 10
 Zeichen (ohne Leerzeichen): 9
-```
+```text
 
 ### Prompt-Vorlage
 
@@ -115,6 +121,7 @@ Zeichen (ohne Leerzeichen): 9
 Erstelle ein Python-Programm: Textanalyse-Tool
 
 Anforderungen:
+
 - Text vom Benutzer einlesen
 - Anzahl Wörter zählen
 - Anzahl Zeichen mit Leerzeichen zählen
@@ -129,9 +136,11 @@ Ausgabe:
   Zeichen (ohne Leerzeichen): 9
 
 Einschränkungen:
+
 - Type Hints verwenden
 - Kommentare auf Deutsch
-```
+
+```text
 
 ## ✅ Checkliste
 

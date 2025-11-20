@@ -8,7 +8,9 @@ Umfassender Guide für Exception Handling in Python.
 
 ```python
 try:
+
     # Code der Fehler werfen könnte
+
     datei = open('daten.txt', 'r')
     inhalt = datei.read()
 except FileNotFoundError:
@@ -16,10 +18,12 @@ except FileNotFoundError:
 except IOError as e:
     print(f"IO-Fehler: {e}")
 finally:
+
     # Wird immer ausgeführt
+
     if 'datei' in locals():
         datei.close()
-```
+```text
 
 ### Mit with-Statement (empfohlen)
 
@@ -29,8 +33,10 @@ try:
         inhalt = datei.read()
 except FileNotFoundError:
     print("Datei nicht gefunden")
+
 # Datei wird automatisch geschlossen
-```
+
+```text
 
 ## Häufige Exceptions
 
@@ -42,8 +48,10 @@ try:
         data = f.read()
 except FileNotFoundError:
     print("Datei existiert nicht")
+
     # Erstelle Datei oder verwende Default
-```
+
+```text
 
 ### PermissionError
 
@@ -53,7 +61,7 @@ try:
         f.write("Test")
 except PermissionError:
     print("Keine Schreibrechte")
-```
+```text
 
 ### ValueError
 
@@ -62,7 +70,7 @@ try:
     alter = int(input("Alter: "))
 except ValueError:
     print("Bitte Zahl eingeben")
-```
+```text
 
 ### JSONDecodeError
 
@@ -73,34 +81,43 @@ try:
     data = json.loads('ungültiges json')
 except json.JSONDecodeError as e:
     print(f"JSON-Fehler: {e}")
-```
+```text
 
 ## Best Practices
 
 ### 1. Spezifische Exceptions zuerst
 
 ```python
+
 # ❌ Schlecht
+
 try:
+
     # Code
+
 except Exception:
     print("Fehler")
 
 # ✅ Gut
+
 try:
+
     # Code
+
 except FileNotFoundError:
     print("Datei nicht gefunden")
 except PermissionError:
     print("Keine Rechte")
 except Exception as e:
     print(f"Unerwarteter Fehler: {e}")
-```
+```text
 
 ### 2. Nicht zu viel in try
 
 ```python
+
 # ❌ Schlecht
+
 try:
     datei = open('daten.txt', 'r')
     inhalt = datei.read()
@@ -110,6 +127,7 @@ except Exception:
     print("Irgendwas ging schief")
 
 # ✅ Gut
+
 try:
     datei = open('daten.txt', 'r')
     inhalt = datei.read()
@@ -122,20 +140,23 @@ try:
 except ValueError:
     print("Ungültige Daten")
     return
-```
+```text
 
 ### 3. Informative Fehlermeldungen
 
 ```python
+
 # ❌ Schlecht
+
 except Exception:
     print("Fehler")
 
 # ✅ Gut
+
 except FileNotFoundError as e:
     print(f"Datei '{filename}' nicht gefunden")
     print(f"Gesucht in: {os.getcwd()}")
-```
+```text
 
 ### 4. Cleanup mit finally
 
@@ -143,13 +164,15 @@ except FileNotFoundError as e:
 datei = None
 try:
     datei = open('daten.txt', 'r')
+
     # Verarbeitung
+
 except Exception as e:
     print(f"Fehler: {e}")
 finally:
     if datei:
         datei.close()
-```
+```text
 
 ## Eigene Exceptions
 
@@ -168,18 +191,22 @@ try:
     validiere_alter(-5)
 except DatenValidierungsFehler as e:
     print(f"Validierung fehlgeschlagen: {e}")
-```
+```text
 
 ## Exception Chaining
 
 ```python
 try:
+
     # Ursprünglicher Fehler
+
     daten = json.loads(text)
 except json.JSONDecodeError as e:
+
     # Neuer Fehler mit Kontext
+
     raise ValueError("Konfiguration ungültig") from e
-```
+```text
 
 ## Logging statt print
 
@@ -189,12 +216,14 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 try:
+
     # Code
+
 except FileNotFoundError as e:
     logging.error(f"Datei nicht gefunden: {e}")
 except Exception as e:
     logging.exception("Unerwarteter Fehler")
-```
+```text
 
 ## Patterns
 
@@ -213,7 +242,7 @@ def retry_operation(func, max_retries=3):
             wait_time = 2 ** attempt
             print(f"Versuch {attempt + 1} fehlgeschlagen, warte {wait_time}s")
             time.sleep(wait_time)
-```
+```text
 
 ### Context Manager
 
@@ -222,11 +251,11 @@ class DateiManager:
     def __init__(self, filename):
         self.filename = filename
         self.file = None
-    
+
     def __enter__(self):
         self.file = open(self.filename, 'r')
         return self.file
-    
+
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.file:
             self.file.close()
@@ -234,7 +263,7 @@ class DateiManager:
 
 with DateiManager('daten.txt') as f:
     data = f.read()
-```
+```text
 
 ## Checkliste
 

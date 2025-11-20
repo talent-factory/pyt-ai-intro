@@ -1,6 +1,6 @@
 # Modul 5: Fortgeschrittene KI-Integration
 
-**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-4 abgeschlossen
 
 ## 🎯 Lernziele
@@ -123,16 +123,26 @@ Nach diesem Modul beherrschen Sie:
 ### RAG (Retrieval-Augmented Generation)
 
 ```text
+
 1. User Query
+
    ↓
+
 2. Retrieve relevant documents (Vector Search)
+
    ↓
+
 3. Augment prompt with context
+
    ↓
+
 4. Generate response with LLM
+
    ↓
+
 5. Return answer
-```
+
+```text
 
 **Vorteile:**
 
@@ -147,7 +157,7 @@ Nach diesem Modul beherrschen Sie:
 ```python
 text = "Python ist eine Programmiersprache"
 embedding = get_embedding(text)  # [0.123, -0.456, ...]
-```
+```text
 
 ### AI Agents
 
@@ -283,27 +293,34 @@ Modul 5 ist der **Höhepunkt** des Kurses:
 ### API Keys
 
 ```bash
+
 # .env Datei (NICHT committen!)
+
 OPENAI_API_KEY=sk-...
 ANTHROPIC_API_KEY=sk-ant-...
-```
+```text
 
 ### Kosten-Kontrolle
 
 ```python
+
 # Maximale Tokens limitieren
+
 max_tokens=500
 
 # Caching nutzen
+
 @cache
 def get_embedding(text):
     ...
-```
+```text
 
 ### Rate Limits
 
 ```python
+
 # Exponential Backoff
+
 import time
 from openai import RateLimitError
 
@@ -313,10 +330,10 @@ for attempt in range(3):
         break
     except RateLimitError:
         time.sleep(2 ** attempt)
-```
+```text
 
 ---
 
-**Erstellt:** Oktober 2025  
-**Version:** 1.0  
+**Erstellt:** Oktober 2025
+**Version:** 1.0
 **Letztes Modul des Kurses!** 🎓

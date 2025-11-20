@@ -11,7 +11,7 @@ from openai import OpenAI
 import os
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-```
+```text
 
 ### Chat Completion
 
@@ -27,7 +27,7 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
-```
+```text
 
 ### Streaming
 
@@ -41,7 +41,7 @@ stream = client.chat.completions.create(
 for chunk in stream:
     if chunk.choices[0].delta.content:
         print(chunk.choices[0].delta.content, end="")
-```
+```text
 
 ### Function Calling
 
@@ -65,7 +65,7 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Wetter in Zürich?"}],
     tools=tools
 )
-```
+```text
 
 ### Embeddings
 
@@ -76,7 +76,7 @@ response = client.embeddings.create(
 )
 
 embedding = response.data[0].embedding  # Liste von Floats
-```
+```text
 
 ## Anthropic API
 
@@ -86,7 +86,7 @@ embedding = response.data[0].embedding  # Liste von Floats
 from anthropic import Anthropic
 
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-```
+```text
 
 ### Messages
 
@@ -100,7 +100,7 @@ response = client.messages.create(
 )
 
 print(response.content[0].text)
-```
+```text
 
 ## Best Practices
 

@@ -1,7 +1,7 @@
 # Aufgabe 3: Code-Review-Übung
 
-**Zeitaufwand:** 45 Minuten  
-**Abgabe:** Vor Modul 2  
+**Zeitaufwand:** 45 Minuten
+**Abgabe:** Vor Modul 2
 **Punkte:** 20% der Nachbearbeitung
 
 ## 🎯 Ziel
@@ -20,6 +20,7 @@ Führen Sie ein Code-Review für das folgende Programm durch und dokumentieren S
 ## 💻 Zu reviewender Code
 
 ```python
+
 # Programm zur Verwaltung einer Bücherliste
 
 b = []
@@ -28,9 +29,9 @@ while True:
     print("1. Buch hinzufügen")
     print("2. Alle Bücher anzeigen")
     print("3. Beenden")
-    
+
     c = input("Wahl: ")
-    
+
     if c == "1":
         t = input("Titel: ")
         a = input("Autor: ")
@@ -41,25 +42,26 @@ while True:
             print(x["t"] + " von " + x["a"])
     elif c == "3":
         break
-```
+```text
 
 ## 📝 Review-Template
 
 Nutzen Sie folgendes Template für Ihr Review:
 
 ```markdown
+
 # Code-Review: Bücherliste
 
-**Reviewer:** [Ihr Name]  
+**Reviewer:** [Ihr Name]
 **Datum:** [Datum]
 
 ## 1. Funktionalität
 
-### Was macht der Code?
+### Was macht der Code
 
 [Beschreiben Sie in eigenen Worten, was das Programm tut]
 
-### Funktioniert der Code?
+### Funktioniert der Code
 
 - [ ] Ja, ohne Probleme
 - [ ] Ja, aber mit Einschränkungen
@@ -69,7 +71,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 
 ## 2. Code-Qualität
 
-### Was ist gut?
+### Was ist gut
 
 [Listen Sie positive Aspekte auf]
 
@@ -77,7 +79,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 2. ...
 3. ...
 
-### Was könnte verbessert werden?
+### Was könnte verbessert werden
 
 [Listen Sie Verbesserungspotenzial auf]
 
@@ -95,6 +97,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 [Ihre Analyse zur Lesbarkeit]
 
 **Verbesserungsvorschläge:**
+
 - ...
 - ...
 
@@ -106,6 +109,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 [Ihre Analyse zu Variablennamen]
 
 **Verbesserungsvorschläge:**
+
 - ...
 - ...
 
@@ -117,6 +121,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 [Ihre Analyse zur Fehlerbehandlung]
 
 **Verbesserungsvorschläge:**
+
 - ...
 - ...
 
@@ -128,6 +133,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 [Ihre Analyse zur Dokumentation]
 
 **Verbesserungsvorschläge:**
+
 - ...
 - ...
 
@@ -139,6 +145,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 [Ihre Analyse zur Code-Struktur]
 
 **Verbesserungsvorschläge:**
+
 - ...
 - ...
 
@@ -151,8 +158,10 @@ Nutzen Sie folgendes Template für Ihr Review:
 ### Verbesserter Code
 
 ```python
+
 # Hier Ihren verbesserten Code einfügen
-```
+
+```text
 
 ### Erklärung der Änderungen
 
@@ -166,10 +175,10 @@ Nutzen Sie folgendes Template für Ihr Review:
 
 [3-5 wichtigste Punkte aus dem Review]
 
-### Was habe ich gelernt?
+### Was habe ich gelernt
 
 [Ihre persönlichen Lernerkenntnisse]
-```
+```text
 
 ## 💡 Review-Checkliste
 

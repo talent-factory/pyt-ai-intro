@@ -1,7 +1,7 @@
 # Persönliche Reflexion - Modul 2
 
-**Zeitaufwand:** 30 Minuten  
-**Abgabe:** Vor Modul 3  
+**Zeitaufwand:** 30 Minuten
+**Abgabe:** Vor Modul 3
 **Punkte:** 10% der Nachbearbeitung
 
 ## 🎯 Ziel
@@ -18,7 +18,7 @@ Beantworten Sie alle 6 Fragen ausführlich und ehrlich (mindestens 400 Wörter t
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 2: KI-Einfluss (60+ Wörter)
 
@@ -26,7 +26,7 @@ Beantworten Sie alle 6 Fragen ausführlich und ehrlich (mindestens 400 Wörter t
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 3: Problemlösung (60+ Wörter)
 
@@ -34,7 +34,7 @@ Beantworten Sie alle 6 Fragen ausführlich und ehrlich (mindestens 400 Wörter t
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 4: Debugging-Strategien (60+ Wörter)
 
@@ -42,7 +42,7 @@ Beantworten Sie alle 6 Fragen ausführlich und ehrlich (mindestens 400 Wörter t
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 5: Listen vs. Dictionaries (60+ Wörter)
 
@@ -50,7 +50,7 @@ Beantworten Sie alle 6 Fragen ausführlich und ehrlich (mindestens 400 Wörter t
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 6: Komplexestes Problem (60+ Wörter)
 
@@ -58,7 +58,7 @@ Beantworten Sie alle 6 Fragen ausführlich und ehrlich (mindestens 400 Wörter t
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ## 📊 Selbsteinschätzung (optional)
 
@@ -94,7 +94,7 @@ Gibt es noch etwas, das Sie teilen möchten?
 
 ```text
 [Hier Platz für weitere Gedanken]
-```
+```text
 
 ## ✅ Bewertungskriterien
 
@@ -124,7 +124,7 @@ Gibt es noch etwas, das Sie teilen möchten?
 
 ## 📤 Abgabe
 
-**Format:** Markdown oder PDF  
+**Format:** Markdown oder PDF
 **Dateiname:** `reflexion-modul-2.md` oder `reflexion-modul-2.pdf`
 
 ---

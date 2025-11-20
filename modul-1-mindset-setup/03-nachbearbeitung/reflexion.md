@@ -1,7 +1,7 @@
 # Reflexion - Modul 1
 
-**Zeitaufwand:** 30 Minuten  
-**Abgabe:** Vor Modul 2  
+**Zeitaufwand:** 30 Minuten
+**Abgabe:** Vor Modul 2
 **Punkte:** 20% der Nachbearbeitung
 
 ## 🎯 Ziel
@@ -29,7 +29,7 @@ Beantworten Sie die folgenden 5 Fragen ausführlich und ehrlich.
 
 ```text
 [Hier Ihre Antwort eintragen]
-```
+```text
 
 ### Frage 2: KI als Werkzeug
 
@@ -39,7 +39,7 @@ Beantworten Sie die folgenden 5 Fragen ausführlich und ehrlich.
 
 ```text
 [Hier Ihre Antwort eintragen]
-```
+```text
 
 ### Frage 3: Grösste Herausforderung
 
@@ -49,7 +49,7 @@ Beantworten Sie die folgenden 5 Fragen ausführlich und ehrlich.
 
 ```text
 [Hier Ihre Antwort eintragen]
-```
+```text
 
 ### Frage 4: Wichtigste Erkenntnis
 
@@ -59,7 +59,7 @@ Beantworten Sie die folgenden 5 Fragen ausführlich und ehrlich.
 
 ```text
 [Hier Ihre Antwort eintragen]
-```
+```text
 
 ### Frage 5: Ziele für Modul 2
 
@@ -69,7 +69,7 @@ Beantworten Sie die folgenden 5 Fragen ausführlich und ehrlich.
 
 ```text
 [Hier Ihre Antwort eintragen]
-```
+```text
 
 ## 💡 Reflexions-Tipps
 
@@ -118,7 +118,7 @@ Gibt es noch etwas, das Sie teilen möchten?
 
 ```text
 [Hier Platz für weitere Gedanken]
-```
+```text
 
 ## ✅ Bewertungskriterien
 

@@ -56,11 +56,12 @@ datum,produkt,kategorie,menge,einzelpreis
 2024-01-17,Monitor,Elektronik,1,350.00
 2024-01-18,Roman,Bücher,2,
 2024-01-18,Headset,Elektronik,3,60.00
-```
+```text
 
 ## 🏗️ Struktur
 
 ```python
+
 # pipeline.py
 
 import csv
@@ -70,6 +71,7 @@ from datetime import datetime
 from typing import List, Dict, Optional
 
 # Logging konfigurieren
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -99,28 +101,33 @@ def save_json(data: Dict, filename: str) -> None:
 def main():
     """Hauptfunktion."""
     logging.info("Pipeline gestartet")
-    
+
     # 1. Laden
+
     data = load_csv("verkaufsdaten.csv")
     logging.info(f"{len(data)} Zeilen geladen")
-    
+
     # 2. Bereinigen
+
     clean = clean_data(data)
     logging.info(f"{len(clean)} Zeilen nach Bereinigung")
-    
+
     # 3. Transformieren
+
     transformed = transform_data(clean)
-    
+
     # 4. Report
+
     report = generate_report(transformed)
-    
+
     # 5. Speichern
+
     save_json(report, "report.json")
     logging.info("Pipeline abgeschlossen")
 
 if __name__ == "__main__":
     main()
-```
+```text
 
 ## 📤 Erwarteter Output
 
@@ -156,7 +163,7 @@ if __name__ == "__main__":
     }
   ]
 }
-```
+```text
 
 ## ✅ Bewertungskriterien
 

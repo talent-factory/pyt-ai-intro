@@ -26,13 +26,15 @@ Grosse Probleme in kleinere, lösbare Teilprobleme zerlegen.
 Grosses Problem: Kaffee kochen
 
 Teilprobleme:
+
 1. Wasser holen
 2. Wasser in Maschine füllen
 3. Kaffeepulver einfüllen
 4. Maschine einschalten
 5. Warten
 6. Kaffee einschenken
-```
+
+```text
 
 #### Anwendung beim Programmieren
 
@@ -40,13 +42,15 @@ Teilprobleme:
 Problem: Einkaufsliste verwalten
 
 Teilprobleme:
+
 1. Datenstruktur wählen (Liste/Dictionary)
 2. Funktion: Artikel hinzufügen
 3. Funktion: Artikel entfernen
 4. Funktion: Artikel anzeigen
 5. Funktion: Artikel suchen
 6. Hauptprogramm: Menü und Schleife
-```
+
+```text
 
 ### 2. Algorithmisches Denken
 
@@ -63,12 +67,14 @@ Schritt-für-Schritt-Anweisungen erstellen, die klar und eindeutig sind.
 #### Beispiel: Route zur Uni
 
 ```text
+
 1. Aus der Haustür gehen
 2. Nach links abbiegen
 3. 200m geradeaus
 4. An der Ampel rechts
 5. Bis zum Haupteingang
-```
+
+```text
 
 #### Anwendung beim Programmieren: Algorithmus
 
@@ -82,7 +88,8 @@ Algorithmus: Durchschnitt berechnen
 4. Anzahl = Länge der Liste
 5. Durchschnitt = Summe / Anzahl
 6. Durchschnitt ausgeben
-```
+
+```text
 
 ### 3. Abstraktion
 
@@ -100,27 +107,33 @@ Unwichtige Details weglassen und auf das Wesentliche fokussieren.
 
 ```text
 Abstraktion: "Auto fahren"
+
 - Sie müssen nicht wissen, wie der Motor funktioniert
 - Sie müssen nur wissen: Gas, Bremse, Lenkrad
 
 Details (versteckt):
+
 - Verbrennungsprozess
 - Getriebe
 - Elektronik
-```
+
+```text
 
 **Anwendung beim Programmieren:**
 
 ```python
+
 # Abstraktion: Funktion verwenden
+
 result = calculate_average([5, 4, 6, 5])
 
-# Details (in der Funktion versteckt):
+# Details (in der Funktion versteckt)
+
 def calculate_average(numbers):
     total = sum(numbers)
     count = len(numbers)
     return total / count
-```
+```text
 
 ### 4. Musterkennung
 
@@ -138,33 +151,41 @@ def calculate_average(numbers):
 
 ```text
 Muster: "Summe berechnen"
+
 - Funktioniert für: Zahlen, Preise, Punkte, Zeiten
 - Das Muster ist immer gleich: Addiere alle Werte
 
 Anwendungen:
+
 - Gesamtpreis im Warenkorb
 - Gesamtpunkte in einem Spiel
 - Gesamtzeit für Aufgaben
-```
+
+```text
 
 #### Anwendung beim Programmieren: Muster
 
 ```python
+
 # Muster: Liste durchgehen und summieren
+
 # Kann für verschiedene Zwecke verwendet werden
 
 # Preise summieren
+
 prices = [10.50, 5.20, 8.90]
 total_price = sum(prices)
 
 # Punkte summieren
+
 points = [100, 85, 92]
 total_points = sum(points)
 
 # Zeiten summieren
+
 times = [30, 45, 60]  # Minuten
 total_time = sum(times)
-```
+```text
 
 ## 🤖 KI als Werkzeug
 
@@ -189,17 +210,20 @@ total_time = sum(times)
 **Traditionell (ohne KI):**
 
 ```text
+
 1. Problem verstehen
 2. Lösung konzipieren
 3. Syntax nachschlagen
 4. Code schreiben
 5. Testen
 6. Debuggen
-```
+
+```text
 
 **Modern (mit KI):**
 
 ```text
+
 1. Problem verstehen          ← Sie
 2. Lösung konzipieren         ← Sie
 3. Prompt formulieren         ← Sie
@@ -208,7 +232,8 @@ total_time = sum(times)
 6. Code anpassen              ← Sie + KI
 7. Testen                     ← Sie
 8. Debuggen                   ← Sie + KI
-```
+
+```text
 
 ## 💡 Praktische Tipps
 
@@ -219,7 +244,7 @@ total_time = sum(times)
 ✅ Problem erst durchdenken
 ✅ Lösung skizzieren
 ✅ Dann coden
-```
+```text
 
 ### Tipp 2: Klein anfangen
 
@@ -228,7 +253,7 @@ total_time = sum(times)
 ✅ Mit kleinstem Teilproblem starten
 ✅ Schrittweise erweitern
 ✅ Regelmässig testen
-```
+```text
 
 ### Tipp 3: Code verstehen
 
@@ -237,7 +262,7 @@ total_time = sum(times)
 ✅ Jede Zeile verstehen
 ✅ Bei Unklarheiten nachfragen
 ✅ Code anpassen können
-```
+```text
 
 ### Tipp 4: Fehler als Lernchance
 
@@ -246,7 +271,7 @@ total_time = sum(times)
 ✅ Fehler als normal akzeptieren
 ✅ Aus Fehlern lernen
 ✅ Debugging-Skills entwickeln
-```
+```text
 
 ## 🎯 Übungen zum Mindset
 

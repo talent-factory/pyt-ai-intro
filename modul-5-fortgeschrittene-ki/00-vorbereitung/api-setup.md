@@ -1,6 +1,6 @@
 # API-Setup
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Ziel:** LLM API einrichten und testen
 
 ## 🎯 Aufgabe
@@ -17,6 +17,7 @@ Richten Sie einen API-Zugang ein und führen Sie erste Tests durch.
 4. Füge Zahlungsmethode hinzu
 
 **Kosten:**
+
 - Erste $5 gratis (für neue Accounts)
 - GPT-3.5-Turbo: ~$0.001 pro 1000 Tokens
 - GPT-4: ~$0.03 pro 1000 Tokens
@@ -31,26 +32,30 @@ Richten Sie einen API-Zugang ein und führen Sie erste Tests durch.
 ### Schritt 3: Setup in Python (10 Min.)
 
 ```bash
+
 # Installation
+
 pip install openai python-dotenv
-```
+```text
 
 Erstelle `.env` Datei:
 
 ```bash
 OPENAI_API_KEY=sk-...
-```
+```text
 
 **Wichtig:** Füge `.env` zu `.gitignore` hinzu!
 
 ```bash
 echo ".env" >> .gitignore
-```
+```text
 
 ### Schritt 4: Erster Test (10 Min.)
 
 ```python
+
 # test_openai.py
+
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
@@ -60,6 +65,7 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Einfacher Test
+
 response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
@@ -71,7 +77,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 print(f"\nTokens verwendet: {response.usage.total_tokens}")
 print(f"Kosten: ~${response.usage.total_tokens * 0.000001:.6f}")
-```
+```text
 
 ### Schritt 5: Spending Limit setzen (10 Min.)
 
@@ -88,6 +94,7 @@ print(f"Kosten: ~${response.usage.total_tokens * 0.000001:.6f}")
 3. Füge Zahlungsmethode hinzu
 
 **Kosten:**
+
 - Claude 3 Sonnet: ~$0.003 pro 1000 Tokens
 - Claude 3 Opus: ~$0.015 pro 1000 Tokens
 
@@ -101,13 +108,13 @@ print(f"Kosten: ~${response.usage.total_tokens * 0.000001:.6f}")
 
 ```bash
 pip install anthropic python-dotenv
-```
+```text
 
 `.env`:
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-...
-```
+```text
 
 ### Schritt 4: Test
 
@@ -129,37 +136,37 @@ response = client.messages.create(
 )
 
 print(response.content[0].text)
-```
+```text
 
 ## Dokumentation
 
-### Welche API haben Sie gewählt?
+### Welche API haben Sie gewählt
 
 ```text
 [ ] OpenAI
 [ ] Anthropic
 [ ] Andere: _______
-```
+```text
 
-### Erster Test erfolgreich?
+### Erster Test erfolgreich
 
 ```text
 [ ] Ja
 [ ] Nein, Fehler: _______
-```
+```text
 
-### Spending Limit gesetzt?
+### Spending Limit gesetzt
 
 ```text
 [ ] Ja, Limit: $_______
 [ ] Nein
-```
+```text
 
-### Geschätzte Kosten für Kurs?
+### Geschätzte Kosten für Kurs
 
 ```text
 Basierend auf Tests: $_______
-```
+```text
 
 ## ⚠️ Sicherheit
 

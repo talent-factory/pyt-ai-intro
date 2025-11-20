@@ -2,11 +2,11 @@
 
 Einführung in die Versionskontrolle mit Git.
 
-## 🎯 Was ist Git?
+## 🎯 Was ist Git
 
 Git ist ein **Versionskontrollsystem**, das Änderungen an Dateien über die Zeit hinweg speichert.
 
-### Warum Git?
+### Warum Git
 
 - ✅ **Sicherheit:** Keine Angst, Code zu verlieren
 - ✅ **Historie:** Alle Änderungen nachvollziehbar
@@ -35,7 +35,7 @@ mein-projekt/
 ├── README.md
 ├── main.py
 └── .gitignore
-```
+```text
 
 ### Commit
 
@@ -47,7 +47,7 @@ Commit 1: "Initial commit"
 Commit 2: "feat: Login hinzugefügt"
     ↓
 Commit 3: "fix: Fehler behoben"
-```
+```text
 
 ### Staging Area
 
@@ -56,7 +56,7 @@ Zwischenbereich für Dateien, die committet werden sollen.
 ```text
 Working Directory → Staging Area → Repository
     (Ändern)        (git add)      (git commit)
-```
+```text
 
 ### Branch
 
@@ -66,124 +66,154 @@ Eine parallele Version des Projekts.
 main:    A → B → C → D
               ↓
 feature:      E → F
-```
+```text
 
 ## 🔄 Der Git-Workflow
 
 ### Schritt 1: Repository initialisieren
 
 ```bash
+
 # Neues Repository erstellen
+
 git init
 
 # Oder: Bestehendes klonen
+
 git clone <url>
-```
+```text
 
 ### Schritt 2: Änderungen machen
 
 ```bash
+
 # Dateien erstellen/ändern
-# ... in VS Code arbeiten ...
-```
+
+# ... in VS Code arbeiten 
+
+```text
 
 ### Schritt 3: Status prüfen
 
 ```bash
 git status
 
-# Zeigt:
+# Zeigt
+
 # - Geänderte Dateien
+
 # - Neue Dateien
+
 # - Gelöschte Dateien
-```
+
+```text
 
 ### Schritt 4: Dateien zum Staging hinzufügen
 
 ```bash
+
 # Einzelne Datei
+
 git add dateiname.py
 
 # Alle Dateien
+
 git add .
-```
+```text
 
 ### Schritt 5: Commit erstellen
 
 ```bash
 git commit -m "Beschreibung der Änderung"
-```
+```text
 
 ### Schritt 6: Historie anzeigen
 
 ```bash
 git log
-# Oder kompakt:
+
+# Oder kompakt
+
 git log --oneline
-```
+```text
 
 ## 📝 Wichtige Befehle
 
 ### Repository-Befehle
 
 ```bash
+
 # Repository initialisieren
+
 git init
 
 # Status anzeigen
+
 git status
 
 # Konfiguration
+
 git config --global user.name "Ihr Name"
 git config --global user.email "ihre.email@example.com"
-```
+```text
 
 ### Änderungen verwalten
 
 ```bash
+
 # Dateien hinzufügen
+
 git add dateiname.py
 git add .
 
 # Commit erstellen
+
 git commit -m "Nachricht"
 
 # Änderungen anzeigen
+
 git diff
-```
+```text
 
 ### Historie
 
 ```bash
+
 # Commits anzeigen
+
 git log
 git log --oneline
 git log --graph
 
 # Bestimmten Commit anzeigen
+
 git show <commit-id>
-```
+```text
 
 ### Änderungen rückgängig machen
 
 ```bash
+
 # Datei aus Staging entfernen
+
 git reset dateiname.py
 
 # Änderungen an Datei verwerfen
+
 git checkout -- dateiname.py
 
 # Letzten Commit rückgängig
+
 git reset --soft HEAD~1
-```
+```text
 
 ## 🎯 .gitignore
 
-### Was ist .gitignore?
+### Was ist .gitignore
 
 Eine Datei, die Git sagt, welche Dateien ignoriert werden sollen.
 
-### Warum wichtig?
+### Warum wichtig
 
 - Temporäre Dateien nicht committen
 - Secrets nicht hochladen
@@ -193,7 +223,9 @@ Eine Datei, die Git sagt, welche Dateien ignoriert werden sollen.
 ### Beispiel .gitignore für Python
 
 ```gitignore
+
 # Python
+
 __pycache__/
 *.py[cod]
 *.so
@@ -202,33 +234,40 @@ venv/
 env/
 
 # IDE
+
 .vscode/
 .idea/
 
 # OS
+
 .DS_Store
 Thumbs.db
 
 # Secrets
+
 .env
 *.key
 config.ini
-```
+```text
 
 ### .gitignore erstellen
 
 ```bash
+
 # Datei erstellen
+
 touch .gitignore
 
 # Inhalt hinzufügen
+
 echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
 
 # Committen
+
 git add .gitignore
 git commit -m "chore: gitignore hinzugefügt"
-```
+```text
 
 ## 💡 Best Practices
 
@@ -241,7 +280,7 @@ git commit -m "feat: Benutzer-Login implementiert"
 git commit -m "fix: Fehler bei Passwort-Validierung behoben"
 git commit -m "docs: README aktualisiert"
 git commit -m "refactor: Code-Struktur verbessert"
-```
+```text
 
 #### Schlechte Messages
 
@@ -250,7 +289,7 @@ git commit -m "Änderungen"          # ❌ Zu vage
 git commit -m "asdf"                # ❌ Nicht aussagekräftig
 git commit -m "WIP"                 # ❌ Work in Progress
 git commit -m "Fix"                 # ❌ Was wurde gefixt?
-```
+```text
 
 #### Message-Format
 
@@ -258,7 +297,7 @@ git commit -m "Fix"                 # ❌ Was wurde gefixt?
 <typ>: <kurze Beschreibung>
 
 <optionale Details>
-```
+```text
 
 **Typen:**
 
@@ -270,7 +309,7 @@ git commit -m "Fix"                 # ❌ Was wurde gefixt?
 - `test:` - Tests
 - `chore:` - Wartungsarbeiten
 
-### Wann committen?
+### Wann committen
 
 #### Gute Zeitpunkte
 
@@ -289,14 +328,14 @@ git commit -m "Fix"                 # ❌ Was wurde gefixt?
 
 ```text
 ❌ Zu gross:
-"feat: Komplette Anwendung mit Login, Dashboard, 
+"feat: Komplette Anwendung mit Login, Dashboard,
 Datenbank, API und Frontend"
 
 ✅ Richtig:
 "feat: Login-Formular hinzugefügt"
 "feat: Login-Validierung implementiert"
 "feat: Login-API-Endpoint erstellt"
-```
+```text
 
 ## 🆘 Häufige Probleme
 
@@ -309,7 +348,7 @@ Datenbank, API und Frontend"
 ```bash
 git config --global user.name "Ihr Name"
 git config --global user.email "ihre.email@example.com"
-```
+```text
 
 ### Problem 2: "fatal: not a git repository"
 
@@ -318,12 +357,15 @@ git config --global user.email "ihre.email@example.com"
 **Lösung:**
 
 ```bash
+
 # Prüfen Sie den Ordner
+
 pwd
 
 # Git initialisieren
+
 git init
-```
+```text
 
 ### Problem 3: Falscher Commit
 
@@ -332,15 +374,19 @@ git init
 **Lösung:**
 
 ```bash
+
 # Letzten Commit rückgängig (Änderungen behalten)
+
 git reset --soft HEAD~1
 
 # Änderungen korrigieren
-# ...
+
+# 
 
 # Neu committen
+
 git commit -m "Korrigierte Nachricht"
-```
+```text
 
 ### Problem 4: Datei versehentlich hinzugefügt
 
@@ -349,75 +395,96 @@ git commit -m "Korrigierte Nachricht"
 **Lösung:**
 
 ```bash
+
 # Aus Staging entfernen
+
 git reset dateiname.py
 
 # Oder alle Dateien
+
 git reset
-```
+```text
 
 ## 🎓 Übungen
 
 ### Übung 1: Erstes Repository
 
 ```bash
+
 # 1. Ordner erstellen
+
 mkdir git-uebung
 cd git-uebung
 
 # 2. Git initialisieren
+
 git init
 
 # 3. Datei erstellen
+
 echo "# Mein erstes Repo" > README.md
 
 # 4. Status prüfen
+
 git status
 
 # 5. Datei hinzufügen
+
 git add README.md
 
 # 6. Commit erstellen
+
 git commit -m "docs: Initial README"
 
 # 7. Historie anzeigen
+
 git log
-```
+```text
 
 ### Übung 2: Mehrere Commits
 
 ```bash
+
 # 1. Neue Datei erstellen
+
 echo "print('Hello')" > hello.py
 
 # 2. Committen
+
 git add hello.py
 git commit -m "feat: Hello-Programm"
 
 # 3. Datei ändern
+
 echo "print('World')" >> hello.py
 
 # 4. Committen
+
 git add hello.py
 git commit -m "feat: World hinzugefügt"
 
 # 5. Historie anzeigen
+
 git log --oneline
-```
+```text
 
 ### Übung 3: .gitignore
 
 ```bash
+
 # 1. .gitignore erstellen
+
 echo "__pycache__/" > .gitignore
 
 # 2. Committen
+
 git add .gitignore
 git commit -m "chore: gitignore hinzugefügt"
 
 # 3. Prüfen
+
 git status
-```
+```text
 
 ## ✅ Checkliste: Git-Grundlagen
 

@@ -63,10 +63,11 @@ def analyze(input_data, threshold=10):
     }
 
 # Beispielaufruf
+
 test_data = [5, "hello", [1, 2, 3], 3.5, "AI", 10, [5, 5, 5], "code"]
 result = analyze(test_data, threshold=20)
 print(result)
-```
+```text
 
 ## ✅ Anforderungen
 
@@ -123,23 +124,29 @@ Für **jede der 4 Funktionen** beschreiben Sie:
 ## 📝 Template für Ihre Dokumentation
 
 ```markdown
+
 # Code-Comprehension: Datenanalyse-Programm
 
 ## 1. Übersicht
 
 ### Zweck des Programms
+
 [Ihre Beschreibung]
 
 ### Hauptfunktionen
+
 1. `process_data()`: [Kurzbeschreibung]
 2. `filter_data()`: [Kurzbeschreibung]
 3. `aggregate()`: [Kurzbeschreibung]
 4. `analyze()`: [Kurzbeschreibung]
 
 ### Datenfluss
-```
+
+```text
+
 Eingabe → process_data() → filter_data() → aggregate() → Ausgabe
-```
+
+```text
 
 ## 2. Detaillierte Funktionsanalyse
 
@@ -148,48 +155,63 @@ Eingabe → process_data() → filter_data() → aggregate() → Ausgabe
 **Zweck:** [Beschreibung]
 
 **Parameter:**
+
 - `raw_data` (list): [Beschreibung]
 
 **Rückgabewert:**
+
 - (list): [Beschreibung]
 
 **Logik:**
+
 1. [Schritt 1]
 2. [Schritt 2]
+
 ...
 
 **Beispiel:**
 ```python
+
 # Eingabe
+
 raw_data = [5, "hello", [1, 2, 3]]
 
 # Ausgabe
+
 # [25, 5, 6]
 
-# Erklärung:
+# Erklärung
+
 # - 5 ist eine Zahl → 5² = 25
+
 # - "hello" ist ein String → len("hello") = 5
+
 # - [1, 2, 3] ist eine Liste → sum([1, 2, 3]) = 6
-```
+
+```text
 
 [Wiederholen Sie dies für alle 4 Funktionen]
 
 ## 3. Code-Qualitätsanalyse
 
 ### Stärken ✅
+
 1. [Stärke 1 mit Erklärung]
 2. [Stärke 2]
 3. [Stärke 3]
 
 ### Schwächen ⚠️
+
 1. [Schwäche 1 mit Erklärung]
 2. [Schwäche 2]
 3. [Schwäche 3]
 
 ### Best Practices
+
 - [Analyse]
 
 ### Fehlerbehandlung
+
 - [Analyse]
 
 ## 4. Verbesserungsvorschläge
@@ -197,6 +219,7 @@ raw_data = [5, "hello", [1, 2, 3]]
 ### Verbesserte Version von `process_data()`
 
 ```python
+
 def process_data(raw_data: list) -> list:
     """
     Verarbeitet Rohdaten und konvertiert sie zu numerischen Werten.
@@ -207,57 +230,71 @@ def process_data(raw_data: list) -> list:
     Returns:
         Liste mit verarbeiteten numerischen Werten
     """
+
     # [Ihr verbesserter Code]
-```
+
+```text
 
 **Verbesserungen:**
+
 - [Erklärung 1]
 - [Erklärung 2]
 
 ## 5. Eigene Experimente
 
 ### Testfall 1
+
 ```python
+
 # Eingabe
+
 test_data = [...]
 
 # Erwartete Ausgabe
+
 # [...]
 
 # Tatsächliche Ausgabe
+
 # [...]
 
 # Erkenntnisse
+
 # [...]
-```
+
+```text
 
 [Wiederholen für Testfall 2 und 3]
 
 ## Zusammenfassung
 
 [Ihre wichtigsten Erkenntnisse]
-```
+```text
 
 ## 💡 Hinweise für die Analyse
 
 ### Schritt-für-Schritt-Vorgehen
 
 **1. Erste Durchsicht (10 Min.)**
+
 - Code einmal komplett durchlesen
 - Groben Zweck identifizieren
 - Unbekannte Konzepte markieren
 
 **2. Funktion für Funktion (30 Min.)**
+
 - Mit der kleinsten Funktion beginnen (`aggregate`)
 - Jeden Codeblock einzeln analysieren
 - Beispiele mit Stift und Papier durchrechnen
 
 **3. Zusammenhänge verstehen (10 Min.)**
+
 - Wie rufen Funktionen einander auf?
 - Welche Daten fliessen zwischen Funktionen?
 - Was ist der Gesamtzweck?
 
 **4. Dokumentation schreiben (10 Min.)**
+
 - Template ausfüllen
 - Beispiele hinzufügen
 - Verbesserungen vorschlagen
@@ -265,24 +302,28 @@ test_data = [...]
 ### Fragen, die Sie beantworten sollten
 
 **Für `process_data()`:**
+
 - Was passiert mit verschiedenen Datentypen?
 - Warum werden Zahlen quadriert?
 - Warum wird bei Strings die Länge genommen?
 - Was bedeutet `isinstance()`?
 
 **Für `filter_data()`:**
+
 - Was macht die List Comprehension?
 - Warum wird auf `None` geprüft?
 - Was ist der Standardwert für `threshold`?
 - Welche Werte werden entfernt?
 
 **Für `aggregate()`:**
+
 - Was passiert, wenn `data` leer ist?
 - Warum wird `sum()` zweimal aufgerufen?
 - Welche Statistiken werden berechnet?
 - Gibt es effizientere Methoden?
 
 **Für `analyze()`:**
+
 - Welche Rolle spielt diese Funktion?
 - Wie werden die anderen Funktionen orchestriert?
 - Was wird zurückgegeben?
@@ -291,70 +332,88 @@ test_data = [...]
 ### KI-Prompts für Hilfe
 
 **Für Konzepterklärungen:**
-```
+
+```text
 Erkläre den folgenden Python-Code Zeile für Zeile:
 ```python
+
 result = [x for x in data if x is not None and x > threshold]
-```
+
+```text
 
 Was macht diese List Comprehension und wie funktioniert die Bedingung?
-```
+```text
 
 **Für Code-Qualität:**
-```
+
+```text
 Analysiere diesen Python-Code und identifiziere:
+
 1. Stärken (Best Practices)
 2. Schwächen (Code Smells)
 3. Potenzielle Bugs
 4. Verbesserungsvorschläge
 
 [Code einfügen]
-```
+```text
 
 **Für Verbesserungen:**
-```
+
+```text
 Wie könnte ich folgende Funktion verbessern?
 [Code einfügen]
 
 Bitte achte auf:
+
 - Type Hints
 - Docstrings
 - Fehlerbehandlung
 - Lesbarkeit
 - Effizienz
-```
+
+```text
 
 ### Nützliche Python-Konzepte
 
 **List Comprehensions:**
+
 ```python
+
 # Longform
+
 result = []
 for x in data:
     if x > 10:
         result.append(x)
 
 # List Comprehension (äquivalent)
+
 result = [x for x in data if x > 10]
-```
+```text
 
 **isinstance():**
+
 ```python
+
 # Prüft den Typ eines Objekts
+
 isinstance(5, int)           # True
 isinstance("hello", str)     # True
 isinstance([1, 2], list)     # True
 isinstance(5, (int, float))  # True (einer von mehreren)
-```
+```text
 
 **Dictionary Comprehensions:**
+
 ```python
+
 # Erstellt ein Dictionary mit Berechnungen
+
 stats = {
     "sum": sum(data),
     "avg": sum(data) / len(data)
 }
-```
+```text
 
 ## 🔍 Beispiel-Analyse (Teillösung)
 
@@ -363,13 +422,16 @@ stats = {
 **Zweck:** Filtert verarbeitete Daten basierend auf einem Schwellenwert.
 
 **Parameter:**
+
 - `data` (list): Liste mit numerischen Werten (oder None)
 - `threshold` (int, optional): Mindestwert, Standardwert ist 10
 
 **Rückgabewert:**
+
 - (list): Liste mit Werten > threshold (None-Werte ausgeschlossen)
 
 **Logik:**
+
 1. Verwendet List Comprehension für kompakte Filterung
 2. Prüft zwei Bedingungen mit `and`:
    - `x is not None`: Schliesst None-Werte aus
@@ -377,34 +439,47 @@ stats = {
 3. Gibt neue gefilterte Liste zurück (Original unverändert)
 
 **Beispiel:**
+
 ```python
+
 # Eingabe
+
 data = [25, 5, 6, None, 15, 30]
 threshold = 10
 
 # Prozess
+
 # 25: 25 > 10 → ✓ behalten
+
 # 5:  5 > 10  → ✗ entfernen
+
 # 6:  6 > 10  → ✗ entfernen
+
 # None: ist None → ✗ entfernen
+
 # 15: 15 > 10 → ✓ behalten
+
 # 30: 30 > 10 → ✓ behalten
 
 # Ausgabe
+
 [25, 15, 30]
-```
+```text
 
 **Stärken:**
+
 - ✅ Kompakt und pythonisch (List Comprehension)
 - ✅ Funktionaler Stil (keine Seiteneffekte)
 - ✅ Flexibel durch optionalen Parameter
 
 **Schwächen:**
+
 - ⚠️ Keine Type Hints
 - ⚠️ Kein Docstring
 - ⚠️ Keine Validierung (was wenn `data` kein List ist?)
 
 **Verbesserte Version:**
+
 ```python
 def filter_data(data: list, threshold: float = 10) -> list:
     """
@@ -428,7 +503,7 @@ def filter_data(data: list, threshold: float = 10) -> list:
         raise TypeError("data muss eine Liste sein")
 
     return [x for x in data if x is not None and x > threshold]
-```
+```text
 
 ## 📚 Zusätzliche Challenges (Optional)
 

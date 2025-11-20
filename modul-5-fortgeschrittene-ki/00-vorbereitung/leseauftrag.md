@@ -1,6 +1,6 @@
 # Leseauftrag - Modul 5
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** LLMs, RAG und AI Agents verstehen
 
 ## 📚 Aufgabe 1: LLM Basics (15 Min.)
@@ -32,13 +32,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Wie funktionieren APIs?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 📚 Aufgabe 2: RAG (15 Min.)
 
@@ -69,13 +69,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Wann RAG nutzen?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 📚 Aufgabe 3: Embeddings (15 Min.)
 
@@ -106,13 +106,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Wie funktioniert Semantic Search?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 📚 Aufgabe 4: AI Agents (15 Min.)
 
@@ -143,13 +143,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Wie funktioniert Function Calling?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 🤔 Reflexionsfragen
 
@@ -159,7 +159,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ### Frage 2
 
@@ -167,7 +167,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ### Frage 3
 
@@ -175,7 +175,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## ✅ Checkliste
 

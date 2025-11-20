@@ -39,10 +39,10 @@ class User:
         self.a = a
         self.e = e
         self.p = p
-    
+
     def get_data(self):
         return f"{self.n},{self.a},{self.e},{self.p}"
-```
+```text
 
 ## Aufgabe
 
@@ -58,6 +58,7 @@ Reviewe folgenden Legacy Code und identifiziere Probleme:
 [KOPIERE CODE HIER EIN]
 
 Analysiere:
+
 1. Code Smells
 2. Naming Issues
 3. Fehlende Dokumentation
@@ -66,12 +67,13 @@ Analysiere:
 6. Performance-Probleme
 
 Gib strukturiertes Feedback.
-```
+```text
 
 ### Erwartetes Feedback
 
 ```text
 Probleme:
+
 1. Unklare Variablennamen (d, r, i, x, y, z)
 2. Keine Type Hints
 3. Keine Docstrings
@@ -81,12 +83,14 @@ Probleme:
 7. Duplizierter Code
 
 Empfehlungen:
+
 - Aussagekräftige Namen
 - Funktionen aufteilen
 - Konstanten definieren
 - Type Hints hinzufügen
 - Dokumentation
-```
+
+```text
 
 ## Schritt 2: Refactoring-Plan (3 Min.)
 
@@ -96,15 +100,18 @@ Empfehlungen:
 Erstelle einen Refactoring-Plan für den Code.
 
 Schritte:
+
 1. Was zuerst?
 2. Was danach?
 3. Wie testen?
 
 Priorität:
+
 - Sicherheit (keine Bugs einführen)
 - Lesbarkeit
 - Wartbarkeit
-```
+
+```text
 
 ## Schritt 3: Refactoring durchführen (7 Min.)
 
@@ -116,6 +123,7 @@ Refactore den Code Schritt für Schritt:
 [KOPIERE CODE HIER EIN]
 
 Anforderungen:
+
 1. Aussagekräftige Namen
 2. Type Hints
 3. Docstrings
@@ -125,7 +133,7 @@ Anforderungen:
 7. Fehlerbehandlung
 
 Behalte die Funktionalität bei!
-```
+```text
 
 ### Erwartetes Ergebnis
 
@@ -134,6 +142,7 @@ from typing import List, Dict
 from dataclasses import dataclass
 
 # Konstanten
+
 MIN_AGE = 18
 HIGH_SALARY_THRESHOLD = 50000
 HIGH_SALARY_BONUS_RATE = 0.1
@@ -155,10 +164,10 @@ class Employee:
 def calculate_bonus(salary: float) -> float:
     """
     Berechnet Bonus basierend auf Gehalt.
-    
+
     Args:
         salary: Jahresgehalt
-    
+
     Returns:
         Bonus-Betrag
     """
@@ -169,15 +178,15 @@ def calculate_bonus(salary: float) -> float:
 def process_active_employees(employees: List[Dict]) -> List[Dict]:
     """
     Verarbeitet aktive Mitarbeiter über 18.
-    
+
     Args:
         employees: Liste von Mitarbeiter-Dictionaries
-    
+
     Returns:
         Liste von verarbeiteten Mitarbeitern mit Bonus
     """
     result = []
-    
+
     for emp_data in employees:
         if emp_data['age'] > MIN_AGE and emp_data['status'] == 'active':
             employee = {
@@ -187,29 +196,29 @@ def process_active_employees(employees: List[Dict]) -> List[Dict]:
                 'bonus': calculate_bonus(emp_data['salary'])
             }
             result.append(employee)
-    
+
     return result
 
 def calculate_total_with_discount(items: List[Dict]) -> float:
     """
     Berechnet Gesamtpreis mit Rabatten.
-    
+
     Args:
         items: Liste von Items mit 'type' und 'price'
-    
+
     Returns:
         Gesamtpreis nach Rabatten
     """
     total = 0.0
-    
+
     for item in items:
         price = item['price']
         item_type = item['type']
-        
+
         discount_rate = DISCOUNT_RATES.get(item_type, 0.0)
         discounted_price = price * (1 - discount_rate)
         total += discounted_price
-    
+
     return total
 
 @dataclass
@@ -219,16 +228,16 @@ class User:
     age: int
     email: str
     phone: str
-    
+
     def to_csv(self) -> str:
         """
         Konvertiert User zu CSV-Format.
-        
+
         Returns:
             CSV-String
         """
         return f"{self.name},{self.age},{self.email},{self.phone}"
-```
+```text
 
 ## Vergleich
 

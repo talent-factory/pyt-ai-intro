@@ -1,6 +1,6 @@
 # Leseauftrag - Modul 4
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** Agentic Coding Konzepte verstehen
 
 ## 📚 Aufgabe 1: Agentic Coding (20 Min.)
@@ -31,13 +31,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Unterschied zu traditionellem Coding?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 📚 Aufgabe 2: Advanced Prompt Engineering (20 Min.)
 
@@ -70,13 +70,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Wann welches Pattern?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 📚 Aufgabe 3: Test-Driven Development (20 Min.)
 
@@ -107,13 +107,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 **Wie hilft KI bei TDD?**
 
 ```text
 [Ihre Notizen]
-```
+```text
 
 ## 🤔 Reflexionsfragen
 
@@ -123,7 +123,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ### Frage 2
 
@@ -131,7 +131,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ### Frage 3
 
@@ -139,7 +139,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ## ✅ Checkliste
 

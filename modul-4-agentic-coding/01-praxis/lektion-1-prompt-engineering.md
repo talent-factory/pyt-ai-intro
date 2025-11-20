@@ -25,6 +25,7 @@ Technologie: Python 3.11, pytest, click
 Erstelle eine Funktion, die CSV-Dateien validiert.
 
 [CONSTRAINTS]
+
 - Type Hints verwenden
 - Docstrings im Google-Style
 - Exception Handling
@@ -36,10 +37,12 @@ Output: True/False + Liste von Fehlern
 
 [FORMAT]
 Gib mir:
+
 1. Die Funktion
 2. Unit Tests
 3. Verwendungsbeispiel
-```
+
+```text
 
 ### Prompt-Patterns
 
@@ -48,17 +51,19 @@ Gib mir:
 ```text
 Du bist ein Senior Python-Entwickler mit 10 Jahren Erfahrung
 in Datenverarbeitung und Test-Driven Development.
-```
+```text
 
 #### 2. Chain-of-Thought
 
 ```text
 Erkläre Schritt für Schritt:
+
 1. Was ist das Problem?
 2. Welche Lösungsansätze gibt es?
 3. Welcher ist am besten?
 4. Implementiere die Lösung
-```
+
+```text
 
 #### 3. Few-Shot Learning
 
@@ -72,22 +77,25 @@ Input: [10, 20, 30]
 Output: 60
 
 Jetzt für: [5, 15, 25]
-```
+```text
 
 ## 💻 Live-Demo (20 Min.)
 
 ### Demo: Feature-Implementierung
 
 **Schlechter Prompt:**
+
 ```text
 Schreibe eine Funktion für Passwort-Validierung
-```
+```text
 
 **Guter Prompt:**
+
 ```text
 Erstelle eine Python-Funktion zur Passwort-Validierung.
 
 Anforderungen:
+
 - Mindestens 8 Zeichen
 - Mindestens 1 Grossbuchstabe
 - Mindestens 1 Kleinbuchstabe
@@ -95,14 +103,17 @@ Anforderungen:
 - Mindestens 1 Sonderzeichen
 
 Rückgabe:
+
 - Tuple (is_valid: bool, errors: list[str])
 
 Zusätzlich:
+
 - Type Hints
 - Docstring
 - Unit Tests mit pytest
 - Edge Cases berücksichtigen
-```
+
+```text
 
 ### Iteration
 
@@ -111,18 +122,20 @@ Iteration 1: Basis-Implementierung
 Iteration 2: "Füge Passwort-Stärke-Score hinzu (0-5)"
 Iteration 3: "Optimiere für Performance"
 Iteration 4: "Füge Custom Rules hinzu"
-```
+```text
 
 ## ✏️ Übung (15 Min.)
 
 Implementieren Sie mit KI:
 
 **Option A: Email-Validator**
+
 - Validiert Email-Format
 - Prüft Disposable-Domains
 - Mit Tests
 
 **Option B: URL-Parser**
+
 - Extrahiert Komponenten
 - Validiert Format
 - Mit Tests

@@ -1,6 +1,6 @@
 # KI-Konzepterklärungen
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Ziel:** Konzepte mit KI vertiefen
 
 ## 🎯 Aufgabe
@@ -15,13 +15,14 @@ Nutzen Sie KI (ChatGPT/Claude), um sich folgende Konzepte erklären zu lassen. D
 Erkläre mir die verschiedenen File Modes in Python ('r', 'w', 'a', 'r+', 'rb', 'wb').
 
 Für jeden Mode:
+
 - Was macht er?
 - Wann verwende ich ihn?
 - Was passiert mit existierenden Dateien?
 - Ein Beispiel
 
 Erkläre es so, als wäre ich Anfänger.
-```
+```text
 
 ### Dokumentation
 
@@ -29,13 +30,13 @@ Erkläre es so, als wäre ich Anfänger.
 
 ```text
 [Kopieren Sie die KI-Antwort hier ein und fügen Sie eigene Notizen hinzu]
-```
+```text
 
 **Eigene Zusammenfassung (3 Sätze):**
 
 ```text
 [Ihre Zusammenfassung]
-```
+```text
 
 ## Erklärung 2: CSV vs. JSON (15 Min.)
 
@@ -45,13 +46,14 @@ Erkläre es so, als wäre ich Anfänger.
 Erkläre mir den Unterschied zwischen CSV und JSON für Datenspeicherung.
 
 Vergleiche:
+
 - Struktur und Format
 - Vorteile und Nachteile
 - Wann welches Format?
 - Beispiele für Use Cases
 
 Erstelle auch eine Vergleichstabelle.
-```
+```text
 
 ### Dokumentation
 
@@ -59,7 +61,7 @@ Erstelle auch eine Vergleichstabelle.
 
 ```text
 [Kopieren Sie die KI-Antwort hier ein]
-```
+```text
 
 **Eigene Entscheidungsmatrix:**
 
@@ -74,7 +76,7 @@ Erstelle auch eine Vergleichstabelle.
 
 ```text
 [Ihre Überlegungen]
-```
+```text
 
 ## Erklärung 3: Exception Handling (15 Min.)
 
@@ -84,6 +86,7 @@ Erstelle auch eine Vergleichstabelle.
 Erkläre mir Exception Handling in Python mit try/except/finally.
 
 Themen:
+
 - Warum ist Exception Handling wichtig?
 - Wie funktioniert try/except/finally?
 - Unterschied zwischen spezifischen und generischen Exceptions
@@ -91,7 +94,7 @@ Themen:
 - Häufige Fehler beim Exception Handling
 
 Mit Beispielen für Datei-Operationen.
-```
+```text
 
 ### Dokumentation
 
@@ -99,7 +102,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Kopieren Sie die KI-Antwort hier ein]
-```
+```text
 
 **Best Practices (Ihre Liste):**
 
@@ -113,7 +116,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Was sollte man vermeiden?]
-```
+```text
 
 ## 🤔 Reflexionsfragen
 
@@ -123,7 +126,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Ihre Antwort basierend auf KI-Erklärung]
-```
+```text
 
 ### Frage 2
 
@@ -131,7 +134,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Ihre Antwort]
-```
+```text
 
 ### Frage 3
 
@@ -139,7 +142,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Ihre Antwort mit Beispielen]
-```
+```text
 
 ## ✅ Checkliste
 

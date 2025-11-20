@@ -5,9 +5,11 @@
 ## 📚 Lektionsübersicht
 
 ### [Lektion 1: Einführung & Mindset](./lektion-1-einfuehrung.md)
+
 **Dauer:** 50 Minuten
 
 **Themen:**
+
 - Was ist Programmieren wirklich?
 - Die 4 Säulen: Problemdekomposition, Algorithmisches Denken, Abstraktion, Musterkennung
 - KI als Werkzeug vs. Ersatz
@@ -18,9 +20,11 @@
 ---
 
 ### [Lektion 2: Setup-Vertiefung & Git Basics](./lektion-2-setup-git.md)
+
 **Dauer:** 50 Minuten
 
 **Themen:**
+
 - VS Code Workspace & Extensions
 - Python in VS Code
 - Git-Grundlagen (init, add, commit, status, log)
@@ -31,9 +35,11 @@
 ---
 
 ### [Lektion 3: Effektives Prompting](./lektion-3-prompting.md)
+
 **Dauer:** 50 Minuten
 
 **Themen:**
+
 - Prompt Engineering Grundlagen
 - Kontext bereitstellen
 - Iteratives Verfeinern
@@ -44,9 +50,11 @@
 ---
 
 ### [Lektion 4: Von der Idee zur App](./lektion-4-idee-zur-app.md)
+
 **Dauer:** 50 Minuten
 
 **Themen:**
+
 - Der Entwicklungsworkflow mit KI
 - Code-Review Grundlagen
 - Debugging-Strategien

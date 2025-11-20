@@ -1,6 +1,6 @@
 # Modul 2: Python-Grundlagen mit KI verstehen
 
-**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Abgeschlossenes Modul 1
 
 ## 🎯 Modulziele
@@ -124,5 +124,5 @@ Sie haben das Modul erfolgreich abgeschlossen, wenn Sie:
 
 ---
 
-**Version:** 1.0  
+**Version:** 1.0
 **Stand:** Januar 2025

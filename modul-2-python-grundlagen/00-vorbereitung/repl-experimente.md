@@ -1,9 +1,9 @@
 # Python REPL Experimente
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Ziel:** Praktische Erfahrung mit Python sammeln
 
-## 🎯 Was ist die REPL?
+## 🎯 Was ist die REPL
 
 **REPL** = Read-Eval-Print-Loop
 
@@ -14,19 +14,22 @@ Eine interaktive Python-Umgebung, in der Sie Code direkt ausführen können.
 ### Option 1: Python-Konsole
 
 ```bash
-# Terminal öffnen und eingeben:
+
+# Terminal öffnen und eingeben
+
 python
 
-# Oder:
+# Oder
+
 python3
-```
+```text
 
 Sie sehen:
 
 ```text
 Python 3.11.0 (main, Oct 24 2022, 18:26:48)
 >>>
-```
+```text
 
 ### Option 2: VS Code Python Interactive
 
@@ -45,7 +48,9 @@ Falls installiert, können Sie auch Jupyter nutzen.
 Probieren Sie folgendes aus:
 
 ```python
+
 # Einfache Berechnungen
+
 >>> 5 + 3
 >>> 10 - 4
 >>> 7 * 6
@@ -55,13 +60,15 @@ Probieren Sie folgendes aus:
 >>> 2 ** 8   # Potenz
 
 # Verschiedene Zahlentypen
+
 >>> type(5)
 >>> type(5.0)
 >>> type(5 + 3.0)
 
 # Grosse Zahlen
+
 >>> 999999999999999999999 * 2
-```
+```text
 
 **Dokumentieren Sie:**
 
@@ -72,7 +79,9 @@ Probieren Sie folgendes aus:
 ### Experiment 2: Strings (10 Min.)
 
 ```python
+
 # String-Operationen
+
 >>> "Hallo" + " " + "Welt"
 >>> "Python" * 3
 >>> "GROSS".lower()
@@ -80,6 +89,7 @@ Probieren Sie folgendes aus:
 >>> "  Leerzeichen  ".strip()
 
 # String-Methoden
+
 >>> text = "Python ist toll"
 >>> text.split()
 >>> text.replace("toll", "super")
@@ -87,10 +97,11 @@ Probieren Sie folgendes aus:
 >>> text.endswith("toll")
 
 # String-Formatierung
+
 >>> name = "Anna"
 >>> alter = 25
 >>> f"Ich heisse {name} und bin {alter} Jahre alt"
-```
+```text
 
 **Dokumentieren Sie:**
 
@@ -101,12 +112,15 @@ Probieren Sie folgendes aus:
 ### Experiment 3: Listen (10 Min.)
 
 ```python
+
 # Listen erstellen
+
 >>> zahlen = [1, 2, 3, 4, 5]
 >>> namen = ["Anna", "Bob", "Clara"]
 >>> gemischt = [1, "zwei", 3.0, True]
 
 # Listen-Operationen
+
 >>> zahlen[0]      # Erstes Element
 >>> zahlen[-1]     # Letztes Element
 >>> zahlen[1:3]    # Slicing
@@ -114,13 +128,14 @@ Probieren Sie folgendes aus:
 >>> zahlen * 2
 
 # Listen-Methoden
+
 >>> zahlen.append(6)
 >>> zahlen.remove(3)
 >>> zahlen.sort()
 >>> len(zahlen)
 >>> sum(zahlen)
 >>> max(zahlen)
-```
+```text
 
 **Dokumentieren Sie:**
 
@@ -131,30 +146,36 @@ Probieren Sie folgendes aus:
 ### Experiment 4: Dictionaries (10 Min.)
 
 ```python
+
 # Dictionary erstellen
+
 >>> person = {"name": "Anna", "alter": 25, "stadt": "Zürich"}
 
 # Zugriff
+
 >>> person["name"]
 >>> person.get("alter")
 >>> person.get("beruf", "Unbekannt")  # Mit Default
 
 # Ändern und hinzufügen
+
 >>> person["alter"] = 26
 >>> person["beruf"] = "Entwicklerin"
 
 # Dictionary-Methoden
+
 >>> person.keys()
 >>> person.values()
 >>> person.items()
 
 # Verschachtelte Dictionaries
+
 >>> personen = {
 ...     "anna": {"alter": 25, "stadt": "Zürich"},
 ...     "bob": {"alter": 30, "stadt": "Bern"}
 ... }
 >>> personen["anna"]["stadt"]
-```
+```text
 
 **Dokumentieren Sie:**
 
@@ -175,6 +196,7 @@ Probieren Sie eigene Ideen aus:
 ### Template für Ihre Notizen
 
 ```markdown
+
 # Meine Python REPL Experimente
 
 ## 5 Interessante Entdeckungen
@@ -185,15 +207,19 @@ Probieren Sie eigene Ideen aus:
    - Warum das interessant ist: ...
 
 2. [Entdeckung 2]
+
    ...
 
 3. [Entdeckung 3]
+
    ...
 
 4. [Entdeckung 4]
+
    ...
 
 5. [Entdeckung 5]
+
    ...
 
 ## 3 Dinge, die ich nicht verstehe
@@ -203,15 +229,17 @@ Probieren Sie eigene Ideen aus:
    - Was unklar ist: ...
 
 2. [Unklarheit 2]
+
    ...
 
 3. [Unklarheit 3]
+
    ...
 
 ## Screenshots
 
 [Hier Screenshots Ihrer interessantesten Experimente einfügen]
-```
+```text
 
 ## ✅ Checkliste
 
@@ -237,14 +265,14 @@ Drücken Sie Tab nach einem Punkt, um verfügbare Methoden zu sehen:
 
 ```python
 >>> "text".  # Jetzt Tab drücken
-```
+```text
 
 ### Tipp 3: Hilfe nutzen
 
 ```python
 >>> help(str)
 >>> help(list.append)
-```
+```text
 
 ### Tipp 4: Verlauf nutzen
 
@@ -255,12 +283,15 @@ Mit Pfeiltasten ↑↓ können Sie vorherige Befehle wiederholen.
 ### Problem: REPL startet nicht
 
 ```bash
+
 # Prüfen Sie die Python-Installation
+
 python --version
 
-# Oder versuchen Sie:
+# Oder versuchen Sie
+
 python3 --version
-```
+```text
 
 ### Problem: Syntax-Fehler
 
@@ -270,10 +301,12 @@ Das ist normal beim Lernen! Lesen Sie die Fehlermeldung genau.
 
 ```python
 >>> exit()
+
 # Oder Ctrl+D (Mac/Linux) / Ctrl+Z (Windows)
-```
+
+```text
 
 ---
 
-**Weiter zu:** [KI-Erklärungen](./ki-erklaerungen.md)  
+**Weiter zu:** [KI-Erklärungen](./ki-erklaerungen.md)
 **Zurück zu:** [Leseauftrag](./leseauftrag.md)

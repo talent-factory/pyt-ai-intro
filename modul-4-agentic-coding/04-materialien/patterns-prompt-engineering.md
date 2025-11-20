@@ -10,7 +10,7 @@ Bewährte Patterns für effektives Prompt Engineering.
 Du bist ein [ROLLE] mit [EXPERTISE].
 
 [AUFGABE]
-```
+```text
 
 ### Beispiel
 
@@ -18,12 +18,14 @@ Du bist ein [ROLLE] mit [EXPERTISE].
 Du bist ein Senior Python-Entwickler mit 10 Jahren Erfahrung in Web-Entwicklung und Security.
 
 Erstelle eine sichere Login-Funktion mit:
+
 - Password Hashing (bcrypt)
 - Rate Limiting
 - Session Management
-```
 
-### Wann nutzen?
+```text
+
+### Wann nutzen
 
 - Für spezifische Expertise
 - Wenn Kontext wichtig ist
@@ -35,6 +37,7 @@ Erstelle eine sichere Login-Funktion mit:
 
 ```text
 Kontext:
+
 - [PROJEKT-INFO]
 - [TECHNOLOGIE]
 - [CONSTRAINTS]
@@ -43,13 +46,16 @@ Aufgabe:
 [SPEZIFIKATION]
 
 Constraints:
+
 - [EINSCHRÄNKUNGEN]
-```
+
+```text
 
 ### Beispiel
 
 ```text
 Kontext:
+
 - E-Commerce-Plattform
 - Python 3.11, FastAPI, PostgreSQL
 - 10.000+ Nutzer täglich
@@ -58,10 +64,12 @@ Aufgabe:
 Implementiere Warenkorb-Funktionalität
 
 Constraints:
+
 - Muss skalierbar sein
 - Redis für Caching
 - Maximale Response-Zeit: 100ms
-```
+
+```text
 
 ## 3. Chain-of-Thought
 
@@ -69,23 +77,26 @@ Constraints:
 
 ```text
 Erkläre Schritt für Schritt:
+
 1. [SCHRITT 1]
 2. [SCHRITT 2]
+
 ...
 
 Dann implementiere die Lösung.
-```
+```text
 
 ### Beispiel
 
 ```text
 Erkläre Schritt für Schritt wie man einen LRU Cache implementiert:
+
 1. Welche Datenstruktur?
 2. Welche Operationen?
 3. Wie O(1) erreichen?
 
 Dann implementiere in Python.
-```
+```text
 
 ## 4. Few-Shot Learning
 
@@ -102,7 +113,7 @@ Beispiel 2:
 
 Jetzt für:
 [NEUE AUFGABE]
-```
+```text
 
 ## 5. Iterative Refinement
 
@@ -113,7 +124,7 @@ Iteration 1: Basis-Implementierung
 Iteration 2: Feature X hinzufügen
 Iteration 3: Optimieren
 Iteration 4: Edge Cases
-```
+```text
 
 ---
 

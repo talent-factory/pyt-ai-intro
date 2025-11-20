@@ -1,7 +1,7 @@
 # Übung 4: Einfacher Taschenrechner
 
-**Dauer:** 25 Minuten  
-**Lektion:** 4  
+**Dauer:** 25 Minuten
+**Lektion:** 4
 **Ziel:** Erste vollständige Anwendung mit KI entwickeln
 
 ## 🎯 Lernziel
@@ -44,28 +44,32 @@ Der Taschenrechner soll folgende Operationen unterstützen:
 Nutzen Sie das Prompt-Template aus Lektion 3:
 
 ```text
-[Aufgabe]: 
+[Aufgabe]:
 Erstelle einen einfachen Taschenrechner in Python
 
-[Kontext]: 
-Ich möchte die Grundrechenarten üben und ein interaktives 
+[Kontext]:
+Ich möchte die Grundrechenarten üben und ein interaktives
 Programm erstellen
 
 [Anforderungen]:
+
 - [Hier Ihre Anforderungen auflisten]
 
 [Beispiel]:
+
 - [Hier Beispiel-Interaktion zeigen]
 
 [Einschränkungen]:
+
 - [Hier Einschränkungen nennen]
-```
+
+```text
 
 **Ihr vollständiger Prompt:**
 
 ```text
 [Hier Ihren Prompt schreiben]
-```
+```text
 
 ### Schritt 2: Code generieren (5 Min.)
 
@@ -98,7 +102,7 @@ Eingabe: 5 + 3
 Erwartete Ausgabe: 8
 Tatsächliche Ausgabe: ___
 Status: [ ] Bestanden [ ] Fehlgeschlagen
-```
+```text
 
 #### Testfall 2: Subtraktion
 
@@ -107,7 +111,7 @@ Eingabe: 10 - 4
 Erwartete Ausgabe: 6
 Tatsächliche Ausgabe: ___
 Status: [ ] Bestanden [ ] Fehlgeschlagen
-```
+```text
 
 #### Testfall 3: Multiplikation
 
@@ -116,7 +120,7 @@ Eingabe: 7 * 2
 Erwartete Ausgabe: 14
 Tatsächliche Ausgabe: ___
 Status: [ ] Bestanden [ ] Fehlgeschlagen
-```
+```text
 
 #### Testfall 4: Division
 
@@ -125,7 +129,7 @@ Eingabe: 15 / 3
 Erwartete Ausgabe: 5
 Tatsächliche Ausgabe: ___
 Status: [ ] Bestanden [ ] Fehlgeschlagen
-```
+```text
 
 #### Testfall 5: Division durch Null
 
@@ -134,7 +138,7 @@ Eingabe: 10 / 0
 Erwartete Ausgabe: Fehlermeldung (kein Crash!)
 Tatsächliche Ausgabe: ___
 Status: [ ] Bestanden [ ] Fehlgeschlagen
-```
+```text
 
 #### Testfall 6: Ungültige Eingabe
 
@@ -143,7 +147,7 @@ Eingabe: abc
 Erwartete Ausgabe: Fehlermeldung (kein Crash!)
 Tatsächliche Ausgabe: ___
 Status: [ ] Bestanden [ ] Fehlgeschlagen
-```
+```text
 
 #### Testfall 7: Beenden
 
@@ -152,27 +156,33 @@ Eingabe: quit
 Erwartete Ausgabe: Programm endet
 Tatsächliche Ausgabe: ___
 Status: [ ] Bestanden [ ] Fehlgeschlagen
-```
+```text
 
 ### Schritt 5: Git Commit (5 Min.)
 
 ```bash
+
 # Falls noch kein Repository: initialisieren
+
 git init
 
 # .gitignore erstellen (falls noch nicht vorhanden)
+
 echo "__pycache__/" > .gitignore
 echo "*.pyc" >> .gitignore
 
 # Dateien hinzufügen
+
 git add taschenrechner.py .gitignore
 
 # Commit erstellen
+
 git commit -m "feat: Einfacher Taschenrechner mit Grundrechenarten"
 
 # Prüfen
+
 git log --oneline
-```
+```text
 
 ## ✅ Checkliste
 
@@ -194,7 +204,7 @@ Erweitern Sie den Taschenrechner für Dezimalzahlen:
 ```text
 Eingabe: 5.5 + 2.3
 Ausgabe: 7.8
-```
+```text
 
 ### Bonus 2: Mehr Operationen
 
@@ -222,7 +232,7 @@ Zweite Zahl: 3
 --------------------------------
 Ergebnis: 5 + 3 = 8
 ================================
-```
+```text
 
 ## 🆘 Troubleshooting
 
@@ -250,9 +260,9 @@ Ergebnis: 5 + 3 = 8
 Fragen Sie die KI:
 
 ```text
-Wie kann ich in meinem Taschenrechner-Code die Division 
+Wie kann ich in meinem Taschenrechner-Code die Division
 durch Null abfangen und eine Fehlermeldung ausgeben?
-```
+```text
 
 ## 🎓 Reflexion
 
@@ -267,7 +277,7 @@ durch Null abfangen und eine Fehlermeldung ausgeben?
 
 ```text
 [Hier Ihre Gedanken notieren]
-```
+```text
 
 ## 📎 Dateien
 

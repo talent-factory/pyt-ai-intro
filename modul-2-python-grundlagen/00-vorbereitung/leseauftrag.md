@@ -1,6 +1,6 @@
 # Leseauftrag - Modul 2
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** Grundlegende Python-Syntax verstehen
 
 ## 📚 Aufgabe 1: Python-Tutorial (30 Min.)
@@ -92,7 +92,7 @@ Falls nicht: Was fällt Ihnen an Python auf?
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 2: Intuition vs. Verwirrung
 
@@ -100,7 +100,7 @@ Was erscheint Ihnen intuitiv, was eher verwirrend?
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 3: Wichtigste Erkenntnis
 
@@ -108,23 +108,28 @@ Was ist die wichtigste Sache, die Sie aus dem Leseauftrag mitgenommen haben?
 
 ```text
 [Hier Ihre Antwort]
-```
+```text
 
 ### Frage 4: Offene Fragen
 
 Welche 3 Fragen haben Sie nach dem Leseauftrag?
 
 1. ```text
+
    [Frage 1]
-   ```
+
+```text
 
 2. ```text
+
    [Frage 2]
-   ```
+```text
 
 3. ```text
+
    [Frage 3]
-   ```
+
+```text
 
 ## ✅ Checkliste
 
@@ -163,5 +168,5 @@ Falls Sie mehr Zeit haben:
 
 ---
 
-**Weiter zu:** [REPL Experimente](./repl-experimente.md)  
+**Weiter zu:** [REPL Experimente](./repl-experimente.md)
 **Zurück zu:** [Vorbereitung README](./README.md)

@@ -23,17 +23,17 @@ Für jede Lektion benötigt:
   - Theorie: Was ist Programmieren, Rolle von KI
   - Live-Demo: Problem mit/ohne KI
   - Übung: Einkaufsliste durchdenken (15 Min.)
-  
+
 - **lektion-2-setup-git.md**
   - Theorie: VS Code, Git-Grundlagen, uv
   - Live-Demo: Repository erstellen
   - Übung: Git-Repository erstellen (20 Min.)
-  
+
 - **lektion-3-prompting.md**
   - Theorie: Prompt Engineering, Best Practices
   - Live-Demo: Prompt-Iteration
   - Übung: Prompting-Challenge (20 Min.)
-  
+
 - **lektion-4-idee-zur-app.md**
   - Theorie: Entwicklungsworkflow, Code-Review, Debugging
   - Live-Demo: Kleine Anwendung von Grund auf
@@ -45,17 +45,17 @@ Für jede Lektion benötigt:
   - Aufgabenstellung
   - Hilfestellungen
   - Diskussionspunkte
-  
+
 - **uebung-2-git-repository.md**
   - Schritt-für-Schritt-Anleitung
   - Checkliste
   - Troubleshooting
-  
+
 - **uebung-3-prompting-challenge.md**
   - 2-3 Programmieraufgaben
   - Bewertungskriterien für Prompts
   - Beispiel-Prompts
-  
+
 - **uebung-4-taschenrechner.md** - Aufgabenstellung
 - **uebung-4-taschenrechner-loesung.py** - Musterlösung
 - **uebung-4-taschenrechner-erweitert.py** - Erweiterte Version (optional)
@@ -66,17 +66,17 @@ Für jede Lektion benötigt:
 - **aufgabe-1-prompt-portfolio.md**
   - 10 effektive Prompts dokumentieren
   - Template für Dokumentation
-  
+
 - **aufgabe-2-projekt-setup.md**
   - Git-Repository erstellen
   - 3+ Python-Dateien
   - README, requirements.txt
-  
+
 - **aufgabe-3-code-review.md**
   - Code-Beispiel (bereitzustellen)
   - Review-Checkliste
   - Dokumentationstemplate
-  
+
 - **reflexion.md**
   - 5 Reflexionsfragen (min. 300 Wörter)
   - Template
@@ -87,18 +87,18 @@ Für jede Lektion benötigt:
   - Problemdekomposition
   - Algorithmisches Denken
   - Abstraktion
-  
+
 - **handout-git-grundlagen.md**
   - Git-Workflow
   - Wichtigste Befehle
   - Best Practices
-  
+
 - **prompt-engineering-guide.md**
   - Gute vs. schlechte Prompts
   - Kontext bereitstellen
   - Iteratives Verfeinern
   - Templates
-  
+
 - **cheatsheet-git.md**
   - Schnellreferenz Git-Befehle
   - Häufige Workflows

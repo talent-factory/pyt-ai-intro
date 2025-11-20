@@ -5,6 +5,7 @@ Umfassender Leitfaden für Funktionen in Python aus Modul 2.
 ## 🎯 Lernziele
 
 Nach diesem Handout können Sie:
+
 - Funktionen definieren und aufrufen
 - Parameter und Rückgabewerte verwenden
 - Docstrings schreiben
@@ -20,8 +21,9 @@ def gruss():
     print("Hallo Welt!")
 
 # Aufruf
+
 gruss()  # Ausgabe: Hallo Welt!
-```
+```text
 
 ### Funktion mit Parameter
 
@@ -30,7 +32,7 @@ def gruss(name):
     print(f"Hallo {name}!")
 
 gruss("Anna")  # Ausgabe: Hallo Anna!
-```
+```text
 
 ### Funktion mit Rückgabewert
 
@@ -39,7 +41,7 @@ def addiere(a, b):
     return a + b
 
 ergebnis = addiere(5, 3)  # 8
-```
+```text
 
 ## 📝 Parameter
 
@@ -50,7 +52,7 @@ def vollstaendiger_name(vorname, nachname):
     return f"{vorname} {nachname}"
 
 vollstaendiger_name("Anna", "Müller")  # "Anna Müller"
-```
+```text
 
 ### Keyword-Parameter
 
@@ -59,8 +61,9 @@ def beschreibe_person(name, alter, stadt):
     return f"{name}, {alter} Jahre, aus {stadt}"
 
 # Mit Keywords (Reihenfolge egal)
+
 beschreibe_person(stadt="Zürich", name="Anna", alter=25)
-```
+```text
 
 ### Default-Werte
 
@@ -75,7 +78,7 @@ def gruss(name, sprache="DE"):
 
 gruss("Anna")           # "Hallo Anna" (Default)
 gruss("Anna", "EN")     # "Hello Anna"
-```
+```text
 
 ### *args (Variable Positional Arguments)
 
@@ -86,7 +89,7 @@ def summe(*zahlen):
 
 summe(1, 2, 3)        # 6
 summe(1, 2, 3, 4, 5)  # 15
-```
+```text
 
 ### **kwargs (Variable Keyword Arguments)
 
@@ -97,10 +100,14 @@ def person_info(**infos):
         print(f"{key}: {value}")
 
 person_info(name="Anna", alter=25, stadt="Zürich")
+
 # name: Anna
+
 # alter: 25
+
 # stadt: Zürich
-```
+
+```text
 
 ### Kombiniert
 
@@ -118,11 +125,16 @@ def funktion(a, b, *args, key1="default", **kwargs):
     print(f"kwargs: {kwargs}")
 
 funktion(1, 2, 3, 4, key1="wert", key2="extra")
+
 # a: 1, b: 2
+
 # args: (3, 4)
+
 # key1: wert
+
 # kwargs: {'key2': 'extra'}
-```
+
+```text
 
 ## 🔙 Return Statement
 
@@ -133,7 +145,7 @@ def quadrat(x):
     return x ** 2
 
 ergebnis = quadrat(5)  # 25
-```
+```text
 
 ### Mehrere Rückgabewerte (Tuple)
 
@@ -144,7 +156,7 @@ def teile_mit_rest(dividend, divisor):
     return quotient, rest
 
 q, r = teile_mit_rest(17, 5)  # q=3, r=2
-```
+```text
 
 ### Früher Return
 
@@ -153,17 +165,18 @@ def ist_positiv(zahl):
     if zahl <= 0:
         return False
     return True
-```
+```text
 
 ### Kein Return (implizit None)
 
 ```python
 def print_nachricht(text):
     print(text)
+
     # Kein return → gibt None zurück
 
 ergebnis = print_nachricht("Hallo")  # None
-```
+```text
 
 ## 📚 Type Hints
 
@@ -178,7 +191,7 @@ def gruss(name: str) -> str:
 
 def ist_erwachsen(alter: int) -> bool:
     return alter >= 18
-```
+```text
 
 ### Listen und Dictionaries
 
@@ -195,9 +208,11 @@ def koordinaten() -> Tuple[float, float]:
     return (3.14, 2.71)
 
 def finde_person(name: str) -> Optional[Dict[str, any]]:
+
     # Optional bedeutet: Dict oder None
+
     return None  # Wenn nicht gefunden
-```
+```text
 
 ### Union Types
 
@@ -208,9 +223,10 @@ def formatiere_wert(wert: Union[int, float, str]) -> str:
     return str(wert)
 
 # Ab Python 3.10: Syntax mit |
+
 def formatiere_wert(wert: int | float | str) -> str:
     return str(wert)
-```
+```text
 
 ## 📖 Docstrings
 
@@ -240,7 +256,7 @@ def berechne_flaeche(laenge: float, breite: float) -> float:
     if laenge < 0 or breite < 0:
         raise ValueError("Länge und Breite müssen positiv sein")
     return laenge * breite
-```
+```text
 
 ### NumPy Style
 
@@ -267,7 +283,7 @@ def berechne_flaeche(laenge, breite):
     15.0
     """
     return laenge * breite
-```
+```text
 
 ### Einzeiler
 
@@ -275,41 +291,53 @@ def berechne_flaeche(laenge, breite):
 def quadrat(x):
     """Gibt das Quadrat von x zurück."""
     return x ** 2
-```
+```text
 
 ## 🔧 Lambda-Funktionen
 
 ### Grundsyntax
 
 ```python
+
 # Normale Funktion
+
 def quadrat(x):
     return x ** 2
 
 # Als Lambda
+
 quadrat = lambda x: x ** 2
 
 # Verwendung
+
 quadrat(5)  # 25
-```
+```text
 
 ### Praktische Anwendungen
 
 ```python
+
 # Mit sorted()
+
 paare = [(1, 'eins'), (3, 'drei'), (2, 'zwei')]
 sortiert = sorted(paare, key=lambda x: x[0])
+
 # [(1, 'eins'), (2, 'zwei'), (3, 'drei')]
 
 # Mit map()
+
 zahlen = [1, 2, 3, 4, 5]
 quadrate = list(map(lambda x: x**2, zahlen))
+
 # [1, 4, 9, 16, 25]
 
 # Mit filter()
+
 gerade = list(filter(lambda x: x % 2 == 0, zahlen))
+
 # [2, 4]
-```
+
+```text
 
 ## 🎯 Scope und Namespaces
 
@@ -324,8 +352,10 @@ def funktion():
     print(lokal_var)
 
 funktion()
+
 # print(lokal_var)  # NameError! Nicht ausserhalb sichtbar
-```
+
+```text
 
 ### Global Keyword
 
@@ -338,7 +368,7 @@ def inkrementiere():
 
 inkrementiere()
 print(zaehler)  # 1
-```
+```text
 
 ### Nonlocal Keyword
 
@@ -352,26 +382,35 @@ def aeussere():
 
     innere()
     print(x)  # "innen"
-```
+```text
 
 ## 🏗️ Funktions-Design Best Practices
 
 ### 1. Single Responsibility Principle
 
 ```python
+
 # ❌ Schlecht: Funktion macht zu viel
+
 def verarbeite_daten_und_speichere(daten, dateiname):
+
     # Validierung
+
     if not daten:
         raise ValueError("Keine Daten")
+
     # Verarbeitung
+
     verarbeitet = [d * 2 for d in daten]
+
     # Speichern
+
     with open(dateiname, 'w') as f:
         for d in verarbeitet:
             f.write(str(d) + '\n')
 
 # ✅ Gut: Aufgeteilt in separate Funktionen
+
 def validiere_daten(daten):
     if not daten:
         raise ValueError("Keine Daten")
@@ -383,17 +422,22 @@ def speichere_daten(daten, dateiname):
     with open(dateiname, 'w') as f:
         for d in daten:
             f.write(str(d) + '\n')
-```
+```text
 
 ### 2. Kurze Funktionen (max. 20-30 Zeilen)
 
 ```python
+
 # ❌ Zu lang
+
 def grosse_funktion():
-    # 100 Zeilen Code...
+
+    # 100 Zeilen Code
+
     pass
 
 # ✅ In kleinere Funktionen aufteilen
+
 def teilfunktion1():
     pass
 
@@ -403,35 +447,41 @@ def teilfunktion2():
 def hauptfunktion():
     teilfunktion1()
     teilfunktion2()
-```
+```text
 
 ### 3. Aussagekräftige Namen
 
 ```python
+
 # ❌ Schlecht
+
 def f(x, y):
     return x + y
 
 # ✅ Gut
+
 def addiere_zahlen(erste_zahl, zweite_zahl):
     return erste_zahl + zweite_zahl
-```
+```text
 
 ### 4. Vermeide Seiteneffekte
 
 ```python
+
 # ❌ Schlecht: Ändert globalen Zustand
+
 ergebnisse = []
 
 def addiere_zu_ergebnissen(wert):
     ergebnisse.append(wert)  # Seiteneffekt!
 
 # ✅ Gut: Pure Function
+
 def addiere_zu_liste(liste, wert):
     neue_liste = liste.copy()
     neue_liste.append(wert)
     return neue_liste
-```
+```text
 
 ### 5. Defensive Programmierung
 
@@ -446,7 +496,7 @@ def dividiere(dividend, divisor):
         raise ValueError("Division durch 0 nicht erlaubt")
 
     return dividend / divisor
-```
+```text
 
 ## 🎨 Dekoratoren (Fortgeschritten)
 
@@ -465,11 +515,16 @@ def sag_hallo():
     print("Hallo!")
 
 sag_hallo()
-# Ausgabe:
+
+# Ausgabe
+
 # Vor der Funktion
-# Hallo!
+
+# Hallo
+
 # Nach der Funktion
-```
+
+```text
 
 ### Timer-Dekorator
 
@@ -489,14 +544,16 @@ def timer(func):
 def langsame_funktion():
     time.sleep(1)
     return "Fertig"
-```
+```text
 
 ## 🐛 Häufige Fehler
 
 ### 1. Mutable Default Arguments
 
 ```python
-# ❌ BUG!
+
+# ❌ BUG
+
 def add_item(item, liste=[]):
     liste.append(item)
     return liste
@@ -505,26 +562,30 @@ add_item(1)  # [1]
 add_item(2)  # [1, 2] <- Unerwartet!
 
 # ✅ Richtig
+
 def add_item(item, liste=None):
     if liste is None:
         liste = []
     liste.append(item)
     return liste
-```
+```text
 
 ### 2. Vergessenes Return
 
 ```python
+
 # ❌ Falsch
+
 def addiere(a, b):
     a + b  # Kein return!
 
 ergebnis = addiere(5, 3)  # None
 
 # ✅ Richtig
+
 def addiere(a, b):
     return a + b
-```
+```text
 
 ### 3. Global ohne global Keyword
 
@@ -532,14 +593,16 @@ def addiere(a, b):
 zaehler = 0
 
 # ❌ Falsch
+
 def inkrementiere():
     zaehler += 1  # UnboundLocalError!
 
 # ✅ Richtig
+
 def inkrementiere():
     global zaehler
     zaehler += 1
-```
+```text
 
 ## 📊 Code-Beispiel: Vollständige Funktion
 
@@ -570,7 +633,9 @@ def berechne_durchschnitt(zahlen: List[float], runden: bool = True) -> Optional[
         >>> berechne_durchschnitt([])
         None
     """
+
     # Validierung
+
     if not isinstance(zahlen, list):
         raise TypeError("zahlen muss eine Liste sein")
 
@@ -581,9 +646,11 @@ def berechne_durchschnitt(zahlen: List[float], runden: bool = True) -> Optional[
         raise ValueError("Alle Elemente müssen Zahlen sein")
 
     # Berechnung
+
     durchschnitt = sum(zahlen) / len(zahlen)
 
     # Runden wenn gewünscht
+
     if runden:
         durchschnitt = round(durchschnitt, 2)
 
@@ -591,12 +658,13 @@ def berechne_durchschnitt(zahlen: List[float], runden: bool = True) -> Optional[
 
 
 # Tests
+
 if __name__ == "__main__":
     assert berechne_durchschnitt([1, 2, 3, 4, 5]) == 3.0
     assert berechne_durchschnitt([1.5, 2.5, 3.5], runden=False) == 2.5
     assert berechne_durchschnitt([]) is None
     print("✓ Alle Tests bestanden")
-```
+```text
 
 ## 🎓 Zusammenfassung
 

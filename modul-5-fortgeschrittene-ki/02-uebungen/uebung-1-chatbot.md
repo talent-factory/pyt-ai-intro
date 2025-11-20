@@ -16,6 +16,7 @@ Erstellen Sie einen Chatbot mit Persönlichkeit und Kontext-Management.
 Erstelle einen Python-Chatbot mit OpenAI API:
 
 Features:
+
 1. System-Prompt für Persönlichkeit
 2. Kontext-Management (letzte N Nachrichten)
 3. Streaming-Responses
@@ -23,6 +24,7 @@ Features:
 5. Kosten-Tracking
 
 Anforderungen:
+
 - Klasse ChatBot
 - Methode chat(message: str) -> str
 - Methode reset()
@@ -31,6 +33,7 @@ Anforderungen:
 
 Beispiel:
 ```python
+
 bot = ChatBot(
     system_prompt="Du bist ein Python-Tutor",
     model="gpt-3.5-turbo",
@@ -40,10 +43,11 @@ bot = ChatBot(
 response = bot.chat("Erkläre List Comprehensions")
 print(response)
 print(f"Kosten: ${bot.get_cost():.4f}")
-```
+
+```text
 
 Mit Type Hints, Docstrings und Error Handling.
-```
+```text
 
 ## Erwartetes Ergebnis
 

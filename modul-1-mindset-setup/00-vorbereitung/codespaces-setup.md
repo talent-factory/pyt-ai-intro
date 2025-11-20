@@ -3,7 +3,7 @@
 **Zeitaufwand:** 10 Minuten
 **Ziel:** Cloud-basierte Entwicklungsumgebung ohne lokale Installation
 
-## 🎯 Was ist GitHub Codespaces?
+## 🎯 Was ist GitHub Codespaces
 
 GitHub Codespaces ist eine **vollständig konfigurierte Cloud-IDE** direkt in deinem Browser:
 
@@ -55,14 +55,18 @@ GitHub Codespaces ist eine **vollständig konfigurierte Cloud-IDE** direkt in de
 ### Schritt 3: Testen (1 Min.)
 
 ```bash
+
 # Terminal öffnen: Ctrl+` (Backtick)
+
 python --version
+
 # Sollte: Python 3.13.x
 
 # Erstes Programm
+
 echo 'print("Hello from Codespaces!")' > test.py
 python test.py
-```
+```text
 
 ---
 
@@ -79,16 +83,21 @@ python test.py
 ### Erste Aufgabe zum Testen
 
 ```bash
+
 # 1. Terminal öffnen: Ctrl+`
+
 # 2. Erstelle eine interaktive Datei
+
 echo 'name = input("Wie heisst du? ")
 print(f"Hallo {name}!")' > hello.py
 
 # 3. Führe aus
+
 python hello.py
 
 # 4. Gib deinen Namen ein
-```
+
+```text
 
 ---
 
@@ -147,9 +156,11 @@ Wenn du einen Server startest (Flask, FastAPI):
 
 ```bash
 python -m flask run
+
 # Oder
+
 uvicorn main:app --reload
-```
+```text
 
 → Codespaces zeigt automatisch einen Link zum Öffnen im Browser
 
@@ -217,7 +228,7 @@ uvicorn main:app --reload
 
 ---
 
-## ✅ Fertig?
+## ✅ Fertig
 
 Dein Codespace ist bereit! Du kannst jetzt:
 
@@ -227,6 +238,7 @@ Dein Codespace ist bereit! Du kannst jetzt:
 - ✅ Mit KI-Tools arbeiten
 
 **Nächste Schritte:**
+
 - 👉 [Erste Schritte mit KI](./erste-schritte.md)
 - 👉 [Leseauftrag](./leseauftrag.md)
 - 👉 [Lokale Installation (optional)](./installationsanleitung.md)

@@ -41,7 +41,7 @@ Jede Transaktion sollte folgende Informationen enthalten:
     "betrag": 45.50,             # Float
     "beschreibung": "Wocheneinkauf"
 }
-```
+```text
 
 ## ✅ Muss-Kriterien (erforderlich für 70% der Punkte)
 
@@ -128,19 +128,19 @@ Ausgaben nach Kategorie:
   Lebensmittel:    45.50 €  (5.1%)
 
 Durchschnittliche Ausgabe: 447.75 €
-```
+```text
 
 ## 🛠️ Technische Anforderungen
 
 ### Projektstruktur
 
-```
+```text
 aufgabe-1-finanztracker/
 ├── finanztracker.py       # Hauptprogramm
 ├── finanzen.json          # Datendatei (wird automatisch erstellt)
 ├── README.md              # Anleitung und Dokumentation
 └── requirements.txt       # (leer, keine externen Pakete nötig)
-```
+```text
 
 ### Empfohlene Funktionsstruktur
 
@@ -175,7 +175,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-```
+```text
 
 ## 💡 Hinweise und Tipps
 
@@ -210,63 +210,77 @@ if __name__ == "__main__":
 ### Nützliche Python-Funktionen
 
 ```python
+
 # Datum
+
 from datetime import date
 heute = date.today().isoformat()  # "2025-01-15"
 
 # Formatierung
+
 betrag_formatiert = f"{betrag:.2f} €"  # "45.50 €"
 
 # Tabelle (mit festen Breiten)
+
 print(f"{id:3} | {datum:10} | {typ:8} | {betrag:>10.2f} €")
 
 # JSON
+
 import json
 with open("finanzen.json", "w") as datei:
     json.dump(transaktionen, datei, indent=2)
 
 # Statistiken
+
 kategorien = {}
 for t in transaktionen:
     kategorien[t["kategorie"]] = kategorien.get(t["kategorie"], 0) + t["betrag"]
-```
+```text
 
 ### KI-Prompts (Beispiele)
 
 **Für Code-Generierung:**
-```
+
+```text
 Erstelle eine Python-Funktion `transaktion_hinzufuegen`, die:
+
 - Benutzereingaben für Typ, Kategorie, Betrag und Beschreibung abfragt
 - Ein Dictionary mit den Daten und einer auto-inkrementierten ID erstellt
 - Das Dictionary zur übergebenen Liste hinzufügt
 - Fehlerhafte Eingaben (z.B. negative Beträge) abfängt
 - Type Hints und Docstring verwendet
-```
+
+```text
 
 **Für Debugging:**
-```
+
+```text
 Mein Code gibt einen KeyError beim Laden der JSON-Datei.
 Hier ist der relevante Code:
 [Code einfügen]
 
 Was könnte das Problem sein und wie behebe ich es?
-```
+```text
 
 **Für Code-Review:**
-```
+
+```text
 Bitte reviewe diese Funktion und schlage Verbesserungen vor:
 [Code einfügen]
 
 Achte auf:
+
 - Code-Qualität und Lesbarkeit
 - Fehlerbehandlung
 - PEP 8 Konformität
 - Type Hints
-```
+
+```text
 
 ### Häufige Probleme
 
 **Problem:** JSON-Datei existiert beim ersten Start nicht
+
 ```python
 def daten_laden(dateiname: str = "finanzen.json") -> list:
     try:
@@ -274,9 +288,10 @@ def daten_laden(dateiname: str = "finanzen.json") -> list:
             return json.load(datei)
     except FileNotFoundError:
         return []  # Leere Liste zurückgeben
-```
+```text
 
 **Problem:** Benutzer gibt ungültigen Betrag ein
+
 ```python
 while True:
     try:
@@ -287,49 +302,61 @@ while True:
         break
     except ValueError:
         print("❌ Bitte eine gültige Zahl eingeben!")
-```
+```text
 
 **Problem:** Auto-inkrementierende ID
+
 ```python
 def naechste_id(transaktionen: list) -> int:
     if not transaktionen:
         return 1
     return max(t["id"] for t in transaktionen) + 1
-```
+```text
 
 ## 📝 README-Vorlage
 
 Ihr `README.md` sollte mindestens enthalten:
 
 ```markdown
+
 # Persönlicher Finanztracker
 
 ## Beschreibung
+
 [Kurze Beschreibung des Programms]
 
 ## Installation
+
 ```bash
+
 # Keine externe Dependencies
+
 python finanztracker.py
-```
+
+```text
 
 ## Verwendung
+
 [Schritte zur Benutzung]
 
 ## Features
+
 - [ ] Transaktionen hinzufügen
 - [ ] Statistiken anzeigen
 - [ ] ...
 
 ## KI-Nutzung
+
 [Dokumentieren Sie, wie Sie KI eingesetzt haben]
 
 ## Lernerkenntnisse
+
 [Was haben Sie gelernt?]
 
 ## Autor
+
 [Ihr Name]
-```
+```text
 
 ## 🎯 Selbsttest vor Abgabe
 
@@ -352,6 +379,7 @@ Prüfen Sie folgende Punkte:
 ## 🤝 Hilfe und Support
 
 Bei Fragen:
+
 1. Nutzen Sie KI-Tools (Claude, ChatGPT) für spezifische Probleme
 2. Konsultieren Sie die Python-Dokumentation
 3. Fragen Sie im Kurs-Forum
