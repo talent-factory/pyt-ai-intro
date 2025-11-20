@@ -19,9 +19,9 @@
 **Lektion:** 3  
 **Ziel:** Effektive Prompts formulieren lernen
 
-### [Übung 4: Einfacher Taschenrechner](./uebung-4-taschenrechner/)
-**Dauer:** 25 Minuten  
-**Lektion:** 4  
+### [Übung 4: Einfacher Taschenrechner](./uebung-4-taschenrechner.md)
+**Dauer:** 25 Minuten
+**Lektion:** 4
 **Ziel:** Erste vollständige Anwendung mit KI entwickeln
 
 ## 🎯 Lernziele

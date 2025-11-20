@@ -56,10 +56,9 @@ Für jede Lektion benötigt:
   - Bewertungskriterien für Prompts
   - Beispiel-Prompts
   
-- **uebung-4-taschenrechner/**
-  - README.md - Aufgabenstellung
-  - loesung-beispiel.py - Musterlösung
-  - loesung-erweitert.py - Erweiterte Version (optional)
+- **uebung-4-taschenrechner.md** - Aufgabenstellung
+- **uebung-4-taschenrechner-loesung.py** - Musterlösung
+- **uebung-4-taschenrechner-erweitert.py** - Erweiterte Version (optional)
 
 ### 03-nachbearbeitung/ (Hausaufgaben)
 

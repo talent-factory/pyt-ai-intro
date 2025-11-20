@@ -13,7 +13,7 @@
 - KI als Werkzeug vs. Ersatz
 - Live-Demo: Problem mit/ohne KI
 
-**Übung:** Einkaufsliste durchdenken (15 Min.)
+**Übung:** [Einkaufsliste durchdenken](../02-uebungen/uebung-1-einkaufsliste.md) (15 Min.)
 
 ---
 
@@ -26,7 +26,7 @@
 - Git-Grundlagen (init, add, commit, status, log)
 - .gitignore
 
-**Übung:** Git-Repository erstellen (20 Min.)
+**Übung:** [Git-Repository erstellen](../02-uebungen/uebung-2-git-repository.md) (20 Min.)
 
 ---
 
@@ -39,7 +39,7 @@
 - Iteratives Verfeinern
 - Schlechte vs. gute Prompts
 
-**Übung:** Prompting-Challenge (20 Min.)
+**Übung:** [Prompting-Challenge](../02-uebungen/uebung-3-prompting-challenge.md) (20 Min.)
 
 ---
 
@@ -52,7 +52,7 @@
 - Debugging-Strategien
 - Live-Coding: Kleine Anwendung
 
-**Übung:** Einfacher Taschenrechner (25 Min.)
+**Übung:** [Einfacher Taschenrechner](../02-uebungen/uebung-4-taschenrechner.md) (25 Min.)
 
 ---
 
@@ -95,13 +95,13 @@ Nach den 4 Lektionen können die Studierenden:
 
 | Zeit | Aktivität | Raum |
 |------|-----------|------|
-| 09:00-09:50 | Lektion 1: Einführung & Mindset | A101 |
-| 09:50-10:00 | Pause | - |
-| 10:00-10:50 | Lektion 2: Setup & Git | A101 |
-| 10:50-11:00 | Pause | - |
-| 11:00-11:50 | Lektion 3: Prompting | A101 |
-| 11:50-12:00 | Pause | - |
-| 12:00-12:50 | Lektion 4: Idee zur App | A101 |
+| 18:00-18:50 | Lektion 1: Einführung & Mindset | A101 |
+| 18:50-19:00 | Pause | - |
+| 19:00-19:50 | Lektion 2: Setup & Git | A101 |
+| 19:50-20:00 | Pause | - |
+| 20:00-20:50 | Lektion 3: Prompting | A101 |
+| 20:50-21:00 | Pause | - |
+| 21:00-21:50 | Lektion 4: Idee zur App | A101 |
 
 *Zeiten sind Beispiele - an Ihren Stundenplan anpassen*
 
