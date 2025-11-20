@@ -22,7 +22,7 @@ Für jeden Mode:
 - Ein Beispiel
 
 Erkläre es so, als wäre ich Anfänger.
-```text
+```
 
 ### Dokumentation
 
@@ -30,13 +30,13 @@ Erkläre es so, als wäre ich Anfänger.
 
 ```text
 [Kopieren Sie die KI-Antwort hier ein und fügen Sie eigene Notizen hinzu]
-```text
+```
 
 **Eigene Zusammenfassung (3 Sätze):**
 
 ```text
 [Ihre Zusammenfassung]
-```text
+```
 
 ## Erklärung 2: CSV vs. JSON (15 Min.)
 
@@ -53,7 +53,7 @@ Vergleiche:
 - Beispiele für Use Cases
 
 Erstelle auch eine Vergleichstabelle.
-```text
+```
 
 ### Dokumentation
 
@@ -61,7 +61,7 @@ Erstelle auch eine Vergleichstabelle.
 
 ```text
 [Kopieren Sie die KI-Antwort hier ein]
-```text
+```
 
 **Eigene Entscheidungsmatrix:**
 
@@ -76,7 +76,7 @@ Erstelle auch eine Vergleichstabelle.
 
 ```text
 [Ihre Überlegungen]
-```text
+```
 
 ## Erklärung 3: Exception Handling (15 Min.)
 
@@ -94,7 +94,7 @@ Themen:
 - Häufige Fehler beim Exception Handling
 
 Mit Beispielen für Datei-Operationen.
-```text
+```
 
 ### Dokumentation
 
@@ -102,7 +102,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Kopieren Sie die KI-Antwort hier ein]
-```text
+```
 
 **Best Practices (Ihre Liste):**
 
@@ -116,7 +116,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Was sollte man vermeiden?]
-```text
+```
 
 ## 🤔 Reflexionsfragen
 
@@ -126,7 +126,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Ihre Antwort basierend auf KI-Erklärung]
-```text
+```
 
 ### Frage 2
 
@@ -134,7 +134,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ### Frage 3
 
@@ -142,7 +142,7 @@ Mit Beispielen für Datei-Operationen.
 
 ```text
 [Ihre Antwort mit Beispielen]
-```text
+```
 
 ## ✅ Checkliste
 

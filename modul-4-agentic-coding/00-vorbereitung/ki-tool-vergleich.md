@@ -29,7 +29,7 @@ Erstelle eine Python-Klasse für einen Shopping Cart mit:
 - apply_discount(percentage)
 - Mit Type Hints und Docstrings
 
-```text
+```
 
 ### Dokumentation
 
@@ -37,25 +37,25 @@ Erstelle eine Python-Klasse für einen Shopping Cart mit:
 
 ```text
 [ ]
-```text
+```
 
 **Erklärungen (1-5):**
 
 ```text
 [ ]
-```text
+```
 
 **Stärken:**
 
 ```text
 [Was war gut?]
-```text
+```
 
 **Schwächen:**
 
 ```text
 [Was fehlte?]
-```text
+```
 
 ## Tool 2: GitHub Copilot
 
@@ -86,25 +86,25 @@ Schreiben Sie Kommentare und lassen Sie Copilot generieren:
 
 ```text
 [ ]
-```text
+```
 
 **Geschwindigkeit (1-5):**
 
 ```text
 [ ]
-```text
+```
 
 **Stärken:**
 
 ```text
 [Was war gut?]
-```text
+```
 
 **Schwächen:**
 
 ```text
 [Was fehlte?]
-```text
+```
 
 ## Tool 3: Cursor / Windsurf
 
@@ -126,7 +126,7 @@ Refactore die Shopping Cart Klasse:
 - Implementiere Persistence (JSON)
 - Erstelle Unit Tests
 
-```text
+```
 
 ### Dokumentation
 
@@ -134,25 +134,25 @@ Refactore die Shopping Cart Klasse:
 
 ```text
 [ ]
-```text
+```
 
 **Kontext-Verständnis (1-5):**
 
 ```text
 [ ]
-```text
+```
 
 **Stärken:**
 
 ```text
 [Was war gut?]
-```text
+```
 
 **Schwächen:**
 
 ```text
 [Was fehlte?]
-```text
+```
 
 ## Vergleichstabelle
 
@@ -171,19 +171,19 @@ Refactore die Shopping Cart Klasse:
 
 ```text
 [Ihre Empfehlung]
-```text
+```
 
 ### Wann GitHub Copilot
 
 ```text
 [Ihre Empfehlung]
-```text
+```
 
 ### Wann Cursor
 
 ```text
 [Ihre Empfehlung]
-```text
+```
 
 ## 💡 Learnings
 
@@ -191,19 +191,19 @@ Refactore die Shopping Cart Klasse:
 
 ```text
 [Ihre Erkenntnisse]
-```text
+```
 
 ### Welches Tool werden Sie nutzen
 
 ```text
 [Ihre Wahl und warum]
-```text
+```
 
 ### Kombination mehrerer Tools
 
 ```text
 [Ihre Strategie]
-```text
+```
 
 ## ✅ Checkliste
 

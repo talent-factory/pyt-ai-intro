@@ -13,7 +13,7 @@ Reflektieren Sie über Ihre Lernerfahrungen in Modul 3. Beantworten Sie alle 6 F
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 2: File I/O Herausforderungen (ca. 80 Wörter)
 
@@ -21,7 +21,7 @@ Reflektieren Sie über Ihre Lernerfahrungen in Modul 3. Beantworten Sie alle 6 F
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 3: Exception Handling (ca. 70 Wörter)
 
@@ -29,7 +29,7 @@ Reflektieren Sie über Ihre Lernerfahrungen in Modul 3. Beantworten Sie alle 6 F
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 4: KI-Unterstützung (ca. 70 Wörter)
 
@@ -37,7 +37,7 @@ Reflektieren Sie über Ihre Lernerfahrungen in Modul 3. Beantworten Sie alle 6 F
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 5: Praktische Anwendung (ca. 60 Wörter)
 
@@ -45,7 +45,7 @@ Reflektieren Sie über Ihre Lernerfahrungen in Modul 3. Beantworten Sie alle 6 F
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 6: Nächste Schritte (ca. 60 Wörter)
 
@@ -53,7 +53,7 @@ Reflektieren Sie über Ihre Lernerfahrungen in Modul 3. Beantworten Sie alle 6 F
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## 📊 Selbsteinschätzung
 
@@ -83,7 +83,7 @@ Kreuzen Sie an, was Sie jetzt können:
 
 ```text
 [Weitere Überlegungen, Feedback zum Modul, etc.]
-```text
+```
 
 ## ✅ Checkliste
 

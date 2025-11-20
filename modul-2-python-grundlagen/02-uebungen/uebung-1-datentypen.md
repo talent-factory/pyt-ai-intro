@@ -28,7 +28,7 @@ Wählen Sie **EINE** der folgenden Optionen und implementieren Sie diese mit KI-
 Geburtsjahr: 1990
 Du bist 35 Jahre alt.
 Das sind ungefähr 12775 Tage!
-```text
+```
 
 ### Prompt-Vorlage
 
@@ -55,7 +55,7 @@ Einschränkungen:
 - Kommentare auf Deutsch
 - Eingabe-Validierung (nur Zahlen)
 
-```text
+```
 
 ## Option B: Währungsrechner
 
@@ -71,7 +71,7 @@ Einschränkungen:
 ```text
 Betrag in EUR: 100
 100.00 EUR = 95.00 CHF
-```text
+```
 
 ### Prompt-Vorlage
 
@@ -95,7 +95,7 @@ Einschränkungen:
 - Kommentare auf Deutsch
 - Fehlerbehandlung für ungültige Eingaben
 
-```text
+```
 
 ## Option C: Textanalyse-Tool
 
@@ -113,7 +113,7 @@ Text: Hallo Welt
 Wörter: 2
 Zeichen (mit Leerzeichen): 10
 Zeichen (ohne Leerzeichen): 9
-```text
+```
 
 ### Prompt-Vorlage
 
@@ -140,7 +140,7 @@ Einschränkungen:
 - Type Hints verwenden
 - Kommentare auf Deutsch
 
-```text
+```
 
 ## ✅ Checkliste
 

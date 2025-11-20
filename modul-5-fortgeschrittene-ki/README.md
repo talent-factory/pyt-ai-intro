@@ -142,7 +142,7 @@ Nach diesem Modul beherrschen Sie:
 
 5. Return answer
 
-```text
+```
 
 **Vorteile:**
 

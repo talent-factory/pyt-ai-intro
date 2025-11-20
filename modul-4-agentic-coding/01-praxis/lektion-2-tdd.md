@@ -19,7 +19,7 @@
 2. GREEN: Minimale Implementierung (Test besteht)
 3. REFACTOR: Code verbessern (Tests bleiben grün)
 
-```text
+```
 
 ### Mit KI
 
@@ -32,7 +32,7 @@ Prompt 2: "Implementiere Calculator basierend auf Tests"
 
 Prompt 3: "Refactore für bessere Lesbarkeit"
 → Verbesserter Code
-```text
+```
 
 ### pytest Basics
 

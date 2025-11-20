@@ -10,7 +10,7 @@ Bewährte Patterns für effektives Prompt Engineering.
 Du bist ein [ROLLE] mit [EXPERTISE].
 
 [AUFGABE]
-```text
+```
 
 ### Beispiel
 
@@ -23,7 +23,7 @@ Erstelle eine sichere Login-Funktion mit:
 - Rate Limiting
 - Session Management
 
-```text
+```
 
 ### Wann nutzen
 
@@ -49,7 +49,7 @@ Constraints:
 
 - [EINSCHRÄNKUNGEN]
 
-```text
+```
 
 ### Beispiel
 
@@ -69,7 +69,7 @@ Constraints:
 - Redis für Caching
 - Maximale Response-Zeit: 100ms
 
-```text
+```
 
 ## 3. Chain-of-Thought
 
@@ -84,7 +84,7 @@ Erkläre Schritt für Schritt:
 ...
 
 Dann implementiere die Lösung.
-```text
+```
 
 ### Beispiel
 
@@ -96,7 +96,7 @@ Erkläre Schritt für Schritt wie man einen LRU Cache implementiert:
 3. Wie O(1) erreichen?
 
 Dann implementiere in Python.
-```text
+```
 
 ## 4. Few-Shot Learning
 
@@ -113,7 +113,7 @@ Beispiel 2:
 
 Jetzt für:
 [NEUE AUFGABE]
-```text
+```
 
 ## 5. Iterative Refinement
 
@@ -124,7 +124,7 @@ Iteration 1: Basis-Implementierung
 Iteration 2: Feature X hinzufügen
 Iteration 3: Optimieren
 Iteration 4: Edge Cases
-```text
+```
 
 ---
 

@@ -24,7 +24,7 @@ Prompt:
 5. Best Practices
 
 [CODE HIER]"
-```text
+```
 
 ### Code Smells
 
@@ -53,7 +53,7 @@ O - Open/Closed
 L - Liskov Substitution
 I - Interface Segregation
 D - Dependency Inversion
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 

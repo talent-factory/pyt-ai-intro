@@ -35,7 +35,7 @@ mein-projekt/
 ├── README.md
 ├── main.py
 └── .gitignore
-```text
+```
 
 ### Commit
 
@@ -47,7 +47,7 @@ Commit 1: "Initial commit"
 Commit 2: "feat: Login hinzugefügt"
     ↓
 Commit 3: "fix: Fehler behoben"
-```text
+```
 
 ### Staging Area
 
@@ -56,7 +56,7 @@ Zwischenbereich für Dateien, die committet werden sollen.
 ```text
 Working Directory → Staging Area → Repository
     (Ändern)        (git add)      (git commit)
-```text
+```
 
 ### Branch
 
@@ -66,7 +66,7 @@ Eine parallele Version des Projekts.
 main:    A → B → C → D
               ↓
 feature:      E → F
-```text
+```
 
 ## 🔄 Der Git-Workflow
 
@@ -297,7 +297,7 @@ git commit -m "Fix"                 # ❌ Was wurde gefixt?
 <typ>: <kurze Beschreibung>
 
 <optionale Details>
-```text
+```
 
 **Typen:**
 
@@ -335,7 +335,7 @@ Datenbank, API und Frontend"
 "feat: Login-Formular hinzugefügt"
 "feat: Login-Validierung implementiert"
 "feat: Login-API-Endpoint erstellt"
-```text
+```
 
 ## 🆘 Häufige Probleme
 

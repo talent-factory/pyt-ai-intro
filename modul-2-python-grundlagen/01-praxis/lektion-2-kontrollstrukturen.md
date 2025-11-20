@@ -383,7 +383,7 @@ Zahl (oder 'quit'): 20
 
 Zahl (oder 'quit'): quit
 Auf Wiedersehen!
-```text
+```
 
 **Hinweis:** Eine Primzahl ist nur durch 1 und sich selbst teilbar.
 
@@ -410,7 +410,7 @@ Hallo! Willkommen!
 
 === MENÜ ===
 ...
-```text
+```
 
 ### Option C: Fibonacci-Folge
 
@@ -436,7 +436,7 @@ Fibonacci-Folge (erste 10 Zahlen):
 9. 21
 
 10. 34
-```text
+```
 
 **Hinweis:** Fibonacci: Jede Zahl ist die Summe der beiden vorherigen (0, 1, 1, 2, 3, 5, ...)
 
@@ -454,7 +454,7 @@ Anforderungen:
 
 Beispiel:
 [Zeigen Sie die erwartete Interaktion]
-```text
+```
 
 ## 🎓 Zusammenfassung
 

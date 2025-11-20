@@ -23,7 +23,7 @@ Anforderungen:
 
 Gib mir dann zwei Variationen des Beispiels, damit ich den
 Unterschied besser verstehe.
-```text
+```
 
 ### Ihre Dokumentation
 
@@ -31,7 +31,7 @@ Unterschied besser verstehe.
 
 ```text
 [Hier die Erklärung der KI in eigenen Worten zusammenfassen]
-```text
+```
 
 **Beispiel 1 - Liste:**
 
@@ -70,7 +70,7 @@ Unterschied besser verstehe.
 ```text
 [Erklären Sie in eigenen Worten, wann Sie eine Liste und
 wann ein Dictionary verwenden würden]
-```text
+```
 
 ## 📝 Konzept 2: for vs. while Schleifen (15 Min.)
 
@@ -89,7 +89,7 @@ Anforderungen:
 
 Erstelle dann zwei Beispiele: Eines, wo for besser ist,
 und eines, wo while besser ist.
-```text
+```
 
 ### Ihre Dokumentation
 
@@ -97,7 +97,7 @@ und eines, wo while besser ist.
 
 ```text
 [Hier die Erklärung zusammenfassen]
-```text
+```
 
 **Beispiel: for-Schleife**
 
@@ -119,19 +119,19 @@ und eines, wo while besser ist.
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Wann while verwenden:**
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Mein Verständnis:**
 
 ```text
 [Erklären Sie in eigenen Worten den Unterschied]
-```text
+```
 
 ## 📝 Konzept 3: Funktionen (15 Min.)
 
@@ -150,7 +150,7 @@ Anforderungen:
 
 Erstelle dann eine Variation des Beispiels mit verschiedenen
 Parametern und zeige, wie man die Funktion aufruft.
-```text
+```
 
 ### Ihre Dokumentation
 
@@ -158,7 +158,7 @@ Parametern und zeige, wie man die Funktion aufruft.
 
 ```text
 [Hier die Erklärung zusammenfassen]
-```text
+```
 
 **Beispiel: Einfache Funktion**
 
@@ -195,7 +195,7 @@ Parametern und zeige, wie man die Funktion aufruft.
 2. ```text
 
    [Grund 2]
-```text
+```
 
 3. ```text
 
@@ -205,7 +205,7 @@ Parametern und zeige, wie man die Funktion aufruft.
 
 **Mein Verständnis:**
 
-```text
+```
 
 [Erklären Sie in eigenen Worten, was Funktionen sind und
 wann Sie sie verwenden würden]
@@ -231,7 +231,7 @@ Lassen Sie sich mehrere Beispiele geben, um das Konzept besser zu verstehen.
 
 Wenn etwas unklar ist, fragen Sie nach:
 
-```text
+```
 
 "Kannst du das nochmal einfacher erklären?"
 "Was meinst du mit [Begriff]?"
@@ -277,7 +277,7 @@ Nach den drei Konzepten:
 
 **Was habe ich gelernt?**
 
-```text
+```
 
 [Ihre Reflexion]
 
@@ -288,7 +288,7 @@ Nach den drei Konzepten:
 1. ```text
 
    [Frage 1]
-```text
+```
 
 2. ```text
 
@@ -299,13 +299,13 @@ Nach den drei Konzepten:
 3. ```text
 
    [Frage 3]
-```text
+```
 
 **Wie hat mir KI beim Lernen geholfen?**
 
 ```text
 [Ihre Gedanken]
-```text
+```
 
 ---
 

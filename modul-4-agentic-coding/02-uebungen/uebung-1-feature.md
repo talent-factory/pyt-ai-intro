@@ -102,7 +102,7 @@ Parser der URLs in Komponenten zerlegt:
 
 #### Prompt-Vorlage
 
-```text
+```
 Du bist ein erfahrener Python-Entwickler für Web-Technologien.
 
 Erstelle eine URLParser-Klasse die URLs in Komponenten zerlegt.
@@ -163,7 +163,7 @@ Validator für JSON gegen Schema:
 
 #### Prompt-Vorlage
 
-```text
+```
 Erstelle einen JSON-Schema-Validator in Python.
 
 Features:

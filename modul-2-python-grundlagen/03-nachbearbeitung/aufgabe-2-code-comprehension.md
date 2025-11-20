@@ -146,7 +146,7 @@ Für **jede der 4 Funktionen** beschreiben Sie:
 
 Eingabe → process_data() → filter_data() → aggregate() → Ausgabe
 
-```text
+```
 
 ## 2. Detaillierte Funktionsanalyse
 
@@ -333,7 +333,7 @@ test_data = [...]
 
 **Für Konzepterklärungen:**
 
-```text
+```
 Erkläre den folgenden Python-Code Zeile für Zeile:
 ```python
 
@@ -346,7 +346,7 @@ Was macht diese List Comprehension und wie funktioniert die Bedingung?
 
 **Für Code-Qualität:**
 
-```text
+```
 Analysiere diesen Python-Code und identifiziere:
 
 1. Stärken (Best Practices)
@@ -359,7 +359,7 @@ Analysiere diesen Python-Code und identifiziere:
 
 **Für Verbesserungen:**
 
-```text
+```
 Wie könnte ich folgende Funktion verbessern?
 [Code einfügen]
 

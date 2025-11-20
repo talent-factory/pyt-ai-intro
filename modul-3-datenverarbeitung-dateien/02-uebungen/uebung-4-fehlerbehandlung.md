@@ -46,7 +46,7 @@ Nach allen Dateien:
 - Gesamt: Z
 
 Verwende try/except/finally.
-```text
+```
 
 #### Test-Szenario
 
@@ -81,7 +81,7 @@ files = [
 Erfolgreich: 1
 Fehler: 3
 Gesamt: 4
-```text
+```
 
 ### Option B: Logging-System
 
@@ -120,7 +120,7 @@ Nach Verarbeitung:
 - Zeige Log-Datei-Inhalt
 - Statistik (INFO/WARNING/ERROR)
 
-```text
+```
 
 #### Erwartetes Log
 
@@ -132,7 +132,7 @@ Nach Verarbeitung:
 [2025-10-27 10:30:16] INFO - Verarbeite daten2.csv
 [2025-10-27 10:30:16] ERROR - Datei nicht gefunden: daten2.csv
 [2025-10-27 10:30:16] INFO - Verarbeitung abgeschlossen
-```text
+```
 
 ### Option C: Retry-Mechanismus
 
@@ -170,7 +170,7 @@ Beispiel-Anwendung:
 - Loggt jeden Versuch
 
 Verwende time.sleep() und Exception Handling.
-```text
+```
 
 #### Erwartetes Verhalten
 
@@ -183,7 +183,7 @@ Warte 2 Sekunden...
 
 Versuch 3/3: Erfolg!
 Datei heruntergeladen: 1.2 MB
-```text
+```
 
 ## 💡 Tipps
 

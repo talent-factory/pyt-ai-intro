@@ -129,7 +129,7 @@ Mein Code:
 [Code]
 
 Was ist das Problem?
-```text
+```
 
 ## ✅ Checkliste
 

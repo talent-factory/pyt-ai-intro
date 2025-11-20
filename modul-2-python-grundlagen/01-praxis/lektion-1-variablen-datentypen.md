@@ -327,7 +327,7 @@ Erstellen Sie mit KI-Unterstützung **EINES** der folgenden Programme:
 Geburtsjahr: 1990
 Du bist 35 Jahre alt.
 Das sind ungefähr 12775 Tage!
-```text
+```
 
 ### Option B: Währungsrechner
 
@@ -343,7 +343,7 @@ Das sind ungefähr 12775 Tage!
 ```text
 Betrag in EUR: 100
 100.00 EUR = 95.00 CHF
-```text
+```
 
 ### Option C: Textanalyse-Tool
 
@@ -361,7 +361,7 @@ Text: Hallo Welt
 Wörter: 2
 Zeichen (mit Leerzeichen): 10
 Zeichen (ohne Leerzeichen): 9
-```text
+```
 
 ### Vorgehen
 
@@ -393,7 +393,7 @@ Einschränkungen:
 - Type Hints verwenden
 - Benutzerfreundliche Ausgabe
 
-```text
+```
 
 ## 🎓 Zusammenfassung
 

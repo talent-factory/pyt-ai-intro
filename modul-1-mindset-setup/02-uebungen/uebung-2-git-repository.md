@@ -54,7 +54,7 @@ Es soll enthalten:
 - Datum: [Heutiges Datum]
 
 Formatierung in Markdown.
-```text
+```
 
 **Speichern Sie das Ergebnis** als `README.md` im Projekt-Ordner.
 

@@ -17,7 +17,7 @@ Prompt Engineering ist die Kunst, klare und effektive Anweisungen für KI-Tools 
 ```text
 ❌ Schlecht: "Sortiere die Liste"
 ✅ Gut: "Sortiere die Liste von Zahlen aufsteigend"
-```text
+```
 
 ### 2. Kontext
 
@@ -30,7 +30,7 @@ Prompt Engineering ist die Kunst, klare und effektive Anweisungen für KI-Tools 
 ✅ Mit Kontext: "Erstelle eine Python-Funktion, die eine E-Mail-Adresse
 validiert. Die Funktion soll True zurückgeben, wenn die E-Mail gültig
 ist (enthält @ und .), sonst False."
-```text
+```
 
 ### 3. Spezifität
 
@@ -42,7 +42,7 @@ ist (enthält @ und .), sonst False."
 ❌ Unspezifisch: "Lies eine Datei"
 ✅ Spezifisch: "Lies eine CSV-Datei namens 'daten.csv' ein und gib
 die erste Spalte als Liste zurück"
-```text
+```
 
 ### 4. Beispiele
 
@@ -56,7 +56,7 @@ Erstelle eine Funktion, die einen String umdreht.
 Beispiel:
 Eingabe: "Hallo"
 Ausgabe: "ollaH"
-```text
+```
 
 ### 5. Einschränkungen
 
@@ -71,7 +71,7 @@ Erstelle ein Programm zur Passwort-Generierung.
 - Passwort soll 12 Zeichen lang sein
 - Muss Gross- und Kleinbuchstaben, Zahlen und Sonderzeichen enthalten
 
-```text
+```
 
 ## 📝 Prompt-Template
 
@@ -96,7 +96,7 @@ Ausgabe: ...
 
 - Was zu beachten ist
 
-```text
+```
 
 ### Ausgefülltes Beispiel
 
@@ -123,7 +123,7 @@ Ausgabe: 5.0
 - Keine externen Bibliotheken
 - Kommentare auf Deutsch
 
-```text
+```
 
 ## ❌ Häufige Fehler
 
@@ -133,7 +133,7 @@ Ausgabe: 5.0
 ❌ "Schreib mir was mit Daten"
 ✅ "Erstelle ein Python-Programm, das eine CSV-Datei einliest und
 die Anzahl der Zeilen ausgibt"
-```text
+```
 
 ### Fehler 2: Zu komplex
 
@@ -141,7 +141,7 @@ die Anzahl der Zeilen ausgibt"
 ❌ "Erstelle eine vollständige Webanwendung mit Login, Datenbank,
 API, Frontend und Backend"
 ✅ "Erstelle eine einfache Flask-Route, die 'Hello World' zurückgibt"
-```text
+```
 
 **Tipp:** Grosse Aufgaben in kleine Schritte zerlegen!
 
@@ -151,7 +151,7 @@ API, Frontend und Backend"
 ❌ "Wie sortiere ich das?"
 ✅ "Wie sortiere ich eine Liste von Dictionaries in Python nach dem
 Wert des Keys 'name'?"
-```text
+```
 
 ### Fehler 4: Keine Beispiele
 
@@ -159,7 +159,7 @@ Wert des Keys 'name'?"
 ❌ "Formatiere den String"
 ✅ "Formatiere den String so, dass der erste Buchstabe gross ist.
 Beispiel: 'hallo' → 'Hallo'"
-```text
+```
 
 ## ✅ Best Practices
 
@@ -170,7 +170,7 @@ Beispiel: 'hallo' → 'Hallo'"
 ```text
 Erster Versuch → Testen → Probleme identifizieren →
 Prompt verbessern → Erneut testen
-```text
+```
 
 **Beispiel:**
 
@@ -189,7 +189,7 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 - Anzahl Versuche zählen"
 
 → Perfekt!
-```text
+```
 
 ### 2. Sprache und Ton
 
@@ -198,14 +198,14 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 ```text
 ✅ "Erstelle eine Funktion, die..."
 ❌ "Könntest du vielleicht eventuell..."
-```text
+```
 
 **Imperativ verwenden:**
 
 ```text
 ✅ "Erstelle", "Implementiere", "Berechne"
 ❌ "Würdest du", "Kannst du"
-```text
+```
 
 ### 3. Technische Details
 
@@ -215,14 +215,14 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 ✅ "Erstelle in Python..."
 ✅ "Nutze Flask für..."
 ❌ "Erstelle ein Programm..." (welche Sprache?)
-```text
+```
 
 **Version spezifizieren (falls wichtig):**
 
 ```text
 ✅ "Nutze Python 3.11 Features"
 ✅ "Kompatibel mit Python 3.8+"
-```text
+```
 
 ### 4. Code-Stil
 
@@ -236,7 +236,7 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 - Kommentare auf Deutsch
 - PEP 8 konform"
 
-```text
+```
 
 ## 🔄 Prompt-Iteration Beispiel
 
@@ -246,7 +246,7 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 
 ```text
 "Zähle Wörter"
-```text
+```
 
 **Problem:** Keine Details, keine Sprache, kein Kontext.
 
@@ -254,7 +254,7 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 
 ```text
 "Erstelle ein Python-Programm, das Wörter in einem Text zählt"
-```text
+```
 
 **Problem:** Wie wird der Text eingegeben? Was wird ausgegeben?
 
@@ -270,7 +270,7 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 Beispiel:
 Eingabe: 'Hallo Welt, wie geht es dir?'
 Ausgabe: 'Der Text enthält 6 Wörter.'"
-```text
+```
 
 **Problem:** Funktioniert, aber könnte mehr Features haben.
 
@@ -300,7 +300,7 @@ Einschränkungen:
 - Keine externen Bibliotheken
 - Kommentare auf Deutsch"
 
-```text
+```
 
 ## 💡 Prompt-Bibliothek aufbauen
 

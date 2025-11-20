@@ -86,7 +86,7 @@ MIT
 
 Prompt für KI:
 
-```text
+```
 Erstelle vollständige Dokumentation für folgendes Projekt:
 
 [CODE/PROJEKT-BESCHREIBUNG]

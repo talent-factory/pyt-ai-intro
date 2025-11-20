@@ -78,7 +78,7 @@ tests/
 README.md
 requirements.txt
 .github/workflows/test.yml
-```text
+```
 
 ## Bewertung
 

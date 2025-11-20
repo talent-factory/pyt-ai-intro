@@ -9,7 +9,7 @@
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 2: Prompt Engineering (ca. 70 Wörter)
 
@@ -17,7 +17,7 @@
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 3: Code-Qualität (ca. 70 Wörter)
 
@@ -25,7 +25,7 @@
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 4: TDD mit KI (ca. 60 Wörter)
 
@@ -33,7 +33,7 @@
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 5: Grenzen von KI (ca. 60 Wörter)
 
@@ -41,7 +41,7 @@
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Frage 6: Zukunft (ca. 60 Wörter)
 
@@ -49,7 +49,7 @@
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## Selbsteinschätzung
 

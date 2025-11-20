@@ -128,7 +128,7 @@ Ausgaben nach Kategorie:
   Lebensmittel:    45.50 €  (5.1%)
 
 Durchschnittliche Ausgabe: 447.75 €
-```text
+```
 
 ## 🛠️ Technische Anforderungen
 
@@ -140,7 +140,7 @@ aufgabe-1-finanztracker/
 ├── finanzen.json          # Datendatei (wird automatisch erstellt)
 ├── README.md              # Anleitung und Dokumentation
 └── requirements.txt       # (leer, keine externen Pakete nötig)
-```text
+```
 
 ### Empfohlene Funktionsstruktur
 
@@ -250,7 +250,7 @@ Erstelle eine Python-Funktion `transaktion_hinzufuegen`, die:
 - Fehlerhafte Eingaben (z.B. negative Beträge) abfängt
 - Type Hints und Docstring verwendet
 
-```text
+```
 
 **Für Debugging:**
 
@@ -260,7 +260,7 @@ Hier ist der relevante Code:
 [Code einfügen]
 
 Was könnte das Problem sein und wie behebe ich es?
-```text
+```
 
 **Für Code-Review:**
 
@@ -275,7 +275,7 @@ Achte auf:
 - PEP 8 Konformität
 - Type Hints
 
-```text
+```
 
 ### Häufige Probleme
 

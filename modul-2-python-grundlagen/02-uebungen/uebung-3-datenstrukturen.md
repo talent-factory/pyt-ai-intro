@@ -24,7 +24,7 @@ inventar = {
     "maus": {"preis": 25, "anzahl": 20}
 }
 Gesamtwert: CHF 6495
-```text
+```
 
 ## Option B: Duplikat-Entferner
 
@@ -42,7 +42,7 @@ Beispiel:
 Eingabe: [1, 2, 2, 3, 3, 3, 4]
 Ausgabe: [1, 2, 3, 4]
 Entfernt: 3 Duplikate
-```text
+```
 
 ## Option C: Mini-Kontaktliste
 
@@ -61,7 +61,7 @@ kontakte = [
     {"name": "Anna", "email": "anna@test.com", "telefon": "123"},
     {"name": "Bob", "email": "bob@test.com", "telefon": "456"}
 ]
-```text
+```
 
 ---
 

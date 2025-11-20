@@ -92,7 +92,7 @@ Falls nicht: Was fällt Ihnen an Python auf?
 
 ```text
 [Hier Ihre Antwort]
-```text
+```
 
 ### Frage 2: Intuition vs. Verwirrung
 
@@ -100,7 +100,7 @@ Was erscheint Ihnen intuitiv, was eher verwirrend?
 
 ```text
 [Hier Ihre Antwort]
-```text
+```
 
 ### Frage 3: Wichtigste Erkenntnis
 
@@ -108,7 +108,7 @@ Was ist die wichtigste Sache, die Sie aus dem Leseauftrag mitgenommen haben?
 
 ```text
 [Hier Ihre Antwort]
-```text
+```
 
 ### Frage 4: Offene Fragen
 
@@ -123,7 +123,7 @@ Welche 3 Fragen haben Sie nach dem Leseauftrag?
 2. ```text
 
    [Frage 2]
-```text
+```
 
 3. ```text
 

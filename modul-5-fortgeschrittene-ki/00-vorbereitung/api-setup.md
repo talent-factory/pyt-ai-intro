@@ -146,27 +146,27 @@ print(response.content[0].text)
 [ ] OpenAI
 [ ] Anthropic
 [ ] Andere: _______
-```text
+```
 
 ### Erster Test erfolgreich
 
 ```text
 [ ] Ja
 [ ] Nein, Fehler: _______
-```text
+```
 
 ### Spending Limit gesetzt
 
 ```text
 [ ] Ja, Limit: $_______
 [ ] Nein
-```text
+```
 
 ### Geschätzte Kosten für Kurs
 
 ```text
 Basierend auf Tests: $_______
-```text
+```
 
 ## ⚠️ Sicherheit
 

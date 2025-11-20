@@ -46,7 +46,7 @@ Nutzen Sie folgendes Template für jeden Prompt:
 
 [Hier den kompletten Prompt einfügen]
 
-```text
+```
 
 ### Generierter Code (Auszug)
 
@@ -76,7 +76,7 @@ Nutzen Sie folgendes Template für jeden Prompt:
 
 [Falls Sie den Prompt verbessert haben]
 
-```text
+```
 
 ---
 ```text
@@ -97,7 +97,7 @@ Ein Programm erstellen, das Temperaturen zwischen Celsius und Fahrenheit umrechn
 
 ### Vollständiger Prompt
 
-```text
+```
 
 Erstelle ein Python-Programm zur Temperatur-Umrechnung:
 
@@ -166,7 +166,7 @@ while True:
 - Bei ungültiger Auswahl: Fehlermeldung und erneut fragen
 - Ausgabe formatiert mit Rahmen
 
-```text
+```
 
 ---
 ```text
@@ -275,7 +275,7 @@ Verteilen Sie Ihre 10 Prompts auf mindestens 4 verschiedene Kategorien:
 ### Verbesserungspotenzial
 
 [Was möchten Sie beim Prompting noch verbessern?]
-```text
+```
 
 ## 🎓 Bewertungskriterien
 

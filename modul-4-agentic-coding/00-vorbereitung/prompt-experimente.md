@@ -17,7 +17,7 @@ Testen Sie denselben Prompt mit und ohne Rolle.
 
 ```text
 Schreibe eine Funktion zur Passwort-Validierung.
-```text
+```
 
 **Mit Rolle:**
 
@@ -32,7 +32,7 @@ Schreibe eine Funktion zur Passwort-Validierung mit:
 - Type Hints und Docstrings
 - Unit Tests
 
-```text
+```
 
 ### Dokumentation
 
@@ -40,19 +40,19 @@ Schreibe eine Funktion zur Passwort-Validierung mit:
 
 ```text
 [Was hat die KI generiert?]
-```text
+```
 
 **Ergebnis mit Rolle:**
 
 ```text
 [Was hat die KI generiert?]
-```text
+```
 
 **Unterschiede:**
 
 ```text
 [Welche Unterschiede haben Sie beobachtet?]
-```text
+```
 
 ## Experiment 2: Context-Rich Prompting (15 Min.)
 
@@ -64,7 +64,7 @@ Vergleichen Sie vagen vs. detaillierten Prompt.
 
 ```text
 Erstelle eine Funktion für Datenvalidierung.
-```text
+```
 
 **Detailliert:**
 
@@ -93,7 +93,7 @@ Rückgabe:
 
 - Tuple (is_valid: bool, errors: list[str])
 
-```text
+```
 
 ### Dokumentation
 
@@ -101,19 +101,19 @@ Rückgabe:
 
 ```text
 [Bewertung 1-5]
-```text
+```
 
 **Qualität detaillierter Prompt:**
 
 ```text
 [Bewertung 1-5]
-```text
+```
 
 **Learnings:**
 
 ```text
 [Was haben Sie gelernt?]
-```text
+```
 
 ## Experiment 3: Chain-of-Thought (15 Min.)
 
@@ -151,7 +151,7 @@ Erkläre Schritt für Schritt:
 
 **Erklärung der KI:**
 
-```text
+```
 [Kopieren Sie die Erklärung]
 ```text
 
@@ -167,7 +167,7 @@ Erkläre Schritt für Schritt:
 
 ```text
 [Ihre Bewertung]
-```text
+```
 
 ## Experiment 4: Few-Shot Learning (15 Min.)
 
@@ -233,7 +233,7 @@ def calculate_average(numbers):
 
 ```text
 [Ja/Nein und warum]
-```text
+```
 
 ## 🎯 Zusammenfassung
 
@@ -241,19 +241,19 @@ def calculate_average(numbers):
 
 ```text
 [Ihre Einschätzung]
-```text
+```
 
 ### Was haben Sie über Prompt Engineering gelernt
 
 ```text
 [Ihre Learnings]
-```text
+```
 
 ### Wie werden Sie Prompts in Zukunft formulieren
 
 ```text
 [Ihre Strategie]
-```text
+```
 
 ## ✅ Checkliste
 

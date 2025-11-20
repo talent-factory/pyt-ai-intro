@@ -29,7 +29,7 @@ Erstelle ein Python-Skript das:
 - Jede Zeile nummeriert ausgibt
 
 Verwende with-Statement für sichere Datei-Operationen.
-```text
+```
 
 ### Dokumentation
 
@@ -37,13 +37,13 @@ Verwende with-Statement für sichere Datei-Operationen.
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Welche Fehler sind aufgetreten?**
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 ## Experiment 2: CSV-Daten lesen (15 Min.)
 
@@ -66,7 +66,7 @@ Schreiben Sie dann ein Python-Skript, das:
 
 ### Mit KI
 
-```text
+```
 Ich habe eine CSV-Datei "personen.csv" mit Spalten: name, alter, stadt
 
 Erstelle ein Python-Skript das:
@@ -82,7 +82,7 @@ Verwende DictReader für bessere Lesbarkeit.
 
 **Wie funktioniert csv.DictReader?**
 
-```text
+```
 [Ihre Notizen]
 ```text
 
@@ -122,7 +122,7 @@ Erstelle ein Python-Skript für JSON-Konfiguration:
 4. Speichert die Änderung zurück
 
 Verwende json.load() und json.dump() mit indent=2.
-```text
+```
 
 ### Dokumentation
 
@@ -130,7 +130,7 @@ Verwende json.load() und json.dump() mit indent=2.
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 ## Experiment 4: Fehler provozieren (15 Min.)
 
@@ -154,7 +154,7 @@ Erstelle ein Python-Skript das verschiedene Datei-Fehler demonstriert:
 3. JSONDecodeError - ungültiges JSON
 
 Fange jeden Fehler mit try/except ab und gib eine hilfreiche Nachricht aus.
-```text
+```
 
 ### Dokumentation
 
@@ -162,13 +162,13 @@ Fange jeden Fehler mit try/except ab und gib eine hilfreiche Nachricht aus.
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Wie behandelt man sie richtig?**
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 ## ✅ Checkliste
 

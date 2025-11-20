@@ -415,7 +415,7 @@ inventar = {
 Eingabe: [1, 2, 2, 3, 3, 3, 4]
 Ausgabe: [1, 2, 3, 4]
 Entfernt: 3 Duplikate
-```text
+```
 
 ### Option C: Mini-Kontaktliste
 

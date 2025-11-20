@@ -87,7 +87,7 @@ Für jede Klasse und Methode:
 - Returns mit Type
 - Beispiele wo sinnvoll
 
-```text
+```
 
 ### Erwartetes Ergebnis
 
@@ -157,7 +157,7 @@ Sections:
 - Contributing (optional)
 - License
 
-```text
+```
 
 ### Erwartetes Ergebnis
 
@@ -243,7 +243,7 @@ MIT
 
 ### Prompt
 
-```text
+```
 Füge hilfreiche Inline-Comments zu komplexen Stellen hinzu:
 
 [KOPIERE CODE HIER EIN]
@@ -256,7 +256,7 @@ Erkläre das "Warum", nicht das "Was".
 
 ### Prompt
 
-```text
+```
 Erstelle ein CHANGELOG.md für dieses Projekt:
 
 Version 1.0.0 (Initial Release)
@@ -280,7 +280,7 @@ Alle wichtigen Änderungen an diesem Projekt werden hier dokumentiert.
 - Interaktives CLI
 - Vollständige Dokumentation
 
-```text
+```
 
 ## ✅ Erfolg
 

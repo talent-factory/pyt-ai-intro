@@ -43,7 +43,7 @@ Einschränkungen:
 - Fehlerbehandlung für fehlende Datei
 - Kommentare auf Deutsch
 
-```text
+```
 
 ## Option B: Todo-Listen-Manager
 
@@ -76,7 +76,7 @@ Einschränkungen:
 - Fehlerbehandlung
 - Benutzerfreundlich
 
-```text
+```
 
 ---
 

@@ -63,7 +63,7 @@ Menü:
 4. Beenden
 
 Verwende json-Modul und dict-Navigation.
-```text
+```
 
 #### Erwartetes Verhalten
 
@@ -81,7 +81,7 @@ App Name: Meine App
 Version: 1.0.0
 Debug: True
 ...
-```text
+```
 
 ### Option B: API-Client für öffentliche API
 
@@ -99,7 +99,7 @@ Nutzen Sie eine öffentliche API (z.B. JSONPlaceholder):
 ```text
 URL: https://jsonplaceholder.typicode.com/users
 Gibt Liste von Benutzern zurück
-```text
+```
 
 #### Prompt-Vorlage
 
@@ -122,7 +122,7 @@ Fehlerbehandlung:
 - Netzwerkfehler
 - Ungültige JSON-Response
 
-```text
+```
 
 #### Erwartete Ausgabe
 
@@ -142,7 +142,7 @@ Fehlerbehandlung:
 ...
 
 Gespeichert in: users.json
-```text
+```
 
 ### Option C: JSON-zu-CSV-Konverter
 
@@ -200,7 +200,7 @@ Features:
 - Optionale Feldauswahl
 
 Verwende json und csv Module.
-```text
+```
 
 #### Erwartetes Ergebnis
 

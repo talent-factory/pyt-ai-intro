@@ -270,7 +270,7 @@ aufgabe-3-algorithmen/
 ├── test_algorithms.py     # Unit Tests
 ├── README.md              # Dokumentation
 └── lernprozess.md         # KI-Nutzung dokumentieren
-```text
+```
 
 ## 📝 Template für algorithms.py
 
@@ -384,7 +384,7 @@ Erkläre mir den [Algorithmus-Name] Algorithmus:
 - Welche Edge Cases gibt es?
 - Zeige ein Beispiel Schritt für Schritt
 
-```text
+```
 
 2. **Pseudocode erstellen:**
 
@@ -394,7 +394,7 @@ Gib mir Pseudocode (NICHT Python) für [Algorithmus]:
 - In einfachen, logischen Schritten
 - Mit Kommentaren für jeden Schritt
 
-```text
+```
 
 3. **Stift & Papier:** Zeichnen Sie den Ablauf für ein Beispiel
 
@@ -433,7 +433,7 @@ Prüfe:
 - Edge Cases
 
 Gibt es Verbesserungsmöglichkeiten?
-```text
+```
 
 2. **Dokumentation schreiben:**
    - README mit Algorithmus-Übersicht
@@ -463,7 +463,7 @@ Gibt es Verbesserungsmöglichkeiten?
 
 3. Gib -1 zurück (nicht gefunden)
 
-```text
+```
 
 **Häufiger Fehler:**
 
@@ -681,7 +681,7 @@ Geben Sie für jeden Algorithmus die Zeitkomplexität an:
 
 [Ihr Prompt]
 
-```text
+```
 
 **Was habe ich gelernt?**
 [Ihre Erkenntnisse]
@@ -691,7 +691,7 @@ Geben Sie für jeden Algorithmus die Zeitkomplexität an:
 
 [Ihr Prompt]
 
-```text
+```
 
 **Wie hat KI geholfen?**
 [Ihre Erfahrung]

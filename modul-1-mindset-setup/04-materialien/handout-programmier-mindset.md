@@ -34,7 +34,7 @@ Teilprobleme:
 5. Warten
 6. Kaffee einschenken
 
-```text
+```
 
 #### Anwendung beim Programmieren
 
@@ -50,7 +50,7 @@ Teilprobleme:
 5. Funktion: Artikel suchen
 6. Hauptprogramm: Menü und Schleife
 
-```text
+```
 
 ### 2. Algorithmisches Denken
 
@@ -74,7 +74,7 @@ Schritt-für-Schritt-Anweisungen erstellen, die klar und eindeutig sind.
 4. An der Ampel rechts
 5. Bis zum Haupteingang
 
-```text
+```
 
 #### Anwendung beim Programmieren: Algorithmus
 
@@ -89,7 +89,7 @@ Algorithmus: Durchschnitt berechnen
 5. Durchschnitt = Summe / Anzahl
 6. Durchschnitt ausgeben
 
-```text
+```
 
 ### 3. Abstraktion
 
@@ -117,7 +117,7 @@ Details (versteckt):
 - Getriebe
 - Elektronik
 
-```text
+```
 
 **Anwendung beim Programmieren:**
 
@@ -161,7 +161,7 @@ Anwendungen:
 - Gesamtpunkte in einem Spiel
 - Gesamtzeit für Aufgaben
 
-```text
+```
 
 #### Anwendung beim Programmieren: Muster
 
@@ -218,7 +218,7 @@ total_time = sum(times)
 5. Testen
 6. Debuggen
 
-```text
+```
 
 **Modern (mit KI):**
 
@@ -233,7 +233,7 @@ total_time = sum(times)
 7. Testen                     ← Sie
 8. Debuggen                   ← Sie + KI
 
-```text
+```
 
 ## 💡 Praktische Tipps
 
@@ -244,7 +244,7 @@ total_time = sum(times)
 ✅ Problem erst durchdenken
 ✅ Lösung skizzieren
 ✅ Dann coden
-```text
+```
 
 ### Tipp 2: Klein anfangen
 
@@ -253,7 +253,7 @@ total_time = sum(times)
 ✅ Mit kleinstem Teilproblem starten
 ✅ Schrittweise erweitern
 ✅ Regelmässig testen
-```text
+```
 
 ### Tipp 3: Code verstehen
 
@@ -262,7 +262,7 @@ total_time = sum(times)
 ✅ Jede Zeile verstehen
 ✅ Bei Unklarheiten nachfragen
 ✅ Code anpassen können
-```text
+```
 
 ### Tipp 4: Fehler als Lernchance
 
@@ -271,7 +271,7 @@ total_time = sum(times)
 ✅ Fehler als normal akzeptieren
 ✅ Aus Fehlern lernen
 ✅ Debugging-Skills entwickeln
-```text
+```
 
 ## 🎯 Übungen zum Mindset
 

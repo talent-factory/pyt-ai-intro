@@ -139,7 +139,7 @@ Nach diesem Modul beherrschen Sie:
 
    "Hier sind 2 Beispiele: [...]
     Jetzt mache das Gleiche für: [...]"
-```text
+```
 
 ## 📋 Voraussetzungen
 
@@ -193,7 +193,7 @@ Entwickler → Code schreiben → Testen → Debuggen
 
 Mit KI:
 Entwickler → Spezifikation → KI generiert → Review → Test → Iteration
-```text
+```
 
 **Wichtig:** KI ist ein Werkzeug, kein Ersatz für Verständnis!
 

@@ -36,13 +36,13 @@ prompt = "The doctor said to the nurse..."
 
 ```text
 [Ihre Erfahrungen]
-```text
+```
 
 **Wie können Sie Bias minimieren?**
 
 ```text
 [Ihre Strategien]
-```text
+```
 
 ## Thema 2: Datenschutz (10 Min.)
 
@@ -66,7 +66,7 @@ prompt = "The doctor said to the nurse..."
 
 ```text
 [Ihre Liste]
-```text
+```
 
 ## Thema 3: Transparenz (10 Min.)
 
@@ -89,7 +89,7 @@ prompt = "The doctor said to the nurse..."
 
 ```text
 [Ihre Massnahmen]
-```text
+```
 
 ## Thema 4: Verantwortung (10 Min.)
 
@@ -117,7 +117,7 @@ prompt = "The doctor said to the nurse..."
 
 ```text
 [Ihre Strategie]
-```text
+```
 
 ## Ethik-Checkliste
 
@@ -156,7 +156,7 @@ Sie entwickeln einen AI-Chatbot für Bewerbungs-Screening.
 
 4. [Ihre Antwort]
 
-```text
+```
 
 ## Ressourcen
 

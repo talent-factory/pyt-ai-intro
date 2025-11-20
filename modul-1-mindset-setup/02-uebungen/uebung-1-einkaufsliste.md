@@ -47,7 +47,7 @@ Wie speichern Sie die Artikel?
 
 ```text
 [Hier notieren]
-```text
+```
 
 #### Frage 2: Artikel hinzufügen
 
@@ -57,7 +57,7 @@ Welche Schritte sind nötig?
 Schritt 1: ...
 Schritt 2: ...
 Schritt 3: ...
-```text
+```
 
 **Besondere Überlegungen:**
 
@@ -72,7 +72,7 @@ Welche Schritte sind nötig?
 Schritt 1: ...
 Schritt 2: ...
 Schritt 3: ...
-```text
+```
 
 **Besondere Überlegungen:**
 
@@ -86,7 +86,7 @@ Wie soll die Ausgabe aussehen?
 ```text
 Beispiel:
 [Ihre Idee hier]
-```text
+```
 
 ### Phase 2: Gruppenarbeit (5 Min.)
 
@@ -156,7 +156,7 @@ einkaufsliste = {"Milch": 2, "Brot": 1, "Eier": 12}
    - Nein: Artikel hinzufügen
 3. Bestätigung ausgeben
 
-```text
+```
 
 **Artikel entfernen:**
 
@@ -168,7 +168,7 @@ einkaufsliste = {"Milch": 2, "Brot": 1, "Eier": 12}
    - Nein: Fehlermeldung
 3. Bestätigung ausgeben
 
-```text
+```
 
 **Artikel anzeigen:**
 
@@ -179,7 +179,7 @@ einkaufsliste = {"Milch": 2, "Brot": 1, "Eier": 12}
    - Nein: Alle Artikel durchgehen und ausgeben
 2. Optional: Nummerierung, Formatierung
 
-```text
+```
 
 ## ✅ Checkliste
 

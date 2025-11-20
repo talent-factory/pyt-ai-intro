@@ -29,7 +29,7 @@ Sie sehen:
 ```text
 Python 3.11.0 (main, Oct 24 2022, 18:26:48)
 >>>
-```text
+```
 
 ### Option 2: VS Code Python Interactive
 

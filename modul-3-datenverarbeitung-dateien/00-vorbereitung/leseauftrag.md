@@ -34,19 +34,19 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Warum with Statement?**
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Was ist Encoding?**
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 ## 📚 Aufgabe 2: CSV & JSON (20 Min.)
 
@@ -63,13 +63,13 @@ Clara,28,Basel
 
 **Vorteile:**
 
-```text
+```
 [Ihre Notizen]
 ```text
 
 **Nachteile:**
 
-```text
+```
 [Ihre Notizen]
 ```text
 
@@ -89,13 +89,13 @@ Clara,28,Basel
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Nachteile:**
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 ## 📚 Aufgabe 3: Exception Handling (20 Min.)
 
@@ -118,13 +118,13 @@ Fokus auf:
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 **Was macht finally?**
 
 ```text
 [Ihre Notizen]
-```text
+```
 
 ## 🤔 Reflexionsfragen
 
@@ -134,7 +134,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ### Frage 2
 
@@ -142,7 +142,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ### Frage 3
 
@@ -150,7 +150,7 @@ Fokus auf:
 
 ```text
 [Ihre Antwort]
-```text
+```
 
 ## ✅ Checkliste
 

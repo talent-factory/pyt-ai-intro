@@ -38,7 +38,7 @@ Schreibe Unit Tests für folgende String-Utility-Funktionen:
    - Schneidet bei Wortgrenze
 
 Verwende pytest und parametrize für mehrere Test-Cases.
-```text
+```
 
 ### Erwartetes Ergebnis
 
@@ -78,7 +78,7 @@ Anforderungen:
 - Docstrings im Google-Style
 - Effiziente Implementierung
 
-```text
+```
 
 ### Erwartetes Ergebnis
 
@@ -119,7 +119,7 @@ test_count_vowels PASSED
 test_truncate PASSED
 
 5 passed in 0.03s
-```text
+```
 
 ## Schritt 4: Refactoring (3 Min.)
 
@@ -135,7 +135,7 @@ Refactore die String-Utilities:
 
 Aktueller Code:
 [KOPIERE CODE HIER EIN]
-```text
+```
 
 ## Alternative: Eigene Funktionen
 

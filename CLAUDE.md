@@ -74,11 +74,29 @@ Erstelle ein Programm, das zwei Zahlen addiert.
 ```
 ````
 
+**WICHTIG: Auch Text-Blöcke enden mit ```**
+
+Häufiger Fehler - Text-Blöcke, die mit ````text` beginnen, enden fälschlicherweise auch mit ````text`:
+
+````markdown
+```text
+[Hier notieren]
+```text    ← FALSCH!
+````
+
+**Korrekt:**
+
+````markdown
+```text
+[Hier notieren]
+```        ← RICHTIG!
+````
+
 **Bei automatischen Markdown-Korrekturen:**
 
-- NIEMALS ```text als Code-Block-Ender hinzufügen
-- Prüfe nach automatischen Linting-Fixes alle Code-Blöcke manuell
-- Bei Unsicherheit: Code-Block-Ender ist IMMER nur ```
+- NIEMALS ````text` als Block-Ender hinzufügen (weder für Code- noch Text-Blöcke)
+- Prüfe nach automatischen Linting-Fixes alle Blöcke manuell
+- Bei Unsicherheit: Block-Ender ist IMMER nur ``` (ohne Sprach-Tag)
 
 ---
 

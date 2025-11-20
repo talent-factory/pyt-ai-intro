@@ -24,7 +24,7 @@ Ausgabe: 17 ist eine Primzahl!
 
 Eingabe: quit
 Ausgabe: Auf Wiedersehen!
-```text
+```
 
 ## Option B: Menü-System
 
@@ -48,7 +48,7 @@ Beispiel:
 
 Wahl: 1
 Hallo! Willkommen!
-```text
+```
 
 ## Option C: Fibonacci-Folge
 
@@ -70,7 +70,7 @@ Beispiel:
 
 ...
 10. 34
-```text
+```
 
 ---
 

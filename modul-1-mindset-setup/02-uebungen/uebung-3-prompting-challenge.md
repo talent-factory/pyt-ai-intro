@@ -33,7 +33,7 @@ Ausgabe: ...
 
 - Was zu beachten ist
 
-```text
+```
 
 ## 🎯 Challenge 1: Einkaufsliste (7 Min.)
 
@@ -50,7 +50,7 @@ Erstellen Sie einen Prompt für ein Einkaufslisten-Programm mit:
 
 ```text
 [Hier Ihren Prompt schreiben]
-```text
+```
 
 ### Bewertungskriterien
 
@@ -76,7 +76,7 @@ Erstellen Sie einen Prompt für einen Temperatur-Umrechner mit:
 
 ```text
 [Hier Ihren Prompt schreiben]
-```text
+```
 
 ### Bewertungskriterien
 
@@ -102,7 +102,7 @@ Erstellen Sie einen Prompt für einen Wort-Zähler mit:
 
 ```text
 [Hier Ihren Prompt schreiben]
-```text
+```
 
 ### Bewertungskriterien
 
@@ -145,7 +145,7 @@ Vorschläge:
 
 - ...
 
-```text
+```
 
 ## 💡 Tipps
 
@@ -164,21 +164,21 @@ Vorschläge:
 ```text
 ❌ "Mach ein Programm für Temperaturen"
 ✅ "Erstelle ein Python-Programm, das Celsius in Fahrenheit umrechnet"
-```text
+```
 
 **Zu komplex:**
 
 ```text
 ❌ "Erstelle eine vollständige Wetter-App mit Datenbank und API"
 ✅ "Erstelle ein Programm, das Temperatur umrechnet"
-```text
+```
 
 **Ohne Kontext:**
 
 ```text
 ❌ "Zähle die Wörter"
 ✅ "Erstelle ein Programm, das in einem Text die Anzahl Wörter zählt"
-```text
+```
 
 ## ✅ Erfolg messen
 
@@ -201,7 +201,7 @@ Nach dieser Übung sollten Sie:
 
 ```text
 [Hier Ihre Gedanken notieren]
-```text
+```
 
 ## 📎 Bonus
 

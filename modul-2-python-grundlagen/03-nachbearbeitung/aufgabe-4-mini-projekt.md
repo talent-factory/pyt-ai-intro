@@ -141,7 +141,7 @@ aufgabe-4-password-manager/
 ├── requirements.txt       # cryptography
 ├── README.md              # Dokumentation
 └── .gitignore            # passwords.json.enc nicht committen!
-```text
+```
 
 ### Technische Spezifikation
 
@@ -149,7 +149,7 @@ aufgabe-4-password-manager/
 
 ```text
 cryptography==41.0.7
-```text
+```
 
 **Installation:**
 
@@ -272,7 +272,7 @@ Generiertes Passwort: xK9!mP#2qL@7nR$4
 Passwort gespeichert ✓
 
 [Zurück zum Menü]
-```text
+```
 
 ---
 
@@ -289,7 +289,7 @@ aufgabe-4-quiz-game/
 └── categories/            # Optional: Mehrere Kategorie-Dateien
     ├── python.json
     └── general.json
-```text
+```
 
 ### Datenstruktur (questions.json)
 
@@ -400,7 +400,7 @@ Highscores:
 3. Sie       - 80 Punkte
 4. Charlie   - 75 Punkte
 
-```text
+```
 
 ---
 
@@ -414,7 +414,7 @@ aufgabe-4-workout-tracker/
 ├── workouts.json          # Trainings-Historie
 ├── README.md              # Dokumentation
 └── goals.json             # Trainingsziele (optional)
-```text
+```
 
 ### Datenstruktur (workouts.json)
 
@@ -511,7 +511,7 @@ Workout-Verteilung:
 ████████ Krafttraining (2x)
 
 Ziel: 5 Workouts/Woche ✓ ERREICHT!
-```text
+```
 
 ### Statistik-Funktionen
 
@@ -594,7 +594,7 @@ Hilf mir bei:
 3. Projektstruktur (welche Dateien?)
 
 Gib mir einen Überblick, NICHT den kompletten Code.
-```text
+```
 
 **Für spezifische Probleme:**
 
@@ -608,7 +608,7 @@ Wie kann ich das elegant lösen? Zeige mir:
 2. Ein Code-Beispiel
 3. Mögliche Edge Cases
 
-```text
+```
 
 ### README-Template
 
@@ -663,7 +663,7 @@ python [hauptdatei].py
 
 [Beispiel-Ausgabe des Programms]
 
-```text
+```
 
 ## Projektstruktur
 
@@ -674,7 +674,7 @@ projekt/
 ├── [datei].json
 └── README.md
 
-```text
+```
 
 ## Technische Details
 

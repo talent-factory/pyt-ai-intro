@@ -86,7 +86,7 @@ Anforderungen:
 - Tests im if __name__ == "__main__" Block
 - Kommentare auf Deutsch
 
-```text
+```
 
 ---
 

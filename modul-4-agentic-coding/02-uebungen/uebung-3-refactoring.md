@@ -67,7 +67,7 @@ Analysiere:
 6. Performance-Probleme
 
 Gib strukturiertes Feedback.
-```text
+```
 
 ### Erwartetes Feedback
 
@@ -90,7 +90,7 @@ Empfehlungen:
 - Type Hints hinzufügen
 - Dokumentation
 
-```text
+```
 
 ## Schritt 2: Refactoring-Plan (3 Min.)
 
@@ -111,7 +111,7 @@ Priorität:
 - Lesbarkeit
 - Wartbarkeit
 
-```text
+```
 
 ## Schritt 3: Refactoring durchführen (7 Min.)
 
@@ -133,7 +133,7 @@ Anforderungen:
 7. Fehlerbehandlung
 
 Behalte die Funktionalität bei!
-```text
+```
 
 ### Erwartetes Ergebnis
 

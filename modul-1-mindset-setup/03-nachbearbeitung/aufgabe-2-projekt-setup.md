@@ -55,7 +55,7 @@ mein-python-projekt/
 └── tests/                       # Tests (optional)
     ├── test_programm1.py
     └── test_programm2.py
-```text
+```
 
 ## 📝 README.md Template
 

@@ -32,7 +32,7 @@ Bob,bob@test.com,30
 
 #### Prompt-Vorlage
 
-```text
+```
 Erstelle ein Python-Programm zur CSV-Datenbereinigung:
 
 Anforderungen:
@@ -50,7 +50,7 @@ Verwende set() für Duplikat-Erkennung.
 
 #### Erwartetes Ergebnis
 
-```text
+```
 Original: 5 Zeilen
 Duplikate: 2 Zeilen
 Bereinigt: 3 Zeilen
@@ -78,7 +78,7 @@ Maus,,10
 Tastatur,80,
 Monitor,350,3
 Headset,60,
-```text
+```
 
 #### Prompt-Vorlage
 
@@ -96,7 +96,7 @@ Anforderungen:
 - Gibt Report aus
 
 Verwende pandas oder csv-Modul.
-```text
+```
 
 ### Option C: Daten filtern und sortieren
 
@@ -123,7 +123,7 @@ Monitor,Elektronik,350,4.7
 
 #### Prompt-Vorlage
 
-```text
+```
 Erstelle ein Python-Programm für Datenfilterung:
 
 Anforderungen:
