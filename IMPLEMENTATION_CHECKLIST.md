@@ -26,15 +26,10 @@
 ### Dokumentation für Studierende
 
 - [x] `modul-1-mindset-setup/00-vorbereitung/codespaces-setup.md`
-  - Detaillierte Anleitung
-  - GitHub Student Pack Erklärung
-  - Kostenlose Limits
-  - Troubleshooting
-
-- [x] `modul-1-mindset-setup/00-vorbereitung/CODESPACES_QUICK_START.md`
-  - 5-Minuten Quick Start
-  - Schritt-für-Schritt
-  - Häufige Probleme
+  - Vollständige Anleitung (Schnellstart + Details)
+  - Kostenlose Limits mit GitHub Free Account (ohne .edu E-Mail)
+  - Stunden-Management & Troubleshooting
+  - Vergleichstabelle Codespaces vs. Lokal
 
 - [x] `modul-1-mindset-setup/00-vorbereitung/README.md` aktualisiert
   - Neue Struktur mit Optionen
