@@ -45,14 +45,13 @@ Nach dieser Lektion können die Studierenden:
 # Windows: Python neu installieren mit "Add to PATH"
 
 # macOS/Linux: Shell-Profil aktualisieren
-
-```text
+```
 
 **Problem 2: Git Credential Helper**
 
 ```bash
 git config --global credential.helper store
-```text
+```
 
 **Problem 3: VS Code findet Python nicht**
 
@@ -104,7 +103,7 @@ git config --global credential.helper store
 # Tippen Sie "pri" und sehen Sie die Vorschläge
 
 print("Hello, World!")
-```text
+```
 
 **2. Linting**
 
@@ -138,18 +137,18 @@ print("Hello, World!")
 mkdir mein-erstes-projekt
 cd mein-erstes-projekt
 code .  # VS Code im aktuellen Ordner öffnen
-```text
+```
 
 #### Empfohlene Struktur
 
 ```text
 mein-erstes-projekt/
-├── README.md          # Projektbeschreibung
-├── requirements.txt   # Python-Abhängigkeiten
+├── README.md         # Projektbeschreibung
+├── requirements.txt  # Python-Abhängigkeiten
 ├── .gitignore        # Dateien, die Git ignorieren soll
 └── src/              # Quellcode
     └── main.py
-```text
+```
 
 ---
 
@@ -196,8 +195,7 @@ mein-erstes-projekt/
 git init
 
 # Erstellt ein neues Git-Repository im aktuellen Ordner
-
-```text
+```
 
 #### 2. Status prüfen
 
@@ -205,8 +203,7 @@ git init
 git status
 
 # Zeigt, welche Dateien geändert wurden
-
-```text
+```
 
 #### 3. Dateien hinzufügen (Staging)
 
@@ -218,8 +215,7 @@ git add dateiname.py
 git add .
 
 # Fügt alle geänderten Dateien hinzu
-
-```text
+```
 
 #### 4. Commit erstellen
 
@@ -227,8 +223,7 @@ git add .
 git commit -m "Beschreibung der Änderung"
 
 # Erstellt einen Commit mit Nachricht
-
-```text
+```
 
 #### 5. Historie anzeigen
 
@@ -240,8 +235,7 @@ git log
 git log --oneline
 
 # Kompakte Ansicht
-
-```text
+```
 
 ### Git-Workflow
 
@@ -264,8 +258,7 @@ git add .
 git commit -m "feat: Neue Funktion hinzugefügt"
 
 # 5. Wiederholen
-
-```text
+```
 
 ### .gitignore
 
@@ -301,7 +294,7 @@ Thumbs.db
 
 .env
 *.key
-```text
+```
 
 ### Live-Demo: Erstes Repository
 
@@ -337,7 +330,7 @@ git commit -m "docs: Initiales README"
 # 7. Historie anzeigen
 
 git log
-```text
+```
 
 ---
 
@@ -354,7 +347,7 @@ Erstellen Sie Ihr erstes Git-Repository mit einem README.
 ```bash
 mkdir mein-python-projekt
 cd mein-python-projekt
-```text
+```
 
 #### Schritt 2: Git initialisieren (1 Min.)
 
@@ -362,7 +355,7 @@ cd mein-python-projekt
 git init
 git config user.name "Ihr Name"
 git config user.email "ihre.email@example.com"
-```text
+```
 
 #### Schritt 3: README mit KI erstellen (5 Min.)
 
@@ -378,8 +371,7 @@ Es soll enthalten:
 - Beschreibung: Was ich in diesem Kurs lerne
 - Technologien: Python, Git, VS Code
 - Autor: [Ihr Name]
-
-```text
+```
 
 **Speichern Sie das Ergebnis** als `README.md`
 
@@ -389,7 +381,7 @@ Es soll enthalten:
 
 ```text
 Erstelle eine .gitignore Datei für ein Python-Projekt.
-```text
+```
 
 **Oder kopieren Sie** das Beispiel von oben.
 
@@ -412,7 +404,7 @@ git commit -m "docs: Initiales Projekt-Setup"
 # Prüfen
 
 git log
-```text
+```
 
 #### Schritt 6: Python-Datei hinzufügen (2 Min.)
 
@@ -420,14 +412,14 @@ git log
 
 ```python
 print("Hello, Git!")
-```text
+```
 
 **Commit:**
 
 ```bash
 git add hello.py
 git commit -m "feat: Hello World Programm hinzugefügt"
-```text
+```
 
 ### Checkliste
 
@@ -447,7 +439,7 @@ git commit -m "feat: Hello World Programm hinzugefügt"
 ```bash
 git config user.name "Ihr Name"
 git config user.email "ihre.email@example.com"
-```text
+```
 
 **Problem: "Nothing to commit"**
 
@@ -483,7 +475,7 @@ git config user.email "ihre.email@example.com"
 
 ```text
 Ändern → Status prüfen → Add → Commit → Wiederholen
-```text
+```
 
 ### Best Practices
 
@@ -502,7 +494,7 @@ git config user.email "ihre.email@example.com"
 ❌ "Änderungen"
 ❌ "asdf"
 ❌ "WIP"
-```text
+```
 
 ### Nächste Schritte
 

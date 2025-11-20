@@ -66,7 +66,7 @@ python --version
 
 echo 'print("Hello from Codespaces!")' > test.py
 python test.py
-```text
+```
 
 ---
 
@@ -96,8 +96,7 @@ print(f"Hallo {name}!")' > hello.py
 python hello.py
 
 # 4. Gib deinen Namen ein
-
-```text
+```
 
 ---
 
@@ -160,7 +159,7 @@ python -m flask run
 # Oder
 
 uvicorn main:app --reload
-```text
+```
 
 → Codespaces zeigt automatisch einen Link zum Öffnen im Browser
 

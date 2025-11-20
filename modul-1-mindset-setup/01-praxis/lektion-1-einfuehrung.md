@@ -82,8 +82,7 @@ Teilprobleme:
 4. Maschine einschalten
 5. Warten
 6. Kaffee einschenken
-
-```text
+```
 
 **Diskussion:** Warum ist das wichtig?
 
@@ -104,8 +103,7 @@ Teilprobleme:
 3. 200m geradeaus
 4. An der Ampel rechts
 5. Bis zum Haupteingang
-
-```text
+```
 
 **Diskussion:** Was passiert, wenn Schritte fehlen oder unklar sind?
 
@@ -201,7 +199,7 @@ for number in numbers:
         even_numbers.append(number)
 
 print(even_numbers)
-```text
+```
 
 **Zeit:** ~15-30 Minuten für Anfänger
 
@@ -214,7 +212,7 @@ print(even_numbers)
 ```text
 Ich habe eine Liste von Zahlen. Erstelle ein Python-Programm,
 das nur die geraden Zahlen behält und ausgibt.
-```text
+```
 
 **Schritt 2: Code erhalten & verstehen**
 
@@ -222,7 +220,7 @@ das nur die geraden Zahlen behält und ausgibt.
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 even_numbers = [num for num in numbers if num % 2 == 0]
 print(even_numbers)
-```text
+```
 
 **Schritt 3: Erklärung einholen**
 
@@ -230,7 +228,7 @@ print(even_numbers)
 
 ```text
 Erkläre mir diesen Code Zeile für Zeile.
-```text
+```
 
 **Zeit:** ~2-5 Minuten
 
@@ -321,8 +319,7 @@ Erkläre mir diesen Code Zeile für Zeile.
 5. Funktion: Artikel suchen
    - In Liste suchen
    - Ja/Nein zurückgeben
-
-```text
+```
 
 ---
 

@@ -22,13 +22,13 @@ Erstellen Sie einen kostenlosen Account, falls noch nicht vorhanden.
 
 ```python
 Erstelle ein einfaches "Hello World" Programm in Python.
-```text
+```
 
 **Erwartetes Ergebnis:**
 
 ```python
 print("Hello, World!")
-```text
+```
 
 ✅ **Kopieren Sie den Code** und speichern Sie ihn als `hello.py`
 ✅ **Führen Sie ihn aus** in VS Code oder Terminal: `python hello.py`
@@ -39,7 +39,7 @@ print("Hello, World!")
 
 ```python
 Erkläre mir diesen Code Zeile für Zeile. Was macht print()?
-```text
+```
 
 📝 **Dokumentieren Sie** die Erklärung in eigenen Worten.
 
@@ -50,14 +50,14 @@ Erkläre mir diesen Code Zeile für Zeile. Was macht print()?
 ```python
 Erstelle eine Variante, die den Benutzer nach seinem Namen fragt
 und dann "Hello, [Name]!" ausgibt.
-```text
+```
 
 **Erwartetes Ergebnis:**
 
 ```python
 name = input("Wie ist dein Name? ")
 print(f"Hello, {name}!")
-```text
+```
 
 ✅ **Testen Sie den Code**
 ✅ **Experimentieren Sie** mit verschiedenen Eingaben
@@ -69,7 +69,7 @@ print(f"Hello, {name}!")
 ```text
 Erweitere das Programm so, dass es auch nach dem Alter fragt
 und dann sagt: "Hello [Name], du bist [Alter] Jahre alt!"
-```text
+```
 
 ## 📸 Dokumentation
 
@@ -106,20 +106,20 @@ Wenn Sie Zeit haben, probieren Sie:
 
    ```text
    Erstelle ein Programm, das zwei Zahlen addiert.
-```text
+```
 
 2. **Fehler provozieren:**
 
    ```text
    Was passiert, wenn ich Text statt einer Zahl eingebe?
    Wie kann ich das abfangen?
-```text
+```
 
 3. **Code verbessern lassen:**
 
    ```text
    Wie kann ich diesen Code besser/lesbarer machen?
-```text
+```
 
 ## ✅ Fertig
 
