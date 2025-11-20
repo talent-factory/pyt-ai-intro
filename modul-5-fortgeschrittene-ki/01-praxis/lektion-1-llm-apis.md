@@ -30,7 +30,7 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
-```text
+```
 
 ### Streaming
 
@@ -44,7 +44,7 @@ stream = client.chat.completions.create(
 for chunk in stream:
     if chunk.choices[0].delta.content:
         print(chunk.choices[0].delta.content, end="")
-```text
+```
 
 ### Function Calling
 
@@ -69,7 +69,7 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Wie ist das Wetter in Zürich?"}],
     tools=tools
 )
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -107,7 +107,7 @@ while True:
     messages.append({"role": "assistant", "content": response})
 
     print(f"Bot: {response}\n")
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

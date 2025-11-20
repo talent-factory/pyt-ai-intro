@@ -19,7 +19,7 @@ Erstellen Sie Ihr erstes Git-Repository mit einem README und einer Python-Datei.
 ```bash
 mkdir mein-python-projekt
 cd mein-python-projekt
-```text
+```
 
 ### Schritt 2: Git initialisieren (2 Min.)
 
@@ -27,7 +27,7 @@ cd mein-python-projekt
 git init
 git config user.name "Ihr Name"
 git config user.email "ihre.email@example.com"
-```text
+```
 
 **Prüfen:**
 
@@ -36,7 +36,7 @@ git status
 
 # Sollte zeigen: "On branch main" oder "On branch master"
 
-```text
+```
 
 ### Schritt 3: README mit KI erstellen (5 Min.)
 
@@ -103,7 +103,7 @@ git commit -m "docs: Initiales Projekt-Setup mit README und gitignore"
 # Prüfen
 
 git log
-```text
+```
 
 ### Schritt 6: Python-Datei hinzufügen (3 Min.)
 
@@ -115,7 +115,7 @@ Erstellen Sie eine Datei `hello.py`:
 
 print("Hello, Git!")
 print("Ich lerne Python und Versionskontrolle.")
-```text
+```
 
 ### Schritt 7: Zweiten Commit erstellen (3 Min.)
 
@@ -136,7 +136,7 @@ git commit -m "feat: Hello World Programm hinzugefügt"
 # Historie anzeigen
 
 git log --oneline
-```text
+```
 
 ## ✅ Checkliste
 
@@ -159,7 +159,7 @@ git log --oneline
 ```bash
 git config user.name "Ihr Name"
 git config user.email "ihre.email@example.com"
-```text
+```
 
 ### Problem: "Nothing to commit"
 
@@ -174,7 +174,7 @@ git config user.email "ihre.email@example.com"
 ```bash
 ls -la  # Dateien anzeigen
 git status  # Git-Status prüfen
-```text
+```
 
 ### Problem: Editor öffnet sich bei Commit
 
@@ -196,7 +196,7 @@ pwd
 # Git initialisieren
 
 git init
-```text
+```
 
 ## 🎓 Reflexion
 
@@ -216,7 +216,7 @@ git status        # Status prüfen
 git add .         # Alle Dateien hinzufügen
 git commit -m ""  # Commit erstellen
 git log           # Historie anzeigen
-```text
+```
 
 ---
 

@@ -57,7 +57,7 @@ files = [
     "kein_zugriff.txt",   # PermissionError (simuliert)
     "binary.bin"          # UnicodeDecodeError
 ]
-```text
+```
 
 #### Erwartete Ausgabe
 

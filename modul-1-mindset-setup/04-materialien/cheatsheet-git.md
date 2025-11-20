@@ -13,7 +13,7 @@ git init
 # Repository klonen
 
 git clone <url>
-```text
+```
 
 ## ⚙️ Konfiguration
 
@@ -30,7 +30,7 @@ git config --global user.email "ihre.email@example.com"
 # Konfiguration anzeigen
 
 git config --list
-```text
+```
 
 ## 📊 Status & Info
 
@@ -55,7 +55,7 @@ git log --oneline
 # Grafische Historie
 
 git log --graph --oneline --all
-```text
+```
 
 ## ➕ Änderungen hinzufügen
 
@@ -72,7 +72,7 @@ git add .
 # Interaktiv hinzufügen
 
 git add -i
-```text
+```
 
 ## 💾 Commit erstellen
 
@@ -89,7 +89,7 @@ git commit -am "Nachricht"
 # Letzten Commit ändern
 
 git commit --amend
-```text
+```
 
 ## 🔄 Änderungen rückgängig machen
 
@@ -114,7 +114,7 @@ git reset --soft HEAD~1
 # Letzten Commit rückgängig (Änderungen verwerfen)
 
 git reset --hard HEAD~1
-```text
+```
 
 ## 🌿 Branches
 
@@ -143,7 +143,7 @@ git branch -d branch-name
 # Branch umbenennen
 
 git branch -m alter-name neuer-name
-```text
+```
 
 ## 🔗 Remote Repositories
 
@@ -168,7 +168,7 @@ git pull origin main
 # Remote-Repository entfernen
 
 git remote remove origin
-```text
+```
 
 ## 📝 .gitignore
 
@@ -210,7 +210,7 @@ git status                    # Änderungen prüfen
 git add .                     # Alle Änderungen hinzufügen
 git commit -m "Nachricht"     # Commit erstellen
 git log --oneline             # Prüfen
-```text
+```
 
 ### Workflow 2: Mit GitHub arbeiten
 
@@ -222,7 +222,7 @@ git clone <url>               # Repository klonen
 git add .                     # Änderungen hinzufügen
 git commit -m "Nachricht"     # Commit erstellen
 git push origin main          # Hochladen
-```text
+```
 
 ### Workflow 3: Projekt starten
 
@@ -235,7 +235,7 @@ git init                      # Git initialisieren
 
 git add .                     # Dateien hinzufügen
 git commit -m "Initial commit"  # Erster Commit
-```text
+```
 
 ## 🆘 Troubleshooting
 
@@ -244,7 +244,7 @@ git commit -m "Initial commit"  # Erster Commit
 ```bash
 git config user.name "Ihr Name"
 git config user.email "ihre.email@example.com"
-```text
+```
 
 ### Problem: "fatal: not a git repository"
 
@@ -257,7 +257,7 @@ pwd
 # Git initialisieren
 
 git init
-```text
+```
 
 ### Problem: Merge-Konflikt
 
@@ -278,7 +278,7 @@ git add konflikt-datei.py
 # Merge abschliessen
 
 git commit
-```text
+```
 
 ### Problem: Falscher Commit
 
@@ -295,7 +295,7 @@ git reset --soft HEAD~1
 # Neu committen
 
 git commit -m "Korrigierte Nachricht"
-```text
+```
 
 ## 💡 Best Practices
 
@@ -308,7 +308,7 @@ git commit -m "feat: Benutzer-Login implementiert"
 git commit -m "fix: Fehler bei Passwort-Validierung behoben"
 git commit -m "docs: README aktualisiert"
 git commit -m "refactor: Code-Struktur verbessert"
-```text
+```
 
 **Schlechte Commit-Messages:**
 
@@ -316,7 +316,7 @@ git commit -m "refactor: Code-Struktur verbessert"
 git commit -m "Änderungen"          # ❌ Zu vage
 git commit -m "asdf"                # ❌ Nicht aussagekräftig
 git commit -m "WIP"                 # ❌ Work in Progress
-```text
+```
 
 ### Commit-Präfixe
 

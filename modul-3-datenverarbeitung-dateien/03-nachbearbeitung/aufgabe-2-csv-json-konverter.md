@@ -83,7 +83,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-```text
+```
 
 ## 📊 Beispiele
 
@@ -113,7 +113,7 @@ id,name,alter,aktiv
     "aktiv": false
   }
 ]
-```text
+```
 
 ### Format: object (key=id)
 
@@ -130,7 +130,7 @@ id,name,alter,aktiv
     "aktiv": false
   }
 }
-```text
+```
 
 ## 🎯 Verwendung
 
@@ -147,7 +147,7 @@ python converter.py personen.csv --format object --output personen.json
 # Mit Indent
 
 python converter.py personen.csv --indent 4
-```text
+```
 
 ## ✅ Bewertungskriterien
 

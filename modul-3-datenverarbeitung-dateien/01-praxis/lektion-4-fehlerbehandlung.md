@@ -22,7 +22,7 @@ except IOError:
     print("Fehler beim Lesen")
 finally:
     datei.close()
-```text
+```
 
 ### Logging
 
@@ -38,7 +38,7 @@ logging.basicConfig(
 logging.info("Programm gestartet")
 logging.warning("Warnung")
 logging.error("Fehler aufgetreten")
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -67,7 +67,7 @@ def verarbeite_csv(datei: str) -> list:
     except Exception as e:
         logging.error(f"Unerwarteter Fehler: {e}")
         return []
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

@@ -23,7 +23,7 @@ finally:
 
     if 'datei' in locals():
         datei.close()
-```text
+```
 
 ### Mit with-Statement (empfohlen)
 
@@ -36,7 +36,7 @@ except FileNotFoundError:
 
 # Datei wird automatisch geschlossen
 
-```text
+```
 
 ## Häufige Exceptions
 
@@ -51,7 +51,7 @@ except FileNotFoundError:
 
     # Erstelle Datei oder verwende Default
 
-```text
+```
 
 ### PermissionError
 
@@ -61,7 +61,7 @@ try:
         f.write("Test")
 except PermissionError:
     print("Keine Schreibrechte")
-```text
+```
 
 ### ValueError
 
@@ -70,7 +70,7 @@ try:
     alter = int(input("Alter: "))
 except ValueError:
     print("Bitte Zahl eingeben")
-```text
+```
 
 ### JSONDecodeError
 
@@ -81,7 +81,7 @@ try:
     data = json.loads('ungültiges json')
 except json.JSONDecodeError as e:
     print(f"JSON-Fehler: {e}")
-```text
+```
 
 ## Best Practices
 
@@ -110,7 +110,7 @@ except PermissionError:
     print("Keine Rechte")
 except Exception as e:
     print(f"Unerwarteter Fehler: {e}")
-```text
+```
 
 ### 2. Nicht zu viel in try
 
@@ -140,7 +140,7 @@ try:
 except ValueError:
     print("Ungültige Daten")
     return
-```text
+```
 
 ### 3. Informative Fehlermeldungen
 
@@ -156,7 +156,7 @@ except Exception:
 except FileNotFoundError as e:
     print(f"Datei '{filename}' nicht gefunden")
     print(f"Gesucht in: {os.getcwd()}")
-```text
+```
 
 ### 4. Cleanup mit finally
 
@@ -172,7 +172,7 @@ except Exception as e:
 finally:
     if datei:
         datei.close()
-```text
+```
 
 ## Eigene Exceptions
 
@@ -191,7 +191,7 @@ try:
     validiere_alter(-5)
 except DatenValidierungsFehler as e:
     print(f"Validierung fehlgeschlagen: {e}")
-```text
+```
 
 ## Exception Chaining
 
@@ -206,7 +206,7 @@ except json.JSONDecodeError as e:
     # Neuer Fehler mit Kontext
 
     raise ValueError("Konfiguration ungültig") from e
-```text
+```
 
 ## Logging statt print
 
@@ -223,7 +223,7 @@ except FileNotFoundError as e:
     logging.error(f"Datei nicht gefunden: {e}")
 except Exception as e:
     logging.exception("Unerwarteter Fehler")
-```text
+```
 
 ## Patterns
 
@@ -242,7 +242,7 @@ def retry_operation(func, max_retries=3):
             wait_time = 2 ** attempt
             print(f"Versuch {attempt + 1} fehlgeschlagen, warte {wait_time}s")
             time.sleep(wait_time)
-```text
+```
 
 ### Context Manager
 
@@ -263,7 +263,7 @@ class DateiManager:
 
 with DateiManager('daten.txt') as f:
     data = f.read()
-```text
+```
 
 ## Checkliste
 

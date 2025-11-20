@@ -57,7 +57,7 @@ hex = 0x0A      # 10
 # Unterstriche zur Lesbarkeit (ab Python 3.6)
 
 million = 1_000_000
-```text
+```
 
 **Operationen:**
 
@@ -72,7 +72,7 @@ a / b    # 3.333... (Division → float)
 a // b   # 3  (Ganzzahldivision)
 a % b    # 1  (Modulo/Rest)
 a ** b   # 1000 (Potenz)
-```text
+```
 
 ### Float
 
@@ -82,7 +82,7 @@ Dezimalzahlen (64-bit Fliesskomma).
 pi = 3.14159
 wissenschaft = 1.5e-3  # 0.0015
 negativ = -2.5
-```text
+```
 
 **Wichtig: Rundungsfehler!**
 
@@ -93,7 +93,7 @@ negativ = -2.5
 
 from decimal import Decimal
 Decimal('0.1') + Decimal('0.2')  # Decimal('0.3')
-```text
+```
 
 ### Complex
 
@@ -103,7 +103,7 @@ Komplexe Zahlen (selten verwendet).
 z = 1 + 2j
 z.real  # 1.0
 z.imag  # 2.0
-```text
+```
 
 ## 📝 String (str)
 
@@ -130,7 +130,7 @@ Text"""
 # Raw String (keine Escape-Sequenzen)
 
 pfad = r"C:\Users\name"  # Backslash wird nicht escaped
-```text
+```
 
 ### Wichtige String-Methoden
 
@@ -170,7 +170,7 @@ text.isalpha()             # False
 text.isalnum()             # False
 text.islower()             # False
 text.isupper()             # False
-```text
+```
 
 ### String-Formatierung
 
@@ -192,7 +192,7 @@ text = "Hallo {name}, du bist {alter} Jahre alt.".format(name=name, alter=alter)
 # 3. % (veraltet)
 
 text = "Hallo %s, du bist %d Jahre alt." % (name, alter)
-```text
+```
 
 ## 📚 List
 
@@ -217,7 +217,7 @@ verschachtelt = [[1, 2], [3, 4]]
 
 quadrate = [x**2 for x in range(10)]
 gerade = [x for x in range(10) if x % 2 == 0]
-```text
+```
 
 ### Listen manipulieren
 
@@ -250,7 +250,7 @@ liste.sort()              # In-place sortieren (ändert Liste)
 liste.sort(reverse=True)  # Absteigend
 sortiert = sorted(liste)  # Neue sortierte Liste
 liste.reverse()           # Umkehren
-```text
+```
 
 ### Slicing
 
@@ -264,7 +264,7 @@ liste[:3]      # [0, 1, 2] (Anfang bis Index 2)
 liste[3:]      # [3, 4, 5] (Index 3 bis Ende)
 liste[::2]     # [0, 2, 4] (jedes 2. Element)
 liste[::-1]    # [5, 4, 3, 2, 1, 0] (rückwärts)
-```text
+```
 
 ## 📖 Dictionary (dict)
 
@@ -290,7 +290,7 @@ person = {
 # Dict Comprehension
 
 quadrate = {x: x**2 for x in range(5)}
-```text
+```
 
 ### Dictionaries manipulieren
 
@@ -336,7 +336,7 @@ for value in person.values():
 
 for key, value in person.items():
     print(f"{key}: {value}")
-```text
+```
 
 ## 📦 Tuple
 
@@ -362,7 +362,7 @@ x, y = koordinaten  # x=3, y=4
 
 # - Wenn Daten nicht geändert werden sollen
 
-```text
+```
 
 ## 🎲 Set
 
@@ -391,7 +391,7 @@ a.add(4)
 a.remove(1)      # KeyError wenn nicht vorhanden
 a.discard(1)     # Kein Error
 a.clear()
-```text
+```
 
 ## ✅ Boolean (bool)
 
@@ -415,7 +415,7 @@ bool(None)      # False
 bool(1)         # True
 bool("text")    # True
 bool([1, 2])    # True
-```text
+```
 
 ## 🚫 None
 
@@ -431,7 +431,7 @@ if ergebnis is None:
 
 if ergebnis == None:  # Funktioniert, aber nicht idiomatisch
 if not ergebnis:      # Prüft auf Falsy (None, 0, "", [], etc.)
-```text
+```
 
 ## 🔄 Type Conversion
 
@@ -439,7 +439,7 @@ if not ergebnis:      # Prüft auf Falsy (None, 0, "", [], etc.)
 
 ```python
 zahl = 5 + 2.5  # 7.5 (int → float automatisch)
-```text
+```
 
 ### Explizite Konvertierung
 
@@ -475,7 +475,7 @@ set([1, 2, 2, 3]) # {1, 2, 3}
 # Zu Dictionary
 
 dict([("a", 1), ("b", 2)])  # {'a': 1, 'b': 2}
-```text
+```
 
 ## 🎯 Welchen Datentyp wählen
 
@@ -519,7 +519,7 @@ tuple = [1, 2, 3]  # Das ist eine Liste!
 # ✅ Richtig
 
 tuple = (1, 2, 3)
-```text
+```
 
 ### 2. Leeres Set erstellen
 
@@ -532,7 +532,7 @@ empty = {}  # Das ist ein Dictionary!
 # ✅ Richtig
 
 empty = set()
-```text
+```
 
 ### 3. Mutable Default Arguments
 
@@ -551,7 +551,7 @@ def add_item(item, liste=None):
         liste = []
     liste.append(item)
     return liste
-```text
+```
 
 ### 4. String Konkatenation in Schleifen
 
@@ -566,7 +566,7 @@ for i in range(1000):
 # ✅ Effizient
 
 text = "".join(str(i) for i in range(1000))
-```text
+```
 
 ## 📚 Weiterführende Ressourcen
 

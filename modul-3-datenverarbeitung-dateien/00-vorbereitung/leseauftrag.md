@@ -83,7 +83,7 @@ Clara,28,Basel
   "alter": 25,
   "stadt": "Zürich"
 }
-```text
+```
 
 **Vorteile:**
 

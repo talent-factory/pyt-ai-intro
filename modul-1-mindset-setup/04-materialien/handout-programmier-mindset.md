@@ -133,7 +133,7 @@ def calculate_average(numbers):
     total = sum(numbers)
     count = len(numbers)
     return total / count
-```text
+```
 
 ### 4. Musterkennung
 
@@ -185,7 +185,7 @@ total_points = sum(points)
 
 times = [30, 45, 60]  # Minuten
 total_time = sum(times)
-```text
+```
 
 ## 🤖 KI als Werkzeug
 

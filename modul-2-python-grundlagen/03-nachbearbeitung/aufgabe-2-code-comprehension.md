@@ -67,7 +67,7 @@ def analyze(input_data, threshold=10):
 test_data = [5, "hello", [1, 2, 3], 3.5, "AI", 10, [5, 5, 5], "code"]
 result = analyze(test_data, threshold=20)
 print(result)
-```text
+```
 
 ## ✅ Anforderungen
 
@@ -188,7 +188,7 @@ raw_data = [5, "hello", [1, 2, 3]]
 
 # - [1, 2, 3] ist eine Liste → sum([1, 2, 3]) = 6
 
-```text
+```
 
 [Wiederholen Sie dies für alle 4 Funktionen]
 
@@ -233,7 +233,7 @@ def process_data(raw_data: list) -> list:
 
     # [Ihr verbesserter Code]
 
-```text
+```
 
 **Verbesserungen:**
 
@@ -262,7 +262,7 @@ test_data = [...]
 
 # [...]
 
-```text
+```
 
 [Wiederholen für Testfall 2 und 3]
 
@@ -339,7 +339,7 @@ Erkläre den folgenden Python-Code Zeile für Zeile:
 
 result = [x for x in data if x is not None and x > threshold]
 
-```text
+```
 
 Was macht diese List Comprehension und wie funktioniert die Bedingung?
 ```text
@@ -389,7 +389,7 @@ for x in data:
 # List Comprehension (äquivalent)
 
 result = [x for x in data if x > 10]
-```text
+```
 
 **isinstance():**
 
@@ -401,7 +401,7 @@ isinstance(5, int)           # True
 isinstance("hello", str)     # True
 isinstance([1, 2], list)     # True
 isinstance(5, (int, float))  # True (einer von mehreren)
-```text
+```
 
 **Dictionary Comprehensions:**
 
@@ -413,7 +413,7 @@ stats = {
     "sum": sum(data),
     "avg": sum(data) / len(data)
 }
-```text
+```
 
 ## 🔍 Beispiel-Analyse (Teillösung)
 
@@ -464,7 +464,7 @@ threshold = 10
 # Ausgabe
 
 [25, 15, 30]
-```text
+```
 
 **Stärken:**
 
@@ -503,7 +503,7 @@ def filter_data(data: list, threshold: float = 10) -> list:
         raise TypeError("data muss eine Liste sein")
 
     return [x for x in data if x is not None and x > threshold]
-```text
+```
 
 ## 📚 Zusätzliche Challenges (Optional)
 

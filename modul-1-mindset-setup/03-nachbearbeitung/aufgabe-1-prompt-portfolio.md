@@ -54,7 +54,7 @@ Nutzen Sie folgendes Template für jeden Prompt:
 
 # Zeigen Sie einen relevanten Ausschnitt des generierten Codes
 
-```text
+```
 
 ### Funktioniert
 
@@ -137,7 +137,7 @@ while True:
 
     # ... rest des Codes
 
-```text
+```
 
 ### Funktioniert
 

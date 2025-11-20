@@ -28,7 +28,7 @@ def begruessung():
 # Funktion aufrufen
 
 begruessung()
-```text
+```
 
 **Mit Parametern:**
 
@@ -38,7 +38,7 @@ def begruessung(name):
     print(f"Hallo {name}!")
 
 begruessung("Anna")  # "Hallo Anna!"
-```text
+```
 
 **Mit Rückgabewert:**
 
@@ -48,7 +48,7 @@ def addiere(a, b):
     return a + b
 
 ergebnis = addiere(5, 3)  # 8
-```text
+```
 
 **Mit Type Hints:**
 
@@ -56,7 +56,7 @@ ergebnis = addiere(5, 3)  # 8
 def addiere(a: int, b: int) -> int:
     """Addiert zwei Zahlen."""
     return a + b
-```text
+```
 
 ### Parameter-Varianten
 
@@ -67,7 +67,7 @@ def person_info(name, alter, stadt):
     return f"{name}, {alter} Jahre, aus {stadt}"
 
 info = person_info("Anna", 25, "Zürich")
-```text
+```
 
 **Keyword-Arguments:**
 
@@ -76,7 +76,7 @@ info = person_info("Anna", 25, "Zürich")
 # Reihenfolge egal
 
 info = person_info(alter=25, stadt="Zürich", name="Anna")
-```text
+```
 
 **Default-Parameter:**
 
@@ -87,7 +87,7 @@ def begruessung(name, gruss="Hallo"):
 print(begruessung("Anna"))              # "Hallo Anna!"
 print(begruessung("Bob", "Hi"))         # "Hi Bob!"
 print(begruessung("Clara", gruss="Hey")) # "Hey Clara!"
-```text
+```
 
 **args und **kwargs:**
 
@@ -108,7 +108,7 @@ def person_info(**daten):
         print(f"{key}: {value}")
 
 person_info(name="Anna", alter=25, stadt="Zürich")
-```text
+```
 
 ### Docstrings
 
@@ -134,7 +134,7 @@ def berechne_bmi(gewicht: float, groesse: float) -> float:
 
 print(berechne_bmi.__doc__)
 help(berechne_bmi)
-```text
+```
 
 ### Lambda-Funktionen
 
@@ -163,7 +163,7 @@ personen = [
 ]
 
 nach_alter = sorted(personen, key=lambda p: p["alter"])
-```text
+```
 
 ### Scope (Gültigkeitsbereich)
 
@@ -194,7 +194,7 @@ def aendere_global():
 
 aendere_global()
 print(x)  # 100
-```text
+```
 
 ### Module importieren
 
@@ -222,7 +222,7 @@ print(m.pi)
 # Alles importieren (nicht empfohlen)
 
 from math import *
-```text
+```
 
 **Häufige Module:**
 
@@ -254,7 +254,7 @@ import os
 os.getcwd()           # Aktuelles Verzeichnis
 os.listdir('.')       # Dateien im Verzeichnis
 os.path.exists(datei) # Prüft ob Datei existiert
-```text
+```
 
 ### Eigene Module erstellen
 
@@ -272,7 +272,7 @@ def addiere(a, b):
     return a + b
 
 PI = 3.14159
-```text
+```
 
 **Verwendung:**
 
@@ -285,7 +285,7 @@ import mein_modul
 print(mein_modul.begruessung("Anna"))
 print(mein_modul.addiere(5, 3))
 print(mein_modul.PI)
-```text
+```
 
 ## 💻 Live-Demo (15 Min.)
 
@@ -325,7 +325,7 @@ print(ist_passwort_sicher("schwach"))         # False
 
 print(ist_alter_gueltig(25))                  # True
 print(ist_alter_gueltig(200))                 # False
-```text
+```
 
 ### Demo 2: Mathematik-Utilities
 
@@ -374,7 +374,7 @@ if __name__ == "__main__":
     print(f"17 ist Primzahl: {ist_primzahl(17)}")
     print(f"5! = {fakultaet(5)}")
     print(f"Fibonacci(10): {fibonacci(10)}")
-```text
+```
 
 ### Demo 3: Datums-Operationen
 
@@ -438,7 +438,7 @@ jetzt = datetime.now()
 print(f"DE: {formatiere_datum(jetzt, 'DE')}")
 print(f"US: {formatiere_datum(jetzt, 'US')}")
 print(f"ISO: {formatiere_datum(jetzt, 'ISO')}")
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 
@@ -502,7 +502,7 @@ def ist_palindrom(text: str) -> bool:
 if __name__ == "__main__":
     print(ist_palindrom("anna"))  # True
     print(ist_palindrom("test"))  # False
-```text
+```
 
 ## 🎓 Zusammenfassung
 

@@ -22,7 +22,7 @@ def ist_palindrom(text: str) -> bool:
 def zaehle_woerter(text: str) -> int:
     """Zählt Wörter in Text."""
     pass
-```text
+```
 
 ### Mathe-Utilities (wählen Sie 1-2)
 
@@ -34,7 +34,7 @@ def ist_gerade(zahl: int) -> bool:
 def durchschnitt(zahlen: list[float]) -> float:
     """Berechnet Durchschnitt."""
     pass
-```text
+```
 
 ### Listen-Utilities (wählen Sie 1)
 
@@ -42,7 +42,7 @@ def durchschnitt(zahlen: list[float]) -> float:
 def entferne_duplikate(liste: list) -> list:
     """Entfernt Duplikate aus Liste."""
     pass
-```text
+```
 
 ## Vorgaben
 
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     print(ist_palindrom("anna"))  # True
     print(ist_palindrom("test"))  # False
-```text
+```
 
 ## Prompt-Vorlage
 

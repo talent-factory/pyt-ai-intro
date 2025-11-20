@@ -127,7 +127,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-```text
+```
 
 ## 📤 Erwarteter Output
 
@@ -163,7 +163,7 @@ if __name__ == "__main__":
     }
   ]
 }
-```text
+```
 
 ## ✅ Bewertungskriterien
 

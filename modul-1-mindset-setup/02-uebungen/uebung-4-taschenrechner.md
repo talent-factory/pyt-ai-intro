@@ -182,7 +182,7 @@ git commit -m "feat: Einfacher Taschenrechner mit Grundrechenarten"
 # Prüfen
 
 git log --oneline
-```text
+```
 
 ## ✅ Checkliste
 

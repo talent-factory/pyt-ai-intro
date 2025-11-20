@@ -44,7 +44,7 @@ response = bot.chat("Erkläre List Comprehensions")
 print(response)
 print(f"Kosten: ${bot.get_cost():.4f}")
 
-```text
+```
 
 Mit Type Hints, Docstrings und Error Handling.
 ```text

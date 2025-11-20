@@ -89,7 +89,7 @@ von Modul 1 mit KI-Unterstützung erstellt habe.
 
 python programm1_taschenrechner.py
 
-```text
+```
 
 ### 2. Textanalyse (`programm2_textanalyse.py`)
 
@@ -107,7 +107,7 @@ python programm1_taschenrechner.py
 
 python programm2_textanalyse.py
 
-```text
+```
 
 ### 3. Zahlenraten (`programm3_zahlenraten.py`)
 
@@ -126,7 +126,7 @@ der Benutzer raten muss.
 
 python programm3_zahlenraten.py
 
-```text
+```
 
 ## 🛠️ Installation
 
@@ -153,7 +153,7 @@ source venv/bin/activate  # Auf Windows: venv\Scripts\activate
 
 pip install -r requirements.txt
 
-```text
+```
 
 ## 📚 Verwendete Technologien
 
@@ -295,7 +295,7 @@ git commit -m "docs: README mit Programmbeschreibungen aktualisiert"
 # 10. Historie prüfen
 
 git log --oneline
-```text
+```
 
 ## ✅ Checkliste
 

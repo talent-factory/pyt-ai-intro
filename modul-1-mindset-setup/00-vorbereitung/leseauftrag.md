@@ -57,7 +57,7 @@ _Ihre Antwort:_
 
 ```json
 [Hier Ihre Antwort eintragen]
-```text
+```
 
 ### Frage 2: Bedenken
 
@@ -67,7 +67,7 @@ _Ihre Antwort:_
 
 ```json
 [Hier Ihre Antwort eintragen]
-```text
+```
 
 ### Frage 3: Erwartungen
 
@@ -77,7 +77,7 @@ _Ihre Antwort:_
 
 ```json
 [Hier Ihre Antwort eintragen]
-```text
+```
 
 ### Frage 4: Motivation
 
@@ -87,7 +87,7 @@ _Ihre Antwort:_
 
 ```json
 [Hier Ihre Antwort eintragen]
-```text
+```
 
 ## 📝 Notizen
 

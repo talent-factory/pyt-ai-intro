@@ -23,7 +23,7 @@ with open('daten.csv', 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
         print(row['name'])  # Dictionary
-```text
+```
 
 ### Schreiben
 
@@ -43,7 +43,7 @@ with open('output.csv', 'w', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerow({'name': 'Anna', 'alter': 25})
-```text
+```
 
 ## JSON-Modul
 
@@ -61,7 +61,7 @@ with open('daten.json', 'r') as f:
 
 json_string = '{"name": "Anna", "alter": 25}'
 data = json.loads(json_string)
-```text
+```
 
 ### Schreiben
 
@@ -76,7 +76,7 @@ with open('output.json', 'w') as f:
 # Als String
 
 json_string = json.dumps(data, indent=2)
-```text
+```
 
 ## pandas Basics
 
@@ -101,7 +101,7 @@ erwachsene = df[df['alter'] >= 18]
 # Schreiben
 
 df.to_csv('output.csv', index=False)
-```text
+```
 
 ### JSON
 
@@ -114,7 +114,7 @@ df = pd.read_json('daten.json')
 # Schreiben
 
 df.to_json('output.json', orient='records', indent=2)
-```text
+```
 
 ## Häufige Operationen
 
@@ -129,7 +129,7 @@ for row in reader:
     if key not in seen:
         seen.add(key)
         unique_rows.append(row)
-```text
+```
 
 ### JSON: Nested Access
 
@@ -146,7 +146,7 @@ data = {
 # Sicher zugreifen
 
 city = data.get('user', {}).get('address', {}).get('city')
-```text
+```
 
 ### Type Conversion
 
@@ -157,7 +157,7 @@ city = data.get('user', {}).get('address', {}).get('city')
 alter = int(row['alter'])
 preis = float(row['preis'])
 aktiv = row['aktiv'].lower() == 'true'
-```text
+```
 
 ## Fehlerbehandlung
 
@@ -170,7 +170,7 @@ except FileNotFoundError:
     print("Datei nicht gefunden")
 except csv.Error as e:
     print(f"CSV-Fehler: {e}")
-```text
+```
 
 ## Best Practices
 

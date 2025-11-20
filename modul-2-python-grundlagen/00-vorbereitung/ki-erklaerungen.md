@@ -39,7 +39,7 @@ Unterschied besser verstehe.
 
 # Hier das Beispiel der KI einfügen
 
-```text
+```
 
 **Beispiel 2 - Dictionary:**
 
@@ -47,7 +47,7 @@ Unterschied besser verstehe.
 
 # Hier das Beispiel der KI einfügen
 
-```text
+```
 
 **Variation 1:**
 
@@ -55,7 +55,7 @@ Unterschied besser verstehe.
 
 # Erste Variation
 
-```text
+```
 
 **Variation 2:**
 
@@ -63,7 +63,7 @@ Unterschied besser verstehe.
 
 # Zweite Variation
 
-```text
+```
 
 **Mein Verständnis:**
 
@@ -105,7 +105,7 @@ und eines, wo while besser ist.
 
 # Hier das for-Beispiel
 
-```text
+```
 
 **Beispiel: while-Schleife**
 
@@ -113,7 +113,7 @@ und eines, wo while besser ist.
 
 # Hier das while-Beispiel
 
-```text
+```
 
 **Wann for verwenden:**
 
@@ -166,7 +166,7 @@ Parametern und zeige, wie man die Funktion aufruft.
 
 # Hier das Beispiel
 
-```text
+```
 
 **Variation mit Parametern:**
 
@@ -174,7 +174,7 @@ Parametern und zeige, wie man die Funktion aufruft.
 
 # Hier die Variation
 
-```text
+```
 
 **Aufruf-Beispiele:**
 
@@ -182,7 +182,7 @@ Parametern und zeige, wie man die Funktion aufruft.
 
 # Verschiedene Aufrufe der Funktion
 
-```text
+```
 
 **Warum Funktionen nützlich sind:**
 

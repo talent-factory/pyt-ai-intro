@@ -29,7 +29,7 @@ name = "Anna"
 alter = 25
 groesse = 1.75
 ist_student = True
-```text
+```
 
 **Naming Conventions (PEP 8):**
 
@@ -47,7 +47,7 @@ BenutzerName = "Anna"  # CamelCase nur für Klassen
 maxVersuche = 3        # camelCase nicht in Python
 ist-aktiv = True       # Bindestriche nicht erlaubt
 2name = "Bob"          # Darf nicht mit Zahl beginnen
-```text
+```
 
 **Regeln:**
 
@@ -66,7 +66,7 @@ ist-aktiv = True       # Bindestriche nicht erlaubt
 alter = 25
 anzahl = 100
 temperatur = -5
-```text
+```
 
 **Float:**
 
@@ -74,7 +74,7 @@ temperatur = -5
 preis = 19.99
 pi = 3.14159
 temperatur = 36.5
-```text
+```
 
 #### 2. Strings (str)
 
@@ -97,7 +97,7 @@ wiederholung = "Ha" * 3  # "HaHaHa"
 alter = 25
 text = f"Ich bin {alter} Jahre alt"
 berechnung = f"2 + 2 = {2 + 2}"
-```text
+```
 
 #### 3. Boolean (bool)
 
@@ -109,13 +109,13 @@ ist_fertig = False
 
 ist_erwachsen = alter >= 18
 ist_leer = len(name) == 0
-```text
+```
 
 #### 4. None
 
 ```python
 ergebnis = None  # Kein Wert
-```text
+```
 
 ### Type Hints
 
@@ -132,7 +132,7 @@ ist_student: bool = True
 
 def begruessung(name: str) -> str:
     return f"Hallo {name}"
-```text
+```
 
 ### Operatoren
 
@@ -152,7 +152,7 @@ quotient = 20 / 4    # 5.0 (immer float)
 ganzzahl_division = 20 // 3  # 6 (ohne Rest)
 rest = 20 % 3                # 2 (Modulo)
 potenz = 2 ** 8              # 256
-```text
+```
 
 #### Vergleichsoperatoren
 
@@ -166,7 +166,7 @@ groesser = 10 > 5         # True
 kleiner = 3 < 7           # True
 groesser_gleich = 5 >= 5  # True
 kleiner_gleich = 3 <= 7   # True
-```text
+```
 
 #### Logische Operatoren
 
@@ -180,7 +180,7 @@ hat_ausweis = True
 darf_eintreten = ist_erwachsen and hat_ausweis  # Beide müssen True sein
 darf_rabatt = ist_student or alter >= 65        # Eines muss True sein
 ist_nicht_aktiv = not ist_aktiv                 # Negation
-```text
+```
 
 ### Type Conversion (Casting)
 
@@ -211,7 +211,7 @@ try:
     zahl = int("abc")  # ValueError!
 except ValueError:
     print("Keine gültige Zahl")
-```text
+```
 
 ## 💻 Live-Demo (15 Min.)
 
@@ -239,7 +239,7 @@ print(f"{temp_c}°C = {temp_f}°F")
 temp_f = 77.0
 temp_c = fahrenheit_zu_celsius(temp_f)
 print(f"{temp_f}°F = {temp_c:.1f}°C")
-```text
+```
 
 ### Demo 2: BMI-Rechner
 
@@ -273,7 +273,7 @@ kategorie = interpretiere_bmi(bmi)
 
 print(f"BMI: {bmi:.1f}")
 print(f"Kategorie: {kategorie}")
-```text
+```
 
 ### Demo 3: String-Manipulationen
 
@@ -305,7 +305,7 @@ name = "Anna Müller"
 teile = name.split()
 print(f"Vorname: {teile[0]}")
 print(f"Nachname: {teile[1]}")
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

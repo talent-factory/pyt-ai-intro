@@ -117,7 +117,7 @@ Bilden Sie 2er-Gruppen.
 
 ```python
 einkaufsliste = ["Milch", "Brot", "Eier"]
-```text
+```
 
 **Vorteile:**
 
@@ -133,7 +133,7 @@ einkaufsliste = ["Milch", "Brot", "Eier"]
 
 ```python
 einkaufsliste = {"Milch": 2, "Brot": 1, "Eier": 12}
-```text
+```
 
 **Vorteile:**
 

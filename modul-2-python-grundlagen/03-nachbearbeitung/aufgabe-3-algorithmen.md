@@ -45,7 +45,7 @@ def binary_search(sorted_list: list, target: int) -> int:
         -1
     """
     pass
-```text
+```
 
 **Testfälle:**
 
@@ -55,7 +55,7 @@ assert binary_search([1, 3, 5, 7, 9], 1) == 0
 assert binary_search([1, 3, 5, 7, 9], 9) == 4
 assert binary_search([1, 3, 5, 7, 9], 4) == -1
 assert binary_search([], 5) == -1
-```text
+```
 
 ---
 
@@ -87,7 +87,7 @@ def is_palindrome(text: str) -> bool:
         False
     """
     pass
-```text
+```
 
 **Testfälle:**
 
@@ -97,7 +97,7 @@ assert is_palindrome("A man a plan a canal Panama") == True
 assert is_palindrome("racecar") == True
 assert is_palindrome("Hallo") == False
 assert is_palindrome("") == True
-```text
+```
 
 ---
 
@@ -132,7 +132,7 @@ def fibonacci(n: int, memo: dict = None) -> int:
         55
     """
     pass
-```text
+```
 
 **Testfälle:**
 
@@ -142,7 +142,7 @@ assert fibonacci(1) == 1
 assert fibonacci(5) == 5
 assert fibonacci(10) == 55
 assert fibonacci(20) == 6765
-```text
+```
 
 ---
 
@@ -175,7 +175,7 @@ def are_anagrams(str1: str, str2: str) -> bool:
         False
     """
     pass
-```text
+```
 
 **Testfälle:**
 
@@ -184,7 +184,7 @@ assert are_anagrams("listen", "silent") == True
 assert are_anagrams("Astronomer", "Moon starer") == True
 assert are_anagrams("hello", "world") == False
 assert are_anagrams("", "") == True
-```text
+```
 
 ---
 
@@ -216,7 +216,7 @@ def is_prime(n: int) -> bool:
         False
     """
     pass
-```text
+```
 
 **Testfälle:**
 
@@ -227,7 +227,7 @@ assert is_prime(4) == False
 assert is_prime(17) == True
 assert is_prime(100) == False
 assert is_prime(1) == False
-```text
+```
 
 ## ✅ Anforderungen
 
@@ -326,7 +326,7 @@ if __name__ == "__main__":
 
     # Weitere Tests
 
-```text
+```
 
 ## 📝 Template für test_algorithms.py
 
@@ -366,7 +366,7 @@ class TestBinarySearch:
 
 # Tests für weitere Algorithmen
 
-```text
+```
 
 ## 💡 Schritt-für-Schritt-Anleitung
 
@@ -476,7 +476,7 @@ while left < right:
 # ✅ Richtig
 
 while left <= right:
-```text
+```
 
 ---
 
@@ -491,7 +491,7 @@ while left <= right:
 # Leerzeichen entfernen, Kleinbuchstaben
 
 clean = text.lower().replace(" ", "")
-```text
+```
 
 **Zwei Ansätze:**
 
@@ -510,7 +510,7 @@ while left < right:
     left += 1
     right -= 1
 return True
-```text
+```
 
 ---
 
@@ -525,7 +525,7 @@ def fib(n):
     if n <= 1:
         return n
     return fib(n-1) + fib(n-2)  # Viele doppelte Berechnungen!
-```text
+```
 
 **Mit Memoization (SCHNELL):**
 
@@ -544,7 +544,7 @@ def fibonacci(n: int, memo: dict = None) -> int:
 
     memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)
     return memo[n]
-```text
+```
 
 **Komplexität:**
 
@@ -570,7 +570,7 @@ def are_anagrams(str1: str, str2: str) -> bool:
     # Sortieren und vergleichen
 
     return sorted(clean1) == sorted(clean2)
-```text
+```
 
 **Ansatz 2: Buchstaben zählen**
 
@@ -582,7 +582,7 @@ def are_anagrams(str1: str, str2: str) -> bool:
     clean2 = str2.lower().replace(" ", "")
 
     return Counter(clean1) == Counter(clean2)
-```text
+```
 
 ---
 
@@ -598,7 +598,7 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-```text
+```
 
 **Optimierte Methode (SCHNELL):**
 
@@ -618,7 +618,7 @@ def is_prime(n: int) -> bool:
         if n % i == 0:
             return False
     return True
-```text
+```
 
 **Warum nur bis √n?**
 Wenn n = a × b, dann ist mindestens einer der Faktoren ≤ √n.
@@ -629,7 +629,7 @@ Wenn n = a × b, dann ist mindestens einer der Faktoren ≤ √n.
 
 ```bash
 pip install pytest
-```text
+```
 
 **Tests ausführen:**
 
@@ -646,7 +646,7 @@ pytest test_algorithms.py -v
 # Nur ein Test
 
 pytest test_algorithms.py::TestBinarySearch::test_found_middle
-```text
+```
 
 ## 📚 Zeitkomplexität (Big-O)
 
@@ -735,7 +735,7 @@ Fügen Sie alle Dateien Ihrem Git-Repository hinzu:
 git add aufgabe-3-algorithmen/
 git commit -m "Aufgabe 3: Algorithmen implementiert"
 git push
-```text
+```
 
 ---
 

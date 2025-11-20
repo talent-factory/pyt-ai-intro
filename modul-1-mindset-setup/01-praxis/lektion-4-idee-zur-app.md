@@ -95,7 +95,7 @@ def divide(a, b):
 
 # Problem: Was passiert bei b = 0
 
-```text
+```
 
 **Besser:**
 
@@ -104,7 +104,7 @@ def divide(a, b):
     if b == 0:
         return "Fehler: Division durch Null"
     return a / b
-```text
+```
 
 #### 2. Lesbarkeit
 
@@ -128,7 +128,7 @@ def f(x, y):
 def calculate_tax(price, quantity):
     tax_rate = 0.19
     return price * quantity * tax_rate
-```text
+```
 
 #### 3. Fehlerbehandlung
 
@@ -153,7 +153,7 @@ try:
 except ValueError:
     print("Bitte eine Zahl eingeben!")
     age = 0
-```text
+```
 
 #### 4. Effizienz
 
@@ -179,7 +179,7 @@ for n in numbers:
 
 numbers = [1, 2, 3, 4, 5]
 even = [n for n in numbers if n % 2 == 0]
-```text
+```
 
 ### Debugging-Strategien
 
@@ -193,7 +193,7 @@ def calculate_total(prices):
     total = sum(prices)
     print(f"Summe: {total}")  # Debug
     return total
-```text
+```
 
 #### Strategie 2: Fehler lesen
 
@@ -207,7 +207,7 @@ def calculate_total(prices):
 
 # Lösung: Variable definieren oder Tippfehler korrigieren
 
-```text
+```
 
 #### Strategie 3: Schrittweise testen
 
@@ -226,7 +226,7 @@ print(f"Nach Schritt 1: {step1}")
 step2 = process_data(step1)
 print(f"Nach Schritt 2: {step2}")
 result = finalize_data(step2)
-```text
+```
 
 #### Strategie 4: KI um Hilfe fragen
 
@@ -316,7 +316,7 @@ Ergebnis: Bestanden
 ```bash
 git add notenverwaltung.py
 git commit -m "feat: Notenverwaltung mit Durchschnittsberechnung"
-```text
+```
 
 ---
 
@@ -409,7 +409,7 @@ git add taschenrechner.py .gitignore
 # Commit erstellen
 
 git commit -m "feat: Einfacher Taschenrechner mit Grundrechenarten"
-```text
+```
 
 ### Checkliste
 

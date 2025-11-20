@@ -36,19 +36,19 @@ Richten Sie einen API-Zugang ein und führen Sie erste Tests durch.
 # Installation
 
 pip install openai python-dotenv
-```text
+```
 
 Erstelle `.env` Datei:
 
 ```bash
 OPENAI_API_KEY=sk-...
-```text
+```
 
 **Wichtig:** Füge `.env` zu `.gitignore` hinzu!
 
 ```bash
 echo ".env" >> .gitignore
-```text
+```
 
 ### Schritt 4: Erster Test (10 Min.)
 
@@ -77,7 +77,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 print(f"\nTokens verwendet: {response.usage.total_tokens}")
 print(f"Kosten: ~${response.usage.total_tokens * 0.000001:.6f}")
-```text
+```
 
 ### Schritt 5: Spending Limit setzen (10 Min.)
 
@@ -108,13 +108,13 @@ print(f"Kosten: ~${response.usage.total_tokens * 0.000001:.6f}")
 
 ```bash
 pip install anthropic python-dotenv
-```text
+```
 
 `.env`:
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-...
-```text
+```
 
 ### Schritt 4: Test
 
@@ -136,7 +136,7 @@ response = client.messages.create(
 )
 
 print(response.content[0].text)
-```text
+```
 
 ## Dokumentation
 

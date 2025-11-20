@@ -55,7 +55,7 @@ print(response)  # "15 * 23 = 345"
 response = agent.run("Wie ist das Wetter in Zürich?")
 print(response)
 
-```text
+```
 
 Mit vollständiger Implementierung.
 ```text

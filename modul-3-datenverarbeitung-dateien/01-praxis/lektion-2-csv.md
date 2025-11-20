@@ -36,7 +36,7 @@ with open("output.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerow(["Name", "Alter"])
     writer.writerow(["Anna", 25])
-```text
+```
 
 ### pandas Basics
 
@@ -63,7 +63,7 @@ durchschnitt = df["alter"].mean()
 # Schreiben
 
 df.to_csv("output.csv", index=False)
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -91,7 +91,7 @@ print(top5)
 # Speichern
 
 top5.to_csv("top_produkte.csv")
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

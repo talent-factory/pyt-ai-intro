@@ -49,7 +49,7 @@ rag.add_documents(["doc1.txt", "doc2.txt"])
 answer = rag.ask("Was ist Python?")
 print(answer)
 
-```text
+```
 ```text
 
 ## Erwartetes Ergebnis

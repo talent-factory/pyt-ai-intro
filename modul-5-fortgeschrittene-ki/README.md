@@ -157,7 +157,7 @@ Nach diesem Modul beherrschen Sie:
 ```python
 text = "Python ist eine Programmiersprache"
 embedding = get_embedding(text)  # [0.123, -0.456, ...]
-```text
+```
 
 ### AI Agents
 
@@ -298,7 +298,7 @@ Modul 5 ist der **Höhepunkt** des Kurses:
 
 OPENAI_API_KEY=sk-...
 ANTHROPIC_API_KEY=sk-ant-...
-```text
+```
 
 ### Kosten-Kontrolle
 
@@ -313,7 +313,7 @@ max_tokens=500
 @cache
 def get_embedding(text):
     ...
-```text
+```
 
 ### Rate Limits
 
@@ -330,7 +330,7 @@ for attempt in range(3):
         break
     except RateLimitError:
         time.sleep(2 ** attempt)
-```text
+```
 
 ---
 

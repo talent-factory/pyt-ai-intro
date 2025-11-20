@@ -26,7 +26,7 @@ if alter >= 18:
     print("Volljährig")
 else:
     print("Minderjährig")
-```text
+```
 
 **Mehrere Bedingungen:**
 
@@ -45,7 +45,7 @@ else:
     note = "F"
 
 print(f"Note: {note}")
-```text
+```
 
 **Verschachtelte Bedingungen:**
 
@@ -60,7 +60,7 @@ if alter >= 18:
         print("Ausweis erforderlich")
 else:
     print("Zu jung")
-```text
+```
 
 **Ternärer Operator (Kurzform):**
 
@@ -76,7 +76,7 @@ else:
 # Kurzform
 
 status = "Erwachsen" if alter >= 18 else "Kind"
-```text
+```
 
 ### Vergleichsoperatoren
 
@@ -96,7 +96,7 @@ x <= y   # Kleiner oder gleich
 alter >= 18 and hat_ausweis  # Beide müssen True sein
 ist_student or ist_senior    # Mindestens eines True
 not ist_gesperrt             # Negation
-```text
+```
 
 ### for-Schleifen
 
@@ -107,7 +107,7 @@ namen = ["Anna", "Bob", "Clara"]
 
 for name in namen:
     print(f"Hallo {name}")
-```text
+```
 
 **Mit range():**
 
@@ -127,7 +127,7 @@ for i in range(1, 6):
 
 for i in range(0, 10, 2):  # 0, 2, 4, 6, 8
     print(i)
-```text
+```
 
 **Mit enumerate():**
 
@@ -136,7 +136,7 @@ namen = ["Anna", "Bob", "Clara"]
 
 for index, name in enumerate(namen):
     print(f"{index + 1}. {name}")
-```text
+```
 
 **Über Strings iterieren:**
 
@@ -145,7 +145,7 @@ wort = "Python"
 
 for buchstabe in wort:
     print(buchstabe)
-```text
+```
 
 ### while-Schleifen
 
@@ -157,7 +157,7 @@ zaehler = 0
 while zaehler < 5:
     print(zaehler)
     zaehler += 1
-```text
+```
 
 **Mit Bedingung:**
 
@@ -167,7 +167,7 @@ antwort = ""
 while antwort != "quit":
     antwort = input("Befehl (quit zum Beenden): ")
     print(f"Du hast eingegeben: {antwort}")
-```text
+```
 
 **Endlosschleife (mit break):**
 
@@ -177,7 +177,7 @@ while True:
     if antwort == "nein":
         break
     print("OK, weiter geht's!")
-```text
+```
 
 ### break, continue, pass
 
@@ -188,7 +188,7 @@ for i in range(10):
     if i == 5:
         break  # Stoppt bei 5
     print(i)
-```text
+```
 
 **continue - Iteration überspringen:**
 
@@ -197,7 +197,7 @@ for i in range(10):
     if i % 2 == 0:
         continue  # Überspringt gerade Zahlen
     print(i)  # Gibt nur ungerade Zahlen aus
-```text
+```
 
 **pass - Platzhalter:**
 
@@ -207,7 +207,7 @@ for i in range(5):
         pass  # Macht nichts, Platzhalter
     else:
         print(i)
-```text
+```
 
 ## 💻 Live-Demo (15 Min.)
 
@@ -238,7 +238,7 @@ test_punkte = [95, 85, 75, 65, 55]
 for punkte in test_punkte:
     note = klassifiziere_note(punkte)
     print(f"{punkte} Punkte → {note}")
-```text
+```
 
 ### Demo 2: FizzBuzz-Problem
 
@@ -262,7 +262,7 @@ for zahl in range(1, 31):
         print("Buzz")
     else:
         print(zahl)
-```text
+```
 
 ### Demo 3: Passwort-Validator
 
@@ -320,7 +320,7 @@ for pw in test_passwoerter:
         print("✗ Ungültig:")
         for fehler_text in fehler:
             print(f"  - {fehler_text}")
-```text
+```
 
 ### Demo 4: Zahlenratespiel
 
@@ -357,7 +357,7 @@ def zahlenraten():
 
 # zahlenraten()
 
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

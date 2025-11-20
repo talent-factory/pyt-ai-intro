@@ -17,7 +17,7 @@ if x > 5
 
 if x > 5:
     print("Gross")
-```text
+```
 
 ### IndentationError
 
@@ -32,7 +32,7 @@ print("Test")
 
 def funktion():
     print("Test")
-```text
+```
 
 ### NameError
 
@@ -46,7 +46,7 @@ print(name)
 
 name = "Anna"
 print(name)
-```text
+```
 
 ### TypeError
 
@@ -60,7 +60,7 @@ print(name)
 
 int("5") + 3  # 8
 "5" + str(3)  # "53"
-```text
+```
 
 ### IndexError
 
@@ -75,7 +75,7 @@ print(liste[5])
 
 if len(liste) > 5:
     print(liste[5])
-```text
+```
 
 ## 🔍 Debugging-Strategien
 
@@ -87,7 +87,7 @@ def berechne(x, y):
     ergebnis = x + y
     print(f"ergebnis={ergebnis}")  # Debug
     return ergebnis
-```text
+```
 
 ### 2. Schrittweise testen
 
@@ -99,7 +99,7 @@ x = 5
 print(x)  # OK?
 y = x * 2
 print(y)  # OK?
-```text
+```
 
 ### 3. Vereinfachen
 
@@ -117,7 +117,7 @@ for x in range(10):
     if x % 2 == 0:
         print(f"  gerade!")
         ergebnis.append(x**2)
-```text
+```
 
 ### 4. KI um Hilfe fragen
 

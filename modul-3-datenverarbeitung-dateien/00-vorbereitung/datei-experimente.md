@@ -102,7 +102,7 @@ Erstellen Sie eine JSON-Datei `config.json`:
     "port": 5432
   }
 }
-```text
+```
 
 Schreiben Sie ein Python-Skript, das:
 

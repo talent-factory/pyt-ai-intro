@@ -155,7 +155,7 @@ cryptography==41.0.7
 
 ```bash
 pip install -r requirements.txt
-```text
+```
 
 **Funktionen:**
 
@@ -164,28 +164,28 @@ pip install -r requirements.txt
    ```python
    def verify_master_password() -> bool:
        """Fragt Master-Passwort ab und verifiziert es."""
-```text
+```
 
 2. **Passwort hinzufügen**
 
    ```python
    def add_password(website: str, username: str, password: str) -> None:
        """Fügt neues Passwort hinzu."""
-```text
+```
 
 3. **Passwort anzeigen**
 
    ```python
    def get_password(website: str) -> dict:
        """Gibt Passwort für Website zurück."""
-```text
+```
 
 4. **Passwort generieren**
 
    ```python
    def generate_password(length: int = 16) -> str:
        """Generiert sicheres, zufälliges Passwort."""
-```text
+```
 
 5. **Daten verschlüsseln/entschlüsseln**
 
@@ -195,7 +195,7 @@ pip install -r requirements.txt
 
    def decrypt_data(encrypted: bytes, key: bytes) -> str:
        """Entschlüsselt Daten."""
-```text
+```
 
 ### Code-Beispiel (Starter)
 
@@ -239,7 +239,7 @@ def verify_master_password() -> tuple[bool, bytes]:
 
 # Weitere Funktionen implementieren
 
-```text
+```
 
 ### Sicherheitshinweise
 
@@ -324,7 +324,7 @@ aufgabe-4-quiz-game/
     }
   ]
 }
-```text
+```
 
 ### Funktionen
 
@@ -359,7 +359,7 @@ def save_highscore(name: str, score: int) -> None:
 
 def show_highscores() -> None:
     """Zeigt Highscore-Tabelle."""
-```text
+```
 
 ### Beispiel-Interaktion
 
@@ -441,7 +441,7 @@ aufgabe-4-workout-tracker/
     }
   ]
 }
-```text
+```
 
 ### Funktionen
 
@@ -472,7 +472,7 @@ def weekly_summary() -> None:
 
 def workout_chart(workouts: list) -> None:
     """Zeigt ASCII-Balkendiagramm der Workouts."""
-```text
+```
 
 ### Beispiel-Interaktion
 
@@ -542,7 +542,7 @@ def calculate_statistics(workouts: list) -> dict:
         "haeufigster_typ": haeufigster[0],
         "haeufigster_count": haeufigster[1]
     }
-```text
+```
 
 ---
 
@@ -649,7 +649,7 @@ pip install -r requirements.txt
 
 python [hauptdatei].py
 
-```text
+```
 
 ## Verwendung
 
@@ -723,7 +723,7 @@ Lernprojekt für [Kurs-Name]
 git add aufgabe-4-[projektname]/
 git commit -m "Aufgabe 4: [Projektname] fertiggestellt"
 git push
-```text
+```
 
 ---
 

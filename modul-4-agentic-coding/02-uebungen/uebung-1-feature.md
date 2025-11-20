@@ -71,7 +71,7 @@ suggestion = validator.suggest_correction("test@gmial.com")
 
 # suggestion = "test@gmail.com"
 
-```text
+```
 
 Format:
 
@@ -138,7 +138,7 @@ components = parser.parse("https://example.com/path?key=value#section")
 
 # components.fragment = "section"
 
-```text
+```
 
 Mit:
 
@@ -182,7 +182,7 @@ schema = {
     "email": {"type": "string", "validator": "email"}
 }
 
-```text
+```
 
 Beispiel-Verwendung:
 ```python
@@ -190,7 +190,7 @@ Beispiel-Verwendung:
 validator = JSONValidator(schema)
 is_valid, errors = validator.validate(data)
 
-```text
+```
 
 Mit vollständiger Implementierung und Tests.
 ```text

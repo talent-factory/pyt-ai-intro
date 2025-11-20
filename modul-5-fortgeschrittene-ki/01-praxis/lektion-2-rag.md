@@ -24,7 +24,7 @@ def get_embedding(text: str) -> list[float]:
         input=text
     )
     return response.data[0].embedding
-```text
+```
 
 ### Vector Database (ChromaDB)
 
@@ -52,7 +52,7 @@ results = collection.query(
     query_texts=["Programmiersprachen"],
     n_results=2
 )
-```text
+```
 
 ### RAG Pipeline
 
@@ -80,7 +80,7 @@ def rag_query(question: str) -> str:
     )
 
     return response.choices[0].message.content
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 

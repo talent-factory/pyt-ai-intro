@@ -28,7 +28,7 @@ prompt = "The doctor said to the nurse..."
 
 # LLM könnte stereotypische Gender-Annahmen machen
 
-```text
+```
 
 ### Fragen
 

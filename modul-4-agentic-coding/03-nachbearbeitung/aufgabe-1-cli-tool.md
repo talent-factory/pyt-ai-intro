@@ -43,7 +43,7 @@ task complete 1
 # Statistik
 
 task stats
-```text
+```
 
 ## Prompt-Vorlage
 

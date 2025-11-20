@@ -29,7 +29,7 @@ python --version
 
 # Sollte ausgeben: Python 3.11.x oder höher
 
-```text
+```
 
 ### macOS
 
@@ -44,7 +44,7 @@ python --version
 # Python installieren
 
 brew install python@3.11
-```text
+```
 
 **Option B: Von python.org**
 
@@ -59,20 +59,20 @@ python3 --version
 
 # Sollte ausgeben: Python 3.11.x oder höher
 
-```text
+```
 
 ### Linux (Ubuntu/Debian)
 
 ```bash
 sudo apt update
 sudo apt install python3.11 python3.11-venv python3-pip
-```text
+```
 
 **Testen:**
 
 ```bash
 python3 --version
-```text
+```
 
 ---
 
@@ -95,20 +95,20 @@ brew install git
 # ODER: Xcode Command Line Tools
 
 xcode-select --install
-```text
+```
 
 ### Linux
 
 ```bash
 sudo apt install git
-```text
+```
 
 ### Git konfigurieren (alle Systeme)
 
 ```bash
 git config --global user.name "Ihr Name"
 git config --global user.email "ihre.email@example.com"
-```text
+```
 
 **Testen:**
 
@@ -117,7 +117,7 @@ git --version
 
 # Sollte ausgeben: git version 2.x.x
 
-```text
+```
 
 ---
 
@@ -170,7 +170,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
-```text
+```
 
 ### Nach der Installation
 
@@ -181,7 +181,7 @@ uv --version
 
 # Sollte ausgeben: uv x.x.x
 
-```text
+```
 
 ---
 
@@ -228,14 +228,14 @@ python --version
 # oder
 
 python3 --version
-```text
+```
 
 ### Test 2: Git
 
 ```bash
 git --version
 git config --global user.name
-```text
+```
 
 ### Test 3: VS Code + Python
 
@@ -245,7 +245,7 @@ git config --global user.name
 
    ```python
    print("Hello, World!")
-```text
+```
 
 4. Führen Sie die Datei aus (Play-Button oben rechts)
 5. Sie sollten "Hello, World!" in der Ausgabe sehen
@@ -254,7 +254,7 @@ git config --global user.name
 
 ```bash
 uv --version
-```text
+```
 
 ### Test 5: KI-Assistent
 
@@ -306,7 +306,7 @@ git config --global credential.helper osxkeychain
 # Linux
 
 git config --global credential.helper store
-```text
+```
 
 ### VS Code findet Python nicht
 

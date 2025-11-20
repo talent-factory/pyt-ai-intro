@@ -35,6 +35,52 @@ Dieses Projekt verwendet die **Schweizer Schreibweise** (Schweizer Hochdeutsch).
 - Docstrings für alle Funktionen
 - Kommentare in Deutsch (Schweizer Schreibweise)
 
+## Markdown-Konventionen
+
+### Code-Block-Syntax
+
+**Wichtige Regel: Code-Block-Ender**
+
+Code-Blöcke in Markdown müssen IMMER mit ``` (drei Backticks) enden, NICHT mit ```text.
+
+**Korrekt ✅:**
+
+````markdown
+```bash
+python --version
+```
+````
+
+**Falsch ❌:**
+
+````markdown
+```bash
+python --version
+```text
+````
+
+**Hintergrund:**
+
+- Code-Blöcke beginnen mit ```<sprache> (z.B. ```bash, ```python, ```json)
+- Code-Blöcke enden mit ``` (OHNE Sprach-Tag)
+- ```text wird nur für Text-Prompts verwendet (wenn der Block mit ```text BEGINNT)
+
+**Verwendung von ```text:**
+
+Nur korrekt, wenn der gesamte Block ein Text-Prompt ist:
+
+````markdown
+```text
+Erstelle ein Programm, das zwei Zahlen addiert.
+```
+````
+
+**Bei automatischen Markdown-Korrekturen:**
+
+- NIEMALS ```text als Code-Block-Ender hinzufügen
+- Prüfe nach automatischen Linting-Fixes alle Code-Blöcke manuell
+- Bei Unsicherheit: Code-Block-Ender ist IMMER nur ```
+
 ---
 
 Letzte Aktualisierung: 2025-11-20

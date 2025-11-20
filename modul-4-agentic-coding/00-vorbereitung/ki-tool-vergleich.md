@@ -78,7 +78,7 @@ Schreiben Sie Kommentare und lassen Sie Copilot generieren:
 
 # Gibt True/False zurück
 
-```text
+```
 
 ### Dokumentation
 

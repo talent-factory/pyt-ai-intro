@@ -11,7 +11,7 @@ if bedingung:
 
     # Code wenn True
 
-```text
+```
 
 ### if-else
 
@@ -24,7 +24,7 @@ else:
 
     # Code wenn False
 
-```text
+```
 
 ### if-elif-else
 
@@ -41,13 +41,13 @@ else:
 
     # Code wenn alle False
 
-```text
+```
 
 ### Ternärer Operator
 
 ```python
 wert = a if bedingung else b
-```text
+```
 
 ## for-Schleifen
 
@@ -56,7 +56,7 @@ wert = a if bedingung else b
 ```python
 for item in liste:
     print(item)
-```text
+```
 
 ### Mit range()
 
@@ -69,14 +69,14 @@ for i in range(1, 11):   # 1-10
 
 for i in range(0, 10, 2): # 0,2,4,6,8
     print(i)
-```text
+```
 
 ### Mit enumerate()
 
 ```python
 for index, item in enumerate(liste):
     print(f"{index}: {item}")
-```text
+```
 
 ### Über Dictionary
 
@@ -86,7 +86,7 @@ for key in dict:
 
 for key, value in dict.items():
     print(f"{key}: {value}")
-```text
+```
 
 ## while-Schleifen
 
@@ -97,7 +97,7 @@ while bedingung:
 
     # Code
 
-```text
+```
 
 ### Mit Zähler
 
@@ -106,7 +106,7 @@ i = 0
 while i < 10:
     print(i)
     i += 1
-```text
+```
 
 ### Endlosschleife
 
@@ -114,7 +114,7 @@ while i < 10:
 while True:
     if bedingung:
         break
-```text
+```
 
 ## Schleifensteuerung
 
@@ -124,7 +124,7 @@ while True:
 for i in range(10):
     if i == 5:
         break  # Stoppt Schleife
-```text
+```
 
 ### continue
 
@@ -133,7 +133,7 @@ for i in range(10):
     if i % 2 == 0:
         continue  # Überspringt Rest
     print(i)
-```text
+```
 
 ### pass
 
@@ -143,7 +143,7 @@ for i in range(10):
         pass  # Macht nichts
     else:
         print(i)
-```text
+```
 
 ## Häufige Patterns
 
@@ -154,7 +154,7 @@ count = 0
 for item in liste:
     if bedingung:
         count += 1
-```text
+```
 
 ### Filtern
 
@@ -163,7 +163,7 @@ ergebnis = []
 for item in liste:
     if bedingung:
         ergebnis.append(item)
-```text
+```
 
 ### Summieren
 
@@ -171,7 +171,7 @@ for item in liste:
 total = 0
 for zahl in zahlen:
     total += zahl
-```text
+```
 
 ---
 

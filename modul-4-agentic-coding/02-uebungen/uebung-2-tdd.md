@@ -60,7 +60,7 @@ def test_is_palindrome(text, expected):
 
 # ... weitere Tests
 
-```text
+```
 
 ## Schritt 2: Implementierung (5 Min.)
 
@@ -101,13 +101,13 @@ def reverse_string(text: str) -> str:
 
 # ... weitere Funktionen
 
-```text
+```
 
 ## Schritt 3: Tests ausführen (2 Min.)
 
 ```bash
 pytest test_string_utils.py -v
-```text
+```
 
 ### Erwartete Ausgabe
 

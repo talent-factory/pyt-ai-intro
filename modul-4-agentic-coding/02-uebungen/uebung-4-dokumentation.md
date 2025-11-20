@@ -65,7 +65,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-```text
+```
 
 ## Aufgabe
 
@@ -135,7 +135,7 @@ class Calculator:
 
     # ... weitere Docstrings
 
-```text
+```
 
 ## Schritt 2: README.md (5 Min.)
 
@@ -185,7 +185,7 @@ cd calculator
 
 # Keine Dependencies nötig (Standard-Library)
 
-```text
+```
 
 ## Usage
 
@@ -195,7 +195,7 @@ cd calculator
 
 python main.py
 
-```text
+```
 
 ### Als Library
 
@@ -210,7 +210,7 @@ print(result)  # 8
 history = calc.get_history()
 print(history)  # ['5 + 3 = 8']
 
-```text
+```
 
 ## API-Dokumentation
 
@@ -232,7 +232,7 @@ Addiert zwei Zahlen und speichert in Historie.
 
 pytest test_calculator.py
 
-```text
+```
 
 ## License
 

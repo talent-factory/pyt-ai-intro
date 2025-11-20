@@ -14,7 +14,7 @@ def load_documents(paths: list[str]) -> list[str]:
         with open(path, 'r') as f:
             documents.append(f.read())
     return documents
-```text
+```
 
 ### 2. Chunker
 
@@ -29,7 +29,7 @@ def chunk_text(text: str, chunk_size: int = 500) -> list[str]:
         chunks.append(chunk)
 
     return chunks
-```text
+```
 
 ### 3. Embedder
 
@@ -44,7 +44,7 @@ def create_embeddings(texts: list[str]) -> list[list[float]]:
         )
         embeddings.append(response.data[0].embedding)
     return embeddings
-```text
+```
 
 ### 4. Vector Store
 
@@ -68,7 +68,7 @@ results = collection.query(
     query_texts=["Frage"],
     n_results=3
 )
-```text
+```
 
 ### 5. Retriever
 
@@ -80,7 +80,7 @@ def retrieve(query: str, n: int = 3) -> list[str]:
         n_results=n
     )
     return results['documents'][0]
-```text
+```
 
 ### 6. Generator
 
@@ -102,7 +102,7 @@ Beantworte die Frage basierend auf dem Kontext."""
     )
 
     return response.choices[0].message.content
-```text
+```
 
 ## Vollständige Pipeline
 
@@ -118,7 +118,7 @@ def rag_query(question: str) -> str:
     answer = generate_answer(question, relevant_chunks)
 
     return answer
-```text
+```
 
 ## Optimierungen
 
@@ -134,7 +134,7 @@ def chunk_with_overlap(text: str, size: int, overlap: int):
         chunks.append(chunk)
 
     return chunks
-```text
+```
 
 ### Reranking
 
@@ -145,7 +145,7 @@ def rerank(query: str, chunks: list[str]) -> list[str]:
     # Nutze Cross-Encoder oder LLM
 
     pass
-```text
+```
 
 ### Hybrid Search
 
@@ -163,7 +163,7 @@ def hybrid_search(query: str):
     # Kombiniere
 
     return merge_results(semantic_results, keyword_results)
-```text
+```
 
 ---
 

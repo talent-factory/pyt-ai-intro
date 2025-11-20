@@ -42,7 +42,7 @@ class User:
 
     def get_data(self):
         return f"{self.n},{self.a},{self.e},{self.p}"
-```text
+```
 
 ## Aufgabe
 
@@ -237,7 +237,7 @@ class User:
             CSV-String
         """
         return f"{self.name},{self.age},{self.email},{self.phone}"
-```text
+```
 
 ## Vergleich
 

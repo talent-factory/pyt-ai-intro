@@ -136,7 +136,7 @@ def find_duplicates(items):
                 duplicates.append(items[i])
     return duplicates
 
-```text
+```
 
 Erkläre Schritt für Schritt:
 
@@ -161,7 +161,7 @@ Erkläre Schritt für Schritt:
 
 # [Kopieren Sie den Code]
 
-```text
+```
 
 **War die Erklärung hilfreich?**
 
@@ -186,7 +186,7 @@ Beispiel 1:
 def add(a, b):
     return a + b
 
-```text
+```
 
 Docstring:
 ```python
@@ -208,7 +208,7 @@ def add(a: int, b: int) -> int:
     """
     return a + b
 
-```text
+```
 
 Jetzt für diese Funktion:
 ```python
@@ -216,7 +216,7 @@ Jetzt für diese Funktion:
 def calculate_average(numbers):
     return sum(numbers) / len(numbers)
 
-```text
+```
 ```text
 
 ### Dokumentation
@@ -227,7 +227,7 @@ def calculate_average(numbers):
 
 # [Kopieren Sie das Ergebnis]
 
-```text
+```
 
 **Entspricht es dem Beispiel?**
 

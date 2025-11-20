@@ -53,7 +53,7 @@ def test_division_by_zero():
 ])
 def test_add_parametrized(a, b, expected):
     assert a + b == expected
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -86,7 +86,7 @@ def test_divide_by_zero():
     calc = Calculator()
     with pytest.raises(ValueError):
         calc.divide(5, 0)
-```text
+```
 
 **Schritt 2: Implementierung**
 
@@ -113,7 +113,7 @@ class Calculator:
         if b == 0:
             raise ValueError("Division durch Null nicht erlaubt")
         return a / b
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

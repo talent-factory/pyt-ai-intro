@@ -28,7 +28,7 @@ with open("datei.txt", "r") as file:
 
 # Datei wird automatisch geschlossen
 
-```text
+```
 
 ### File Modes
 
@@ -38,7 +38,7 @@ with open("datei.txt", "r") as file:
 "a"   # Append - Anhängen
 "r+"  # Read + Write
 "rb"  # Read Binary
-```text
+```
 
 ### Lesen
 
@@ -59,7 +59,7 @@ with open("datei.txt", "r") as f:
 
 with open("datei.txt", "r") as f:
     zeilen = f.readlines()
-```text
+```
 
 ### Schreiben
 
@@ -75,7 +75,7 @@ with open("datei.txt", "w") as f:
 
 with open("datei.txt", "a") as f:
     f.write("Neue Zeile\n")
-```text
+```
 
 ### Pfade
 
@@ -94,7 +94,7 @@ if pfad.exists():
 # Verzeichnis erstellen
 
 pfad.parent.mkdir(parents=True, exist_ok=True)
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -126,7 +126,7 @@ def analysiere_log(dateiname: str) -> dict:
 stats = analysiere_log("app.log")
 print(f"Zeilen: {stats['zeilen']}")
 print(f"Errors: {stats['errors']}")
-```text
+```
 
 ### Demo 2: Backup erstellen
 
@@ -159,7 +159,7 @@ def erstelle_backup(datei: str) -> str:
             ziel.write(quelle.read())
 
     return str(backup_pfad)
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

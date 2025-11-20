@@ -31,7 +31,7 @@ namen = list()
 zahlen = [1, 2, 3, 4, 5]
 namen = ["Anna", "Bob", "Clara"]
 gemischt = [1, "zwei", 3.0, True]
-```text
+```
 
 **Indexierung:**
 
@@ -47,7 +47,7 @@ print(namen[1])   # "Bob"
 
 print(namen[-1])  # "David" (letztes Element)
 print(namen[-2])  # "Clara"
-```text
+```
 
 **Slicing:**
 
@@ -62,7 +62,7 @@ print(zahlen[7:])     # [7, 8, 9] (bis Ende)
 print(zahlen[-3:])    # [7, 8, 9] (letzte 3)
 print(zahlen[::2])    # [0, 2, 4, 6, 8] (jedes 2.)
 print(zahlen[::-1])   # [9, 8, 7, ...] (umgekehrt)
-```text
+```
 
 **List Methods:**
 
@@ -98,7 +98,7 @@ laenge = len(zahlen)     # Anzahl Elemente
 summe = sum(zahlen)      # Summe aller Zahlen
 maximum = max(zahlen)    # Grösstes Element
 minimum = min(zahlen)    # Kleinstes Element
-```text
+```
 
 **List Comprehensions:**
 
@@ -122,7 +122,7 @@ gerade = [i for i in range(20) if i % 2 == 0]
 
 namen = ["anna", "bob", "clara"]
 gross = [name.upper() for name in namen]
-```text
+```
 
 ### Dictionaries
 
@@ -142,7 +142,7 @@ person = {
     "alter": 25,
     "stadt": "Zürich"
 }
-```text
+```
 
 **Zugriff:**
 
@@ -158,7 +158,7 @@ name = person["name"]  # "Anna"
 
 name = person.get("name")           # "Anna"
 beruf = person.get("beruf", "N/A")  # "N/A" (Default)
-```text
+```
 
 **Ändern und Hinzufügen:**
 
@@ -175,7 +175,7 @@ person["beruf"] = "Entwicklerin"
 # Mehrere auf einmal
 
 person.update({"email": "anna@example.com", "telefon": "123"})
-```text
+```
 
 **Dictionary Methods:**
 
@@ -199,7 +199,7 @@ for key, value in person.items():
 
 beruf = person.pop("beruf")  # Entfernt und gibt Wert zurück
 person.clear()               # Leert Dictionary
-```text
+```
 
 **Nested Data Structures:**
 
@@ -226,7 +226,7 @@ kontakt = {
 }
 
 print(kontakt["telefone"][0])  # "123"
-```text
+```
 
 ## 💻 Live-Demo (15 Min.)
 
@@ -282,7 +282,7 @@ def main():
 
 # main()  # Auskommentiert für Demo
 
-```text
+```
 
 ### Demo 2: Kontaktbuch
 
@@ -328,7 +328,7 @@ gefunden = [k for k in kontakte if suchbegriff.lower() in k["name"].lower()]
 print(f"\nSuche nach '{suchbegriff}':")
 for kontakt in gefunden:
     print(f"- {kontakt['name']}")
-```text
+```
 
 ### Demo 3: Datenanalyse
 
@@ -376,7 +376,7 @@ print("\nTop-Seller nach Umsatz:")
 for verkauf in nach_umsatz:
     umsatz = verkauf["preis"] * verkauf["anzahl"]
     print(f"{verkauf['produkt']}: CHF {umsatz}")
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 
@@ -398,7 +398,7 @@ inventar = {
     "laptop": {"preis": 999, "anzahl": 5},
     "maus": {"preis": 25, "anzahl": 20}
 }
-```text
+```
 
 ### Option B: Duplikat-Entferner
 

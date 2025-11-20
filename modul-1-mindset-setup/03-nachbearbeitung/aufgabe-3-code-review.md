@@ -42,7 +42,7 @@ while True:
             print(x["t"] + " von " + x["a"])
     elif c == "3":
         break
-```text
+```
 
 ## 📝 Review-Template
 
@@ -161,7 +161,7 @@ Nutzen Sie folgendes Template für Ihr Review:
 
 # Hier Ihren verbesserten Code einfügen
 
-```text
+```
 
 ### Erklärung der Änderungen
 

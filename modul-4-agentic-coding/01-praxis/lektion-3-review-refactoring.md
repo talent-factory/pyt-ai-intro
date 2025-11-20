@@ -43,7 +43,7 @@ def process_data(data):
 def validate_data(data): pass
 def transform_data(data): pass
 def save_data(data): pass
-```text
+```
 
 ### SOLID Principles
 
@@ -73,7 +73,7 @@ def calc(a, b, op):
         if b == 0:
             return 'Error'
         return a / b
-```text
+```
 
 **Nachher:**
 
@@ -110,7 +110,7 @@ class Calculator:
         if b == 0:
             raise ZeroDivisionError("Division durch Null")
         return a / b
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

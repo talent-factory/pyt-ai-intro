@@ -22,7 +22,7 @@ python
 # Oder
 
 python3
-```text
+```
 
 Sie sehen:
 
@@ -68,7 +68,7 @@ Probieren Sie folgendes aus:
 # Grosse Zahlen
 
 >>> 999999999999999999999 * 2
-```text
+```
 
 **Dokumentieren Sie:**
 
@@ -101,7 +101,7 @@ Probieren Sie folgendes aus:
 >>> name = "Anna"
 >>> alter = 25
 >>> f"Ich heisse {name} und bin {alter} Jahre alt"
-```text
+```
 
 **Dokumentieren Sie:**
 
@@ -135,7 +135,7 @@ Probieren Sie folgendes aus:
 >>> len(zahlen)
 >>> sum(zahlen)
 >>> max(zahlen)
-```text
+```
 
 **Dokumentieren Sie:**
 
@@ -175,7 +175,7 @@ Probieren Sie folgendes aus:
 ...     "bob": {"alter": 30, "stadt": "Bern"}
 ... }
 >>> personen["anna"]["stadt"]
-```text
+```
 
 **Dokumentieren Sie:**
 
@@ -265,14 +265,14 @@ Drücken Sie Tab nach einem Punkt, um verfügbare Methoden zu sehen:
 
 ```python
 >>> "text".  # Jetzt Tab drücken
-```text
+```
 
 ### Tipp 3: Hilfe nutzen
 
 ```python
 >>> help(str)
 >>> help(list.append)
-```text
+```
 
 ### Tipp 4: Verlauf nutzen
 
@@ -291,7 +291,7 @@ python --version
 # Oder versuchen Sie
 
 python3 --version
-```text
+```
 
 ### Problem: Syntax-Fehler
 
@@ -304,7 +304,7 @@ Das ist normal beim Lernen! Lesen Sie die Fehlermeldung genau.
 
 # Oder Ctrl+D (Mac/Linux) / Ctrl+Z (Windows)
 
-```text
+```
 
 ---
 

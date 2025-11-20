@@ -23,7 +23,7 @@ def gruss():
 # Aufruf
 
 gruss()  # Ausgabe: Hallo Welt!
-```text
+```
 
 ### Funktion mit Parameter
 
@@ -32,7 +32,7 @@ def gruss(name):
     print(f"Hallo {name}!")
 
 gruss("Anna")  # Ausgabe: Hallo Anna!
-```text
+```
 
 ### Funktion mit Rückgabewert
 
@@ -41,7 +41,7 @@ def addiere(a, b):
     return a + b
 
 ergebnis = addiere(5, 3)  # 8
-```text
+```
 
 ## 📝 Parameter
 
@@ -52,7 +52,7 @@ def vollstaendiger_name(vorname, nachname):
     return f"{vorname} {nachname}"
 
 vollstaendiger_name("Anna", "Müller")  # "Anna Müller"
-```text
+```
 
 ### Keyword-Parameter
 
@@ -63,7 +63,7 @@ def beschreibe_person(name, alter, stadt):
 # Mit Keywords (Reihenfolge egal)
 
 beschreibe_person(stadt="Zürich", name="Anna", alter=25)
-```text
+```
 
 ### Default-Werte
 
@@ -78,7 +78,7 @@ def gruss(name, sprache="DE"):
 
 gruss("Anna")           # "Hallo Anna" (Default)
 gruss("Anna", "EN")     # "Hello Anna"
-```text
+```
 
 ### *args (Variable Positional Arguments)
 
@@ -89,7 +89,7 @@ def summe(*zahlen):
 
 summe(1, 2, 3)        # 6
 summe(1, 2, 3, 4, 5)  # 15
-```text
+```
 
 ### **kwargs (Variable Keyword Arguments)
 
@@ -107,7 +107,7 @@ person_info(name="Anna", alter=25, stadt="Zürich")
 
 # stadt: Zürich
 
-```text
+```
 
 ### Kombiniert
 
@@ -134,7 +134,7 @@ funktion(1, 2, 3, 4, key1="wert", key2="extra")
 
 # kwargs: {'key2': 'extra'}
 
-```text
+```
 
 ## 🔙 Return Statement
 
@@ -145,7 +145,7 @@ def quadrat(x):
     return x ** 2
 
 ergebnis = quadrat(5)  # 25
-```text
+```
 
 ### Mehrere Rückgabewerte (Tuple)
 
@@ -156,7 +156,7 @@ def teile_mit_rest(dividend, divisor):
     return quotient, rest
 
 q, r = teile_mit_rest(17, 5)  # q=3, r=2
-```text
+```
 
 ### Früher Return
 
@@ -165,7 +165,7 @@ def ist_positiv(zahl):
     if zahl <= 0:
         return False
     return True
-```text
+```
 
 ### Kein Return (implizit None)
 
@@ -176,7 +176,7 @@ def print_nachricht(text):
     # Kein return → gibt None zurück
 
 ergebnis = print_nachricht("Hallo")  # None
-```text
+```
 
 ## 📚 Type Hints
 
@@ -191,7 +191,7 @@ def gruss(name: str) -> str:
 
 def ist_erwachsen(alter: int) -> bool:
     return alter >= 18
-```text
+```
 
 ### Listen und Dictionaries
 
@@ -212,7 +212,7 @@ def finde_person(name: str) -> Optional[Dict[str, any]]:
     # Optional bedeutet: Dict oder None
 
     return None  # Wenn nicht gefunden
-```text
+```
 
 ### Union Types
 
@@ -226,7 +226,7 @@ def formatiere_wert(wert: Union[int, float, str]) -> str:
 
 def formatiere_wert(wert: int | float | str) -> str:
     return str(wert)
-```text
+```
 
 ## 📖 Docstrings
 
@@ -256,7 +256,7 @@ def berechne_flaeche(laenge: float, breite: float) -> float:
     if laenge < 0 or breite < 0:
         raise ValueError("Länge und Breite müssen positiv sein")
     return laenge * breite
-```text
+```
 
 ### NumPy Style
 
@@ -283,7 +283,7 @@ def berechne_flaeche(laenge, breite):
     15.0
     """
     return laenge * breite
-```text
+```
 
 ### Einzeiler
 
@@ -291,7 +291,7 @@ def berechne_flaeche(laenge, breite):
 def quadrat(x):
     """Gibt das Quadrat von x zurück."""
     return x ** 2
-```text
+```
 
 ## 🔧 Lambda-Funktionen
 
@@ -311,7 +311,7 @@ quadrat = lambda x: x ** 2
 # Verwendung
 
 quadrat(5)  # 25
-```text
+```
 
 ### Praktische Anwendungen
 
@@ -337,7 +337,7 @@ gerade = list(filter(lambda x: x % 2 == 0, zahlen))
 
 # [2, 4]
 
-```text
+```
 
 ## 🎯 Scope und Namespaces
 
@@ -355,7 +355,7 @@ funktion()
 
 # print(lokal_var)  # NameError! Nicht ausserhalb sichtbar
 
-```text
+```
 
 ### Global Keyword
 
@@ -368,7 +368,7 @@ def inkrementiere():
 
 inkrementiere()
 print(zaehler)  # 1
-```text
+```
 
 ### Nonlocal Keyword
 
@@ -382,7 +382,7 @@ def aeussere():
 
     innere()
     print(x)  # "innen"
-```text
+```
 
 ## 🏗️ Funktions-Design Best Practices
 
@@ -422,7 +422,7 @@ def speichere_daten(daten, dateiname):
     with open(dateiname, 'w') as f:
         for d in daten:
             f.write(str(d) + '\n')
-```text
+```
 
 ### 2. Kurze Funktionen (max. 20-30 Zeilen)
 
@@ -447,7 +447,7 @@ def teilfunktion2():
 def hauptfunktion():
     teilfunktion1()
     teilfunktion2()
-```text
+```
 
 ### 3. Aussagekräftige Namen
 
@@ -462,7 +462,7 @@ def f(x, y):
 
 def addiere_zahlen(erste_zahl, zweite_zahl):
     return erste_zahl + zweite_zahl
-```text
+```
 
 ### 4. Vermeide Seiteneffekte
 
@@ -481,7 +481,7 @@ def addiere_zu_liste(liste, wert):
     neue_liste = liste.copy()
     neue_liste.append(wert)
     return neue_liste
-```text
+```
 
 ### 5. Defensive Programmierung
 
@@ -496,7 +496,7 @@ def dividiere(dividend, divisor):
         raise ValueError("Division durch 0 nicht erlaubt")
 
     return dividend / divisor
-```text
+```
 
 ## 🎨 Dekoratoren (Fortgeschritten)
 
@@ -524,7 +524,7 @@ sag_hallo()
 
 # Nach der Funktion
 
-```text
+```
 
 ### Timer-Dekorator
 
@@ -544,7 +544,7 @@ def timer(func):
 def langsame_funktion():
     time.sleep(1)
     return "Fertig"
-```text
+```
 
 ## 🐛 Häufige Fehler
 
@@ -568,7 +568,7 @@ def add_item(item, liste=None):
         liste = []
     liste.append(item)
     return liste
-```text
+```
 
 ### 2. Vergessenes Return
 
@@ -585,7 +585,7 @@ ergebnis = addiere(5, 3)  # None
 
 def addiere(a, b):
     return a + b
-```text
+```
 
 ### 3. Global ohne global Keyword
 
@@ -602,7 +602,7 @@ def inkrementiere():
 def inkrementiere():
     global zaehler
     zaehler += 1
-```text
+```
 
 ## 📊 Code-Beispiel: Vollständige Funktion
 
@@ -664,7 +664,7 @@ if __name__ == "__main__":
     assert berechne_durchschnitt([1.5, 2.5, 3.5], runden=False) == 2.5
     assert berechne_durchschnitt([]) is None
     print("✓ Alle Tests bestanden")
-```text
+```
 
 ## 🎓 Zusammenfassung
 

@@ -81,7 +81,7 @@ git init
 # Oder: Bestehendes klonen
 
 git clone <url>
-```text
+```
 
 ### Schritt 2: Änderungen machen
 
@@ -91,7 +91,7 @@ git clone <url>
 
 # ... in VS Code arbeiten 
 
-```text
+```
 
 ### Schritt 3: Status prüfen
 
@@ -106,7 +106,7 @@ git status
 
 # - Gelöschte Dateien
 
-```text
+```
 
 ### Schritt 4: Dateien zum Staging hinzufügen
 
@@ -119,13 +119,13 @@ git add dateiname.py
 # Alle Dateien
 
 git add .
-```text
+```
 
 ### Schritt 5: Commit erstellen
 
 ```bash
 git commit -m "Beschreibung der Änderung"
-```text
+```
 
 ### Schritt 6: Historie anzeigen
 
@@ -135,7 +135,7 @@ git log
 # Oder kompakt
 
 git log --oneline
-```text
+```
 
 ## 📝 Wichtige Befehle
 
@@ -155,7 +155,7 @@ git status
 
 git config --global user.name "Ihr Name"
 git config --global user.email "ihre.email@example.com"
-```text
+```
 
 ### Änderungen verwalten
 
@@ -173,7 +173,7 @@ git commit -m "Nachricht"
 # Änderungen anzeigen
 
 git diff
-```text
+```
 
 ### Historie
 
@@ -188,7 +188,7 @@ git log --graph
 # Bestimmten Commit anzeigen
 
 git show <commit-id>
-```text
+```
 
 ### Änderungen rückgängig machen
 
@@ -205,7 +205,7 @@ git checkout -- dateiname.py
 # Letzten Commit rückgängig
 
 git reset --soft HEAD~1
-```text
+```
 
 ## 🎯 .gitignore
 
@@ -267,7 +267,7 @@ echo "*.pyc" >> .gitignore
 
 git add .gitignore
 git commit -m "chore: gitignore hinzugefügt"
-```text
+```
 
 ## 💡 Best Practices
 
@@ -280,7 +280,7 @@ git commit -m "feat: Benutzer-Login implementiert"
 git commit -m "fix: Fehler bei Passwort-Validierung behoben"
 git commit -m "docs: README aktualisiert"
 git commit -m "refactor: Code-Struktur verbessert"
-```text
+```
 
 #### Schlechte Messages
 
@@ -289,7 +289,7 @@ git commit -m "Änderungen"          # ❌ Zu vage
 git commit -m "asdf"                # ❌ Nicht aussagekräftig
 git commit -m "WIP"                 # ❌ Work in Progress
 git commit -m "Fix"                 # ❌ Was wurde gefixt?
-```text
+```
 
 #### Message-Format
 
@@ -348,7 +348,7 @@ Datenbank, API und Frontend"
 ```bash
 git config --global user.name "Ihr Name"
 git config --global user.email "ihre.email@example.com"
-```text
+```
 
 ### Problem 2: "fatal: not a git repository"
 
@@ -365,7 +365,7 @@ pwd
 # Git initialisieren
 
 git init
-```text
+```
 
 ### Problem 3: Falscher Commit
 
@@ -386,7 +386,7 @@ git reset --soft HEAD~1
 # Neu committen
 
 git commit -m "Korrigierte Nachricht"
-```text
+```
 
 ### Problem 4: Datei versehentlich hinzugefügt
 
@@ -403,7 +403,7 @@ git reset dateiname.py
 # Oder alle Dateien
 
 git reset
-```text
+```
 
 ## 🎓 Übungen
 
@@ -439,7 +439,7 @@ git commit -m "docs: Initial README"
 # 7. Historie anzeigen
 
 git log
-```text
+```
 
 ### Übung 2: Mehrere Commits
 
@@ -466,7 +466,7 @@ git commit -m "feat: World hinzugefügt"
 # 5. Historie anzeigen
 
 git log --oneline
-```text
+```
 
 ### Übung 3: .gitignore
 
@@ -484,7 +484,7 @@ git commit -m "chore: gitignore hinzugefügt"
 # 3. Prüfen
 
 git status
-```text
+```
 
 ## ✅ Checkliste: Git-Grundlagen
 

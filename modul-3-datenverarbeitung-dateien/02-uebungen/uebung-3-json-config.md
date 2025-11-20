@@ -41,7 +41,7 @@ Erstellen Sie `config.json`:
     "api": true
   }
 }
-```text
+```
 
 #### Prompt-Vorlage
 
@@ -179,7 +179,7 @@ Erstellen Sie `daten.json`:
     "beruf": "Managerin"
   }
 ]
-```text
+```
 
 #### Prompt-Vorlage
 

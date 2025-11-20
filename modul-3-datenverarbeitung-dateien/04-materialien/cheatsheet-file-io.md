@@ -11,7 +11,7 @@ Schnellreferenz für Datei-Operationen.
 "r+"  # Read + Write
 "rb"  # Read Binary
 "wb"  # Write Binary
-```text
+```
 
 ## Lesen
 
@@ -32,7 +32,7 @@ with open("datei.txt", "r") as f:
 
 with open("datei.txt", "r") as f:
     zeilen = f.readlines()
-```text
+```
 
 ## Schreiben
 
@@ -47,7 +47,7 @@ with open("datei.txt", "w") as f:
 
 with open("datei.txt", "a") as f:
     f.write("Mehr Text\n")
-```text
+```
 
 ## Pfade
 
@@ -64,7 +64,7 @@ if pfad.exists():
 # Erstellen
 
 pfad.parent.mkdir(parents=True, exist_ok=True)
-```text
+```
 
 ---
 

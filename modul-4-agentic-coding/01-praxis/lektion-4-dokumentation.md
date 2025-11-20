@@ -36,7 +36,7 @@ def function(arg1: int, arg2: str) -> bool:
         True
     """
     pass
-```text
+```
 
 ### README-Struktur
 
@@ -57,7 +57,7 @@ Kurze Beschreibung
 
 pip install -r requirements.txt
 
-```text
+```
 
 ## Usage
 
@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 from myproject import MyClass
 
-```text
+```
 
 ## Testing
 
@@ -73,7 +73,7 @@ from myproject import MyClass
 
 pytest
 
-```text
+```
 
 ## License
 

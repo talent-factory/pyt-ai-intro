@@ -34,7 +34,7 @@ with open("config.json", "r") as f:
 
 with open("output.json", "w") as f:
     json.dump(daten, f, indent=2)
-```text
+```
 
 ### requests-Library
 
@@ -51,7 +51,7 @@ if response.status_code == 200:
 
 daten = {"name": "Anna"}
 response = requests.post("https://api.example.com/users", json=daten)
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 
@@ -87,7 +87,7 @@ print(f"Temperatur: {wetter['main']['temp']}°C")
 
 with open("wetter.json", "w") as f:
     json.dump(wetter, f, indent=2)
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

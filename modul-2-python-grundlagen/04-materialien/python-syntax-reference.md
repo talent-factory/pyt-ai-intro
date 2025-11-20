@@ -21,7 +21,7 @@ name: str = "Anna"
 alter: int = 25
 groesse: float = 1.75
 ist_student: bool = True
-```text
+```
 
 ### Datentypen
 
@@ -53,7 +53,7 @@ text = str(42)           # "42"
 # List → Set (Duplikate entfernen)
 
 unique = set([1, 2, 2, 3])  # {1, 2, 3}
-```text
+```
 
 ## 🔢 Operatoren
 
@@ -67,7 +67,7 @@ a / b      # Division (ergibt float)
 a // b     # Ganzzahldivision
 a % b      # Modulo (Rest)
 a ** b     # Potenz
-```text
+```
 
 ### Vergleichsoperatoren
 
@@ -78,7 +78,7 @@ a < b      # Kleiner als
 a <= b     # Kleiner oder gleich
 a > b      # Grösser als
 a >= b     # Grösser oder gleich
-```text
+```
 
 ### Logische Operatoren
 
@@ -86,7 +86,7 @@ a >= b     # Grösser oder gleich
 a and b    # Logisches UND
 a or b     # Logisches ODER
 not a      # Logisches NICHT
-```text
+```
 
 ## 📝 Strings
 
@@ -109,7 +109,7 @@ text.endswith("!  ")       # True
 "toll" in text             # True
 text.isdigit()             # False
 text.isalpha()             # False (wegen Leerzeichen)
-```text
+```
 
 ### String-Formatierung
 
@@ -130,7 +130,7 @@ f"Preis: {19.99:.2f} CHF"
 # % (veraltet)
 
 "Hallo %s, du bist %d" % (name, alter)
-```text
+```
 
 ### String-Slicing
 
@@ -144,7 +144,7 @@ text[:3]      # 'Pyt' (Anfang bis 3)
 text[3:]      # 'hon' (3 bis Ende)
 text[::2]     # 'Pto' (jedes 2. Zeichen)
 text[::-1]    # 'nohtyP' (rückwärts)
-```text
+```
 
 ## 🔀 Kontrollstrukturen
 
@@ -166,7 +166,7 @@ else:
 # Einzeiler (ternärer Operator)
 
 ergebnis = "Ja" if bedingung else "Nein"
-```text
+```
 
 ### for-Schleifen
 
@@ -197,7 +197,7 @@ for index, item in enumerate(liste):
 
 for key, value in dict.items():
     print(f"{key}: {value}")
-```text
+```
 
 ### while-Schleifen
 
@@ -210,7 +210,7 @@ while bedingung:
         break     # Schleife beenden
     if ueberspringen:
         continue  # Zur nächsten Iteration
-```text
+```
 
 ## 📚 Listen
 
@@ -248,7 +248,7 @@ liste.count(3)            # Anzahl des Werts 3
 liste.sort()              # In-place sortieren
 sortiert = sorted(liste)  # Neue sortierte Liste
 liste.reverse()           # Umkehren
-```text
+```
 
 ### List Comprehensions
 
@@ -272,7 +272,7 @@ kategorisiert = ["Gerade" if x % 2 == 0 else "Ungerade" for x in range(5)]
 
 # ['Gerade', 'Ungerade', 'Gerade', 'Ungerade', 'Gerade']
 
-```text
+```
 
 ## 📖 Dictionaries
 
@@ -317,7 +317,7 @@ person.items()                     # Key-Value-Paare
 
 for key, value in person.items():
     print(f"{key}: {value}")
-```text
+```
 
 ### Dictionary Comprehensions
 
@@ -335,7 +335,7 @@ gerade = {x: x**2 for x in range(10) if x % 2 == 0}
 
 # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
 
-```text
+```
 
 ## 🔧 Funktionen
 
@@ -371,7 +371,7 @@ def summe(*zahlen):
 def person(**infos):
     for key, value in infos.items():
         print(f"{key}: {value}")
-```text
+```
 
 ### Docstrings
 
@@ -392,7 +392,7 @@ def berechne_flaeche(laenge: float, breite: float) -> float:
         15.0
     """
     return laenge * breite
-```text
+```
 
 ## ⚠️ Fehlerbehandlung
 
@@ -430,7 +430,7 @@ finally:
     # Wird immer ausgeführt
 
     print("Fertig!")
-```text
+```
 
 ## 📁 File I/O
 
@@ -450,7 +450,7 @@ with open("datei.txt", "r") as datei:
 datei = open("datei.txt", "r")
 inhalt = datei.read()
 datei.close()
-```text
+```
 
 ### Dateien schreiben
 
@@ -465,7 +465,7 @@ with open("datei.txt", "w") as datei:
 
 with open("datei.txt", "a") as datei:
     datei.write("Neue Zeile\n")
-```text
+```
 
 ### JSON
 
@@ -482,7 +482,7 @@ with open("data.json", "w") as datei:
 
 with open("data.json", "r") as datei:
     data = json.load(datei)
-```text
+```
 
 ## 📦 Module importieren
 
@@ -506,7 +506,7 @@ heute = dt.date.today()
 # Alles importieren (nicht empfohlen)
 
 from math import *
-```text
+```
 
 ## 💡 Best Practices
 
@@ -549,7 +549,7 @@ z = x * 2 - y
 
 # Zeilenlänge: max. 79 Zeichen
 
-```text
+```
 
 ### Code-Organisation
 
@@ -577,7 +577,7 @@ def funktion():
 
 if __name__ == "__main__":
     funktion()
-```text
+```
 
 ---
 

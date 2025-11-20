@@ -41,7 +41,7 @@ Jede Transaktion sollte folgende Informationen enthalten:
     "betrag": 45.50,             # Float
     "beschreibung": "Wocheneinkauf"
 }
-```text
+```
 
 ## ✅ Muss-Kriterien (erforderlich für 70% der Punkte)
 
@@ -175,7 +175,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-```text
+```
 
 ## 💡 Hinweise und Tipps
 
@@ -235,7 +235,7 @@ with open("finanzen.json", "w") as datei:
 kategorien = {}
 for t in transaktionen:
     kategorien[t["kategorie"]] = kategorien.get(t["kategorie"], 0) + t["betrag"]
-```text
+```
 
 ### KI-Prompts (Beispiele)
 
@@ -288,7 +288,7 @@ def daten_laden(dateiname: str = "finanzen.json") -> list:
             return json.load(datei)
     except FileNotFoundError:
         return []  # Leere Liste zurückgeben
-```text
+```
 
 **Problem:** Benutzer gibt ungültigen Betrag ein
 
@@ -302,7 +302,7 @@ while True:
         break
     except ValueError:
         print("❌ Bitte eine gültige Zahl eingeben!")
-```text
+```
 
 **Problem:** Auto-inkrementierende ID
 
@@ -311,7 +311,7 @@ def naechste_id(transaktionen: list) -> int:
     if not transaktionen:
         return 1
     return max(t["id"] for t in transaktionen) + 1
-```text
+```
 
 ## 📝 README-Vorlage
 
@@ -333,7 +333,7 @@ Ihr `README.md` sollte mindestens enthalten:
 
 python finanztracker.py
 
-```text
+```
 
 ## Verwendung
 
