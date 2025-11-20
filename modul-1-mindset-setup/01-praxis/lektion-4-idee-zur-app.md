@@ -68,7 +68,7 @@ Nach dieser Lektion können die Studierenden:
 
 6. Code committen (Git)
 
-```text
+```
 
 ---
 
@@ -241,7 +241,7 @@ Fehlermeldung:
 [Fehlermeldung hier einfügen]
 
 Was ist das Problem und wie kann ich es beheben?
-```text
+```
 
 ---
 
@@ -263,8 +263,7 @@ Was ist das Problem und wie kann ich es beheben?
 2. Noten speichern (Liste)
 3. Durchschnitt berechnen
 4. Ergebnis ausgeben
-
-```text
+```
 
 ### Schritt 2: Prompt formulieren
 
@@ -283,7 +282,7 @@ Note: 6
 Note: fertig
 Durchschnitt: 5.0
 Ergebnis: Bestanden
-```text
+```
 
 ### Schritt 3: Code generieren & verstehen
 
@@ -361,7 +360,7 @@ Erstellen Sie einen Taschenrechner mit KI-Unterstützung.
 [Anforderungen]: ...
 [Beispiel]: ...
 [Einschränkungen]: ...
-```text
+```
 
 #### Schritt 2: Code generieren (5 Min.)
 
@@ -450,7 +449,7 @@ git commit -m "feat: Einfacher Taschenrechner mit Grundrechenarten"
 
 ```text
 Verstehen → Zerlegen → Prompts → Code → Testen → Verbessern → Committen
-```text
+```
 
 **Code-Review Checkliste:**
 

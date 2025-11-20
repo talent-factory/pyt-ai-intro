@@ -63,7 +63,6 @@ python --version
 
 - Code-Blöcke beginnen mit ```<sprache> (z.B. ```bash, ```python, ```json)
 - Code-Blöcke enden mit ``` (OHNE Sprach-Tag)
-- ```text wird nur für Text-Prompts verwendet (wenn der Block mit ```text BEGINNT)
 
 **Verwendung von ```text:**
 
