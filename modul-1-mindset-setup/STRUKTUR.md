@@ -3,18 +3,22 @@
 ## ✅ Erstellte Dateien
 
 ### 00-vorbereitung/ (Vollständig)
+
 - ✅ README.md - Übersicht Vorbereitung
 - ✅ installationsanleitung.md - Detaillierte Installation (Python, Git, VS Code, uv, KI-Tools)
 - ✅ erste-schritte.md - Erste KI-Interaktion mit Schritt-für-Schritt-Anleitung
 - ✅ leseauftrag.md - Artikel, Videos, Reflexionsfragen
 
 ### Hauptverzeichnis
+
 - ✅ README.md - Modulübersicht mit Navigation
 
 ## 📋 Noch zu erstellen
 
 ### 01-praxis/ (Präsenzunterricht)
+
 Für jede Lektion benötigt:
+
 - **lektion-1-einfuehrung.md**
   - Theorie: Was ist Programmieren, Rolle von KI
   - Live-Demo: Problem mit/ohne KI
@@ -36,6 +40,7 @@ Für jede Lektion benötigt:
   - Übung: Einfacher Taschenrechner (25 Min.)
 
 ### 02-uebungen/ (Übungen während Präsenz)
+
 - **uebung-1-einkaufsliste.md**
   - Aufgabenstellung
   - Hilfestellungen
@@ -57,6 +62,7 @@ Für jede Lektion benötigt:
   - loesung-erweitert.py - Erweiterte Version (optional)
 
 ### 03-nachbearbeitung/ (Hausaufgaben)
+
 - **README.md** - Übersicht Nachbearbeitung
 - **aufgabe-1-prompt-portfolio.md**
   - 10 effektive Prompts dokumentieren
@@ -77,6 +83,7 @@ Für jede Lektion benötigt:
   - Template
 
 ### 04-materialien/ (Handouts & Ressourcen)
+
 - **handout-programmier-mindset.md**
   - Problemdekomposition
   - Algorithmisches Denken
@@ -99,6 +106,7 @@ Für jede Lektion benötigt:
   - Troubleshooting
 
 ### 05-beispiele/ (Code-Beispiele vom Dozenten)
+
 - **hello-world.py** - Einfachstes Beispiel
 - **hello-world-input.py** - Mit Benutzereingabe
 - **textanalyse-beispiel.py** - Wortfrequenz-Analyse (Live-Demo)
@@ -136,6 +144,7 @@ Für jede Lektion benötigt:
 ## 💡 Hinweise für die Erstellung
 
 ### Stil & Format
+
 - **Markdown** für alle Dokumente
 - **Klare Struktur** mit Überschriften
 - **Emojis** für bessere Orientierung
@@ -143,6 +152,7 @@ Für jede Lektion benötigt:
 - **Checklisten** wo sinnvoll
 
 ### Didaktik
+
 - **Vom Einfachen zum Komplexen**
 - **Hands-on** statt nur Theorie
 - **KI-Integration** in allen Übungen
@@ -150,6 +160,7 @@ Für jede Lektion benötigt:
 - **Fehler als Lernchance**
 
 ### Code-Beispiele
+
 - **Gut kommentiert**
 - **Verschiedene Schwierigkeitsgrade**
 - **Lauffähig** und getestet

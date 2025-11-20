@@ -200,7 +200,7 @@ def main() -> None:
     todos = []
 
     # Demo-Daten
-    todos.append(erstelle_todo("Python Modul 2 abschließen", "hoch"))
+    todos.append(erstelle_todo("Python Modul 2 abschliessen", "hoch"))
     todos[0]["id"] = 1
     todos.append(erstelle_todo("Einkaufen gehen", "normal"))
     todos[1]["id"] = 2
