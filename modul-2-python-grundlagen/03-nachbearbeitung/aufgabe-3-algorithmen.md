@@ -715,7 +715,6 @@ Geben Sie für jeden Algorithmus die Zeitkomplexität an:
 ## Nächste Schritte
 
 [Was möchten Sie als nächstes über Algorithmen lernen?]
-```text
 
 ## ✅ Selbsttest vor Abgabe
 

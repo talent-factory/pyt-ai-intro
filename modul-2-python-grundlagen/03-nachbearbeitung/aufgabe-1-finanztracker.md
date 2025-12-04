@@ -356,7 +356,6 @@ python finanztracker.py
 ## Autor
 
 [Ihr Name]
-```text
 
 ## 🎯 Selbsttest vor Abgabe
 

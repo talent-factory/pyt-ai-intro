@@ -124,7 +124,7 @@ def main() -> None:
     visuell = zeige_passwort_staerke_visuell(staerke)
 
     # Ausgabe
-    print(f"\n📊 ANALYSE")
+    print("\n📊 ANALYSE")
     print("─" * 40)
     print(f"Länge: {len(passwort)} Zeichen")
     print(f"Stärke: {staerke.upper()} {visuell}")
@@ -137,7 +137,7 @@ def main() -> None:
             print(f"  {fehler_msg}")
 
     # Kriterien anzeigen
-    print(f"\n💡 KRITERIEN")
+    print("\n💡 KRITERIEN")
     print("─" * 40)
     kriterien = [
         ("Mindestens 8 Zeichen", len(passwort) >= 8),

@@ -3,7 +3,6 @@ pandas Grundlagen
 Verwendung: Lektion 2 - Live-Demo
 """
 import pandas as pd
-from pathlib import Path
 
 
 def erstelle_beispiel_daten():

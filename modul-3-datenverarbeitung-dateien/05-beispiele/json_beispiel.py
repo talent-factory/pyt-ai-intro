@@ -3,7 +3,6 @@ JSON-Daten verarbeiten
 Verwendung: Lektion 3 - Live-Demo
 """
 import json
-from pathlib import Path
 
 
 def lese_json(dateiname: str) -> dict:

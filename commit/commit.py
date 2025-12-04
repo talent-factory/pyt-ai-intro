@@ -90,10 +90,15 @@ class GitCommitSystem:
         # 5. Optional: Push anbieten
         print("\n🌐 Schritt 5: Push zum Remote-Repository")
         if self._should_push(force_push):
-            return self._push_changes(force_push)
-        
-        print("\n✅ Commit erfolgreich erstellt!")
-        print("   Verwende 'git push' zum Hochladen der Änderungen.")
+            if self._push_changes(force_push):
+                print("\n✅ Commit und Push erfolgreich!")
+            else:
+                print("\n✅ Commit erfolgreich erstellt!")
+                print("   Push fehlgeschlagen - verwende 'git push' manuell.")
+        else:
+            print("\n✅ Commit erfolgreich erstellt!")
+            print("   Verwende 'git push' zum Hochladen der Änderungen.")
+
         return True
     
     def _run_pre_commit_checks(self, skip_tests: bool) -> bool:
@@ -178,9 +183,9 @@ class GitCommitSystem:
     def _confirm_continue(self) -> bool:
         """Fragt Benutzer ob fortgefahren werden soll."""
         try:
-            response = input("Trotzdem fortfahren? (j/N): ").lower()
+            response = input("Trotzdem fortfahren? (j/N): ").strip().lower()
             return response in ["j", "ja", "y", "yes"]
-        except KeyboardInterrupt:
+        except (KeyboardInterrupt, EOFError):
             print("\n\n❌ Abgebrochen durch Benutzer")
             return False
     

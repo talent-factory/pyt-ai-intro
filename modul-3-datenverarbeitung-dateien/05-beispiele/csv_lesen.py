@@ -3,7 +3,6 @@ CSV-Daten lesen und verarbeiten
 Verwendung: Lektion 2 - Live-Demo
 """
 import csv
-from pathlib import Path
 
 
 def lese_csv_basic(dateiname: str) -> list:
@@ -20,7 +19,7 @@ def lese_csv_basic(dateiname: str) -> list:
     
     with open(dateiname, "r", encoding="utf-8") as f:
         reader = csv.reader(f)
-        header = next(reader)  # Erste Zeile überspringen
+        next(reader)  # Erste Zeile (Header) überspringen
         
         for row in reader:
             daten.append(row)

@@ -107,7 +107,7 @@ def main() -> None:
         # Ausgabe
         prozent = (punkte / max_punkte) * 100
 
-        print(f"\n📊 ERGEBNIS")
+        print("\n📊 ERGEBNIS")
         print(f"{'─' * 30}")
         print(f"Punkte:    {punkte}/{max_punkte} ({prozent:.1f}%)")
         print(f"Note:      {note:.1f}")
@@ -115,7 +115,7 @@ def main() -> None:
         print(f"Status:    {'✓ Bestanden' if bestanden else '✗ Nicht bestanden'}")
 
         # Notenskala anzeigen
-        print(f"\n💡 NOTENSKALA")
+        print("\n💡 NOTENSKALA")
         print(f"{'─' * 30}")
         print("6.0 : 90-100% (sehr gut)")
         print("5.5 : 80-89%")

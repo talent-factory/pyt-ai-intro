@@ -180,7 +180,7 @@ def hauptanalyse(verkaeufe: list) -> None:
     # 1. Gesamtstatistik
     stats = verkaufsstatistik(verkaeufe)
 
-    print(f"\n📈 GESAMTSTATISTIK")
+    print("\n📈 GESAMTSTATISTIK")
     print("─" * 40)
     print(f"Anzahl Produkte:       {stats['anzahl_produkte']}")
     print(f"Gesamtumsatz:          {stats['gesamtumsatz']:>10,.2f} CHF")
@@ -191,14 +191,14 @@ def hauptanalyse(verkaeufe: list) -> None:
     print(f"Gesamtmenge verkauft:  {stats['gesamtmenge']:>10}")
 
     # 2. Umsatz nach Kategorie
-    print(f"\n💰 UMSATZ NACH KATEGORIE")
+    print("\n💰 UMSATZ NACH KATEGORIE")
     print("─" * 40)
     kategorien_umsatz = umsatz_nach_kategorie(verkaeufe)
     balkendiagramm(kategorien_umsatz)
 
     # Prozentuale Verteilung
     gesamt = sum(kategorien_umsatz.values())
-    print(f"\nProzentuale Verteilung:")
+    print("\nProzentuale Verteilung:")
     for kategorie, umsatz in sorted(
         kategorien_umsatz.items(), key=lambda x: x[1], reverse=True
     ):
@@ -206,7 +206,7 @@ def hauptanalyse(verkaeufe: list) -> None:
         print(f"  {kategorie:15} {prozent:>6.1f}%")
 
     # 3. Top-Produkte
-    print(f"\n🏆 TOP 3 PRODUKTE")
+    print("\n🏆 TOP 3 PRODUKTE")
     print("─" * 40)
     top = top_produkte(verkaeufe, 3)
 
@@ -220,7 +220,7 @@ def hauptanalyse(verkaeufe: list) -> None:
         )
 
     # 4. Durchschnittspreis nach Kategorie
-    print(f"\n💵 DURCHSCHNITTSPREIS NACH KATEGORIE")
+    print("\n💵 DURCHSCHNITTSPREIS NACH KATEGORIE")
     print("─" * 40)
     durchschnitte = durchschnittspreis_nach_kategorie(verkaeufe)
 

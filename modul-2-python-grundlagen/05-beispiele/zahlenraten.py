@@ -99,7 +99,7 @@ def schwierigkeitsgrad_waehlen() -> tuple[int, int, int]:
             else:
                 print("❌ Bitte 1-4 wählen!")
 
-        except:
+        except (ValueError, KeyboardInterrupt):
             print("❌ Ungültige Eingabe!")
 
 
@@ -116,7 +116,7 @@ def statistik_anzeigen(gespielt: int, gewonnen: int) -> None:
 
     gewinnrate = (gewonnen / gespielt) * 100
 
-    print(f"\n📊 STATISTIK")
+    print("\n📊 STATISTIK")
     print("─" * 30)
     print(f"Gespielt: {gespielt}")
     print(f"Gewonnen: {gewonnen}")
