@@ -1,0 +1,193 @@
+% pyt-layout.tex - Seitenlayout, Fonts und Farben für die Dokumentation
+% ConTeXt MkIV / LuaMetaTeX
+
+% =============================================================================
+% SPRACHE (Deutsch)
+% =============================================================================
+
+\mainlanguage[de]
+\setuplabeltext[de][content=Inhaltsverzeichnis]
+\setuplabeltext[de][figure=Abbildung]
+\setuplabeltext[de][table=Tabelle]
+\setuplabeltext[de][chapter=Kapitel]
+
+% =============================================================================
+% SEITENLAYOUT
+% =============================================================================
+
+\setuppapersize[A4]
+
+\setuplayout[
+    width=middle,
+    height=middle,
+    topspace=2.5cm,
+    backspace=2.5cm,
+    header=1cm,
+    footer=1cm,
+    headerdistance=0.5cm,
+    footerdistance=0.5cm,
+]
+
+% =============================================================================
+% SCHRIFTEN
+% =============================================================================
+
+% Moderne serifenlose Schrift für Überschriften
+\definefontfamily[mainface][sans][TeX Gyre Heros]
+\definefontfamily[mainface][serif][TeX Gyre Pagella]
+\definefontfamily[mainface][mono][TeX Gyre Cursor][scale=0.85]
+
+\setupbodyfont[mainface, 11pt]
+
+% =============================================================================
+% FARBEN
+% =============================================================================
+
+\definecolor[primarycolor][h=2563EB]      % Blau
+\definecolor[secondarycolor][h=059669]    % Grün
+\definecolor[accentcolor][h=D97706]       % Orange
+\definecolor[warningcolor][h=DC2626]      % Rot
+\definecolor[codebackground][h=F3F4F6]    % Hellgrau
+\definecolor[codeborder][h=D1D5DB]        % Grau
+
+% =============================================================================
+% ÜBERSCHRIFTEN
+% =============================================================================
+
+\setuphead[chapter][
+    style=\bfc\bf,
+    color=primarycolor,
+    before={\blank[3*big]},
+    after={\blank[2*big]},
+]
+
+\setuphead[section][
+    style=\bfb\bf,
+    color=primarycolor,
+    before={\blank[2*big]},
+    after={\blank[big]},
+]
+
+\setuphead[subsection][
+    style=\bfa\bf,
+    color=primarycolor,
+    before={\blank[big]},
+    after={\blank[medium]},
+]
+
+\setuphead[subsubsection][
+    style=\bf,
+    before={\blank[medium]},
+    after={\blank[small]},
+]
+
+% =============================================================================
+% GIT-INFORMATIONEN
+% =============================================================================
+
+% Git-Branch und Commit-ID dynamisch ermitteln
+\startluacode
+    local function get_git_info()
+        local branch = "unknown"
+        local commit = "000000"
+
+        -- Branch ermitteln
+        local handle = io.popen("git rev-parse --abbrev-ref HEAD 2>/dev/null")
+        if handle then
+            branch = handle:read("*a"):gsub("%s+", "")
+            handle:close()
+        end
+
+        -- Kurze Commit-ID ermitteln
+        handle = io.popen("git rev-parse --short HEAD 2>/dev/null")
+        if handle then
+            commit = handle:read("*a"):gsub("%s+", "")
+            handle:close()
+        end
+
+        return branch, commit
+    end
+
+    local branch, commit = get_git_info()
+    document.gitbranch = branch
+    document.gitcommit = commit
+    document.gitinfo = "[git] • Branch: " .. branch .. "@" .. commit
+\stopluacode
+
+% Makro für Git-Info in TeX verfügbar machen
+\def\gitinfo{\ctxlua{context(document.gitinfo)}}
+\def\gitbranch{\ctxlua{context(document.gitbranch)}}
+\def\gitcommit{\ctxlua{context(document.gitcommit)}}
+
+% =============================================================================
+% KOPF- UND FUSSZEILEN
+% =============================================================================
+
+% Markierungen für Kapitel und Section aktivieren
+\setuphead[chapter][marking=chapter]
+\setuphead[section][marking=section]
+
+% Seitennummerierung NUR in Fusszeile (nicht in Kopfzeile)
+\setuppagenumbering[location=]
+
+% Kopfzeile: Links = Dokumenttitel, Rechts = Kapitel (uppercase)
+\setupheadertexts
+    [Python mit KI][\WORD{\getmarking[chapter]}]
+
+% Fusszeile: Git-Info zentriert, Seitenzahl rechts
+% Drei-Spalten-Layout: leer | Git-Info | Seitenzahl
+\setupfootertexts
+    [][\hbox to \hsize{\hfil\gitinfo\hfil\llap{\pagenumber}}]
+
+\setupheader[style=\small, color=black]
+\setupfooter[style=\small, color=black]
+
+% Titelseite ohne Kopf-/Fusszeile
+\definepagebreak[titelpagebreak][yes,header,footer]
+
+% =============================================================================
+% ABSÄTZE UND ABSTÄNDE
+% =============================================================================
+
+\setupwhitespace[medium]
+\setupindenting[no]
+
+% =============================================================================
+% LISTEN
+% =============================================================================
+
+\setupitemize[each][packed][
+    margin=1em,
+    before={\blank[small]},
+    after={\blank[small]},
+]
+
+% =============================================================================
+% LINKS
+% =============================================================================
+
+\setupinteraction[
+    state=start,
+    color=primarycolor,
+    contrastcolor=primarycolor,
+    style=normal,
+]
+
+% =============================================================================
+% INHALTSVERZEICHNIS
+% =============================================================================
+
+\setupcombinedlist[content][
+    list={chapter,section},
+    alternative=c,
+]
+
+\setuplist[chapter][
+    style=\bf,
+    before={\blank[small]},
+]
+
+\setuplist[section][
+    margin=1.5em,
+]
+

@@ -1,0 +1,150 @@
+% env-doc.tex - Environment-Definitionen für die Dokumentation
+% ConTeXt MkIV / LuaMetaTeX
+
+% =============================================================================
+% CODE-BLÖCKE (für Python, Bash, etc.)
+% =============================================================================
+
+\definetyping[pythoncode][
+    before={\blank[small]\startframedtext[
+        frame=on,
+        framecolor=codeborder,
+        background=color,
+        backgroundcolor=codebackground,
+        width=\textwidth,
+        align=flushleft,
+    ]},
+    after={\stopframedtext\blank[small]},
+    style=\tt\small,
+]
+
+\definetyping[bashcode][
+    before={\blank[small]\startframedtext[
+        frame=on,
+        framecolor=codeborder,
+        background=color,
+        backgroundcolor=codebackground,
+        width=\textwidth,
+        align=flushleft,
+    ]},
+    after={\stopframedtext\blank[small]},
+    style=\tt\small,
+]
+
+% Inline-Code
+\definetype[code][style=\tt\small]
+
+% =============================================================================
+% HINWEIS-BOXEN
+% =============================================================================
+
+% Info-Box (blau)
+\defineframedtext[infobox][
+    frame=on,
+    framecolor=primarycolor,
+    background=color,
+    backgroundcolor=primarycolor:1,
+    width=\textwidth,
+    before={\blank[medium]},
+    after={\blank[medium]},
+    loffset=1em,
+    roffset=1em,
+    toffset=0.5em,
+    boffset=0.5em,
+]
+
+% Tipp-Box (grün)
+\defineframedtext[tippbox][
+    frame=on,
+    framecolor=secondarycolor,
+    background=color,
+    backgroundcolor=secondarycolor:1,
+    width=\textwidth,
+    before={\blank[medium]},
+    after={\blank[medium]},
+    loffset=1em,
+    roffset=1em,
+    toffset=0.5em,
+    boffset=0.5em,
+]
+
+% Warnung-Box (rot)
+\defineframedtext[warnbox][
+    frame=on,
+    framecolor=warningcolor,
+    background=color,
+    backgroundcolor=warningcolor:1,
+    width=\textwidth,
+    before={\blank[medium]},
+    after={\blank[medium]},
+    loffset=1em,
+    roffset=1em,
+    toffset=0.5em,
+    boffset=0.5em,
+]
+
+% =============================================================================
+% AUFGABEN UND ÜBUNGEN
+% =============================================================================
+
+% Aufgaben-Box (orange)
+\defineframedtext[aufgabenbox][
+    frame=on,
+    framecolor=accentcolor,
+    background=color,
+    backgroundcolor=accentcolor:1,
+    width=\textwidth,
+    before={\blank[medium]},
+    after={\blank[medium]},
+    loffset=1em,
+    roffset=1em,
+    toffset=0.5em,
+    boffset=0.5em,
+]
+
+% Übungs-Box (grün)
+\defineframedtext[uebungsbox][
+    frame=on,
+    framecolor=secondarycolor,
+    background=color,
+    backgroundcolor=secondarycolor:1,
+    width=\textwidth,
+    before={\blank[medium]},
+    after={\blank[medium]},
+    loffset=1em,
+    roffset=1em,
+    toffset=0.5em,
+    boffset=0.5em,
+]
+
+% =============================================================================
+% LERNZIELE
+% =============================================================================
+
+% Lernziele-Box (grün)
+\defineframedtext[lernziele][
+    frame=off,
+    background=color,
+    backgroundcolor=secondarycolor:1,
+    width=\textwidth,
+    before={\blank[medium]},
+    after={\blank[medium]},
+    loffset=1em,
+    roffset=1em,
+    toffset=0.5em,
+    boffset=0.5em,
+]
+
+% =============================================================================
+% MARKDOWN-ÄHNLICHE SHORTCUTS
+% =============================================================================
+
+% Fett
+\define[1]\strong{{\bf #1}}
+
+% Kursiv
+\define[1]\emph{{\it #1}}
+
+% Durchgestrichen
+\define[1]\strike{{\overstrike #1}}
+
