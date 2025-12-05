@@ -1,0 +1,12 @@
+# ConTeXt generierte Dateien
+*.pdf
+*.tuc
+*.tua
+*.log
+*.tmp
+*.aux
+*.bbl
+*.blg
+
+# Minted Cache
+_minted-*
