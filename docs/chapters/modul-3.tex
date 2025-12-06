@@ -6,32 +6,492 @@
 
 \chapter{Datenverarbeitung \& Dateien}
 
+{\it Dauer: 1 Tag (4 Lektionen à 50 Minuten) • Voraussetzung: Module 1-2 abgeschlossen}
+
 \startlernziele
 Nach diesem Modul können Sie:
 \startitemize[n,packed]
-    \item Dateien lesen und schreiben
-    \item CSV-Dateien verarbeiten
-    \item Mit JSON und APIs arbeiten
-    \item Fehlerbehandlung implementieren
+    \item Dateien lesen und schreiben (TXT, CSV, JSON)
+    \item Daten strukturiert verarbeiten
+    \item Fehlerbehandlung mit try/except implementieren
+    \item Mit externen Bibliotheken arbeiten
+    \item API-Calls durchführen
+    \item KI für Datenverarbeitung nutzen
 \stopitemize
 \stoplernziele
 
-% TODO: Inhalt aus den Markdown-Dateien einfügen
+% =============================================================================
+% VORBEREITUNG
+% =============================================================================
 
 \section{Vorbereitung}
-% Platzhalter
+
+{\it Zeitaufwand: 2-3 Stunden vor dem Präsenzunterricht}
+
+\subsection{Leseauftrag: File I/O \& Datenformate}
+
+\subsubsection{Dateiformate verstehen}
+
+\starttabulate[|l|l|p(6cm)|]
+\HL
+\NC {\bf Format} \NC {\bf Verwendung} \NC {\bf Beispiel} \NC\NR
+\HL
+\NC TXT \NC Einfacher Text \NC Logs, Notizen \NC\NR
+\NC CSV \NC Tabellendaten \NC Excel-Export, Datenbanken \NC\NR
+\NC JSON \NC Strukturierte Daten \NC APIs, Konfiguration \NC\NR
+\HL
+\stoptabulate
+
+\subsubsection{Experimente mit Dateien}
+
+Erstellen Sie eine Testdatei und experimentieren Sie:
+
+\startbashcode
+echo "Zeile 1" > test.txt
+echo "Zeile 2" >> test.txt
+cat test.txt
+\stopbashcode
+
+\startpythoncode
+# Python REPL
+with open("test.txt", "r") as f:
+    print(f.read())
+\stoppythoncode
+
+% =============================================================================
+% PRAXIS
+% =============================================================================
 
 \section{Praxis}
-% Platzhalter
+
+{\it Präsenzunterricht: 4 Lektionen à 50 Minuten}
+
+\subsection{Lektion 1: Dateien lesen \& schreiben}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Dateien öffnen}
+
+\startpythoncode
+# Ohne with (nicht empfohlen)
+file = open("datei.txt", "r")
+inhalt = file.read()
+file.close()
+
+# Mit with (empfohlen - schliesst automatisch)
+with open("datei.txt", "r") as file:
+    inhalt = file.read()
+\stoppythoncode
+
+\subsubsection{File Modes}
+
+\starttabulate[|l|p(9cm)|]
+\HL
+\NC {\bf Mode} \NC {\bf Beschreibung} \NC\NR
+\HL
+\NC \code{"r"} \NC Read -- Lesen (Standard) \NC\NR
+\NC \code{"w"} \NC Write -- Schreiben (überschreibt) \NC\NR
+\NC \code{"a"} \NC Append -- Anhängen \NC\NR
+\NC \code{"r+"} \NC Read + Write \NC\NR
+\NC \code{"rb"} \NC Read Binary \NC\NR
+\HL
+\stoptabulate
+
+\subsubsection{Lesen}
+
+\startpythoncode
+# Alles lesen
+with open("datei.txt", "r") as f:
+    inhalt = f.read()
+
+# Zeile fuer Zeile
+with open("datei.txt", "r") as f:
+    for zeile in f:
+        print(zeile.strip())
+
+# Alle Zeilen als Liste
+with open("datei.txt", "r") as f:
+    zeilen = f.readlines()
+\stoppythoncode
+
+\subsubsection{Schreiben}
+
+\startpythoncode
+# Ueberschreiben
+with open("datei.txt", "w") as f:
+    f.write("Hallo Welt\n")
+    f.write("Zweite Zeile\n")
+
+# Anhaengen
+with open("datei.txt", "a") as f:
+    f.write("Neue Zeile\n")
+\stoppythoncode
+
+\subsubsection{Pfade mit pathlib}
+
+\startpythoncode
+from pathlib import Path
+
+# Pfad erstellen
+pfad = Path("daten/datei.txt")
+
+# Pruefen ob existiert
+if pfad.exists():
+    print("Datei existiert")
+
+# Verzeichnis erstellen
+pfad.parent.mkdir(parents=True, exist_ok=True)
+\stoppythoncode
+
+\subsection{Lektion 2: CSV-Datenverarbeitung}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{csv-Modul}
+
+\startpythoncode
+import csv
+
+# Lesen
+with open("daten.csv", "r") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+
+# Mit DictReader (Spaltenname als Key)
+with open("daten.csv", "r") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        print(row["name"], row["alter"])
+
+# Schreiben
+with open("output.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Name", "Alter"])
+    writer.writerow(["Anna", 25])
+\stoppythoncode
+
+\subsubsection{pandas Basics}
+
+\startpythoncode
+import pandas as pd
+
+# CSV lesen
+df = pd.read_csv("daten.csv")
+
+# Anzeigen
+print(df.head())      # Erste 5 Zeilen
+print(df.info())      # Spalteninfos
+print(df.describe())  # Statistiken
+
+# Filtern
+erwachsene = df[df["alter"] >= 18]
+
+# Aggregieren
+durchschnitt = df["alter"].mean()
+summe = df["umsatz"].sum()
+
+# Gruppieren
+pro_kategorie = df.groupby("kategorie")["umsatz"].sum()
+
+# Schreiben
+df.to_csv("output.csv", index=False)
+\stoppythoncode
+
+
+\subsection{Lektion 3: JSON \& APIs}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{JSON verarbeiten}
+
+\startpythoncode
+import json
+
+# JSON lesen
+with open("config.json", "r") as f:
+    daten = json.load(f)
+
+# Auf Daten zugreifen
+print(daten["name"])
+print(daten["einstellungen"]["theme"])
+
+# JSON schreiben
+daten = {
+    "name": "Meine App",
+    "version": "1.0",
+    "debug": True
+}
+
+with open("config.json", "w") as f:
+    json.dump(daten, f, indent=2)
+
+# String zu JSON
+json_string = '{"name": "Anna", "alter": 25}'
+person = json.loads(json_string)
+
+# JSON zu String
+person_string = json.dumps(person, indent=2)
+\stoppythoncode
+
+\subsubsection{API-Calls mit requests}
+
+\startpythoncode
+import requests
+
+# GET-Request
+response = requests.get("https://api.example.com/data")
+
+if response.status_code == 200:
+    daten = response.json()
+    print(daten)
+else:
+    print(f"Fehler: {response.status_code}")
+
+# Mit Parametern
+params = {"city": "Zurich", "units": "metric"}
+response = requests.get("https://api.weather.com", params=params)
+
+# POST-Request
+daten = {"name": "Anna", "email": "anna@example.com"}
+response = requests.post("https://api.example.com/users", json=daten)
+\stoppythoncode
+
+\startwarnbox
+{\bf API-Keys sicher aufbewahren!}
+
+Niemals API-Keys in den Code schreiben. Verwenden Sie Umgebungsvariablen:
+
+\startpythoncode
+import os
+api_key = os.getenv("API_KEY")
+\stoppythoncode
+\stopwarnbox
+
+\subsection{Lektion 4: Fehlerbehandlung \& Logging}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{try/except}
+
+\startpythoncode
+try:
+    with open("datei.txt", "r") as f:
+        inhalt = f.read()
+except FileNotFoundError:
+    print("Datei nicht gefunden!")
+except PermissionError:
+    print("Keine Berechtigung!")
+except Exception as e:
+    print(f"Unbekannter Fehler: {e}")
+finally:
+    print("Wird immer ausgefuehrt")
+\stoppythoncode
+
+\subsubsection{Eigene Exceptions}
+
+\startpythoncode
+class ValidationError(Exception):
+    """Fehler bei Datenvalidierung."""
+    pass
+
+def validiere_alter(alter: int) -> None:
+    if alter < 0:
+        raise ValidationError("Alter kann nicht negativ sein")
+    if alter > 150:
+        raise ValidationError("Alter unrealistisch hoch")
+
+try:
+    validiere_alter(-5)
+except ValidationError as e:
+    print(f"Validierungsfehler: {e}")
+\stoppythoncode
+
+\subsubsection{Logging}
+
+\startpythoncode
+import logging
+
+# Konfiguration
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    filename="app.log"
+)
+
+# Verwenden
+logging.debug("Debug-Information")
+logging.info("Programm gestartet")
+logging.warning("Warnung!")
+logging.error("Fehler aufgetreten")
+logging.critical("Kritischer Fehler!")
+\stoppythoncode
+
+% =============================================================================
+% ÜBUNGEN
+% =============================================================================
 
 \section{Übungen}
-% Platzhalter
+
+\startaufgabenbox
+{\bf Übung 1: Log-Datei-Analyse} {\it (15 Min.)}
+
+Analysieren Sie eine Log-Datei:
+\startitemize[packed]
+    \item Anzahl ERROR, WARNING, INFO zählen
+    \item Häufigste Fehlermeldung finden
+    \item Zusammenfassung ausgeben
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 2: CSV-Datenbereinigung} {\it (15 Min.)}
+
+CSV-Datei bereinigen:
+\startitemize[packed]
+    \item Leere Zeilen entfernen
+    \item Duplikate entfernen
+    \item Fehlende Werte behandeln
+    \item Bereinigte Datei speichern
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 3: JSON-Konfiguration} {\it (15 Min.)}
+
+Konfigurationssystem erstellen:
+\startitemize[packed]
+    \item config.json lesen
+    \item Default-Werte bei fehlenden Keys
+    \item Änderungen speichern
+    \item Fehlerbehandlung
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 4: API-Integration} {\it (20 Min.)}
+
+Öffentliche API nutzen (z.B. OpenWeatherMap):
+\startitemize[packed]
+    \item API-Call durchführen
+    \item Daten parsen
+    \item Formatiert ausgeben
+    \item Fehler behandeln
+\stopitemize
+\stopaufgabenbox
+
+% =============================================================================
+% NACHBEARBEITUNG
+% =============================================================================
 
 \section{Nachbearbeitung}
-% Platzhalter
+
+{\it Hausaufgaben: 4-6 Stunden vor Modul 4}
+
+\subsection{Aufgabe 1: Daten-Pipeline}
+
+Erstellen Sie eine Pipeline:
+\startitemize[n,packed]
+    \item CSV-Datei einlesen
+    \item Daten validieren und bereinigen
+    \item Als JSON exportieren
+    \item Logging für jeden Schritt
+\stopitemize
+
+\subsection{Aufgabe 2: CSV-zu-JSON-Konverter}
+
+CLI-Tool erstellen:
+
+\startbashcode
+python konverter.py eingabe.csv ausgabe.json
+\stopbashcode
+
+\startitemize[packed]
+    \item Beliebige CSV-Dateien konvertieren
+    \item Datentypen automatisch erkennen
+    \item Fortschritt anzeigen
+\stopitemize
+
+\subsection{Aufgabe 3: Web-Scraper}
+
+Einfachen Scraper implementieren:
+\startitemize[packed]
+    \item Webseite abrufen mit requests
+    \item Daten extrahieren
+    \item Als CSV speichern
+    \item robots.txt beachten!
+\stopitemize
+
+\subsection{Aufgabe 4: Datenanalyse-Projekt}
+
+Öffentlichen Datensatz analysieren:
+\startitemize[packed]
+    \item Daten herunterladen (z.B. von Kaggle)
+    \item Mit pandas analysieren
+    \item Mindestens 5 Erkenntnisse dokumentieren
+    \item Ergebnisse visualisieren (optional: matplotlib)
+\stopitemize
+
+% =============================================================================
+% MATERIALIEN
+% =============================================================================
 
 \section{Materialien}
-% Platzhalter
+
+\subsection{File I/O Cheat Sheet}
+
+\starttabulate[|l|p(8cm)|]
+\HL
+\NC {\bf Aktion} \NC {\bf Code} \NC\NR
+\HL
+\NC Lesen \NC \code{with open("f.txt", "r") as f: f.read()} \NC\NR
+\NC Schreiben \NC \code{with open("f.txt", "w") as f: f.write(text)} \NC\NR
+\NC Anhängen \NC \code{with open("f.txt", "a") as f: f.write(text)} \NC\NR
+\NC CSV lesen \NC \code{pd.read_csv("f.csv")} \NC\NR
+\NC JSON lesen \NC \code{json.load(f)} \NC\NR
+\NC API-Call \NC \code{requests.get(url).json()} \NC\NR
+\HL
+\stoptabulate
+
+\subsection{Error Handling Guide}
+
+\startpythoncode
+# Muster fuer robuste Dateiverarbeitung
+def verarbeite_datei(pfad: str) -> dict:
+    """Verarbeitet Datei mit Fehlerbehandlung."""
+    try:
+        with open(pfad, "r") as f:
+            daten = json.load(f)
+        logging.info(f"Datei {pfad} geladen")
+        return daten
+    except FileNotFoundError:
+        logging.error(f"Datei nicht gefunden: {pfad}")
+        return {}
+    except json.JSONDecodeError as e:
+        logging.error(f"JSON-Fehler: {e}")
+        return {}
+\stoppythoncode
+
+\blank[big]
+
+\starttippbox
+{\bf Erfolgskriterien für Modul 3}
+
+Sie haben das Modul erfolgreich abgeschlossen, wenn Sie:
+\startitemize[packed]
+    \item Dateien sicher lesen und schreiben können
+    \item CSV-Daten mit csv oder pandas verarbeiten können
+    \item JSON parsen und erstellen können
+    \item API-Calls durchführen können
+    \item Robuste Fehlerbehandlung implementieren können
+\stopitemize
+\stoptippbox
 
 \stopcomponent
 

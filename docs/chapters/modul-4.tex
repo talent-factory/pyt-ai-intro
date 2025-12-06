@@ -4,34 +4,447 @@
 \environment ../pyt-layout
 \environment ../pyt-env
 
-\chapter{Agentic Coding}
+\chapter{Agentic Coding -- KI-gestützte Entwicklung}
+
+{\it Dauer: 1 Tag (4 Lektionen à 50 Minuten) • Voraussetzung: Module 1-3 abgeschlossen}
 
 \startlernziele
 Nach diesem Modul können Sie:
 \startitemize[n,packed]
-    \item Fortgeschrittenes Prompt Engineering anwenden
+    \item KI als Entwicklungspartner effektiv nutzen
+    \item Komplexe Prompts für Code-Generierung schreiben
     \item Test-Driven Development (TDD) mit KI praktizieren
-    \item Code Reviews und Refactoring durchführen
-    \item Dokumentation automatisiert erstellen
+    \item Code-Reviews mit KI durchführen
+    \item Refactoring mit KI-Unterstützung
+    \item Dokumentation automatisch generieren
+    \item Grenzen und Best Practices verstehen
 \stopitemize
 \stoplernziele
 
-% TODO: Inhalt aus den Markdown-Dateien einfügen
+% =============================================================================
+% VORBEREITUNG
+% =============================================================================
 
 \section{Vorbereitung}
-% Platzhalter
+
+{\it Zeitaufwand: 2-3 Stunden vor dem Präsenzunterricht}
+
+\subsection{Leseauftrag: Agentic Coding Konzepte}
+
+\startinfobox
+{\bf Was ist Agentic Coding?}
+
+Entwicklung, bei der KI als aktiver Partner agiert, nicht nur als Werkzeug. Die KI generiert, erklärt, verbessert und dokumentiert Code -- der Mensch trifft die Entscheidungen.
+\stopinfobox
+
+\subsubsection{Die 4 Prinzipien}
+
+\startitemize[n,packed]
+    \item {\bf Iterative Verfeinerung} -- Prompts schrittweise verbessern
+    \item {\bf Kontext ist König} -- Mehr Kontext = bessere Ergebnisse
+    \item {\bf Verify \& Validate} -- Immer Code verstehen und testen
+    \item {\bf Human in the Loop} -- Entwickler trifft finale Entscheidungen
+\stopitemize
+
+\subsection{KI-Tool-Vergleich}
+
+Experimentieren Sie mit verschiedenen KI-Tools:
+
+\starttabulate[|l|l|p(5cm)|]
+\HL
+\NC {\bf Tool} \NC {\bf Stärke} \NC {\bf Einsatz} \NC\NR
+\HL
+\NC ChatGPT \NC Erklärungen \NC Konzepte verstehen, Debugging \NC\NR
+\NC Claude \NC Lange Kontexte \NC Grosse Codebasen analysieren \NC\NR
+\NC GitHub Copilot \NC IDE-Integration \NC Code-Vervollständigung \NC\NR
+\NC Cursor \NC Agentic Features \NC Komplexe Refactorings \NC\NR
+\HL
+\stoptabulate
+
+% =============================================================================
+% PRAXIS
+% =============================================================================
 
 \section{Praxis}
-% Platzhalter
+
+{\it Präsenzunterricht: 4 Lektionen à 50 Minuten}
+
+\subsection{Lektion 1: Advanced Prompt Engineering}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Prompt Engineering Patterns}
+
+{\bf 1. Role-Based Prompting:}
+\startbashcode
+Du bist ein erfahrener Python-Entwickler mit Fokus auf
+Clean Code und Test-Driven Development.
+\stopbashcode
+
+{\bf 2. Context-Rich Prompting:}
+\startbashcode
+Gegeben: [Kontext - bestehender Code, Anforderungen]
+Aufgabe: [Was soll gemacht werden]
+Constraints: [Einschraenkungen, Stil-Vorgaben]
+\stopbashcode
+
+{\bf 3. Chain-of-Thought:}
+\startbashcode
+Erklaere Schritt fuer Schritt, wie du die Loesung entwickelst.
+Zeige deine Ueberlegungen.
+\stopbashcode
+
+{\bf 4. Few-Shot Learning:}
+\startbashcode
+Hier sind 2 Beispiele fuer die gewuenschte Funktion:
+[Beispiel 1]
+[Beispiel 2]
+Jetzt mache das Gleiche fuer: [neue Anforderung]
+\stopbashcode
+
+\subsubsection{Prompt-Template}
+
+\startbashcode
+[Rolle]: Du bist ein erfahrener Python-Entwickler.
+
+[Kontext]: Ich arbeite an einer Web-API mit FastAPI.
+Der bestehende Code verwendet Pydantic-Models.
+
+[Aufgabe]: Erstelle einen Endpoint fuer User-Registrierung.
+
+[Anforderungen]:
+- Email-Validierung
+- Passwort-Hashing mit bcrypt
+- Duplikat-Pruefung
+- Aussagekraeftige Fehlermeldungen
+
+[Beispiel]:
+Eingabe: {"email": "test@example.com", "password": "Secure123!"}
+Ausgabe: {"id": 1, "email": "test@example.com", "created_at": "..."}
+
+[Constraints]:
+- Type Hints verwenden
+- Docstrings auf Deutsch
+- Keine print-Statements
+\stopbashcode
+
+\subsection{Lektion 2: Test-Driven Development mit KI}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{TDD-Workflow}
+
+\startitemize[n,packed]
+    \item {\bf Red:} Test schreiben, der fehlschlägt
+    \item {\bf Green:} Minimalen Code schreiben, der Test besteht
+    \item {\bf Refactor:} Code verbessern, Tests müssen weiter bestehen
+\stopitemize
+
+\subsubsection{Tests zuerst mit KI}
+
+\startpythoncode
+# Prompt: "Schreibe pytest-Tests fuer eine Funktion
+# die Primzahlen prueft"
+
+import pytest
+from primzahl import ist_primzahl
+
+def test_zwei_ist_primzahl():
+    assert ist_primzahl(2) == True
+
+def test_eins_ist_keine_primzahl():
+    assert ist_primzahl(1) == False
+
+def test_negative_zahl():
+    assert ist_primzahl(-5) == False
+
+def test_grosse_primzahl():
+    assert ist_primzahl(97) == True
+
+def test_grosse_nicht_primzahl():
+    assert ist_primzahl(100) == False
+\stoppythoncode
+
+\subsubsection{Implementation generieren}
+
+\startpythoncode
+# Prompt: "Implementiere ist_primzahl() so dass
+# alle Tests bestehen"
+
+def ist_primzahl(n: int) -> bool:
+    """Prueft, ob n eine Primzahl ist."""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+\stoppythoncode
+
+
+\subsection{Lektion 3: Code Review \& Refactoring}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{KI als Code Reviewer}
+
+\startbashcode
+Analysiere folgenden Code auf:
+- Code Smells
+- Moegliche Bugs
+- Performance-Probleme
+- Sicherheitsluecken
+- Verbesserungsvorschlaege
+
+[Code hier einfuegen]
+\stopbashcode
+
+\subsubsection{Refactoring-Beispiel}
+
+{\bf Vorher:}
+\startpythoncode
+def f(x, y):
+    r = []
+    for i in x:
+        if i > y:
+            r.append(i * 2)
+    return r
+\stoppythoncode
+
+{\bf Nachher (nach KI-Refactoring):}
+\startpythoncode
+def filter_and_double(
+    numbers: list[int],
+    threshold: int
+) -> list[int]:
+    """
+    Filtert Zahlen groesser als threshold
+    und verdoppelt sie.
+    """
+    return [n * 2 for n in numbers if n > threshold]
+\stoppythoncode
+
+\subsubsection{Refactoring-Checkliste}
+
+\startitemize[packed]
+    \item Aussagekräftige Namen für Variablen/Funktionen
+    \item Type Hints hinzufügen
+    \item Docstrings schreiben
+    \item Komplexe Logik vereinfachen
+    \item Duplikate entfernen (DRY)
+    \item Magic Numbers durch Konstanten ersetzen
+\stopitemize
+
+\subsection{Lektion 4: Dokumentation \& Best Practices}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Docstrings generieren}
+
+\startbashcode
+Generiere Google-Style Docstrings fuer alle
+Funktionen in folgendem Code:
+[Code]
+\stopbashcode
+
+\startpythoncode
+def berechne_rabatt(
+    preis: float,
+    rabatt_prozent: float
+) -> float:
+    """Berechnet den rabattierten Preis.
+
+    Args:
+        preis: Der urspruengliche Preis in CHF.
+        rabatt_prozent: Der Rabatt in Prozent (0-100).
+
+    Returns:
+        Der reduzierte Preis nach Abzug des Rabatts.
+
+    Raises:
+        ValueError: Wenn rabatt_prozent < 0 oder > 100.
+
+    Example:
+        >>> berechne_rabatt(100.0, 20.0)
+        80.0
+    """
+    if not 0 <= rabatt_prozent <= 100:
+        raise ValueError("Rabatt muss zwischen 0 und 100 sein")
+    return preis * (1 - rabatt_prozent / 100)
+\stoppythoncode
+
+\subsubsection{README generieren}
+
+\startbashcode
+Erstelle eine README.md fuer folgendes Projekt:
+- Projektname: [Name]
+- Beschreibung: [Beschreibung]
+- Hauptfeatures: [Features]
+- Struktur: [Dateien/Ordner]
+
+Verwende Badges, Inhaltsverzeichnis,
+Installation, Verwendung, Beispiele.
+\stopbashcode
+
+% =============================================================================
+% ÜBUNGEN
+% =============================================================================
 
 \section{Übungen}
-% Platzhalter
+
+\startaufgabenbox
+{\bf Übung 1: Komplexe Feature-Implementierung} {\it (20 Min.)}
+
+Mit KI-Unterstützung implementieren:
+\startitemize[packed]
+    \item URL-Shortener mit Statistiken
+    \item Passwort-Generator mit Konfiguration
+    \item Markdown-zu-HTML-Konverter
+\stopitemize
+
+Dokumentieren Sie Ihren Prompt-Iterationsprozess!
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 2: TDD-Challenge} {\it (20 Min.)}
+
+TDD-Workflow durchführen:
+\startitemize[n,packed]
+    \item Tests für Taschenrechner schreiben lassen
+    \item Implementation generieren
+    \item Edge Cases ergänzen
+    \item Refactoring durchführen
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 3: Legacy Code Refactoring} {\it (15 Min.)}
+
+Schlechten Code analysieren und verbessern:
+\startitemize[packed]
+    \item Code Smells identifizieren
+    \item Verbesserungen vorschlagen lassen
+    \item Refactoring durchführen
+    \item Tests ergänzen
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 4: Vollständige Dokumentation} {\it (15 Min.)}
+
+Für ein Mini-Projekt erstellen:
+\startitemize[packed]
+    \item Docstrings für alle Funktionen
+    \item README.md mit Installation
+    \item CHANGELOG.md
+    \item Inline-Kommentare
+\stopitemize
+\stopaufgabenbox
+
+% =============================================================================
+% NACHBEARBEITUNG
+% =============================================================================
 
 \section{Nachbearbeitung}
-% Platzhalter
+
+{\it Hausaufgaben: 6-8 Stunden vor Modul 5}
+
+\subsection{Aufgabe 1: Vollständiges CLI-Tool}
+
+Entwickeln Sie ein CLI-Tool mit KI-Unterstützung:
+
+\startbashcode
+python todo-cli.py add "Einkaufen gehen"
+python todo-cli.py list
+python todo-cli.py done 1
+python todo-cli.py delete 1
+\stopbashcode
+
+\startitemize[packed]
+    \item TDD-Workflow anwenden
+    \item Vollständige Dokumentation
+    \item Fehlerbehandlung
+    \item Persistenz (JSON-Datei)
+\stopitemize
+
+\subsection{Aufgabe 2: Code-Qualitäts-Analyse}
+
+Analysieren Sie ein Open-Source-Projekt:
+\startitemize[packed]
+    \item 3 Code Smells identifizieren
+    \item Verbesserungsvorschläge dokumentieren
+    \item Refactoring-Plan erstellen
+\stopitemize
+
+\subsection{Aufgabe 3: Portfolio-Projekt}
+
+Beginnen Sie Ihr Abschlussprojekt:
+\startitemize[packed]
+    \item Projektidee definieren
+    \item README.md erstellen
+    \item Grundstruktur mit KI entwickeln
+    \item Erste Tests schreiben
+\stopitemize
+
+% =============================================================================
+% MATERIALIEN
+% =============================================================================
 
 \section{Materialien}
-% Platzhalter
+
+\subsection{Code Review Checkliste}
+
+\startitemize[packed]
+    \item[$\square$] Funktioniert der Code wie erwartet?
+    \item[$\square$] Sind alle Edge Cases behandelt?
+    \item[$\square$] Gibt es ausreichend Tests?
+    \item[$\square$] Sind Variablennamen aussagekräftig?
+    \item[$\square$] Ist der Code DRY (keine Duplikate)?
+    \item[$\square$] Sind Funktionen klein und fokussiert?
+    \item[$\square$] Gibt es Docstrings/Kommentare?
+    \item[$\square$] Werden Fehler sinnvoll behandelt?
+    \item[$\square$] Gibt es Sicherheitsrisiken?
+    \item[$\square$] Ist der Code performant?
+\stopitemize
+
+\subsection{Prompt Engineering Patterns}
+
+\starttabulate[|l|p(8cm)|]
+\HL
+\NC {\bf Pattern} \NC {\bf Beschreibung} \NC\NR
+\HL
+\NC Role-Based \NC KI eine Expertenrolle zuweisen \NC\NR
+\NC Context-Rich \NC Viel Kontext und Constraints geben \NC\NR
+\NC Chain-of-Thought \NC Schrittweise Erklärung verlangen \NC\NR
+\NC Few-Shot \NC Beispiele zeigen, dann generalisieren \NC\NR
+\NC Iterative \NC Schrittweise verfeinern \NC\NR
+\HL
+\stoptabulate
+
+\blank[big]
+
+\starttippbox
+{\bf Erfolgskriterien für Modul 4}
+
+Sie haben das Modul erfolgreich abgeschlossen, wenn Sie:
+\startitemize[packed]
+    \item Komplexe Prompts für Code-Generierung schreiben können
+    \item TDD-Workflow mit KI-Unterstützung durchführen können
+    \item Code-Reviews mit KI durchführen können
+    \item Vollständige Dokumentation erstellen können
+    \item Die Grenzen von KI-generiertem Code verstehen
+\stopitemize
+\stoptippbox
 
 \stopcomponent
 

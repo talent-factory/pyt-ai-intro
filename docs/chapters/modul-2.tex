@@ -6,32 +6,616 @@
 
 \chapter{Python-Grundlagen mit KI verstehen}
 
+{\it Dauer: 1 Tag (4 Lektionen à 50 Minuten) • Voraussetzung: Modul 1 abgeschlossen}
+
 \startlernziele
 Nach diesem Modul können Sie:
 \startitemize[n,packed]
-    \item Grundlegende Python-Datentypen erklären und anwenden
-    \item Kontrollstrukturen (if/else, Schleifen) verstehen und nutzen
+    \item Grundlegende Python-Datentypen verstehen und anwenden
+    \item Kontrollstrukturen (if/else, Schleifen) implementieren
+    \item Eigene Funktionen mit Parametern erstellen
     \item Mit Listen und Dictionaries arbeiten
-    \item Eigene Funktionen definieren und aufrufen
+    \item Python-Module importieren und nutzen
+    \item KI-generierten Code evaluieren und anpassen
+    \item Systematisch Fehler finden und beheben
 \stopitemize
 \stoplernziele
 
-% TODO: Inhalt aus den Markdown-Dateien einfügen
+% =============================================================================
+% VORBEREITUNG
+% =============================================================================
 
 \section{Vorbereitung}
-% Platzhalter
+
+{\it Zeitaufwand: 2-3 Stunden vor dem Präsenzunterricht}
+
+\subsection{Leseauftrag: Python-Syntax Grundlagen}
+
+\subsubsection{Variablen und Datentypen}
+
+Lesen Sie folgende Konzepte und lassen Sie sich von der KI Beispiele erklären:
+
+\startitemize[packed]
+    \item {\bf int} -- Ganze Zahlen: \code{alter = 25}
+    \item {\bf float} -- Dezimalzahlen: \code{preis = 19.99}
+    \item {\bf str} -- Text/Strings: \code{name = "Anna"}
+    \item {\bf bool} -- Wahrheitswerte: \code{ist_aktiv = True}
+    \item {\bf None} -- Kein Wert: \code{ergebnis = None}
+\stopitemize
+
+\subsubsection{Operatoren}
+
+\starttabulate[|l|l|l|]
+\HL
+\NC {\bf Typ} \NC {\bf Operatoren} \NC {\bf Beispiel} \NC\NR
+\HL
+\NC Arithmetisch \NC +, -, *, /, //, \%, ** \NC \code{5 + 3 = 8} \NC\NR
+\NC Vergleich \NC ==, !=, <, >, <=, >= \NC \code{5 > 3} → True \NC\NR
+\NC Logisch \NC and, or, not \NC \code{True and False} \NC\NR
+\HL
+\stoptabulate
+
+\subsection{REPL-Experimente}
+
+Öffnen Sie ein Terminal und starten Sie Python:
+
+\startbashcode
+python
+\stopbashcode
+
+Experimentieren Sie mit folgenden Befehlen:
+
+\startpythoncode
+# Variablen erstellen
+name = "Anna"
+alter = 25
+
+# Operationen
+print(f"Hallo {name}, du bist {alter} Jahre alt")
+print(f"In 10 Jahren bist du {alter + 10}")
+
+# Listen
+zahlen = [1, 2, 3, 4, 5]
+print(sum(zahlen))  # 15
+print(len(zahlen))  # 5
+
+# Dictionary
+person = {"name": "Anna", "alter": 25}
+print(person["name"])  # Anna
+\stoppythoncode
+
+\subsection{KI-Konzepterklärungen}
+
+Stellen Sie der KI folgende Fragen:
+
+\startitemize[n,packed]
+    \item "Erkläre mir den Unterschied zwischen \code{=} und \code{==} in Python"
+    \item "Was ist der Unterschied zwischen einer Liste und einem Dictionary?"
+    \item "Wann verwende ich \code{for} und wann \code{while}?"
+    \item "Was bedeutet \code{def} in Python?"
+\stopitemize
+
+% =============================================================================
+% PRAXIS
+% =============================================================================
 
 \section{Praxis}
-% Platzhalter
+
+{\it Präsenzunterricht: 4 Lektionen à 50 Minuten}
+
+\subsection{Lektion 1: Variablen, Datentypen \& Operatoren}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Variablen}
+
+Variablen sind "Behälter" für Werte:
+
+\startpythoncode
+# Variable erstellen
+name = "Anna"
+alter = 25
+groesse = 1.75
+ist_student = True
+\stoppythoncode
+
+{\bf Naming Conventions (PEP 8):}
+
+\startpythoncode
+# Gut - snake_case
+benutzer_name = "Anna"
+max_versuche = 3
+
+# Schlecht
+BenutzerName = "Anna"  # CamelCase nur fuer Klassen
+2name = "Bob"          # Darf nicht mit Zahl beginnen
+\stoppythoncode
+
+\subsubsection{Datentypen}
+
+\startpythoncode
+# Integer (Ganzzahlen)
+alter = 25
+anzahl = 100
+
+# Float (Dezimalzahlen)
+preis = 19.99
+pi = 3.14159
+
+# String (Text)
+name = "Anna"
+text = f"Ich bin {alter} Jahre alt"  # F-String
+
+# Boolean (Wahrheitswert)
+ist_aktiv = True
+ist_fertig = False
+\stoppythoncode
+
+\subsubsection{Type Hints}
+
+\startpythoncode
+# Type Hints fuer bessere Lesbarkeit
+name: str = "Anna"
+alter: int = 25
+groesse: float = 1.75
+ist_student: bool = True
+
+def begruessung(name: str) -> str:
+    return f"Hallo {name}"
+\stoppythoncode
+
+\subsubsection{Type Conversion}
+
+\startpythoncode
+# String zu Zahl
+alter_str = "25"
+alter_int = int(alter_str)      # 25
+preis_float = float("19.99")    # 19.99
+
+# Zahl zu String
+zahl = 42
+text = str(zahl)  # "42"
+
+# Fehlerbehandlung
+try:
+    zahl = int("abc")  # ValueError!
+except ValueError:
+    print("Keine gueltige Zahl")
+\stoppythoncode
+
+
+\subsection{Lektion 2: Kontrollstrukturen}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{if/elif/else}
+
+\startpythoncode
+alter = 18
+
+if alter >= 18:
+    print("Volljaehrig")
+else:
+    print("Minderjaehrig")
+
+# Mehrere Bedingungen
+punkte = 85
+
+if punkte >= 90:
+    note = "A"
+elif punkte >= 80:
+    note = "B"
+elif punkte >= 70:
+    note = "C"
+else:
+    note = "F"
+\stoppythoncode
+
+\subsubsection{for-Schleifen}
+
+\startpythoncode
+# Ueber Liste iterieren
+namen = ["Anna", "Bob", "Clara"]
+
+for name in namen:
+    print(f"Hallo {name}")
+
+# Mit range()
+for i in range(5):      # 0, 1, 2, 3, 4
+    print(i)
+
+for i in range(1, 6):   # 1, 2, 3, 4, 5
+    print(i)
+
+# Mit enumerate()
+for index, name in enumerate(namen):
+    print(f"{index + 1}. {name}")
+\stoppythoncode
+
+\subsubsection{while-Schleifen}
+
+\startpythoncode
+zaehler = 0
+
+while zaehler < 5:
+    print(zaehler)
+    zaehler += 1
+
+# Mit break
+while True:
+    antwort = input("Weiter? (ja/nein): ")
+    if antwort == "nein":
+        break
+\stoppythoncode
+
+\subsubsection{break, continue, pass}
+
+\startpythoncode
+# break - Schleife beenden
+for i in range(10):
+    if i == 5:
+        break
+    print(i)  # 0, 1, 2, 3, 4
+
+# continue - Iteration ueberspringen
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)  # 1, 3, 5, 7, 9
+\stoppythoncode
+
+\subsection{Lektion 3: Listen \& Dictionaries}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Listen}
+
+\startpythoncode
+# Liste erstellen
+zahlen = [1, 2, 3, 4, 5]
+namen = ["Anna", "Bob", "Clara"]
+gemischt = [1, "zwei", 3.0, True]
+
+# Zugriff (0-basierter Index)
+print(namen[0])   # Anna
+print(namen[-1])  # Clara (letztes Element)
+
+# Liste aendern
+namen.append("David")      # Hinzufuegen
+namen.remove("Bob")        # Entfernen
+namen.insert(0, "Zoe")     # An Position einfuegen
+
+# Slicing
+zahlen = [0, 1, 2, 3, 4, 5]
+print(zahlen[1:4])    # [1, 2, 3]
+print(zahlen[:3])     # [0, 1, 2]
+print(zahlen[3:])     # [3, 4, 5]
+\stoppythoncode
+
+\subsubsection{List Comprehensions}
+
+\startpythoncode
+# Traditionell
+quadrate = []
+for x in range(5):
+    quadrate.append(x ** 2)
+
+# Mit List Comprehension
+quadrate = [x ** 2 for x in range(5)]  # [0, 1, 4, 9, 16]
+
+# Mit Bedingung
+gerade = [x for x in range(10) if x % 2 == 0]  # [0, 2, 4, 6, 8]
+\stoppythoncode
+
+\subsubsection{Dictionaries}
+
+\startpythoncode
+# Dictionary erstellen
+person = {
+    "name": "Anna",
+    "alter": 25,
+    "stadt": "Zuerich"
+}
+
+# Zugriff
+print(person["name"])           # Anna
+print(person.get("alter", 0))   # 25 (mit Default)
+
+# Aendern/Hinzufuegen
+person["email"] = "anna@example.com"
+person["alter"] = 26
+
+# Iterieren
+for key, value in person.items():
+    print(f"{key}: {value}")
+\stoppythoncode
+
+\subsection{Lektion 4: Funktionen \& Module}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Funktionen definieren}
+
+\startpythoncode
+def begruessung(name: str) -> str:
+    """Gibt eine Begruessung zurueck."""
+    return f"Hallo {name}!"
+
+# Aufruf
+nachricht = begruessung("Anna")
+print(nachricht)  # Hallo Anna!
+\stoppythoncode
+
+\subsubsection{Parameter und Rückgabewerte}
+
+\startpythoncode
+# Default-Parameter
+def begruessung(name: str, sprache: str = "de") -> str:
+    if sprache == "de":
+        return f"Hallo {name}!"
+    else:
+        return f"Hello {name}!"
+
+# Mehrere Rueckgabewerte
+def statistik(zahlen: list) -> tuple:
+    return min(zahlen), max(zahlen), sum(zahlen) / len(zahlen)
+
+minimum, maximum, durchschnitt = statistik([1, 2, 3, 4, 5])
+\stoppythoncode
+
+\subsubsection{Module importieren}
+
+\startpythoncode
+# Standard-Module
+import math
+print(math.sqrt(16))  # 4.0
+print(math.pi)        # 3.14159...
+
+import random
+print(random.randint(1, 10))  # Zufallszahl 1-10
+
+from datetime import datetime
+print(datetime.now())  # Aktuelles Datum/Zeit
+
+# Eigene Module
+# Datei: mathe_utils.py
+# from mathe_utils import addiere
+\stoppythoncode
+
+
+
+% =============================================================================
+% ÜBUNGEN
+% =============================================================================
 
 \section{Übungen}
-% Platzhalter
+
+\startaufgabenbox
+{\bf Übung 1: Altersrechner / Währungsrechner} {\it (15 Min.)}
+
+{\bf Option A: Altersrechner}
+\startitemize[packed]
+    \item Geburtsjahr einlesen
+    \item Alter berechnen (aktuelles Jahr: 2025)
+    \item Alter in Tagen berechnen (365 Tage/Jahr)
+\stopitemize
+
+{\bf Option B: Währungsrechner}
+\startitemize[packed]
+    \item Betrag in EUR eingeben
+    \item Umrechnung in CHF (Kurs: 1 EUR = 0.95 CHF)
+    \item Ergebnis auf 2 Dezimalstellen
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 2: Primzahl-Checker / Menü-System} {\it (15 Min.)}
+
+{\bf Option A: Primzahl-Checker}
+\startitemize[packed]
+    \item Zahl vom Benutzer einlesen
+    \item Prüfen, ob Primzahl
+    \item Programm läuft bis 'quit'
+\stopitemize
+
+{\bf Option B: Menü-System}
+\startitemize[packed]
+    \item Menü mit 3 Optionen anzeigen
+    \item Benutzerwahl einlesen
+    \item Läuft bis "Beenden" gewählt wird
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 3: Inventar-System / Duplikat-Entferner} {\it (15 Min.)}
+
+{\bf Option A: Inventar-System}
+\startitemize[packed]
+    \item Dictionary für Artikel + Anzahl
+    \item Artikel hinzufügen/entfernen
+    \item Gesamtbestand anzeigen
+\stopitemize
+
+{\bf Option B: Duplikat-Entferner}
+\startitemize[packed]
+    \item Liste mit Duplikaten erstellen
+    \item Duplikate entfernen (Reihenfolge beibehalten)
+    \item Beide Listen ausgeben
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 4: Utility-Funktionen-Modul} {\it (20 Min.)}
+
+Erstellen Sie ein Modul \code{utils.py} mit folgenden Funktionen:
+
+\startpythoncode
+def ist_palindrom(text: str) -> bool:
+    """Prueft, ob Text ein Palindrom ist."""
+    ...
+
+def wort_zaehlen(text: str) -> int:
+    """Zaehlt die Woerter im Text."""
+    ...
+
+def durchschnitt(zahlen: list) -> float:
+    """Berechnet den Durchschnitt."""
+    ...
+\stoppythoncode
+\stopaufgabenbox
+
+% =============================================================================
+% NACHBEARBEITUNG
+% =============================================================================
 
 \section{Nachbearbeitung}
-% Platzhalter
+
+{\it Hausaufgaben: 6-7 Stunden vor Modul 3}
+
+\subsection{Aufgabe 1: Persönlicher Finanztracker}
+
+Erstellen Sie einen einfachen Finanztracker:
+
+\startitemize[packed]
+    \item Einnahmen und Ausgaben erfassen
+    \item Kategorien (Essen, Transport, Freizeit, ...)
+    \item Bilanz berechnen
+    \item Daten in Dictionary speichern
+    \item Ausgabe formatieren
+\stopitemize
+
+\startpythoncode
+# Beispiel-Struktur
+finanzen = {
+    "einnahmen": [
+        {"betrag": 3000, "kategorie": "Gehalt"},
+        {"betrag": 100, "kategorie": "Verkauf"}
+    ],
+    "ausgaben": [
+        {"betrag": 50, "kategorie": "Essen"},
+        {"betrag": 200, "kategorie": "Miete"}
+    ]
+}
+\stoppythoncode
+
+\subsection{Aufgabe 2: Code-Comprehension}
+
+Analysieren Sie folgenden Code und erklären Sie ihn Zeile für Zeile:
+
+\startpythoncode
+def fibonacci(n: int) -> list:
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+
+    fib = [0, 1]
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+    return fib
+
+ergebnis = fibonacci(10)
+gerade = [x for x in ergebnis if x % 2 == 0]
+summe = sum(gerade)
+\stoppythoncode
+
+\subsection{Aufgabe 3: Algorithm Implementation}
+
+Implementieren Sie folgende Algorithmen:
+
+\startitemize[n,packed]
+    \item {\bf Bubble Sort} -- Liste aufsteigend sortieren
+    \item {\bf Binary Search} -- Element in sortierter Liste finden
+    \item {\bf Fakultät} -- n! berechnen (iterativ und rekursiv)
+\stopitemize
+
+\subsection{Aufgabe 4: Real-World Mini-Projekt}
+
+Wählen Sie eines:
+
+\startitemize[packed]
+    \item {\bf Todo-Listen-Manager} -- Aufgaben verwalten mit Prioritäten
+    \item {\bf Quiz-App} -- Fragen stellen, Antworten prüfen, Punkte zählen
+    \item {\bf Kontaktbuch} -- Kontakte speichern, suchen, bearbeiten
+\stopitemize
+
+\subsection{Reflexion}
+
+Beantworten Sie schriftlich (400+ Wörter):
+\startitemize[n,packed]
+    \item Welches Konzept war am schwierigsten zu verstehen?
+    \item Wie hat KI beim Lernen geholfen?
+    \item Was würden Sie beim nächsten Mal anders machen?
+    \item Welche Programmierprojekte möchten Sie umsetzen?
+\stopitemize
+
+% =============================================================================
+% MATERIALIEN
+% =============================================================================
 
 \section{Materialien}
-% Platzhalter
+
+\subsection{Python-Syntax Quick Reference}
+
+\starttabulate[|l|p(9cm)|]
+\HL
+\NC {\bf Element} \NC {\bf Syntax} \NC\NR
+\HL
+\NC Variable \NC \code{name = "Wert"} \NC\NR
+\NC F-String \NC \code{f"Text \{variable\}"} \NC\NR
+\NC Liste \NC \code{[1, 2, 3]} \NC\NR
+\NC Dictionary \NC \code{\{"key": "value"\}} \NC\NR
+\NC Funktion \NC \code{def name(param): return wert} \NC\NR
+\NC If \NC \code{if bedingung: ...} \NC\NR
+\NC For \NC \code{for x in liste: ...} \NC\NR
+\NC While \NC \code{while bedingung: ...} \NC\NR
+\HL
+\stoptabulate
+
+\subsection{Debugging-Guide}
+
+{\bf Häufige Fehler und Lösungen:}
+
+\starttabulate[|l|p(8cm)|]
+\HL
+\NC {\bf Fehler} \NC {\bf Lösung} \NC\NR
+\HL
+\NC SyntaxError \NC Klammern, Doppelpunkte, Anführungszeichen prüfen \NC\NR
+\NC NameError \NC Variable definiert? Schreibweise korrekt? \NC\NR
+\NC TypeError \NC Datentypen kompatibel? Conversion nötig? \NC\NR
+\NC IndexError \NC Index innerhalb der Liste? len() prüfen \NC\NR
+\NC KeyError \NC Schlüssel existiert? .get() verwenden \NC\NR
+\HL
+\stoptabulate
+
+{\bf Debugging-Strategien:}
+\startitemize[n,packed]
+    \item \code{print()} an kritischen Stellen
+    \item Fehlermeldung genau lesen
+    \item Code schrittweise testen
+    \item KI nach Erklärung fragen
+\stopitemize
+
+\blank[big]
+
+\starttippbox
+{\bf Erfolgskriterien für Modul 2}
+
+Sie haben das Modul erfolgreich abgeschlossen, wenn Sie:
+\startitemize[packed]
+    \item Alle grundlegenden Python-Datentypen verstehen
+    \item Kontrollstrukturen implementieren können
+    \item Funktionen mit Parametern erstellen können
+    \item Mit Listen und Dictionaries arbeiten können
+    \item Einfache Programme debuggen können
+    \item Alle Nachbearbeitungsaufgaben eingereicht haben
+\stopitemize
+\stoptippbox
 
 \stopcomponent
-
