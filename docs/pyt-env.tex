@@ -2,10 +2,15 @@
 % ConTeXt MkIV / LuaMetaTeX
 
 % =============================================================================
-% CODE-BLÖCKE (für Python, Bash, etc.)
+% CODE-BLÖCKE MIT SYNTAX-HIGHLIGHTING (via vim)
 % =============================================================================
 
-\definetyping[pythoncode][
+% vim-Modul laden für Syntax-Highlighting
+\usemodule[vim]
+
+% Python-Code mit Syntax-Highlighting
+\definevimtyping[pythoncode][
+    syntax=python,
     before={\blank[small]\startframedtext[
         frame=on,
         framecolor=codeborder,
@@ -13,12 +18,19 @@
         backgroundcolor=codebackground,
         width=\textwidth,
         align=flushleft,
+        loffset=0.5em,
+        roffset=0.5em,
+        toffset=0.3em,
+        boffset=0.3em,
     ]},
     after={\stopframedtext\blank[small]},
     style=\tt\small,
+    numbering=no,
 ]
 
-\definetyping[bashcode][
+% Bash/Shell-Code mit Syntax-Highlighting
+\definevimtyping[bashcode][
+    syntax=sh,
     before={\blank[small]\startframedtext[
         frame=on,
         framecolor=codeborder,
@@ -26,6 +38,69 @@
         backgroundcolor=codebackground,
         width=\textwidth,
         align=flushleft,
+        loffset=0.5em,
+        roffset=0.5em,
+        toffset=0.3em,
+        boffset=0.3em,
+    ]},
+    after={\stopframedtext\blank[small]},
+    style=\tt\small,
+    numbering=no,
+]
+
+% JSON-Code mit Syntax-Highlighting
+\definevimtyping[jsoncode][
+    syntax=json,
+    before={\blank[small]\startframedtext[
+        frame=on,
+        framecolor=codeborder,
+        background=color,
+        backgroundcolor=codebackground,
+        width=\textwidth,
+        align=flushleft,
+        loffset=0.5em,
+        roffset=0.5em,
+        toffset=0.3em,
+        boffset=0.3em,
+    ]},
+    after={\stopframedtext\blank[small]},
+    style=\tt\small,
+    numbering=no,
+]
+
+% YAML-Code mit Syntax-Highlighting
+\definevimtyping[yamlcode][
+    syntax=yaml,
+    before={\blank[small]\startframedtext[
+        frame=on,
+        framecolor=codeborder,
+        background=color,
+        backgroundcolor=codebackground,
+        width=\textwidth,
+        align=flushleft,
+        loffset=0.5em,
+        roffset=0.5em,
+        toffset=0.3em,
+        boffset=0.3em,
+    ]},
+    after={\stopframedtext\blank[small]},
+    style=\tt\small,
+    numbering=no,
+]
+
+% Generischer Text-Code (ohne Highlighting)
+\definetyping[textcode][
+    before={\blank[small]\startframedtext[
+        frame=on,
+        framecolor=codeborder,
+        background=color,
+        backgroundcolor=codebackground,
+        width=\textwidth,
+        align=flushleft,
+        loffset=0.5em,
+        roffset=0.5em,
+        toffset=0.3em,
+        boffset=0.3em,
     ]},
     after={\stopframedtext\blank[small]},
     style=\tt\small,
@@ -33,6 +108,9 @@
 
 % Inline-Code
 \definetype[code][style=\tt\small]
+
+% Inline Python (mit Highlighting)
+\definevimtyping[inlinepython][syntax=python,escape=on]
 
 % =============================================================================
 % HINWEIS-BOXEN

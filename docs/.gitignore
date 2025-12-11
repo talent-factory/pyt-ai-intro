@@ -8,5 +8,8 @@
 *.bbl
 *.blg
 
-# Minted Cache
+# vim-Modul temporäre Dateien (Syntax-Highlighting)
+*.vimout
+
+# Minted Cache (LaTeX)
 _minted-*
