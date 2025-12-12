@@ -29,7 +29,7 @@ draft:
 # Aufräumen - temporäre Dateien entfernen
 .PHONY: clean
 clean:
-	rm -f *.log *.tuc *.tua *.tmp
+	rm -f *.log *.tuc *.tua *.tmp *.vimout
 	rm -f *.aux *.bbl *.blg
 	rm -rf _minted-*
 
