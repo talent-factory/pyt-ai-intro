@@ -6,8 +6,7 @@
 % KONFIGURATION LADEN
 % =============================================================================
 
-\environment pyt-layout
-\environment pyt-env
+\environment user/environment % TEXMFHOME | ~/Library/texmf/tex/context/
 
 % =============================================================================
 % DOKUMENTINFORMATIONEN
@@ -16,7 +15,7 @@
 \setupdocument[
     title={Python mit KI},
     subtitle={Einführungskurs für Programmierung mit KI-Unterstützung},
-    author={Talent Factory},
+    author={Talent Factory GmbH},
     date={\currentdate},
 ]
 
@@ -52,9 +51,8 @@
     \stopalignment
 \stopstandardmakeup
 
-% Kopf-/Fusszeilen für restliche Seiten aktivieren
+% Kopf-/Fusszeilen für restliche Seiten aktivieren (definiert in environment.tex)
 \setupheadertexts[Python mit KI][\WORD{\getmarking[chapter]}]
-\setupfootertexts[][\hbox to \hsize{\hfil\gitinfo\hfil\llap{\pagenumber}}]
 
 % -----------------------------------------------------------------------------
 % Inhaltsverzeichnis
