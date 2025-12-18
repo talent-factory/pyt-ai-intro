@@ -23,7 +23,7 @@ Diese **Standard Operating Procedure (SOP)** ist Ihr roter Faden für jedes Pyth
 
 **Schritte:**
 
-```bash
+```text
 □ Auf GitHub.com einloggen
 □ "New Repository" klicken
 □ Repository-Name eingeben (z.B. "customer-map-app")
@@ -42,11 +42,14 @@ Diese **Standard Operating Procedure (SOP)** ist Ihr roter Faden für jedes Pyth
 **Schritte:**
 
 ```bash
-□ Terminal öffnen
-□ Zu gewünschtem Ordner navigieren: cd ~/Projekte
-□ Repository klonen:
+# □ Terminal öffnen
+
+# □ Zu gewünschtem Ordner navigieren: cd ~/Projekte
+
+# □ Repository klonen:
   git clone https://github.com/username/customer-map-app.git
-□ In Projektordner wechseln: cd customer-map-app
+
+# □ In Projektordner wechseln: cd customer-map-app
 ```
 
 **Output:** Ordner mit Repository-Inhalt
@@ -58,14 +61,15 @@ Diese **Standard Operating Procedure (SOP)** ist Ihr roter Faden für jedes Pyth
 **Warum?** Dependency Management, virtuelle Umgebung
 
 **Schritte:**
+
 ```bash
-□ UV installieren (falls noch nicht vorhanden):
+# □ UV installieren (falls noch nicht vorhanden):
   curl -LsSf https://astral.sh/uv/install.sh | sh
 
-□ Projekt initialisieren:
+# □ Projekt initialisieren:
   uv init
 
-□ Python-Version festlegen (optional):
+# □ Python-Version festlegen (optional):
   uv python pin 3.11
 ```
 
@@ -82,8 +86,8 @@ Diese **Standard Operating Procedure (SOP)** ist Ihr roter Faden für jedes Pyth
 **Schritte:**
 
 ```bash
-□ .gitignore öffnen (sollte bereits existieren)
-□ Folgende Zeilen hinzufügen (falls nicht vorhanden):
+# □ .gitignore öffnen (sollte bereits existieren)
+# □ Folgende Zeilen hinzufügen (falls nicht vorhanden):
 
 # Python
 __pycache__/
@@ -112,10 +116,10 @@ data/*.csv
 **Schritte:**
 
 ```bash
-□ Ordner erstellen:
+# □ Ordner erstellen:
   mkdir -p app data utils tests
 
-□ Dateien erstellen:
+# □ Dateien erstellen:
   touch app.py
   touch utils/__init__.py
   touch tests/__init__.py
@@ -148,9 +152,9 @@ projekt-name/
 
 **Schritte:**
 
-```bash
-□ pyproject.toml öffnen
-□ Dependencies hinzufügen:
+```yaml
+# □ pyproject.toml öffnen
+# □ Dependencies hinzufügen:
 
 [project]
 name = "customer-map-app"
@@ -165,8 +169,10 @@ dev = [
     "ruff>=0.1.0",
     "pytest>=7.4.0",
 ]
+```
 
-□ Dependencies installieren:
+```bash
+# □ Dependencies installieren:
   uv sync --all-extras
 ```
 
@@ -181,11 +187,15 @@ dev = [
 **Schritte:**
 
 ```bash
-□ Status prüfen: git status
-□ Alle Dateien hinzufügen: git add .
-□ Commit erstellen:
+# □ Status prüfen: git status
+
+# □ Alle Dateien hinzufügen: git add .
+
+# □ Commit erstellen:
   git commit -m "🎉 init: Initialisiere Projekt mit UV und Struktur"
-□ Zum Remote pushen: git push origin main
+
+# □ Zum Remote pushen:
+  git push origin main
 ```
 
 **Output:** Commit im Repository
@@ -203,7 +213,8 @@ dev = [
 **Schritte:**
 
 ```bash
-□ Branch erstellen: git checkout -b feature/dateneingabe
+# □ Branch erstellen:
+  git checkout -b feature/dateneingabe
 ```
 
 ### 2.2 Code schreiben (iterativ!)
@@ -243,7 +254,7 @@ if st.button("Grüssen"):
 
 **Schritte:**
 
-```bash
+```text
 □ Code erweitern
 □ Speichern
 □ Lokal testen
@@ -258,7 +269,7 @@ if st.button("Grüssen"):
 
 **Für Streamlit-Apps:**
 
-```bash
+```text
 □ Terminal öffnen
 □ App starten: uv run streamlit run app.py
 □ Browser öffnet sich automatisch
@@ -273,7 +284,7 @@ if st.button("Grüssen"):
 
 **Für Python-Skripte:**
 
-```bash
+```text
 □ Skript ausführen: uv run python mein_skript.py
 □ Output im Terminal beobachten
 ```
@@ -290,9 +301,11 @@ if st.button("Grüssen"):
 **Schritte:**
 
 ```bash
-□ Status prüfen: git status
-□ Änderungen hinzufügen: git add .
-□ Commit erstellen:
+# □ Status prüfen: git status
+
+# □ Änderungen hinzufügen: git add .
+
+# □ Commit erstellen:
   git commit -m "✨ feat: Füge Begrüssungsformular hinzu"
 ```
 
@@ -305,6 +318,7 @@ if st.button("Grüssen"):
 ```
 
 **Häufige Typen:**
+
 - ✨ `feat`: Neues Feature
 - 🐛 `fix`: Fehlerbehebung
 - 📚 `docs`: Dokumentation
@@ -325,7 +339,7 @@ if st.button("Grüssen"):
 
 **Wo suchen?**
 
-```bash
+```text
 □ Google: "streamlit file upload example"
 □ Streamlit Docs: https://docs.streamlit.io
 □ GitHub: Suche nach ähnlichen Projekten
@@ -340,30 +354,30 @@ if st.button("Grüssen"):
 
 **Schritte:**
 
-```bash
-□ Code-Snippet anschauen
-□ Import-Statements identifizieren:
+```python
+# □ Code-Snippet anschauen
+# □ Import-Statements identifizieren:
   import pandas as pd          → pandas
   import streamlit as st       → streamlit
   from PIL import Image        → pillow
 
-□ Notieren, welche Pakete fehlen
+# □ Notieren, welche Pakete fehlen
 ```
 
 ### 3.3 Dependencies installieren
 
 **Schritte:**
 
-```bash
-□ pyproject.toml öffnen
-□ Dependency hinzufügen:
+```yaml
+# □ pyproject.toml öffnen
+# □ Dependency hinzufügen:
   dependencies = [
       "streamlit>=1.28.0",
       "pandas>=2.0.0",
       "pillow>=10.0.0",  # NEU
   ]
 
-□ Installieren: uv sync
+# □ Installieren: uv sync
 ```
 
 **Output:** Paket wird heruntergeladen und installiert
@@ -374,7 +388,7 @@ if st.button("Grüssen"):
 
 **Schritte:**
 
-```bash
+```text
 □ Code-Snippet kopieren
 □ In eigene Datei einfügen
 □ Variablennamen anpassen
@@ -409,7 +423,7 @@ if uploaded_file is not None:
 
 **Schritte:**
 
-```bash
+```text
 □ App starten: uv run streamlit run app.py
 □ Funktion testen
 □ Fehler beheben (siehe Troubleshooting)
@@ -560,7 +574,7 @@ def test_load_customers():
 ```
 
 **Schritte:**
-```bash
+```text
 □ Test-Datei erstellen
 □ Test-Funktion schreiben
 □ Tests ausführen: uv run pytest
@@ -583,17 +597,15 @@ Kurze Beschreibung
 
 ## Installation
 
-\`\`\`bash
 git clone <url>
 cd projekt-name
 uv sync --all-extras
-\`\`\`
+
 
 ## Verwendung
 
-\`\`\`bash
 uv run streamlit run app.py
-\`\`\`
+
 
 ## Features
 
@@ -614,7 +626,8 @@ uv run streamlit run app.py
 ### 6.1 Vorbereitung
 
 **Schritte:**
-```bash
+
+```text
 □ Alle Änderungen committen
 □ Zum Remote pushen: git push origin main
 □ README prüfen
@@ -626,7 +639,8 @@ uv run streamlit run app.py
 **Warum?** App mit anderen teilen, im Internet verfügbar
 
 **Schritte:**
-```bash
+
+```text
 □ Auf https://share.streamlit.io einloggen (mit GitHub)
 □ "New app" klicken
 □ Repository auswählen
@@ -644,7 +658,8 @@ uv run streamlit run app.py
 ### 6.3 Deployment testen
 
 **Schritte:**
-```bash
+
+```text
 □ App-URL im Browser öffnen
 □ Alle Features testen
 □ Mit Freunden/Kollegen teilen
@@ -654,7 +669,8 @@ uv run streamlit run app.py
 ### 6.4 Updates deployen
 
 **Schritte:**
-```bash
+
+```text
 □ Änderungen lokal machen
 □ Committen
 □ Pushen: git push origin main
@@ -668,6 +684,7 @@ uv run streamlit run app.py
 ## 📊 Checkliste: Kompletter Workflow
 
 ### Projekt-Start
+
 - [ ] Repository auf GitHub erstellen
 - [ ] Lokal klonen
 - [ ] UV initialisieren

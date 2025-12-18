@@ -1,7 +1,7 @@
 """Geocoding-Funktionen für Adress-Umwandlung."""
 
+from geopy.exc import GeocoderServiceError, GeocoderTimedOut
 from geopy.geocoders import Nominatim
-from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
 # Geocoder initialisieren
 geolocator = Nominatim(user_agent="customer_map_app")
@@ -39,4 +39,3 @@ def geocode_address(street, zip_code, city, country):
     except (GeocoderTimedOut, GeocoderServiceError) as e:
         print(f"Geocoding-Fehler: {e}")
         return None, None
-

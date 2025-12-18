@@ -1,7 +1,6 @@
 """Karten-Erstellung mit Folium."""
 
 import folium
-import pandas as pd
 
 
 def create_customer_map(customers_df):
@@ -31,10 +30,10 @@ def create_customer_map(customers_df):
     for _, customer in valid_customers.iterrows():
         # Popup-Text
         popup_text = f"""
-        <b>{customer['company']}</b><br>
-        {customer['street']}<br>
-        {customer['zip_code']} {customer['city']}<br>
-        {customer['country']}
+        <b>{customer["company"]}</b><br>
+        {customer["street"]}<br>
+        {customer["zip_code"]} {customer["city"]}<br>
+        {customer["country"]}
         """
 
         # Marker hinzufügen
@@ -46,4 +45,3 @@ def create_customer_map(customers_df):
         ).add_to(m)
 
     return m
-

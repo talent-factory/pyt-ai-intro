@@ -14,7 +14,7 @@ Nach diesem Projekt können Sie:
 
 ## 📸 Konzept
 
-```
+```text
 ┌─────────────────────────────────────┐
 │ 📄 SOP Generator                    │
 ├─────────────────────────────────────┤
@@ -49,7 +49,7 @@ uv run streamlit run app.py
 
 ## 📁 Projektstruktur
 
-```
+```text
 projekt-2-sop-generator/
 ├── README.md
 ├── ANLEITUNG.md

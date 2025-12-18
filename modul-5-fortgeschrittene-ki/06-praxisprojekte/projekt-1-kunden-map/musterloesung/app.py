@@ -4,9 +4,10 @@ Eine vollständige Streamlit-App zur Verwaltung und Visualisierung
 von Kundenadressen auf einer interaktiven Karte.
 """
 
-import streamlit as st
-import pandas as pd
 from pathlib import Path
+
+import pandas as pd
+import streamlit as st
 from streamlit_folium import st_folium
 
 from utils.geocoder import geocode_address
@@ -47,8 +48,7 @@ def save_customer(company, street, zip_code, city, country):
 
     if lat is None or lon is None:
         st.warning(
-            "⚠️ Koordinaten konnten nicht ermittelt werden. "
-            "Kunde wird ohne Koordinaten gespeichert."
+            "⚠️ Koordinaten konnten nicht ermittelt werden. Kunde wird ohne Koordinaten gespeichert."
         )
 
     # Bestehende Daten laden
@@ -69,6 +69,8 @@ def save_customer(company, street, zip_code, city, country):
         ]
     )
 
+    # Leere Spalten vor concat entfernen, um FutureWarning zu vermeiden
+    df = df.dropna(how="all", axis=1)
     df = pd.concat([df, new_customer], ignore_index=True)
 
     # Speichern
@@ -179,7 +181,7 @@ else:
 
     with tab1:
         # Tabelle mit Export
-        st.dataframe(filtered_df, use_container_width=True)
+        st.dataframe(filtered_df, width="stretch")
 
         # CSV-Export
         csv = filtered_df.to_csv(index=False)
@@ -194,4 +196,3 @@ else:
         # Karte erstellen und anzeigen
         customer_map = create_customer_map(filtered_df)
         st_folium(customer_map, width=1200, height=600)
-

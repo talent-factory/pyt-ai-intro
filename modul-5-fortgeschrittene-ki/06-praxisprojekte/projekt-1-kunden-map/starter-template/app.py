@@ -41,4 +41,3 @@ st.title("🗺️ Kunden-Adressen Visualisierung")
 
 # Platzhalter für Entwicklung
 st.info("👋 Willkommen! Folgen Sie der ANLEITUNG.md um diese App zu entwickeln.")
-
