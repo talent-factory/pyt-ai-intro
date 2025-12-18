@@ -119,9 +119,9 @@ Die Musterlösungen demonstrieren:
    - Versionskontrolle
 
 2. **Code-Qualität**
-   - Clean Code Prinzipien
-   - SOLID Prinzipien
-   - Design Patterns
+   - [Clean Code Prinzipien](https://de.wikipedia.org/wiki/Clean_Code)
+   - [SOLID Prinzipien](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs)
+   - [Design Patterns](https://de.wikipedia.org/wiki/Entwurfsmuster)
 
 3. **Testing**
    - Unit Testing

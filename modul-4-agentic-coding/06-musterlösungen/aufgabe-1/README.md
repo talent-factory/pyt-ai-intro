@@ -110,14 +110,14 @@ task stats
 
 ## 📁 Projektstruktur
 
-```
+```text
 task-manager-cli/
-├── task_manager/           # Hauptpaket
+├── task_manager/          # Hauptpaket
 │   ├── __init__.py        # Package-Initialisierung
 │   ├── cli.py             # CLI-Commands (Click)
 │   ├── models.py          # Datenmodelle (Task, Priority, Status)
 │   └── storage.py         # JSON-Storage-Layer
-├── tests/                  # Test-Suite
+├── tests/                 # Test-Suite
 │   ├── __init__.py
 │   ├── test_cli.py        # CLI-Tests
 │   ├── test_models.py     # Model-Tests
@@ -128,8 +128,8 @@ task-manager-cli/
 ├── .gitignore
 ├── README.md
 ├── requirements.txt       # Dependencies
-├── setup.py              # Setup-Konfiguration
-└── pyproject.toml        # Projekt-Konfiguration
+├── setup.py               # Setup-Konfiguration
+└── pyproject.toml         # Projekt-Konfiguration
 ```
 
 ## 🧪 Tests ausführen

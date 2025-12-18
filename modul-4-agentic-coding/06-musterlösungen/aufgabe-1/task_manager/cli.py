@@ -3,7 +3,6 @@
 import logging
 import sys
 from pathlib import Path
-from typing import Optional
 
 import click
 
@@ -119,11 +118,15 @@ def complete(task_id: int) -> None:
         task = storage.get_task(task_id)
 
         if not task:
-            click.echo(click.style(f"✗ Task {task_id} nicht gefunden.", fg="red"), err=True)
+            click.echo(
+                click.style(f"✗ Task {task_id} nicht gefunden.", fg="red"), err=True
+            )
             sys.exit(1)
 
         if task.status == Status.DONE:
-            click.echo(click.style(f"ℹ Task {task_id} ist bereits erledigt.", fg="yellow"))
+            click.echo(
+                click.style(f"ℹ Task {task_id} ist bereits erledigt.", fg="yellow")
+            )
             return
 
         task.complete()
@@ -152,7 +155,9 @@ def delete(task_id: int) -> None:
             click.echo(click.style(f"✓ Task {task_id} gelöscht.", fg="green"))
             logger.info(f"Task gelöscht: {task_id}")
         else:
-            click.echo(click.style(f"✗ Task {task_id} nicht gefunden.", fg="red"), err=True)
+            click.echo(
+                click.style(f"✗ Task {task_id} nicht gefunden.", fg="red"), err=True
+            )
             sys.exit(1)
     except Exception as e:
         click.echo(click.style(f"✗ Fehler: {e}", fg="red"), err=True)

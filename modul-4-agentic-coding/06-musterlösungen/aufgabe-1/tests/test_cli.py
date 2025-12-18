@@ -1,10 +1,7 @@
 """Tests für CLI-Commands."""
 
-from pathlib import Path
-
 import pytest
 from click.testing import CliRunner
-
 from task_manager.cli import cli
 from task_manager.storage import TaskStorage
 
@@ -53,7 +50,9 @@ class TestAddCommand:
 
     def test_add_task_default_priority(self, runner, temp_storage_path, monkeypatch):
         """Test: Task mit Standard-Priorität hinzufügen."""
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["add", "Test Task"])
         assert result.exit_code == 0
@@ -66,7 +65,9 @@ class TestAddCommand:
 
     def test_add_task_with_priority(self, runner, temp_storage_path, monkeypatch):
         """Test: Task mit spezifischer Priorität hinzufügen."""
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["add", "Urgent Task", "--priority", "high"])
         assert result.exit_code == 0
@@ -81,7 +82,9 @@ class TestListCommand:
 
     def test_list_empty(self, runner, temp_storage_path, monkeypatch):
         """Test: Leere Task-Liste."""
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["list"])
         assert result.exit_code == 0
@@ -95,7 +98,9 @@ class TestListCommand:
         storage.add_task(Task(id=1, title="Task 1"))
         storage.add_task(Task(id=2, title="Task 2"))
 
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["list"])
         assert result.exit_code == 0
@@ -114,7 +119,9 @@ class TestListCommand:
         storage.add_task(task1)
         storage.add_task(task2)
 
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["list", "--status", "open"])
         assert result.exit_code == 0
@@ -132,7 +139,9 @@ class TestCompleteCommand:
 
         storage.add_task(Task(id=1, title="Test Task"))
 
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["complete", "1"])
         assert result.exit_code == 0
@@ -143,7 +152,9 @@ class TestCompleteCommand:
 
     def test_complete_nonexistent_task(self, runner, temp_storage_path, monkeypatch):
         """Test: Nicht existierenden Task erledigen."""
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["complete", "999"])
         assert result.exit_code == 1
@@ -160,7 +171,9 @@ class TestDeleteCommand:
 
         storage.add_task(Task(id=1, title="Test Task"))
 
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["delete", "1"], input="y\n")
         assert result.exit_code == 0
@@ -174,7 +187,9 @@ class TestStatsCommand:
 
     def test_stats_empty(self, runner, temp_storage_path, monkeypatch):
         """Test: Statistiken bei leerer Liste."""
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["stats"])
         assert result.exit_code == 0
@@ -183,7 +198,7 @@ class TestStatsCommand:
     def test_stats_with_tasks(self, runner, temp_storage_path, monkeypatch):
         """Test: Statistiken mit Tasks."""
         storage = TaskStorage(temp_storage_path)
-        from task_manager.models import Task, Priority
+        from task_manager.models import Priority, Task
 
         task1 = Task(id=1, title="Task 1", priority=Priority.HIGH)
         task2 = Task(id=2, title="Task 2")
@@ -192,7 +207,9 @@ class TestStatsCommand:
         storage.add_task(task1)
         storage.add_task(task2)
 
-        monkeypatch.setattr("task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path))
+        monkeypatch.setattr(
+            "task_manager.cli.TaskStorage", lambda: TaskStorage(temp_storage_path)
+        )
 
         result = runner.invoke(cli, ["stats"])
         assert result.exit_code == 0
