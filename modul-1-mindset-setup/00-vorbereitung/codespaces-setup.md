@@ -1,50 +1,50 @@
 # GitHub Codespaces Setup
 
-**Zeitaufwand:** 10 Minuten
+**Zeitaufwand:** 15 Minuten  
 **Ziel:** Cloud-basierte Entwicklungsumgebung ohne lokale Installation
 
-## 🎯 Was ist GitHub Codespaces
+## 🎯 Was ist GitHub Codespaces?
 
 GitHub Codespaces ist eine **vollständig konfigurierte Cloud-IDE** direkt in deinem Browser:
 
 - ✅ Keine lokale Installation nötig
 - ✅ Funktioniert auf jedem Gerät (Windows, Mac, Linux, Tablet)
 - ✅ Alle Tools bereits installiert
-- ✅ Kostenlos mit GitHub Free Account
+- ✅ Kostenlos für Studierende
 
 ---
 
-## 💰 Kostenlos mit GitHub Free Account
+## 💰 Kostenlos für alle Studierenden
 
-### Was du bekommst (ohne zusätzliche Kosten)
+### ✅ Gute Nachricht: Keine .edu Email nötig!
+
+Jeder mit einem **kostenlosen GitHub Account** bekommt automatisch:
 
 | Ressource | Limit |
 |-----------|-------|
-| **Core-Stunden/Monat** | 120 Stunden* |
+| **Compute-Stunden/Monat** | 60 Stunden |
 | **Storage** | 15 GB |
 | **Gleichzeitige Codespaces** | 1 aktiv |
 | **Machine Type** | 2-core (Standard) |
 
-*Mit 2-core Machine = **60 Stunden Nutzung** pro Monat = **2 Stunden pro Tag** ✅
+**Beispiel:** 60 Stunden = 2 Stunden pro Tag für einen Monat ✅
 
-### Voraussetzung
+### Optional: GitHub Student Developer Pack
 
-- ✅ Kostenloser GitHub Account (privat oder Firma)
-- ✅ Keine .edu E-Mail nötig
-- ✅ Keine Kreditkarte erforderlich
+Falls deine Institution eine **.edu Email-Adresse** anbietet, kannst du zusätzliche Vorteile bekommen:
+
+1. Gehe zu [github.com/education/students](https://github.com/education/students)
+2. Klicke "Get benefits"
+3. Verifiziere mit deiner **.edu Email-Adresse**
+4. Warte auf Bestätigung (meist sofort)
+
+**Aber:** Du brauchst das NICHT für Codespaces - die 60 Stunden/Monat bekommst du auch ohne!
 
 ---
 
-## 🚀 Schnellstart (5 Minuten)
+## 🚀 Codespace starten
 
-### Schritt 1: GitHub Account (falls noch nicht vorhanden)
-
-1. Gehe zu [github.com](https://github.com)
-2. Klicke "Sign up"
-3. Registriere mit deiner E-Mail Adresse
-4. Verifiziere deine E-Mail
-
-### Schritt 2: Codespace starten (2 Min.)
+### Option 1: Schnellstart (empfohlen)
 
 1. Gehe zum Repository: [github.com/talent-factory/pyt-ai-intro](https://github.com/talent-factory/pyt-ai-intro)
 2. Klicke grüner Button **"Code"**
@@ -52,21 +52,11 @@ GitHub Codespaces ist eine **vollständig konfigurierte Cloud-IDE** direkt in de
 4. Klicke **"Create codespace on main"**
 5. Warte ~2 Minuten auf Initialisierung
 
-### Schritt 3: Testen (1 Min.)
+### Option 2: Über GitHub.dev (noch schneller, aber limitiert)
 
-```bash
-
-# Terminal öffnen: Ctrl+` (Backtick)
-
-python --version
-
-# Sollte: Python 3.13.x
-
-# Erstes Programm
-
-echo 'print("Hello from Codespaces!")' > test.py
-python test.py
-```
+1. Drücke `.` (Punkt) auf der Repository-Seite
+2. Öffnet VS Code im Browser
+3. ⚠️ Nur für Datei-Bearbeitung, nicht für Ausführung
 
 ---
 
@@ -78,46 +68,35 @@ python test.py
 - ✅ Git
 - ✅ VS Code Extensions (Python, Copilot, etc.)
 - ✅ Alle Dependencies aus `requirements-dev.txt`
-- ✅ Alle Kursmaterialien
 
-### Erste Aufgabe zum Testen
+### Terminal öffnen
 
 ```bash
+# Terminal öffnen: Ctrl+` (Backtick)
+python --version
+# Sollte: Python 3.13.x
+```
 
-# 1. Terminal öffnen: Ctrl+`
+### Erstes Programm testen
 
-# 2. Erstelle eine interaktive Datei
+```bash
+# Erstelle test.py
+echo 'print("Hello from Codespaces!")' > test.py
 
-echo 'name = input("Wie heisst du? ")
-print(f"Hallo {name}!")' > hello.py
-
-# 3. Führe aus
-
-python hello.py
-
-# 4. Gib deinen Namen ein
+# Führe aus
+python test.py
 ```
 
 ---
 
 ## 🔄 Codespace verwalten
 
-### Codespace pausieren (WICHTIG: spart Stunden!)
-
-**Immer pausieren wenn du fertig bist!**
-
-1. Gehe zu [github.com/codespaces](https://github.com/codespaces)
-2. Klick auf dein Codespace (3 Punkte)
-3. Klick **"Stop codespace"**
-4. ⏸️ Pausiert = keine Stunden verbraucht
-
-**Oder:** Automatisch nach 30 Minuten Inaktivität
-
-### Codespace fortsetzen
+### Codespace pausieren (spart Stunden!)
 
 1. Gehe zu [github.com/codespaces](https://github.com/codespaces)
 2. Klick auf dein Codespace
-3. Startet automatisch (in ~30 Sekunden)
+3. Klick **"..."** → **"Stop codespace"**
+4. ⏸️ Pausiert = keine Stunden verbraucht
 
 ### Codespace löschen
 
@@ -125,7 +104,11 @@ python hello.py
 2. Klick **"..."** → **"Delete"**
 3. Speichert Speicherplatz
 
-**Hinweis:** Nach 30 Tagen Inaktivität werden Codespaces automatisch gelöscht
+### Codespace fortsetzen
+
+1. [github.com/codespaces](https://github.com/codespaces)
+2. Klick auf dein Codespace
+3. Startet automatisch
 
 ---
 
@@ -133,21 +116,16 @@ python hello.py
 
 ### Keyboard Shortcuts
 
-- `Ctrl+` ` ` - Terminal öffnen/schliessen
+- `Ctrl+` ` ` - Terminal öffnen
 - `Ctrl+Shift+P` - Command Palette
 - `Ctrl+/` - Kommentar
-- `Ctrl+S` - Speichern (Auto-Save ist aktiviert)
-- `Ctrl+B` - Sidebar ein/ausblenden
+- `Ctrl+S` - Speichern (auto-save ist an)
 
 ### GitHub Copilot nutzen
-
-Wenn du GitHub Copilot hast (kostenpflichtig oder über Firma):
 
 - Tippe in `.py` Datei
 - Copilot schlägt Code vor
 - `Tab` zum Akzeptieren
-
-**Alternative:** Nutze ChatGPT/Claude parallel im Browser
 
 ### Port Forwarding
 
@@ -155,89 +133,66 @@ Wenn du einen Server startest (Flask, FastAPI):
 
 ```bash
 python -m flask run
-
 # Oder
-
 uvicorn main:app --reload
 ```
 
-→ Codespaces zeigt automatisch einen Link zum Öffnen im Browser
+→ Codespaces zeigt automatisch einen Link zum Öffnen
 
 ---
 
-## ⚠️ Wichtig: Stunden-Management
+## ⚠️ Wichtig: Stunden sparen
 
-### So sparst du Stunden
+### Automatisches Herunterfahren
 
-| Aktion | Spart Stunden? |
-|--------|----------------|
-| Codespace pausieren | ✅ Ja |
-| Browser-Tab schliessen | ❌ Nein (läuft weiter!) |
-| Nach 30 Min. Inaktivität | ✅ Pausiert automatisch |
-| Mehrere Codespaces parallel | ❌ Verbraucht doppelt |
+- Nach **30 Minuten Inaktivität** → Codespace pausiert
+- Nach **30 Tagen** → Codespace gelöscht
 
-### Stunden-Verbrauch im Blick behalten
+### Manuelle Verwaltung
 
-1. Gehe zu [github.com/settings/billing](https://github.com/settings/billing)
-2. Unter "Codespaces" siehst du deinen Verbrauch
-3. **120 Core-Stunden** = **60 Stunden** mit 2-core Machine
-
-### Wenn Stunden aufgebraucht
-
-- ⏰ Warte bis zum nächsten Monat (Reset am 1. des Monats)
-- 💻 Nutze lokale Installation ([Installationsanleitung](./installationsanleitung.md))
-- 💰 Optional: Upgrade zu GitHub Pro (~4$/Monat = 180 Stunden)
+- **Immer pausieren** wenn du fertig bist
+- Nicht mehrere Codespaces gleichzeitig offen lassen
+- Lösche alte Codespaces
 
 ---
 
-## 🆘 Probleme & Lösungen
+## 🆘 Probleme?
 
-| Problem | Lösung |
-|---------|--------|
-| Codespace startet nicht | Warte 2-3 Min., aktualisiere Seite, versuche neuen Codespace |
-| Zu langsam | Schliesse andere Browser-Tabs, pausiere & starte neu |
-| Stunden aufgebraucht | Warte bis nächsten Monat oder nutze lokale Installation |
-| Python nicht gefunden | Terminal neu öffnen: `Ctrl+Shift+` ` ` |
-| Extension fehlt | Öffne Extensions (Ctrl+Shift+X), installiere manuell |
-| Git push schlägt fehl | Authentifiziere mit GitHub (folge den Anweisungen) |
+### Codespace startet nicht
 
----
+- Warte 2-3 Minuten
+- Aktualisiere die Seite
+- Versuche einen neuen Codespace
 
-## 📊 Vergleich: Codespaces vs. Lokal
+### Zu langsam
 
-| Kriterium | Codespaces ☁️ | Lokal 💻 |
-|-----------|--------------|---------|
-| Installation | Keine | 60-90 Min. |
-| Geräte | Alle (inkl. Tablet) | Nur dein Computer |
-| Rechenleistung | 2 cores | Deine Hardware |
-| Zeitlimit | 60h/Monat | Unbegrenzt |
-| Internet nötig | Ja | Nur für Git/KI |
-| Kosten | Kostenlos | Kostenlos |
+- Schliesse andere Browser-Tabs
+- Nutze 2-core Machine (Standard)
+- Pausiere und starte neu
 
-**Empfehlung:** Nutze **beides** - Codespaces für Kursmaterialien, lokal für grössere Projekte.
+### Stunden aufgebraucht
+
+- Warte bis zum nächsten Monat
+- Oder nutze lokale Installation
+- Oder frag deinen Kursleiter
 
 ---
 
 ## 📚 Weitere Ressourcen
 
 - [GitHub Codespaces Docs](https://docs.github.com/en/codespaces)
-- [Codespaces Quickstart](https://docs.github.com/en/codespaces/getting-started/quickstart)
+- [GitHub Student Pack](https://education.github.com/pack)
 - [Codespaces Pricing](https://github.com/features/codespaces/pricing)
-- [VS Code in Codespaces](https://code.visualstudio.com/docs/remote/codespaces)
 
 ---
 
-## ✅ Fertig
+## ✅ Fertig?
 
 Dein Codespace ist bereit! Du kannst jetzt:
 
 - ✅ Python-Code schreiben und ausführen
 - ✅ Git-Befehle nutzen
+- ✅ GitHub Copilot verwenden
 - ✅ Alle Kursmaterialien bearbeiten
-- ✅ Mit KI-Tools arbeiten
 
-**Nächste Schritte:**
-
-- 👉 [Erste Schritte mit KI](./erste-schritte.md)
-- 👉 [Leseauftrag](./leseauftrag.md)
-- 👉 [Lokale Installation (optional)](./installationsanleitung.md)
+**Weiter zu:** [Installationsanleitung (lokal)](./installationsanleitung.md) oder [Erste Schritte](./erste-schritte.md)

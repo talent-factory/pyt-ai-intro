@@ -1,6 +1,6 @@
 # Vorbereitung für Modul 1
 
-**Zeitaufwand:** 2-3 Stunden
+**Zeitaufwand:** 2-3 Stunden  
 **Deadline:** Vor der ersten Präsenzveranstaltung
 
 ## 📋 Übersicht
@@ -13,18 +13,7 @@ Bevor wir mit dem Präsenzunterricht starten, bereiten Sie bitte Ihre Entwicklun
 
 Wähle **EINE** der folgenden Optionen:
 
-#### Option A: GitHub Codespaces (empfohlen - keine Installation!)
-
-- [ ] GitHub Student Developer Pack aktiviert
-- [ ] Codespaces gestartet
-- [ ] Python getestet
-- **Zeitaufwand:** 15 Min.
-- **Voraussetzung:** .edu Email-Adresse
-- **Kosten:** Kostenlos (60 Stunden/Monat)
-
-👉 **[Codespaces Setup Guide](./codespaces-setup.md)**
-
-#### Option B: Lokale Installation (traditionell)
+#### Option A: Lokale Installation (empfohlen - traditionell)
 
 - [ ] Python installiert und getestet
 - [ ] Git installiert und konfiguriert
@@ -36,6 +25,17 @@ Wähle **EINE** der folgenden Optionen:
 - **Kosten:** Kostenlos
 
 👉 **[Installationsanleitung](./installationsanleitung.md)**
+
+#### Option B: GitHub Codespaces (Fallback - keine Installation!)
+
+- [ ] GitHub Student Developer Pack aktiviert
+- [ ] Codespaces gestartet
+- [ ] Python getestet
+- **Zeitaufwand:** 15 Min.
+- **Voraussetzung:** .edu Email-Adresse
+- **Kosten:** Kostenlos (60 Stunden/Monat)
+
+👉 **[Codespaces Setup Guide](./codespaces-setup.md)**
 
 ---
 
@@ -59,7 +59,7 @@ Wähle **EINE** der folgenden Optionen:
 
 👉 **[Erste Schritte mit KI](./erste-schritte.md)**
 
-## 🎯 Welche Option passt zu mir
+## 🎯 Welche Option passt zu mir?
 
 ### GitHub Codespaces ✅ wenn
 
@@ -89,19 +89,19 @@ So sparst du Codespaces-Stunden und hast maximale Flexibilität.
 
 ## 📞 Support
 
-### Probleme bei der Installation
+### Probleme bei der Installation?
 
 - Schreib eine Nachricht im Kurs-Chat
 - Oder komm zur Sprechstunde
 
-### Fragen zu Codespaces
+### Fragen zu Codespaces?
 
 - [GitHub Codespaces FAQ](https://github.com/features/codespaces)
 - [GitHub Education Support](https://support.github.com/contact)
 
 ---
 
-## ✅ Fertig
+## ✅ Fertig?
 
 Wenn du alle Schritte abgeschlossen hast, bist du bereit für Modul 1! 🚀
 

@@ -1,7 +1,7 @@
 # Aufgabe 2: Persönliches Projekt-Setup
 
-**Zeitaufwand:** 90 Minuten
-**Abgabe:** Vor Modul 2
+**Zeitaufwand:** 90 Minuten  
+**Abgabe:** Vor Modul 2  
 **Punkte:** 35% der Nachbearbeitung
 
 ## 🎯 Ziel
@@ -60,16 +60,15 @@ mein-python-projekt/
 ## 📝 README.md Template
 
 ```markdown
-
 # Mein Python-Projekt
 
-**Autor:** [Ihr Name]
-**Datum:** [Datum]
+**Autor:** [Ihr Name]  
+**Datum:** [Datum]  
 **Kurs:** Python & KI-gestütztes Programmieren - Modul 1
 
 ## 📖 Beschreibung
 
-Dieses Repository enthält meine ersten Python-Programme, die ich im Rahmen
+Dieses Repository enthält meine ersten Python-Programme, die ich im Rahmen 
 von Modul 1 mit KI-Unterstützung erstellt habe.
 
 ## 🚀 Programme
@@ -79,16 +78,13 @@ von Modul 1 mit KI-Unterstützung erstellt habe.
 **Beschreibung:** Ein einfacher Taschenrechner mit Grundrechenarten.
 
 **Features:**
-
 - Addition, Subtraktion, Multiplikation, Division
 - Fehlerbehandlung (Division durch Null)
 - Benutzerfreundliche Oberfläche
 
 **Ausführen:**
 ```bash
-
 python programm1_taschenrechner.py
-
 ```
 
 ### 2. Textanalyse (`programm2_textanalyse.py`)
@@ -96,7 +92,6 @@ python programm1_taschenrechner.py
 **Beschreibung:** Analysiert einen Text und gibt Statistiken aus.
 
 **Features:**
-
 - Wörter zählen
 - Zeichen zählen
 - Längstes Wort finden
@@ -104,18 +99,15 @@ python programm1_taschenrechner.py
 
 **Ausführen:**
 ```bash
-
 python programm2_textanalyse.py
-
 ```
 
 ### 3. Zahlenraten (`programm3_zahlenraten.py`)
 
-**Beschreibung:** Ein Spiel, bei dem der Computer eine Zahl wählt und
+**Beschreibung:** Ein Spiel, bei dem der Computer eine Zahl wählt und 
 der Benutzer raten muss.
 
 **Features:**
-
 - Zufällige Zahl zwischen 1-100
 - Hinweise (zu hoch/niedrig)
 - Versuche zählen
@@ -123,9 +115,7 @@ der Benutzer raten muss.
 
 **Ausführen:**
 ```bash
-
 python programm3_zahlenraten.py
-
 ```
 
 ## 🛠️ Installation
@@ -138,21 +128,12 @@ python programm3_zahlenraten.py
 ### Setup
 
 ```bash
-
 # Repository klonen
-
 git clone <repository-url>
 cd mein-python-projekt
 
-# (Optional) Virtuelle Umgebung erstellen
-
-python -m venv venv
-source venv/bin/activate  # Auf Windows: venv\Scripts\activate
-
-# (Optional) Abhängigkeiten installieren
-
-pip install -r requirements.txt
-
+# Abhängigkeiten installieren mit uv
+uv sync
 ```
 
 ## 📚 Verwendete Technologien
@@ -205,7 +186,7 @@ Dieses Projekt wurde für Bildungszwecke erstellt.
 ---
 
 **Kontakt:** [Ihre E-Mail]
-```text
+```
 
 ## 💻 Programm-Ideen
 
@@ -226,7 +207,6 @@ Dieses Projekt wurde für Bildungszwecke erstellt.
 7. **Quiz-Programm** - Fragen und Antworten
 8. **Kontaktliste** - Kontakte verwalten
 9. **Datei-Organizer** - Dateien sortieren
-
 10. **Wetter-Abfrage** - API-Integration
 
 ## 🔄 Git-Workflow
@@ -234,66 +214,50 @@ Dieses Projekt wurde für Bildungszwecke erstellt.
 ### Schritt-für-Schritt
 
 ```bash
-
 # 1. Repository erstellen
-
 mkdir mein-python-projekt
 cd mein-python-projekt
 git init
 
 # 2. Git konfigurieren
-
 git config user.name "Ihr Name"
 git config user.email "ihre.email@example.com"
 
 # 3. .gitignore erstellen
-
 echo "__pycache__/" > .gitignore
 echo "*.pyc" >> .gitignore
 echo "venv/" >> .gitignore
 
 # 4. Initial commit
-
 git add .gitignore
 git commit -m "chore: Initial commit mit gitignore"
 
 # 5. README erstellen
-
-# ... README.md erstellen 
-
+# ... README.md erstellen ...
 git add README.md
 git commit -m "docs: README hinzugefügt"
 
 # 6. Erstes Programm
-
-# ... programm1.py erstellen 
-
+# ... programm1.py erstellen ...
 git add programm1_taschenrechner.py
 git commit -m "feat: Taschenrechner implementiert"
 
 # 7. Zweites Programm
-
-# ... programm2.py erstellen 
-
+# ... programm2.py erstellen ...
 git add programm2_textanalyse.py
 git commit -m "feat: Textanalyse implementiert"
 
 # 8. Drittes Programm
-
-# ... programm3.py erstellen 
-
+# ... programm3.py erstellen ...
 git add programm3_zahlenraten.py
 git commit -m "feat: Zahlenraten-Spiel implementiert"
 
 # 9. Dokumentation aktualisieren
-
-# ... README.md aktualisieren 
-
+# ... README.md aktualisieren ...
 git add README.md
 git commit -m "docs: README mit Programmbeschreibungen aktualisiert"
 
 # 10. Historie prüfen
-
 git log --oneline
 ```
 
@@ -342,7 +306,7 @@ git log --oneline
 2. Sicherstellen, dass `.git` Ordner enthalten ist
 3. ZIP-Datei hochladen
 
-### Was einreichen
+### Was einreichen?
 
 - Repository-Link ODER ZIP-Datei
 - Kurze Beschreibung (2-3 Sätze) über Ihr Projekt

@@ -18,19 +18,19 @@
 ```python
 def function(arg1: int, arg2: str) -> bool:
     """Kurze Beschreibung.
-
+    
     Längere Beschreibung falls nötig.
-
+    
     Args:
         arg1: Beschreibung von arg1
         arg2: Beschreibung von arg2
-
+    
     Returns:
         Beschreibung des Rückgabewerts
-
+    
     Raises:
         ValueError: Wenn arg1 negativ
-
+    
     Example:
         >>> function(5, "test")
         True
@@ -41,7 +41,6 @@ def function(arg1: int, arg2: str) -> bool:
 ### README-Struktur
 
 ```markdown
-
 # Projekt-Name
 
 Kurze Beschreibung
@@ -54,52 +53,43 @@ Kurze Beschreibung
 ## Installation
 
 ```bash
-
-pip install -r requirements.txt
-
+uv sync
 ```
 
 ## Usage
 
 ```python
-
 from myproject import MyClass
-
 ```
 
 ## Testing
 
 ```bash
-
 pytest
-
 ```
 
 ## License
 
 MIT
-```text
+```
 
 ## 💻 Live-Demo (20 Min.)
 
 ### Demo: Projekt dokumentieren
 
 Prompt für KI:
-
-```
+```text
 Erstelle vollständige Dokumentation für folgendes Projekt:
 
 [CODE/PROJEKT-BESCHREIBUNG]
 
 Benötigt:
-
 1. README.md mit allen Sections
 2. Docstrings für alle Funktionen
 3. Inline-Comments wo nötig
 4. CHANGELOG.md
 5. CONTRIBUTING.md
-
-```text
+```
 
 ## ✏️ Übung (15 Min.)
 

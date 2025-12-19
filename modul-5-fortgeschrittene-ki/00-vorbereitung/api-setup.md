@@ -1,6 +1,6 @@
 # API-Setup
 
-**Zeitaufwand:** 45 Minuten
+**Zeitaufwand:** 45 Minuten  
 **Ziel:** LLM API einrichten und testen
 
 ## 🎯 Aufgabe
@@ -17,7 +17,6 @@ Richten Sie einen API-Zugang ein und führen Sie erste Tests durch.
 4. Füge Zahlungsmethode hinzu
 
 **Kosten:**
-
 - Erste $5 gratis (für neue Accounts)
 - GPT-3.5-Turbo: ~$0.001 pro 1000 Tokens
 - GPT-4: ~$0.03 pro 1000 Tokens
@@ -32,10 +31,8 @@ Richten Sie einen API-Zugang ein und führen Sie erste Tests durch.
 ### Schritt 3: Setup in Python (10 Min.)
 
 ```bash
-
-# Installation
-
-pip install openai python-dotenv
+# Installation mit uv
+uv sync
 ```
 
 Erstelle `.env` Datei:
@@ -53,9 +50,7 @@ echo ".env" >> .gitignore
 ### Schritt 4: Erster Test (10 Min.)
 
 ```python
-
 # test_openai.py
-
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
@@ -65,7 +60,6 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Einfacher Test
-
 response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
@@ -94,7 +88,6 @@ print(f"Kosten: ~${response.usage.total_tokens * 0.000001:.6f}")
 3. Füge Zahlungsmethode hinzu
 
 **Kosten:**
-
 - Claude 3 Sonnet: ~$0.003 pro 1000 Tokens
 - Claude 3 Opus: ~$0.015 pro 1000 Tokens
 
@@ -107,7 +100,7 @@ print(f"Kosten: ~${response.usage.total_tokens * 0.000001:.6f}")
 ### Schritt 3: Setup
 
 ```bash
-pip install anthropic python-dotenv
+uv sync
 ```
 
 `.env`:
@@ -140,7 +133,7 @@ print(response.content[0].text)
 
 ## Dokumentation
 
-### Welche API haben Sie gewählt
+### Welche API haben Sie gewählt?
 
 ```text
 [ ] OpenAI
@@ -148,21 +141,21 @@ print(response.content[0].text)
 [ ] Andere: _______
 ```
 
-### Erster Test erfolgreich
+### Erster Test erfolgreich?
 
 ```text
 [ ] Ja
 [ ] Nein, Fehler: _______
 ```
 
-### Spending Limit gesetzt
+### Spending Limit gesetzt?
 
 ```text
 [ ] Ja, Limit: $_______
 [ ] Nein
 ```
 
-### Geschätzte Kosten für Kurs
+### Geschätzte Kosten für Kurs?
 
 ```text
 Basierend auf Tests: $_______

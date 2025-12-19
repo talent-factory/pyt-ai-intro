@@ -25,7 +25,6 @@ Wählen Sie **1 von 3** Projekten und entwickeln Sie eine funktionierende Anwend
 **Beschreibung:** Sichere Verwaltung von Passwörtern mit Verschlüsselung.
 
 **Kernfunktionen:**
-
 - Master-Passwort zum Schutz
 - Passwörter hinzufügen (Website, Benutzername, Passwort)
 - Passwörter anzeigen (nach Master-Passwort)
@@ -33,14 +32,12 @@ Wählen Sie **1 von 3** Projekten und entwickeln Sie eine funktionierende Anwend
 - Speicherung in verschlüsselter JSON-Datei
 
 **Technische Anforderungen:**
-
 - Verschlüsselung mit `cryptography` Bibliothek
 - Passwort-Hashing mit `hashlib`
 - Sichere Eingabe (Passwort nicht sichtbar)
 - Datenpersistenz in JSON
 
 **Bewertungsschwerpunkte:**
-
 - ✅ Sicherheit (Verschlüsselung, Hashing)
 - ✅ Fehlerbehandlung (falsche Master-Passwörter)
 - ✅ Benutzerfreundlichkeit
@@ -52,7 +49,6 @@ Wählen Sie **1 von 3** Projekten und entwickeln Sie eine funktionierende Anwend
 **Beschreibung:** Interaktives Multiple-Choice-Quiz mit Highscore.
 
 **Kernfunktionen:**
-
 - Fragen aus JSON-Datei laden
 - Multiple-Choice-Fragen stellen
 - Antworten überprüfen und Punkte zählen
@@ -60,14 +56,12 @@ Wählen Sie **1 von 3** Projekten und entwickeln Sie eine funktionierende Anwend
 - Verschiedene Kategorien (z.B. Python, Allgemeinwissen)
 
 **Technische Anforderungen:**
-
 - Fragen in JSON-Datei (`questions.json`)
 - Zufällige Reihenfolge der Fragen
 - Timer für jede Frage (optional)
 - Highscore-Persistenz
 
 **Bewertungsschwerpunkte:**
-
 - ✅ Datenstruktur-Design (verschachtelte Dictionaries)
 - ✅ Randomisierung
 - ✅ User Experience (klares Feedback)
@@ -79,7 +73,6 @@ Wählen Sie **1 von 3** Projekten und entwickeln Sie eine funktionierende Anwend
 **Beschreibung:** Verfolgen Sie Trainingseinheiten und Fortschritte.
 
 **Kernfunktionen:**
-
 - Workout hinzufügen (Typ, Dauer, Kalorien, Notizen)
 - Workout-Historie anzeigen
 - Statistiken (Gesamtkalorien, häufigste Übung, etc.)
@@ -87,14 +80,12 @@ Wählen Sie **1 von 3** Projekten und entwickeln Sie eine funktionierende Anwend
 - Trainingsziele setzen und überprüfen
 
 **Technische Anforderungen:**
-
 - Datenspeicherung in JSON
 - Datum/Zeit-Handling mit `datetime`
 - Statistik-Berechnungen
 - Datenvisualisierung (ASCII-Grafiken)
 
 **Bewertungsschwerpunkte:**
-
 - ✅ Datums-/Zeitverarbeitung
 - ✅ Statistik-Berechnungen
 - ✅ Datenvisualisierung
@@ -134,7 +125,7 @@ Wählen Sie **1 von 3** Projekten und entwickeln Sie eine funktionierende Anwend
 
 ### Projektstruktur
 
-```text
+```
 aufgabe-4-password-manager/
 ├── password_manager.py    # Hauptprogramm
 ├── passwords.json.enc     # Verschlüsselte Passwörter (automatisch erstellt)
@@ -146,56 +137,49 @@ aufgabe-4-password-manager/
 ### Technische Spezifikation
 
 **requirements.txt:**
-
-```text
+```
 cryptography==41.0.7
 ```
 
 **Installation:**
-
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 **Funktionen:**
 
 1. **Master-Passwort setzen/überprüfen**
-
    ```python
    def verify_master_password() -> bool:
        """Fragt Master-Passwort ab und verifiziert es."""
-```
+   ```
 
 2. **Passwort hinzufügen**
-
    ```python
    def add_password(website: str, username: str, password: str) -> None:
        """Fügt neues Passwort hinzu."""
-```
+   ```
 
 3. **Passwort anzeigen**
-
    ```python
    def get_password(website: str) -> dict:
        """Gibt Passwort für Website zurück."""
-```
+   ```
 
 4. **Passwort generieren**
-
    ```python
    def generate_password(length: int = 16) -> str:
        """Generiert sicheres, zufälliges Passwort."""
-```
+   ```
 
 5. **Daten verschlüsseln/entschlüsseln**
-
    ```python
    def encrypt_data(data: str, key: bytes) -> bytes:
        """Verschlüsselt Daten mit Fernet."""
 
    def decrypt_data(encrypted: bytes, key: bytes) -> str:
        """Entschlüsselt Daten."""
-```
+   ```
 
 ### Code-Beispiel (Starter)
 
@@ -207,13 +191,9 @@ from cryptography.fernet import Fernet
 
 def generate_key_from_password(password: str) -> bytes:
     """Generiert Verschlüsselungs-Key aus Master-Passwort."""
-
     # Hash das Passwort zu einem 32-Byte-Key
-
     key = hashlib.sha256(password.encode()).digest()
-
     # Konvertiere zu base64 für Fernet
-
     import base64
     return base64.urlsafe_b64encode(key)
 
@@ -228,23 +208,18 @@ def verify_master_password() -> tuple[bool, bytes]:
     key = generate_key_from_password(password)
 
     # Versuche Datei zu entschlüsseln (Test ob Passwort korrekt)
-
     try:
-
         # [Hier Ihre Logik zum Testen]
-
         return True, key
     except:
         return False, None
 
-# Weitere Funktionen implementieren
-
+# Weitere Funktionen implementieren...
 ```
 
 ### Sicherheitshinweise
 
 ⚠️ **WICHTIG für echte Passwort-Manager:**
-
 - Dieses Projekt ist ein LERNPROJEKT, nicht für echte Passwörter geeignet
 - Für echte Passwörter: Nutzen Sie professionelle Tools (1Password, Bitwarden, etc.)
 - Verschlüsselung schützt nur, wenn Master-Passwort sicher ist
@@ -280,7 +255,7 @@ Passwort gespeichert ✓
 
 ### Projektstruktur
 
-```text
+```
 aufgabe-4-quiz-game/
 ├── quiz_game.py           # Hauptprogramm
 ├── questions.json         # Fragen-Datenbank
@@ -367,7 +342,6 @@ def show_highscores() -> None:
 === PYTHON QUIZ ===
 
 Wählen Sie Kategorie:
-
 1. Python Basics
 2. Datenstrukturen
 3. Alle Kategorien
@@ -394,12 +368,10 @@ Ihre Punktzahl: 80/100
 Rang: 3. Platz
 
 Highscores:
-
 1. Anna      - 95 Punkte
 2. Bob       - 90 Punkte
 3. Sie       - 80 Punkte
 4. Charlie   - 75 Punkte
-
 ```
 
 ---
@@ -408,7 +380,7 @@ Highscores:
 
 ### Projektstruktur
 
-```text
+```
 aufgabe-4-workout-tracker/
 ├── workout_tracker.py     # Hauptprogramm
 ├── workouts.json          # Trainings-Historie
@@ -523,12 +495,10 @@ def calculate_statistics(workouts: list) -> dict:
     total_dauer = sum(w["dauer_minuten"] for w in workouts)
 
     # Durchschnitte
-
     avg_kalorien = total_kalorien / total_workouts if total_workouts > 0 else 0
     avg_dauer = total_dauer / total_workouts if total_workouts > 0 else 0
 
     # Häufigster Workout-Typ
-
     from collections import Counter
     typen = [w["typ"] for w in workouts]
     haeufigster = Counter(typen).most_common(1)[0] if typen else ("Keine", 0)
@@ -577,18 +547,15 @@ def calculate_statistics(workouts: list) -> dict:
 ### KI-Prompts
 
 **Für Projektstart:**
-
-```text
+```
 Ich entwickle einen [Projektname] in Python.
 
 Features:
-
 - [Feature 1]
 - [Feature 2]
 - [Feature 3]
 
 Hilf mir bei:
-
 1. Datenstruktur-Design (welche Dicts/Listen brauche ich?)
 2. Funktions-Architektur (welche Funktionen und Parameter?)
 3. Projektstruktur (welche Dateien?)
@@ -597,31 +564,25 @@ Gib mir einen Überblick, NICHT den kompletten Code.
 ```
 
 **Für spezifische Probleme:**
-
-```text
+```
 Ich möchte [Feature] implementieren.
 Aktueller Code: [Code einfügen]
 
 Wie kann ich das elegant lösen? Zeige mir:
-
 1. Die Python-Konzepte die ich brauche
 2. Ein Code-Beispiel
 3. Mögliche Edge Cases
-
 ```
 
 ### README-Template
 
 ```markdown
-
 # [Projekt-Name]
 
 ## Beschreibung
-
 [2-3 Sätze über das Projekt]
 
 ## Features
-
 - ✅ [Feature 1]
 - ✅ [Feature 2]
 - ✅ [Feature 3]
@@ -629,81 +590,61 @@ Wie kann ich das elegant lösen? Zeige mir:
 ## Installation
 
 ### Voraussetzungen
-
 - Python 3.11+
 - [Weitere Dependencies]
 
 ### Setup
-
 ```bash
-
 # Repository klonen
-
 git clone [url]
 
 # Dependencies installieren
-
-pip install -r requirements.txt
+uv sync
 
 # Programm starten
-
 python [hauptdatei].py
-
 ```
 
 ## Verwendung
 
 ### Erste Schritte
-
 [Schritt-für-Schritt-Anleitung]
 
 ### Beispiel-Session
-
 ```text
-
 [Beispiel-Ausgabe des Programms]
-
 ```
 
 ## Projektstruktur
-
-```text
-
+```
 projekt/
 ├── [datei].py
 ├── [datei].json
 └── README.md
-
 ```
 
 ## Technische Details
 
 ### Datenstruktur
-
 [Beschreibung der JSON-Struktur]
 
 ### Hauptfunktionen
-
 - `funktion1()`: [Beschreibung]
 - `funktion2()`: [Beschreibung]
 
 ## Gelerntes
-
 [Was haben Sie durch dieses Projekt gelernt?]
 
 ## Mögliche Erweiterungen
-
 - [ ] [Idee 1]
 - [ ] [Idee 2]
 
 ## Autor
-
 [Ihr Name]
 
 ## Lizenz
-
 Lernprojekt für [Kurs-Name]
-```text
+```
 
 ## ✅ Selbsttest vor Abgabe
 
