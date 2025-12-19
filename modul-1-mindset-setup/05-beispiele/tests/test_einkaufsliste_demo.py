@@ -10,7 +10,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from einkaufsliste-demo import zeige_menu, artikel_hinzufuegen, artikel_entfernen, artikel_anzeigen, artikel_suchen
+from einkaufsliste_demo import zeige_menu, artikel_hinzufuegen, artikel_entfernen, artikel_anzeigen, artikel_suchen
 
 
 class TestZeigeMenu:

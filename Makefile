@@ -24,41 +24,41 @@ help:
 
 install:
 	@echo "📦 Installiere Test-Dependencies mit uv..."
-	uv sync --group test
+	uv sync --extra test --extra dev
 
 test:
 	@echo "🧪 Führe alle Tests aus..."
-	pytest
+	uv run pytest
 
 test-coverage:
 	@echo "📊 Führe Tests mit Coverage aus..."
-	pytest --cov=. --cov-report=html --cov-report=term-missing
+	uv run pytest --cov=. --cov-report=html --cov-report=term-missing
 	@echo ""
 	@echo "✅ Coverage Report: htmlcov/index.html"
 
 test-fast:
 	@echo "⚡ Führe Tests parallel aus..."
-	pytest -n auto
+	uv run pytest -n auto
 
 test-modul1:
 	@echo "🧪 Tests für Modul 1..."
-	pytest modul-1-mindset-setup/05-beispiele/tests -v
+	uv run pytest modul-1-mindset-setup/05-beispiele/tests -v
 
 test-modul2:
 	@echo "🧪 Tests für Modul 2..."
-	pytest modul-2-python-grundlagen/05-beispiele/tests -v
+	uv run pytest modul-2-python-grundlagen/05-beispiele/tests -v
 
 test-modul3:
 	@echo "🧪 Tests für Modul 3..."
-	pytest modul-3-datenverarbeitung-dateien/05-beispiele/tests -v
+	uv run pytest modul-3-datenverarbeitung-dateien/05-beispiele/tests -v
 
 test-modul4:
 	@echo "🧪 Tests für Modul 4..."
-	pytest modul-4-agentic-coding/05-beispiele/tests -v
+	uv run pytest modul-4-agentic-coding/05-beispiele/tests -v
 
 test-modul5:
 	@echo "🧪 Tests für Modul 5..."
-	pytest modul-5-fortgeschrittene-ki/05-beispiele/tests -v
+	uv run pytest modul-5-fortgeschrittene-ki/05-beispiele/tests -v
 
 clean:
 	@echo "🧹 Cleanup..."
