@@ -2,6 +2,43 @@
 
 Ein produktionsreifer RAG (Retrieval-Augmented Generation) ChatBot, der es ermöglicht, PDF-Dokumente hochzuladen und mittels Claude API mit deren Inhalt zu interagieren.
 
+## 🎨 Prompt Engineering: Self-Refinement Pattern
+
+Dieses Projekt wurde mithilfe des **Self-Refinement Prompt-Patterns** entwickelt. Aus einem einfachen, initialen Prompt wurde durch iterative Verfeinerung ein detaillierter Entwicklungsauftrag erstellt.
+
+### Initialer Prompt
+
+```text
+Erstelle mir einen perfekten Prompt mit folgendem Inhalt:
+
+# RAG-ChatBot
+
+Ich möchte eine einfache Streamlit-Anwendung, in welcher ich via Drag & Drop eine beliebige
+PDF-Datei hochladen kann. Diese PDF-Datei soll dann in einer Vektor-Datenbank
+gespeichert werden. Anschliessend möchte ich in einem ChatBot mit dem hochgeladenen PDF
+chaten.
+```
+
+### Verfeinerungsprozess
+
+Der initiale Prompt wurde durch Self-Refinement zu einem umfassenden Entwicklungsauftrag erweitert:
+
+1. **Technische Spezifikation**: Konkrete Tech-Stack-Auswahl (Streamlit, Claude API, ChromaDB)
+2. **Funktionale Anforderungen**: Detaillierte Feature-Beschreibungen
+3. **Nicht-funktionale Anforderungen**: Performance, UX, Code-Qualität, Sicherheit
+4. **Projektstruktur**: Modulare Architektur mit klarer Verantwortlichkeitstrennung
+5. **Implementierungs-Schritte**: Strukturierter Entwicklungsplan
+6. **Akzeptanzkriterien**: Messbare Erfolgskriterien
+
+Das Ergebnis dieser Verfeinerung ist in [`prompt.md`](./prompt.md) dokumentiert und diente als Grundlage für die Implementierung dieses Projekts.
+
+### Learnings
+
+- ✅ **Klarheit**: Vage Anforderungen wurden zu präzisen Spezifikationen
+- ✅ **Vollständigkeit**: Alle Aspekte (Tech, UX, Sicherheit) wurden berücksichtigt
+- ✅ **Umsetzbarkeit**: Konkrete Implementierungs-Schritte statt abstrakter Ideen
+- ✅ **Qualität**: Nicht-funktionale Anforderungen sichern Code-Qualität
+
 ## 🎯 Features
 
 - **PDF-Upload**: Drag & Drop oder File-Browser für PDF-Dateien (max. 50 MB)
