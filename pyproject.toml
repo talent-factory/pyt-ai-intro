@@ -9,6 +9,9 @@ dependencies = [
     "openai>=2.7.1",
 ]
 
+[tool.setuptools]
+packages = []
+
 [project.optional-dependencies]
 test = [
     "pytest>=7.4.0",
