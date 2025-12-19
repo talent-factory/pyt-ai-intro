@@ -6,44 +6,48 @@
 
 ### [Übung 1: Log-Datei-Analyse](./uebung-1-log-analyse.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 1 - Dateien lesen & schreiben  
+**Dauer:** 15 Minuten
+**Lektion:** 1 - Dateien lesen & schreiben
 **Schwierigkeit:** ⭐⭐☆
 
 Optionen:
+
 - Wort-Zähler für Text-Dateien
 - Todo-Listen-Manager
 - Datei-Statistiken
 
 ### [Übung 2: CSV-Datenbereinigung](./uebung-2-csv-bereinigung.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 2 - CSV-Datenverarbeitung  
+**Dauer:** 15 Minuten
+**Lektion:** 2 - CSV-Datenverarbeitung
 **Schwierigkeit:** ⭐⭐☆
 
 Optionen:
+
 - Duplikate entfernen
 - Fehlende Werte behandeln
 - Daten filtern und sortieren
 
 ### [Übung 3: JSON-Konfiguration](./uebung-3-json-config.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 3 - JSON & APIs  
+**Dauer:** 15 Minuten
+**Lektion:** 3 - JSON & APIs
 **Schwierigkeit:** ⭐⭐⭐
 
 Optionen:
+
 - Konfigurations-Manager
 - API-Client für öffentliche API
 - JSON-zu-CSV-Konverter
 
 ### [Übung 4: Robuste Datei-Verarbeitung](./uebung-4-fehlerbehandlung.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 4 - Fehlerbehandlung & Logging  
+**Dauer:** 15 Minuten
+**Lektion:** 4 - Fehlerbehandlung & Logging
 **Schwierigkeit:** ⭐⭐☆
 
 Optionen:
+
 - Datei-Verarbeitung mit Exception Handling
 - Logging-System
 - Retry-Mechanismus

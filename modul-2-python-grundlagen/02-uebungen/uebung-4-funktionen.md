@@ -63,7 +63,9 @@ def ist_palindrom(text: str) -> bool:
     return text == text[::-1]
 
 if __name__ == "__main__":
+
     # Tests
+
     print(ist_palindrom("anna"))  # True
     print(ist_palindrom("test"))  # False
 ```
@@ -78,10 +80,12 @@ Erstelle ein Python-Modul mit Utility-Funktionen:
 3. durchschnitt(zahlen) - Berechnet Durchschnitt
 
 Anforderungen:
+
 - Jede Funktion mit Docstring
 - Type Hints verwenden
 - Tests im if __name__ == "__main__" Block
 - Kommentare auf Deutsch
+
 ```
 
 ---

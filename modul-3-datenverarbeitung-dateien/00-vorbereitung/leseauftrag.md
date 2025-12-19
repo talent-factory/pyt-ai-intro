@@ -1,6 +1,6 @@
 # Leseauftrag - Modul 3
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** File I/O und Datenformate verstehen
 
 ## 📚 Aufgabe 1: Python File I/O (20 Min.)
@@ -59,19 +59,19 @@ name,alter,stadt
 Anna,25,Zürich
 Bob,30,Bern
 Clara,28,Basel
-```
+```text
 
 **Vorteile:**
 
-```text
-[Ihre Notizen]
 ```
+[Ihre Notizen]
+```text
 
 **Nachteile:**
 
-```text
-[Ihre Notizen]
 ```
+[Ihre Notizen]
+```text
 
 ### JSON (JavaScript Object Notation)
 

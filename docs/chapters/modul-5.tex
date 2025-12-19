@@ -1,0 +1,511 @@
+% modul-5.tex - Modul 5: Fortgeschrittene KI-Integration
+
+\startcomponent modul-5
+\environment ../pyt-layout
+\environment ../pyt-env
+
+\chapter{Fortgeschrittene KI-Integration}
+
+{\it Dauer: 1 Tag (4 Lektionen à 50 Minuten) • Voraussetzung: Module 1-4 abgeschlossen}
+
+\startlernziele
+Nach diesem Modul können Sie:
+\startitemize[n,packed]
+    \item LLM APIs (OpenAI, Anthropic) programmatisch nutzen
+    \item RAG-Systeme (Retrieval-Augmented Generation) bauen
+    \item AI Agents mit Tool-Nutzung entwickeln
+    \item Embeddings und Vector Databases verwenden
+    \item Ethische Aspekte verstehen und berücksichtigen
+    \item Production-Ready AI-Apps erstellen
+\stopitemize
+\stoplernziele
+
+% =============================================================================
+% VORBEREITUNG
+% =============================================================================
+
+\section{Vorbereitung}
+
+{\it Zeitaufwand: 2-3 Stunden vor dem Präsenzunterricht}
+
+\subsection{API-Setup}
+
+\startwarnbox
+{\bf API-Keys sicher aufbewahren!}
+
+API-Keys niemals in den Code schreiben oder committen. Verwenden Sie \code{.env}-Dateien:
+
+\startbashcode
+# .env (in .gitignore eintragen!)
+OPENAI_API_KEY=sk-...
+ANTHROPIC_API_KEY=sk-ant-...
+\stopbashcode
+\stopwarnbox
+
+\subsubsection{OpenAI API einrichten}
+
+\startitemize[n,packed]
+    \item Account auf platform.openai.com erstellen
+    \item API Key generieren
+    \item In \code{.env}-Datei speichern
+    \item Python-Package installieren: \code{pip install openai}
+\stopitemize
+
+\subsubsection{Kosten-Übersicht}
+
+\starttabulate[|l|l|l|]
+\HL
+\NC {\bf Modell} \NC {\bf Input/1M Tokens} \NC {\bf Output/1M Tokens} \NC\NR
+\HL
+\NC GPT-4 Turbo \NC \$10 \NC \$30 \NC\NR
+\NC GPT-3.5 Turbo \NC \$0.50 \NC \$1.50 \NC\NR
+\NC Claude 3 Opus \NC \$15 \NC \$75 \NC\NR
+\NC Claude 3 Sonnet \NC \$3 \NC \$15 \NC\NR
+\HL
+\stoptabulate
+
+\starttippbox
+{\bf Tipp für Entwicklung}
+
+Für Entwicklung und Tests GPT-3.5 oder Claude Sonnet verwenden -- deutlich günstiger!
+\stoptippbox
+
+\subsection{Leseauftrag: LLM Basics}
+
+\subsubsection{Was sind LLMs?}
+
+{\bf Large Language Models} sind neuronale Netze mit Milliarden Parametern, trainiert auf riesigen Textmengen. Sie können:
+
+\startitemize[packed]
+    \item Text verstehen und generieren
+    \item Code schreiben und erklären
+    \item Fragen beantworten
+    \item Texte übersetzen und zusammenfassen
+\stopitemize
+
+% =============================================================================
+% PRAXIS
+% =============================================================================
+
+\section{Praxis}
+
+{\it Präsenzunterricht: 4 Lektionen à 50 Minuten}
+
+\subsection{Lektion 1: LLM APIs \& Prompt Engineering}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{OpenAI API}
+
+\startpythoncode
+from openai import OpenAI
+import os
+
+# Client erstellen
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# Chat Completion
+response = client.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "Du bist ein hilfreicher Assistent."},
+        {"role": "user", "content": "Erklaere mir Python in 3 Saetzen."}
+    ],
+    temperature=0.7,
+    max_tokens=500
+)
+
+print(response.choices[0].message.content)
+\stoppythoncode
+
+\subsubsection{Anthropic API (Claude)}
+
+\startpythoncode
+from anthropic import Anthropic
+import os
+
+client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+response = client.messages.create(
+    model="claude-3-sonnet-20240229",
+    max_tokens=1024,
+    messages=[
+        {"role": "user", "content": "Erklaere mir Python in 3 Saetzen."}
+    ]
+)
+
+print(response.content[0].text)
+\stoppythoncode
+
+\subsubsection{Streaming Responses}
+
+\startpythoncode
+# Fuer lange Antworten - zeigt Token fuer Token
+stream = client.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[{"role": "user", "content": "Schreibe eine Geschichte"}],
+    stream=True
+)
+
+for chunk in stream:
+    if chunk.choices[0].delta.content:
+        print(chunk.choices[0].delta.content, end="")
+\stoppythoncode
+
+\subsection{Lektion 2: RAG-Systeme}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Was ist RAG?}
+
+{\bf Retrieval-Augmented Generation} kombiniert:
+\startitemize[n,packed]
+    \item {\bf Retrieval:} Relevante Dokumente aus einer Datenbank holen
+    \item {\bf Augmentation:} Dokumente als Kontext zum Prompt hinzufügen
+    \item {\bf Generation:} LLM generiert Antwort basierend auf Kontext
+\stopitemize
+
+\subsubsection{RAG-Workflow}
+
+\startpythoncode
+# 1. Dokumente laden und in Chunks teilen
+dokumente = lade_dokumente("./docs")
+chunks = teile_in_chunks(dokumente, chunk_size=500)
+
+# 2. Embeddings erstellen
+embeddings = erstelle_embeddings(chunks)
+
+# 3. In Vector-Datenbank speichern
+vector_db.speichern(chunks, embeddings)
+
+# 4. Bei Anfrage: Relevante Chunks suchen
+frage = "Wie funktioniert die Login-Funktion?"
+relevante_chunks = vector_db.suche(frage, top_k=3)
+
+# 5. Kontext zum Prompt hinzufuegen
+prompt = f"""Basierend auf folgenden Dokumenten:
+{relevante_chunks}
+
+Beantworte: {frage}"""
+
+# 6. LLM antworten lassen
+antwort = llm.generiere(prompt)
+\stoppythoncode
+
+\subsubsection{Embeddings}
+
+\startpythoncode
+# OpenAI Embeddings
+from openai import OpenAI
+
+client = OpenAI()
+
+def get_embedding(text: str) -> list[float]:
+    response = client.embeddings.create(
+        model="text-embedding-3-small",
+        input=text
+    )
+    return response.data[0].embedding
+
+# Beispiel
+embedding = get_embedding("Python ist eine Programmiersprache")
+print(f"Dimension: {len(embedding)}")  # 1536
+\stoppythoncode
+
+
+\subsection{Lektion 3: AI Agents \& Tool Use}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Was sind AI Agents?}
+
+AI Agents sind Systeme, die autonom Aufgaben lösen durch:
+\startitemize[n,packed]
+    \item {\bf Planung:} Aufgabe in Schritte zerlegen
+    \item {\bf Tool-Nutzung:} Externe Funktionen aufrufen
+    \item {\bf Iteration:} Ergebnisse prüfen und anpassen
+    \item {\bf Selbst-Korrektur:} Fehler erkennen und beheben
+\stopitemize
+
+\subsubsection{Function Calling}
+
+\startpythoncode
+import json
+
+# Tool-Definition
+tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "get_weather",
+            "description": "Holt das aktuelle Wetter",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "city": {"type": "string", "description": "Stadt"}
+                },
+                "required": ["city"]
+            }
+        }
+    }
+]
+
+# API-Call mit Tools
+response = client.chat.completions.create(
+    model="gpt-4-turbo",
+    messages=[{"role": "user", "content": "Wie ist das Wetter in Zuerich?"}],
+    tools=tools,
+    tool_choice="auto"
+)
+
+# Tool-Call verarbeiten
+if response.choices[0].message.tool_calls:
+    tool_call = response.choices[0].message.tool_calls[0]
+    args = json.loads(tool_call.function.arguments)
+
+    # Funktion ausfuehren
+    result = get_weather(args["city"])
+
+    # Ergebnis zurueck an LLM
+    ...
+\stoppythoncode
+
+\subsection{Lektion 4: Production \& Ethics}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Error Handling für APIs}
+
+\startpythoncode
+import time
+from openai import RateLimitError, APIError
+
+def sichere_api_anfrage(prompt: str, max_retries: int = 3) -> str:
+    """API-Anfrage mit Retry-Logik."""
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return response.choices[0].message.content
+        except RateLimitError:
+            wait_time = 2 ** attempt  # Exponential Backoff
+            print(f"Rate Limit - warte {wait_time}s")
+            time.sleep(wait_time)
+        except APIError as e:
+            print(f"API Fehler: {e}")
+            raise
+
+    raise Exception("Max Retries erreicht")
+\stoppythoncode
+
+\subsubsection{Kosten-Kontrolle}
+
+\startpythoncode
+# Tokens zaehlen vor dem Senden
+import tiktoken
+
+def zaehle_tokens(text: str, model: str = "gpt-3.5-turbo") -> int:
+    encoding = tiktoken.encoding_for_model(model)
+    return len(encoding.encode(text))
+
+# Kosten schaetzen
+def schaetze_kosten(input_tokens: int, output_tokens: int) -> float:
+    input_cost = (input_tokens / 1_000_000) * 0.50   # GPT-3.5
+    output_cost = (output_tokens / 1_000_000) * 1.50
+    return input_cost + output_cost
+\stoppythoncode
+
+\subsubsection{Ethik-Checkliste}
+
+\startwarnbox
+{\bf Ethische Aspekte beachten!}
+
+\startitemize[packed]
+    \item {\bf Bias:} Modelle können Vorurteile reproduzieren
+    \item {\bf Datenschutz:} Keine persönlichen Daten an APIs senden
+    \item {\bf Transparenz:} Nutzer informieren, dass KI verwendet wird
+    \item {\bf Missbrauch:} Sicherheitsmassnahmen gegen böswillige Nutzung
+    \item {\bf Umwelt:} Grosse Modelle haben hohen Energieverbrauch
+\stopitemize
+\stopwarnbox
+
+% =============================================================================
+% ÜBUNGEN
+% =============================================================================
+
+\section{Übungen}
+
+\startaufgabenbox
+{\bf Übung 1: Chatbot mit API} {\it (20 Min.)}
+
+Einfachen Chatbot implementieren:
+\startitemize[packed]
+    \item Konversation mit Gedächtnis
+    \item System-Prompt für Persönlichkeit
+    \item Beenden mit "quit"
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 2: Dokument-Q\&A mit RAG} {\it (25 Min.)}
+
+RAG-System für Textdatei:
+\startitemize[packed]
+    \item Text in Chunks teilen
+    \item Embeddings erstellen
+    \item Fragen beantworten lassen
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 3: Agent mit Tools} {\it (20 Min.)}
+
+Agent mit Tool-Nutzung:
+\startitemize[packed]
+    \item Wetter-Tool (simuliert)
+    \item Rechner-Tool
+    \item Multi-Step Reasoning
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 4: Ethik-Analyse} {\it (15 Min.)}
+
+Diskutieren Sie:
+\startitemize[packed]
+    \item Welche Risiken hat Ihre Anwendung?
+    \item Wie können Sie Bias reduzieren?
+    \item Wie schützen Sie Nutzerdaten?
+\stopitemize
+\stopaufgabenbox
+
+% =============================================================================
+% NACHBEARBEITUNG
+% =============================================================================
+
+\section{Nachbearbeitung}
+
+{\it Hausaufgaben: 8-10 Stunden -- Abschlussprojekt}
+
+\subsection{Aufgabe 1: RAG-System für Dokumentation}
+
+Bauen Sie ein Q\&A-System:
+\startitemize[packed]
+    \item Eigene Dokumentation als Basis
+    \item Vector-Datenbank (z.B. ChromaDB)
+    \item CLI oder Web-Interface
+    \item Quellenangabe in Antworten
+\stopitemize
+
+\subsection{Aufgabe 2: Multi-Agent-System}
+
+Mehrere Agenten zusammenarbeiten lassen:
+\startitemize[packed]
+    \item Agent 1: Recherche
+    \item Agent 2: Zusammenfassung
+    \item Agent 3: Qualitätskontrolle
+    \item Koordination zwischen Agenten
+\stopitemize
+
+\subsection{Aufgabe 3: Production-Ready AI-App}
+
+Vollständige Anwendung erstellen:
+\startitemize[packed]
+    \item Error Handling
+    \item Rate Limiting
+    \item Kosten-Monitoring
+    \item Logging
+    \item Tests
+\stopitemize
+
+\subsection{Aufgabe 4: Abschlussprojekt}
+
+Eigenes KI-Projekt fertigstellen:
+\startitemize[packed]
+    \item Vollständige Dokumentation
+    \item README mit Installation
+    \item Präsentation vorbereiten
+    \item Code auf GitHub
+\stopitemize
+
+% =============================================================================
+% MATERIALIEN
+% =============================================================================
+
+\section{Materialien}
+
+\subsection{LLM API Cheat Sheet}
+
+\starttabulate[|l|p(8cm)|]
+\HL
+\NC {\bf Aktion} \NC {\bf Code} \NC\NR
+\HL
+\NC Chat \NC \code{client.chat.completions.create(...)} \NC\NR
+\NC Embedding \NC \code{client.embeddings.create(...)} \NC\NR
+\NC Streaming \NC \code{stream=True} Parameter \NC\NR
+\NC Tools \NC \code{tools=[...]} Parameter \NC\NR
+\HL
+\stoptabulate
+
+\subsection{RAG Architecture}
+
+\startitemize[n,packed]
+    \item {\bf Load:} Dokumente laden
+    \item {\bf Split:} In Chunks teilen (500-1000 Tokens)
+    \item {\bf Embed:} Embeddings erstellen
+    \item {\bf Store:} In Vector-DB speichern
+    \item {\bf Retrieve:} Relevante Chunks suchen
+    \item {\bf Generate:} Mit Kontext antworten
+\stopitemize
+
+\subsection{Projekt-Ideen}
+
+\startitemize[packed]
+    \item {\bf Dokumentations-Assistent} -- RAG über eigene Docs
+    \item {\bf Code-Review-Agent} -- Pull Requests analysieren
+    \item {\bf Research-Assistant} -- Informationen sammeln und zusammenfassen
+    \item {\bf Personal Knowledge Base} -- Notizen mit semantischer Suche
+\stopitemize
+
+\blank[big]
+
+\starttippbox
+{\bf Erfolgskriterien für Modul 5 \& Kurs}
+
+Sie haben den Kurs erfolgreich abgeschlossen, wenn Sie:
+\startitemize[packed]
+    \item LLM APIs programmatisch nutzen können
+    \item Ein RAG-System implementiert haben
+    \item AI Agents mit Tools bauen können
+    \item Ethische Aspekte berücksichtigen
+    \item Ein vollständiges Abschlussprojekt präsentieren können
+\stopitemize
+\stoptippbox
+
+\blank[big]
+
+\startinfobox
+{\bf Herzlichen Glückwunsch!}
+
+Sie haben alle 5 Module des Kurses "Python mit KI" abgeschlossen. Sie können nun:
+\startitemize[packed]
+    \item Python-Programme entwickeln
+    \item KI-Tools effektiv nutzen
+    \item Eigene KI-Anwendungen bauen
+    \item Code-Qualität sicherstellen
+    \item Mit APIs und Daten arbeiten
+\stopitemize
+
+Viel Erfolg bei Ihren zukünftigen Projekten!
+\stopinfobox
+
+\stopcomponent
+

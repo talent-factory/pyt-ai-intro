@@ -28,14 +28,15 @@ Bob,bob@test.com,30
 Anna,anna@test.com,25
 Clara,clara@test.com,28
 Bob,bob@test.com,30
-```
+```text
 
 #### Prompt-Vorlage
 
-```text
+```
 Erstelle ein Python-Programm zur CSV-Datenbereinigung:
 
 Anforderungen:
+
 - Liest "daten.csv" mit csv.DictReader
 - Entfernt Duplikate basierend auf email
 - Schreibt bereinigte Daten in "daten_clean.csv"
@@ -45,17 +46,17 @@ Anforderungen:
   * Bereinigt: Z Zeilen
 
 Verwende set() für Duplikat-Erkennung.
-```
+```text
 
 #### Erwartetes Ergebnis
 
-```text
+```
 Original: 5 Zeilen
 Duplikate: 2 Zeilen
 Bereinigt: 3 Zeilen
 
 Bereinigte Datei erstellt: daten_clean.csv
-```
+```text
 
 ### Option B: Fehlende Werte behandeln
 
@@ -85,6 +86,7 @@ Headset,60,
 Erstelle ein Python-Programm für fehlende Werte:
 
 Anforderungen:
+
 - Liest "verkauf.csv"
 - Identifiziert fehlende Werte (leere Strings)
 - Behandelt fehlende Werte:
@@ -117,14 +119,15 @@ Buch,Bücher,15,4.8
 Tastatur,Elektronik,80,4.6
 Roman,Bücher,12,4.3
 Monitor,Elektronik,350,4.7
-```
+```text
 
 #### Prompt-Vorlage
 
-```text
+```
 Erstelle ein Python-Programm für Datenfilterung:
 
 Anforderungen:
+
 - Liest "produkte.csv"
 - Filtert nach kategorie="Elektronik"
 - Sortiert nach bewertung (absteigend)
@@ -133,11 +136,13 @@ Anforderungen:
 
 Format:
 Top 3 Elektronik-Produkte:
+
 1. [Name] - [Preis]€ (⭐[Bewertung])
+
 ...
 
 Durchschnittspreis: [X]€
-```
+```text
 
 ## 💡 Tipps
 

@@ -22,6 +22,7 @@ Mit Text-Dateien arbeiten und Daten analysieren.
 Erstelle ein Python-Programm: Wort-Zähler
 
 Anforderungen:
+
 - Liest Text-Datei ein
 - Zählt alle Wörter
 - Findet die 5 häufigsten Wörter
@@ -30,14 +31,18 @@ Anforderungen:
 Beispiel-Ausgabe:
 Gesamte Wörter: 1234
 Top 5:
+
 1. der: 45x
 2. und: 38x
+
 ...
 
 Einschränkungen:
+
 - with Statement verwenden
 - Fehlerbehandlung für fehlende Datei
 - Kommentare auf Deutsch
+
 ```
 
 ## Option B: Todo-Listen-Manager
@@ -55,6 +60,7 @@ Einschränkungen:
 Erstelle ein Python-Programm: Todo-Listen-Manager
 
 Anforderungen:
+
 - Liest todos.txt (ein Todo pro Zeile)
 - Menü: Anzeigen, Hinzufügen, Erledigen, Beenden
 - Speichert Änderungen in Datei
@@ -65,9 +71,11 @@ Dateiformat:
 [ ] Todo 3
 
 Einschränkungen:
+
 - with Statement
 - Fehlerbehandlung
 - Benutzerfreundlich
+
 ```
 
 ---

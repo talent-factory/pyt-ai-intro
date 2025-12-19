@@ -1,7 +1,7 @@
 # Übung 3: Prompting-Challenge
 
-**Dauer:** 20 Minuten  
-**Lektion:** 3  
+**Dauer:** 20 Minuten
+**Lektion:** 3
 **Ziel:** Effektive Prompts für verschiedene Programmieraufgaben formulieren
 
 ## 🎯 Lernziel
@@ -20,6 +20,7 @@ Formulieren Sie für 3 verschiedene Programme vollständige Prompts. Nutzen Sie 
 [Kontext]: Warum? Wofür?
 
 [Anforderungen]:
+
 - Anforderung 1
 - Anforderung 2
 - Anforderung 3
@@ -29,7 +30,9 @@ Eingabe: ...
 Ausgabe: ...
 
 [Einschränkungen]:
+
 - Was zu beachten ist
+
 ```
 
 ## 🎯 Challenge 1: Einkaufsliste (7 Min.)
@@ -129,20 +132,24 @@ Für jeden Prompt prüfen:
 
 ```text
 Was gut ist:
+
 - ...
 - ...
 
 Was verbessert werden könnte:
+
 - ...
 - ...
 
 Vorschläge:
+
 - ...
+
 ```
 
 ## 💡 Tipps
 
-### Gute Prompts sind...
+### Gute Prompts sind
 
 - **Spezifisch:** Genau beschreiben, was gewünscht ist
 - **Vollständig:** Alle wichtigen Details enthalten

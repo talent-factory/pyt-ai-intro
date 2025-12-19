@@ -1,6 +1,6 @@
 # Nachbearbeitung - Modul 3
 
-**Zeitaufwand:** 4-6 Stunden  
+**Zeitaufwand:** 4-6 Stunden
 **Deadline:** Vor Beginn von Modul 4
 
 ## 🎯 Ziel
@@ -14,6 +14,7 @@ Datenverarbeitung und File I/O praktisch anwenden.
 **Zeitaufwand:** 120 Minuten | **Punkte:** 30%
 
 Erstellen Sie eine Pipeline die:
+
 - CSV-Daten einliest
 - Daten bereinigt und transformiert
 - JSON-Report generiert

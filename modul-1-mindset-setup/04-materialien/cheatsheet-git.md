@@ -5,128 +5,168 @@ Schnellreferenz für die wichtigsten Git-Befehle.
 ## 🚀 Repository erstellen
 
 ```bash
+
 # Neues Repository initialisieren
+
 git init
 
 # Repository klonen
+
 git clone <url>
 ```
 
 ## ⚙️ Konfiguration
 
 ```bash
+
 # Name setzen
+
 git config --global user.name "Ihr Name"
 
 # E-Mail setzen
+
 git config --global user.email "ihre.email@example.com"
 
 # Konfiguration anzeigen
+
 git config --list
 ```
 
 ## 📊 Status & Info
 
 ```bash
+
 # Status anzeigen
+
 git status
 
 # Änderungen anzeigen
+
 git diff
 
 # Commit-Historie anzeigen
+
 git log
 
 # Kompakte Historie
+
 git log --oneline
 
 # Grafische Historie
+
 git log --graph --oneline --all
 ```
 
 ## ➕ Änderungen hinzufügen
 
 ```bash
+
 # Einzelne Datei hinzufügen
+
 git add dateiname.py
 
 # Alle Dateien hinzufügen
+
 git add .
 
 # Interaktiv hinzufügen
+
 git add -i
 ```
 
 ## 💾 Commit erstellen
 
 ```bash
+
 # Commit mit Nachricht
+
 git commit -m "Beschreibung der Änderung"
 
 # Alle geänderten Dateien committen
+
 git commit -am "Nachricht"
 
 # Letzten Commit ändern
+
 git commit --amend
 ```
 
 ## 🔄 Änderungen rückgängig machen
 
 ```bash
+
 # Datei aus Staging entfernen
+
 git reset dateiname.py
 
 # Alle Dateien aus Staging entfernen
+
 git reset
 
 # Änderungen an Datei verwerfen
+
 git checkout -- dateiname.py
 
 # Letzten Commit rückgängig (Änderungen behalten)
+
 git reset --soft HEAD~1
 
 # Letzten Commit rückgängig (Änderungen verwerfen)
+
 git reset --hard HEAD~1
 ```
 
 ## 🌿 Branches
 
 ```bash
+
 # Branches anzeigen
+
 git branch
 
 # Neuen Branch erstellen
+
 git branch branch-name
 
 # Zu Branch wechseln
+
 git checkout branch-name
 
 # Branch erstellen und wechseln
+
 git checkout -b branch-name
 
 # Branch löschen
+
 git branch -d branch-name
 
 # Branch umbenennen
+
 git branch -m alter-name neuer-name
 ```
 
 ## 🔗 Remote Repositories
 
 ```bash
+
 # Remote-Repository hinzufügen
+
 git remote add origin <url>
 
 # Remote-Repositories anzeigen
+
 git remote -v
 
 # Änderungen hochladen
+
 git push origin main
 
 # Änderungen herunterladen
+
 git pull origin main
 
 # Remote-Repository entfernen
+
 git remote remove origin
 ```
 
@@ -135,7 +175,9 @@ git remote remove origin
 Erstellen Sie eine `.gitignore` Datei im Projekt-Root:
 
 ```gitignore
+
 # Python
+
 __pycache__/
 *.py[cod]
 *.so
@@ -144,17 +186,20 @@ venv/
 env/
 
 # IDE
+
 .vscode/
 .idea/
 
 # OS
+
 .DS_Store
 Thumbs.db
 
 # Secrets
+
 .env
 *.key
-```
+```text
 
 ## 🔍 Häufige Workflows
 
@@ -171,7 +216,9 @@ git log --oneline             # Prüfen
 
 ```bash
 git clone <url>               # Repository klonen
-# ... Änderungen machen ...
+
+# ... Änderungen machen 
+
 git add .                     # Änderungen hinzufügen
 git commit -m "Nachricht"     # Commit erstellen
 git push origin main          # Hochladen
@@ -183,7 +230,9 @@ git push origin main          # Hochladen
 mkdir mein-projekt            # Ordner erstellen
 cd mein-projekt               # In Ordner wechseln
 git init                      # Git initialisieren
-# ... Dateien erstellen ...
+
+# ... Dateien erstellen 
+
 git add .                     # Dateien hinzufügen
 git commit -m "Initial commit"  # Erster Commit
 ```
@@ -200,39 +249,51 @@ git config user.email "ihre.email@example.com"
 ### Problem: "fatal: not a git repository"
 
 ```bash
+
 # Prüfen Sie, ob Sie im richtigen Ordner sind
+
 pwd
 
 # Git initialisieren
+
 git init
 ```
 
 ### Problem: Merge-Konflikt
 
 ```bash
+
 # Konflikt-Dateien anzeigen
+
 git status
 
 # Dateien manuell bearbeiten
+
 # Konflikt-Marker entfernen: <<<<<<<, =======, >>>>>>>
 
 # Gelöste Dateien hinzufügen
+
 git add konflikt-datei.py
 
 # Merge abschliessen
+
 git commit
 ```
 
 ### Problem: Falscher Commit
 
 ```bash
+
 # Letzten Commit rückgängig (Änderungen behalten)
+
 git reset --soft HEAD~1
 
 # Änderungen korrigieren
-# ...
+
+# 
 
 # Neu committen
+
 git commit -m "Korrigierte Nachricht"
 ```
 
@@ -267,7 +328,7 @@ git commit -m "WIP"                 # ❌ Work in Progress
 - `test:` - Tests
 - `chore:` - Wartungsarbeiten
 
-### Wann committen?
+### Wann committen
 
 - ✅ Nach jeder logischen Änderung
 - ✅ Wenn ein Feature funktioniert

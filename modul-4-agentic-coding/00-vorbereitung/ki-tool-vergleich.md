@@ -1,6 +1,6 @@
 # KI-Tool-Vergleich
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Ziel:** Verschiedene KI-Tools für Coding vergleichen
 
 ## 🎯 Aufgabe
@@ -22,31 +22,37 @@ Stellen Sie dieselbe Coding-Aufgabe:
 
 ```text
 Erstelle eine Python-Klasse für einen Shopping Cart mit:
+
 - add_item(item, quantity, price)
 - remove_item(item)
 - get_total()
 - apply_discount(percentage)
 - Mit Type Hints und Docstrings
+
 ```
 
 ### Dokumentation
 
 **Qualität des Codes (1-5):**
+
 ```text
 [ ]
 ```
 
 **Erklärungen (1-5):**
+
 ```text
 [ ]
 ```
 
 **Stärken:**
+
 ```text
 [Was war gut?]
 ```
 
 **Schwächen:**
+
 ```text
 [Was fehlte?]
 ```
@@ -65,29 +71,37 @@ Erstelle eine Python-Klasse für einen Shopping Cart mit:
 Schreiben Sie Kommentare und lassen Sie Copilot generieren:
 
 ```python
+
 # Funktion die prüft ob eine Email-Adresse gültig ist
+
 # Verwendet regex Pattern
+
 # Gibt True/False zurück
+
 ```
 
 ### Dokumentation
 
 **Qualität der Suggestions (1-5):**
+
 ```text
 [ ]
 ```
 
 **Geschwindigkeit (1-5):**
+
 ```text
 [ ]
 ```
 
 **Stärken:**
+
 ```text
 [Was war gut?]
 ```
 
 **Schwächen:**
+
 ```text
 [Was fehlte?]
 ```
@@ -107,29 +121,35 @@ Nutzen Sie Cursor für eine komplexere Aufgabe:
 
 ```text
 Refactore die Shopping Cart Klasse:
+
 - Füge Inventory-Management hinzu
 - Implementiere Persistence (JSON)
 - Erstelle Unit Tests
+
 ```
 
 ### Dokumentation
 
 **Qualität (1-5):**
+
 ```text
 [ ]
 ```
 
 **Kontext-Verständnis (1-5):**
+
 ```text
 [ ]
 ```
 
 **Stärken:**
+
 ```text
 [Was war gut?]
 ```
 
 **Schwächen:**
+
 ```text
 [Was fehlte?]
 ```
@@ -147,19 +167,19 @@ Refactore die Shopping Cart Klasse:
 
 ## 🎯 Empfehlungen
 
-### Wann ChatGPT/Claude?
+### Wann ChatGPT/Claude
 
 ```text
 [Ihre Empfehlung]
 ```
 
-### Wann GitHub Copilot?
+### Wann GitHub Copilot
 
 ```text
 [Ihre Empfehlung]
 ```
 
-### Wann Cursor?
+### Wann Cursor
 
 ```text
 [Ihre Empfehlung]
@@ -167,19 +187,19 @@ Refactore die Shopping Cart Klasse:
 
 ## 💡 Learnings
 
-### Was haben Sie über KI-Tools gelernt?
+### Was haben Sie über KI-Tools gelernt
 
 ```text
 [Ihre Erkenntnisse]
 ```
 
-### Welches Tool werden Sie nutzen?
+### Welches Tool werden Sie nutzen
 
 ```text
 [Ihre Wahl und warum]
 ```
 
-### Kombination mehrerer Tools?
+### Kombination mehrerer Tools
 
 ```text
 [Ihre Strategie]

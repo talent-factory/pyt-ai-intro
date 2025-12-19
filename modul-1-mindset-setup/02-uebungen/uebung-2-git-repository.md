@@ -1,7 +1,7 @@
 # Übung 2: Git-Repository erstellen
 
-**Dauer:** 20 Minuten  
-**Lektion:** 2  
+**Dauer:** 20 Minuten
+**Lektion:** 2
 **Ziel:** Erste praktische Erfahrung mit Git
 
 ## 🎯 Lernziel
@@ -33,7 +33,9 @@ git config user.email "ihre.email@example.com"
 
 ```bash
 git status
+
 # Sollte zeigen: "On branch main" oder "On branch master"
+
 ```
 
 ### Schritt 3: README mit KI erstellen (5 Min.)
@@ -44,6 +46,7 @@ git status
 Erstelle ein README.md für mein Python-Lernprojekt.
 
 Es soll enthalten:
+
 - Titel: "Mein Python-Lernprojekt"
 - Beschreibung: Was ich in diesem Kurs lerne
 - Technologien: Python, Git, VS Code
@@ -60,7 +63,9 @@ Formatierung in Markdown.
 Erstellen Sie eine Datei `.gitignore` mit folgendem Inhalt:
 
 ```gitignore
+
 # Python
+
 __pycache__/
 *.py[cod]
 *.so
@@ -69,27 +74,34 @@ venv/
 env/
 
 # IDE
+
 .vscode/
 .idea/
 
 # OS
+
 .DS_Store
 Thumbs.db
-```
+```text
 
 ### Schritt 5: Ersten Commit erstellen (3 Min.)
 
 ```bash
+
 # Status prüfen
+
 git status
 
 # Alle Dateien hinzufügen
+
 git add .
 
 # Commit erstellen
+
 git commit -m "docs: Initiales Projekt-Setup mit README und gitignore"
 
 # Prüfen
+
 git log
 ```
 
@@ -98,7 +110,9 @@ git log
 Erstellen Sie eine Datei `hello.py`:
 
 ```python
+
 # Mein erstes Python-Programm
+
 print("Hello, Git!")
 print("Ich lerne Python und Versionskontrolle.")
 ```
@@ -106,16 +120,21 @@ print("Ich lerne Python und Versionskontrolle.")
 ### Schritt 7: Zweiten Commit erstellen (3 Min.)
 
 ```bash
+
 # Status prüfen
+
 git status
 
 # Datei hinzufügen
+
 git add hello.py
 
 # Commit erstellen
+
 git commit -m "feat: Hello World Programm hinzugefügt"
 
 # Historie anzeigen
+
 git log --oneline
 ```
 
@@ -169,10 +188,13 @@ git status  # Git-Status prüfen
 **Lösung:**
 
 ```bash
+
 # Prüfen Sie, ob Sie im richtigen Ordner sind
+
 pwd
 
 # Git initialisieren
+
 git init
 ```
 

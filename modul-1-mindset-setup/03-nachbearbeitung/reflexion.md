@@ -1,7 +1,7 @@
 # Reflexion - Modul 1
 
-**Zeitaufwand:** 30 Minuten  
-**Abgabe:** Vor Modul 2  
+**Zeitaufwand:** 30 Minuten
+**Abgabe:** Vor Modul 2
 **Punkte:** 20% der Nachbearbeitung
 
 ## 🎯 Ziel

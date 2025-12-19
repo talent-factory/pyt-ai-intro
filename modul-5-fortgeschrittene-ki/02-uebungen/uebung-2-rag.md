@@ -16,6 +16,7 @@ Erstellen Sie ein System das Fragen zu Dokumenten beantwortet.
 Erstelle ein RAG-System für Dokument-Q&A:
 
 Komponenten:
+
 1. DocumentLoader - Lädt Text-Dateien
 2. Chunker - Teilt in Chunks (500 Tokens)
 3. Embedder - Erstellt Embeddings
@@ -24,6 +25,7 @@ Komponenten:
 6. Generator - Beantwortet mit LLM
 
 Workflow:
+
 1. Dokumente laden und chunken
 2. Embeddings erstellen
 3. In Vector DB speichern
@@ -32,6 +34,7 @@ Workflow:
 6. LLM generiert Antwort
 
 Anforderungen:
+
 - ChromaDB für Vector Storage
 - OpenAI für Embeddings und Generation
 - Type Hints und Docstrings
@@ -39,13 +42,15 @@ Anforderungen:
 
 Beispiel:
 ```python
+
 rag = DocumentQA()
 rag.add_documents(["doc1.txt", "doc2.txt"])
 
 answer = rag.ask("Was ist Python?")
 print(answer)
+
 ```
-```
+```text
 
 ## Erwartetes Ergebnis
 

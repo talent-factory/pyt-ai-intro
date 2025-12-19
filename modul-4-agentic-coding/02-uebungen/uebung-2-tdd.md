@@ -59,6 +59,7 @@ def test_is_palindrome(text, expected):
     assert is_palindrome(text) == expected
 
 # ... weitere Tests
+
 ```
 
 ## Schritt 2: Implementierung (5 Min.)
@@ -71,10 +72,12 @@ Implementiere die String-Utility-Funktionen basierend auf diesen Tests:
 [KOPIERE DIE TESTS HIER EIN]
 
 Anforderungen:
+
 - Alle Tests müssen bestehen
 - Type Hints verwenden
 - Docstrings im Google-Style
 - Effiziente Implementierung
+
 ```
 
 ### Erwartetes Ergebnis
@@ -83,13 +86,13 @@ Anforderungen:
 def reverse_string(text: str) -> str:
     """
     Kehrt einen String um.
-    
+
     Args:
         text: Zu invertierender String
-    
+
     Returns:
         Umgekehrter String
-    
+
     Example:
         >>> reverse_string("hello")
         'olleh'
@@ -97,6 +100,7 @@ def reverse_string(text: str) -> str:
     return text[::-1]
 
 # ... weitere Funktionen
+
 ```
 
 ## Schritt 3: Tests ausführen (2 Min.)

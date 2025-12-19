@@ -10,7 +10,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from taschenrechner-demo import addiere, subtrahiere, multipliziere, dividiere, hole_zahl, zeige_menu, berechne
+from taschenrechner_demo import addiere, subtrahiere, multipliziere, dividiere, hole_zahl, zeige_menu, berechne
 
 
 class TestAddiere:

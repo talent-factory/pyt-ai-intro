@@ -1,7 +1,7 @@
 # Persönliche Reflexion - Modul 2
 
-**Zeitaufwand:** 30 Minuten  
-**Abgabe:** Vor Modul 3  
+**Zeitaufwand:** 30 Minuten
+**Abgabe:** Vor Modul 3
 **Punkte:** 10% der Nachbearbeitung
 
 ## 🎯 Ziel
@@ -124,7 +124,7 @@ Gibt es noch etwas, das Sie teilen möchten?
 
 ## 📤 Abgabe
 
-**Format:** Markdown oder PDF  
+**Format:** Markdown oder PDF
 **Dateiname:** `reflexion-modul-2.md` oder `reflexion-modul-2.pdf`
 
 ---

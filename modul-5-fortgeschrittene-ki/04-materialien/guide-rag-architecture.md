@@ -23,11 +23,11 @@ def chunk_text(text: str, chunk_size: int = 500) -> list[str]:
     """Teilt Text in Chunks."""
     words = text.split()
     chunks = []
-    
+
     for i in range(0, len(words), chunk_size):
         chunk = ' '.join(words[i:i+chunk_size])
         chunks.append(chunk)
-    
+
     return chunks
 ```
 
@@ -55,6 +55,7 @@ client = chromadb.Client()
 collection = client.create_collection("docs")
 
 # Hinzufügen
+
 collection.add(
     documents=chunks,
     embeddings=embeddings,
@@ -62,6 +63,7 @@ collection.add(
 )
 
 # Suchen
+
 results = collection.query(
     query_texts=["Frage"],
     n_results=3
@@ -86,19 +88,19 @@ def retrieve(query: str, n: int = 3) -> list[str]:
 def generate_answer(query: str, context: list[str]) -> str:
     """Generiert Antwort."""
     context_str = "\n\n".join(context)
-    
+
     prompt = f"""Kontext:
 {context_str}
 
 Frage: {query}
 
 Beantworte die Frage basierend auf dem Kontext."""
-    
+
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}]
     )
-    
+
     return response.choices[0].message.content
 ```
 
@@ -106,12 +108,15 @@ Beantworte die Frage basierend auf dem Kontext."""
 
 ```python
 def rag_query(question: str) -> str:
+
     # 1. Retrieve
+
     relevant_chunks = retrieve(question, n=3)
-    
+
     # 2. Augment + Generate
+
     answer = generate_answer(question, relevant_chunks)
-    
+
     return answer
 ```
 
@@ -123,11 +128,11 @@ def rag_query(question: str) -> str:
 def chunk_with_overlap(text: str, size: int, overlap: int):
     words = text.split()
     chunks = []
-    
+
     for i in range(0, len(words), size - overlap):
         chunk = ' '.join(words[i:i+size])
         chunks.append(chunk)
-    
+
     return chunks
 ```
 
@@ -136,7 +141,9 @@ def chunk_with_overlap(text: str, size: int, overlap: int):
 ```python
 def rerank(query: str, chunks: list[str]) -> list[str]:
     """Rerankt Chunks nach Relevanz."""
+
     # Nutze Cross-Encoder oder LLM
+
     pass
 ```
 
@@ -144,13 +151,17 @@ def rerank(query: str, chunks: list[str]) -> list[str]:
 
 ```python
 def hybrid_search(query: str):
+
     # Semantic Search
+
     semantic_results = vector_search(query)
-    
+
     # Keyword Search
+
     keyword_results = bm25_search(query)
-    
+
     # Kombiniere
+
     return merge_results(semantic_results, keyword_results)
 ```
 

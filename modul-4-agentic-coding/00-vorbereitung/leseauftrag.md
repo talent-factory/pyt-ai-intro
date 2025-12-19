@@ -1,6 +1,6 @@
 # Leseauftrag - Modul 4
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** Agentic Coding Konzepte verstehen
 
 ## 📚 Aufgabe 1: Agentic Coding (20 Min.)

@@ -28,6 +28,7 @@ Erstellen Sie einen universellen Konverter, der CSV-Dateien in verschiedene JSON
 ## 🏗️ Struktur
 
 ```python
+
 # converter.py
 
 import csv
@@ -37,23 +38,28 @@ from typing import List, Dict, Any
 
 def detect_type(value: str) -> Any:
     """Erkennt Datentyp."""
+
     # Versuche int
+
     try:
         return int(value)
     except ValueError:
         pass
-    
+
     # Versuche float
+
     try:
         return float(value)
     except ValueError:
         pass
-    
+
     # Boolean
+
     if value.lower() in ['true', 'false']:
         return value.lower() == 'true'
-    
+
     # String
+
     return value
 
 def csv_to_array(filename: str) -> List[Dict]:
@@ -70,10 +76,10 @@ def main():
     parser.add_argument('--format', choices=['array', 'object'], default='array')
     parser.add_argument('--indent', type=int, default=2)
     parser.add_argument('--output', help='Output JSON-Datei')
-    
+
     args = parser.parse_args()
-    
-    # Konvertierung...
+
+    # Konvertierung
 
 if __name__ == "__main__":
     main()
@@ -88,7 +94,7 @@ id,name,alter,aktiv
 1,Anna,25,true
 2,Bob,30,false
 3,Clara,28,true
-```
+```text
 
 ### Format: array
 
@@ -129,13 +135,17 @@ id,name,alter,aktiv
 ## 🎯 Verwendung
 
 ```bash
+
 # Basis
+
 python converter.py personen.csv
 
 # Mit Optionen
+
 python converter.py personen.csv --format object --output personen.json
 
 # Mit Indent
+
 python converter.py personen.csv --indent 4
 ```
 

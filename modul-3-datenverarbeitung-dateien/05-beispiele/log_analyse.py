@@ -3,7 +3,6 @@ Log-Datei-Analyse
 Verwendung: Lektion 1 - Live-Demo
 """
 from pathlib import Path
-from collections import Counter
 
 
 def analysiere_log(dateiname: str) -> dict:

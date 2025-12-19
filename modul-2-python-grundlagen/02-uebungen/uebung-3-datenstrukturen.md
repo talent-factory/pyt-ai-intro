@@ -12,6 +12,7 @@ Mit Listen und Dictionaries arbeiten.
 Erstelle ein Python-Programm: Inventar-System
 
 Anforderungen:
+
 - Dictionary mit 3-5 Produkten
 - Jedes Produkt: {"name": str, "preis": float, "anzahl": int}
 - Funktionen: Produkt hinzufügen, anzeigen
@@ -31,6 +32,7 @@ Gesamtwert: CHF 6495
 Erstelle ein Python-Programm: Duplikat-Entferner
 
 Anforderungen:
+
 - Liste mit Duplikaten einlesen
 - Duplikate entfernen
 - Sortierte Liste ausgeben
@@ -48,6 +50,7 @@ Entfernt: 3 Duplikate
 Erstelle ein Python-Programm: Kontaktliste
 
 Anforderungen:
+
 - Liste von 2-3 Kontakt-Dictionaries
 - Jeder Kontakt: name, email, telefon
 - Funktion: Suche nach Namen

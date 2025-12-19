@@ -1,6 +1,6 @@
 # Nachbearbeitung - Modul 5
 
-**Zeitaufwand:** 8-10 Stunden  
+**Zeitaufwand:** 8-10 Stunden
 **Abschlussprojekt des Kurses!**
 
 ## 🎯 Ziel

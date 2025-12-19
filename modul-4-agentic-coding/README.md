@@ -1,6 +1,6 @@
 # Modul 4: Agentic Coding - KI-gestützte Entwicklung
 
-**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-3 abgeschlossen
 
 ## 🎯 Lernziele
@@ -120,18 +120,23 @@ Nach diesem Modul beherrschen Sie:
 ### Prompt Engineering Patterns
 
 ```text
+
 1. Role-Based Prompting
+
    "Du bist ein erfahrener Python-Entwickler..."
 
 2. Context-Rich Prompting
+
    "Gegeben: [Kontext]
     Aufgabe: [Spezifikation]
     Constraints: [Einschränkungen]"
 
 3. Chain-of-Thought
+
    "Erkläre Schritt für Schritt..."
 
 4. Few-Shot Learning
+
    "Hier sind 2 Beispiele: [...]
     Jetzt mache das Gleiche für: [...]"
 ```
@@ -220,5 +225,5 @@ Modul 4 ist **praxisorientiert** und **meta**:
 
 ---
 
-**Erstellt:** Oktober 2025  
+**Erstellt:** Oktober 2025
 **Version:** 1.0

@@ -1,6 +1,6 @@
 # Erste Schritte mit KI
 
-**Zeitaufwand:** 30 Minuten  
+**Zeitaufwand:** 30 Minuten
 **Ziel:** Ihre erste erfolgreiche Interaktion mit einem KI-Coding-Assistenten
 
 ## 🎯 Aufgabe
@@ -30,7 +30,7 @@ Erstelle ein einfaches "Hello World" Programm in Python.
 print("Hello, World!")
 ```
 
-✅ **Kopieren Sie den Code** und speichern Sie ihn als `hello.py`  
+✅ **Kopieren Sie den Code** und speichern Sie ihn als `hello.py`
 ✅ **Führen Sie ihn aus** in VS Code oder Terminal: `python hello.py`
 
 ### Schritt 3: Erklärung einholen
@@ -48,7 +48,7 @@ Erkläre mir diesen Code Zeile für Zeile. Was macht print()?
 **Ihr Prompt:**
 
 ```python
-Erstelle eine Variante, die den Benutzer nach seinem Namen fragt 
+Erstelle eine Variante, die den Benutzer nach seinem Namen fragt
 und dann "Hello, [Name]!" ausgibt.
 ```
 
@@ -59,7 +59,7 @@ name = input("Wie ist dein Name? ")
 print(f"Hello, {name}!")
 ```
 
-✅ **Testen Sie den Code**  
+✅ **Testen Sie den Code**
 ✅ **Experimentieren Sie** mit verschiedenen Eingaben
 
 ### Schritt 5: Weitere Variante
@@ -67,7 +67,7 @@ print(f"Hello, {name}!")
 **Ihr Prompt:**
 
 ```text
-Erweitere das Programm so, dass es auch nach dem Alter fragt 
+Erweitere das Programm so, dass es auch nach dem Alter fragt
 und dann sagt: "Hello [Name], du bist [Alter] Jahre alt!"
 ```
 
@@ -106,22 +106,22 @@ Wenn Sie Zeit haben, probieren Sie:
 
    ```text
    Erstelle ein Programm, das zwei Zahlen addiert.
-   ```
+```
 
 2. **Fehler provozieren:**
 
    ```text
    Was passiert, wenn ich Text statt einer Zahl eingebe?
    Wie kann ich das abfangen?
-   ```
+```
 
 3. **Code verbessern lassen:**
 
    ```text
    Wie kann ich diesen Code besser/lesbarer machen?
-   ```
+```
 
-## ✅ Fertig?
+## ✅ Fertig
 
 Speichern Sie Ihre Dokumentation - Sie werden sie für die Nachbearbeitung benötigen!
 

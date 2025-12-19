@@ -177,13 +177,13 @@ def statistik_anzeigen(kontakte: list) -> None:
         erster_buchstabe = kontakt["name"][0].upper()
         buchstaben[erster_buchstabe] = buchstaben.get(erster_buchstabe, 0) + 1
 
-    print(f"\n📊 STATISTIK")
+    print("\n📊 STATISTIK")
     print("=" * 30)
     print(f"Gesamt:         {gesamt}")
     print(f"Mit E-Mail:     {mit_email} ({(mit_email/gesamt)*100:.1f}%)")
     print(f"Mit Notizen:    {mit_notizen} ({(mit_notizen/gesamt)*100:.1f}%)")
 
-    print(f"\nAnfangsbuchstaben:")
+    print("\nAnfangsbuchstaben:")
     for buchstabe in sorted(buchstaben.keys()):
         anzahl = buchstaben[buchstabe]
         balken = "█" * anzahl

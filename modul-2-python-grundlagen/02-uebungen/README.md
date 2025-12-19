@@ -6,8 +6,8 @@
 
 ### [Übung 1: Altersrechner / Währungsrechner / Textanalyse](./uebung-1-datentypen.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 1 - Variablen & Datentypen  
+**Dauer:** 15 Minuten
+**Lektion:** 1 - Variablen & Datentypen
 **Schwierigkeit:** ⭐☆☆
 
 Wählen Sie EINE Option:
@@ -18,8 +18,8 @@ Wählen Sie EINE Option:
 
 ### [Übung 2: Primzahl-Checker / Menü-System / Fibonacci](./uebung-2-kontrollstrukturen.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 2 - Kontrollstrukturen  
+**Dauer:** 15 Minuten
+**Lektion:** 2 - Kontrollstrukturen
 **Schwierigkeit:** ⭐⭐☆
 
 Wählen Sie EINE Option:
@@ -30,8 +30,8 @@ Wählen Sie EINE Option:
 
 ### [Übung 3: Inventar-System / Duplikat-Entferner / Kontaktliste](./uebung-3-datenstrukturen.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 3 - Listen & Dictionaries  
+**Dauer:** 15 Minuten
+**Lektion:** 3 - Listen & Dictionaries
 **Schwierigkeit:** ⭐⭐☆
 
 Wählen Sie EINE Option:
@@ -42,8 +42,8 @@ Wählen Sie EINE Option:
 
 ### [Übung 4: Utility-Funktionen-Modul](./uebung-4-funktionen.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 4 - Funktionen & Module  
+**Dauer:** 15 Minuten
+**Lektion:** 4 - Funktionen & Module
 **Schwierigkeit:** ⭐⭐⭐
 
 Erstellen Sie ein Modul mit 3-4 Utility-Funktionen:

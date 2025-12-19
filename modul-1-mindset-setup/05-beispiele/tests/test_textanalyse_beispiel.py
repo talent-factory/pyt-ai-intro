@@ -10,7 +10,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from textanalyse-beispiel import analysiere_text, zeige_ergebnisse
+from textanalyse_beispiel import analysiere_text, zeige_ergebnisse
 
 
 class TestAnalysiereText:

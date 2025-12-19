@@ -25,6 +25,7 @@ Technologie: Python 3.11, pytest, click
 Erstelle eine Funktion, die CSV-Dateien validiert.
 
 [CONSTRAINTS]
+
 - Type Hints verwenden
 - Docstrings im Google-Style
 - Exception Handling
@@ -36,9 +37,11 @@ Output: True/False + Liste von Fehlern
 
 [FORMAT]
 Gib mir:
+
 1. Die Funktion
 2. Unit Tests
 3. Verwendungsbeispiel
+
 ```
 
 ### Prompt-Patterns
@@ -54,10 +57,12 @@ in Datenverarbeitung und Test-Driven Development.
 
 ```text
 Erkläre Schritt für Schritt:
+
 1. Was ist das Problem?
 2. Welche Lösungsansätze gibt es?
 3. Welcher ist am besten?
 4. Implementiere die Lösung
+
 ```
 
 #### 3. Few-Shot Learning
@@ -79,15 +84,18 @@ Jetzt für: [5, 15, 25]
 ### Demo: Feature-Implementierung
 
 **Schlechter Prompt:**
+
 ```text
 Schreibe eine Funktion für Passwort-Validierung
 ```
 
 **Guter Prompt:**
+
 ```text
 Erstelle eine Python-Funktion zur Passwort-Validierung.
 
 Anforderungen:
+
 - Mindestens 8 Zeichen
 - Mindestens 1 Grossbuchstabe
 - Mindestens 1 Kleinbuchstabe
@@ -95,13 +103,16 @@ Anforderungen:
 - Mindestens 1 Sonderzeichen
 
 Rückgabe:
+
 - Tuple (is_valid: bool, errors: list[str])
 
 Zusätzlich:
+
 - Type Hints
 - Docstring
 - Unit Tests mit pytest
 - Edge Cases berücksichtigen
+
 ```
 
 ### Iteration
@@ -118,11 +129,13 @@ Iteration 4: "Füge Custom Rules hinzu"
 Implementieren Sie mit KI:
 
 **Option A: Email-Validator**
+
 - Validiert Email-Format
 - Prüft Disposable-Domains
 - Mit Tests
 
 **Option B: URL-Parser**
+
 - Extrahiert Komponenten
 - Validiert Format
 - Mit Tests

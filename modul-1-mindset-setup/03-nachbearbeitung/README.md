@@ -10,28 +10,28 @@ Die Konzepte aus Modul 1 vertiefen und praktisch anwenden.
 
 ### [Aufgabe 1: Prompt-Portfolio](./aufgabe-1-prompt-portfolio.md)
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Abgabe:** Vor Modul 2
 
 Dokumentieren Sie 10 effektive Prompts, die Sie erstellt haben.
 
 ### [Aufgabe 2: Persönliches Projekt-Setup](./aufgabe-2-projekt-setup.md)
 
-**Zeitaufwand:** 90 Minuten  
+**Zeitaufwand:** 90 Minuten
 **Abgabe:** Vor Modul 2
 
 Erstellen Sie ein Git-Repository mit mindestens 3 Python-Programmen.
 
 ### [Aufgabe 3: Code-Review-Übung](./aufgabe-3-code-review.md)
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Abgabe:** Vor Modul 2
 
 Analysieren Sie bereitgestellten Code und dokumentieren Sie Ihre Erkenntnisse.
 
 ### [Reflexion](./reflexion.md)
 
-**Zeitaufwand:** 30 Minuten  
+**Zeitaufwand:** 30 Minuten
 **Abgabe:** Vor Modul 2
 
 Beantworten Sie 5 Reflexionsfragen (mindestens 300 Wörter).
@@ -47,14 +47,14 @@ Beantworten Sie 5 Reflexionsfragen (mindestens 300 Wörter).
 
 ## 📤 Abgabe
 
-### Was einreichen?
+### Was einreichen
 
 1. **Git-Repository-Link** (GitHub, GitLab oder ZIP-Datei)
 2. **Prompt-Portfolio** (Markdown oder PDF)
 3. **Code-Review-Dokument** (Markdown oder PDF)
 4. **Reflexion** (Markdown oder PDF)
 
-### Wo einreichen?
+### Wo einreichen
 
 - Über die Lernplattform
 - Oder per E-Mail an Ihren Dozenten
@@ -116,19 +116,19 @@ Beantworten Sie 5 Reflexionsfragen (mindestens 300 Wörter).
 
 ## 🆘 Häufige Fragen
 
-### Frage 1: Kann ich mehr als 10 Prompts dokumentieren?
+### Frage 1: Kann ich mehr als 10 Prompts dokumentieren
 
 Ja, gerne! 10 ist das Minimum.
 
-### Frage 2: Müssen die Programme komplex sein?
+### Frage 2: Müssen die Programme komplex sein
 
 Nein, Qualität vor Komplexität. Einfache, gut dokumentierte Programme sind besser als komplexe, unverständliche.
 
-### Frage 3: Kann ich KI für die Reflexion nutzen?
+### Frage 3: Kann ich KI für die Reflexion nutzen
 
 Nein, die Reflexion sollte Ihre eigenen Gedanken widerspiegeln.
 
-### Frage 4: Was, wenn ich nicht fertig werde?
+### Frage 4: Was, wenn ich nicht fertig werde
 
 Kontaktieren Sie frühzeitig Ihren Dozenten für eine Fristverlängerung.
 

@@ -6,7 +6,6 @@ import csv
 import logging
 from pathlib import Path
 from typing import List, Dict, Optional
-from datetime import datetime
 
 
 # Logging konfigurieren
@@ -200,7 +199,7 @@ def main():
     verarbeiter.zeige_statistik()
     
     logger.info("VERARBEITUNG ABGESCHLOSSEN")
-    logger.info(f"Log-Datei: verarbeitung.log")
+    logger.info("Log-Datei: verarbeitung.log")
 
 
 if __name__ == "__main__":

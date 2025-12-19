@@ -1,0 +1,4 @@
+"""Task Manager CLI - Ein vollständiges Command-Line Tool für Task-Verwaltung."""
+
+__version__ = "1.0.0"
+__author__ = "Talent Factory"

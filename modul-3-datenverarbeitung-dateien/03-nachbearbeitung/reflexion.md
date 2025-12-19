@@ -1,6 +1,6 @@
 # Persönliche Reflexion - Modul 3
 
-**Zeitaufwand:** 30 Minuten | **Punkte:** 10%  
+**Zeitaufwand:** 30 Minuten | **Punkte:** 10%
 **Mindestlänge:** 400 Wörter
 
 ## 📝 Anleitung
@@ -68,7 +68,7 @@ Bewerten Sie Ihr Verständnis (1 = gar nicht, 5 = sehr gut):
 | Logging | [ ] |
 | KI für Datenverarbeitung nutzen | [ ] |
 
-## 🎯 Lernziele erreicht?
+## 🎯 Lernziele erreicht
 
 Kreuzen Sie an, was Sie jetzt können:
 

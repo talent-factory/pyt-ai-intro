@@ -1,0 +1,74 @@
+% pyt-ai-intro.tex - Hauptdokument
+% Python mit KI - Einführungskurs
+% ConTeXt MkIV / LuaMetaTeX
+
+% =============================================================================
+% KONFIGURATION LADEN
+% =============================================================================
+
+\environment user/environment % TEXMFHOME | ~/Library/texmf/tex/context/
+
+% =============================================================================
+% DOKUMENTINFORMATIONEN
+% =============================================================================
+
+\setupdocument[
+    title={Python mit KI},
+    subtitle={Einführungskurs für Programmierung mit KI-Unterstützung},
+    author={Talent Factory GmbH},
+    date={\currentdate},
+]
+
+% =============================================================================
+% DOKUMENT
+% =============================================================================
+
+\starttext
+
+% -----------------------------------------------------------------------------
+% Titelseite (ohne Kopf-/Fusszeile)
+% -----------------------------------------------------------------------------
+
+\setupheadertexts[][]  % Keine Kopfzeile auf Titelseite
+\setupfootertexts[][]  % Keine Fusszeile auf Titelseite
+
+\startstandardmakeup
+    \vfill
+    \startalignment[center]
+        {\bfd\color[primarycolor]{Python mit KI}}
+        \blank[2*big]
+        {\bfb Einführungskurs für Programmierung}
+        \blank[small]
+        {\bfb mit KI-Unterstützung}
+        \blank[4*big]
+        {\bfa Kursunterlagen}
+        \blank[2*big]
+        {\tfx Version 1.0 — \currentdate}
+    \stopalignment
+    \vfill
+    \startalignment[center]
+        {\tfx Talent Factory GmbH}
+    \stopalignment
+\stopstandardmakeup
+
+% Kopf-/Fusszeilen für restliche Seiten aktivieren (definiert in environment.tex)
+\setupheadertexts[Python mit KI][\WORD{\getmarking[chapter]}]
+
+% -----------------------------------------------------------------------------
+% Inhaltsverzeichnis
+% -----------------------------------------------------------------------------
+
+\completecontent[criterium=all]
+
+% -----------------------------------------------------------------------------
+% Kapitel laden
+% -----------------------------------------------------------------------------
+
+\component chapters/modul-1
+\component chapters/modul-2
+\component chapters/modul-3
+\component chapters/modul-4
+\component chapters/modul-5
+
+\stoptext
+

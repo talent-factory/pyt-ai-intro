@@ -1,0 +1,39 @@
+[project]
+name = "sop-generator"
+version = "0.1.0"
+description = "SOP-Generator mit Streamlit und python-docx"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.28.0",
+    "python-docx>=1.1.0",
+    "pandas>=2.0.0",
+    "watchdog>=6.0.0",
+    "docx>=0.2.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "pytest>=7.4.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+include = ["app.py", "templates"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+

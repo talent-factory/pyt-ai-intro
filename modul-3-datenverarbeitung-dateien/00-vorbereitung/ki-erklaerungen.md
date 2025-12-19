@@ -1,6 +1,6 @@
 # KI-Konzepterklärungen
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Ziel:** Konzepte mit KI vertiefen
 
 ## 🎯 Aufgabe
@@ -15,6 +15,7 @@ Nutzen Sie KI (ChatGPT/Claude), um sich folgende Konzepte erklären zu lassen. D
 Erkläre mir die verschiedenen File Modes in Python ('r', 'w', 'a', 'r+', 'rb', 'wb').
 
 Für jeden Mode:
+
 - Was macht er?
 - Wann verwende ich ihn?
 - Was passiert mit existierenden Dateien?
@@ -45,6 +46,7 @@ Erkläre es so, als wäre ich Anfänger.
 Erkläre mir den Unterschied zwischen CSV und JSON für Datenspeicherung.
 
 Vergleiche:
+
 - Struktur und Format
 - Vorteile und Nachteile
 - Wann welches Format?
@@ -84,6 +86,7 @@ Erstelle auch eine Vergleichstabelle.
 Erkläre mir Exception Handling in Python mit try/except/finally.
 
 Themen:
+
 - Warum ist Exception Handling wichtig?
 - Wie funktioniert try/except/finally?
 - Unterschied zwischen spezifischen und generischen Exceptions

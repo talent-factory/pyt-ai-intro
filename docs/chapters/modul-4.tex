@@ -1,0 +1,724 @@
+% modul-4.tex - Modul 4: Agentic Coding
+
+\startcomponent modul-4
+\environment ../pyt-layout
+\environment ../pyt-env
+
+\chapter{Agentic Coding -- KI-gestützte Entwicklung}
+
+{\it Dauer: 1 Tag (4 Lektionen à 50 Minuten) • Voraussetzung: Module 1-3 abgeschlossen}
+
+\startlernziele
+Nach diesem Modul können Sie:
+\startitemize[n,packed]
+    \item KI als Entwicklungspartner effektiv nutzen
+    \item Komplexe Prompts für Code-Generierung schreiben
+    \item Test-Driven Development (TDD) mit KI praktizieren
+    \item Code-Reviews mit KI durchführen
+    \item Refactoring mit KI-Unterstützung
+    \item Dokumentation automatisch generieren
+    \item Grenzen und Best Practices verstehen
+\stopitemize
+\stoplernziele
+
+% =============================================================================
+% VORBEREITUNG
+% =============================================================================
+
+\section{Vorbereitung}
+
+{\it Zeitaufwand: 2-3 Stunden vor dem Präsenzunterricht}
+
+\subsection{Leseauftrag: Agentic Coding Konzepte}
+
+\startinfobox
+{\bf Was ist Agentic Coding?}
+
+Entwicklung, bei der KI als aktiver Partner agiert, nicht nur als Werkzeug. Die KI generiert, erklärt, verbessert und dokumentiert Code -- der Mensch trifft die Entscheidungen.
+\stopinfobox
+
+\subsubsection{Die 4 Prinzipien}
+
+\startitemize[n,packed]
+    \item {\bf Iterative Verfeinerung} -- Prompts schrittweise verbessern
+    \item {\bf Kontext ist König} -- Mehr Kontext = bessere Ergebnisse
+    \item {\bf Verify \& Validate} -- Immer Code verstehen und testen
+    \item {\bf Human in the Loop} -- Entwickler trifft finale Entscheidungen
+\stopitemize
+
+\subsection{KI-Tool-Vergleich}
+
+Experimentieren Sie mit verschiedenen KI-Tools:
+
+\starttabulate[|l|l|p(5cm)|]
+\HL
+\NC {\bf Tool} \NC {\bf Stärke} \NC {\bf Einsatz} \NC\NR
+\HL
+\NC ChatGPT \NC Erklärungen \NC Konzepte verstehen, Debugging \NC\NR
+\NC Claude \NC Lange Kontexte \NC Grosse Codebasen analysieren \NC\NR
+\NC GitHub Copilot \NC IDE-Integration \NC Code-Vervollständigung \NC\NR
+\NC Cursor \NC Agentic Features \NC Komplexe Refactorings \NC\NR
+\HL
+\stoptabulate
+
+% =============================================================================
+% PRAXIS
+% =============================================================================
+
+\section{Praxis}
+
+{\it Präsenzunterricht: 4 Lektionen à 50 Minuten}
+
+\subsection{Lektion 1: Advanced Prompt Engineering}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Prompt Engineering Patterns}
+
+{\bf 1. Role-Based Prompting:}
+\startbashcode
+Du bist ein erfahrener Python-Entwickler mit Fokus auf
+Clean Code und Test-Driven Development.
+\stopbashcode
+
+{\bf 2. Context-Rich Prompting:}
+\startbashcode
+Gegeben: [Kontext - bestehender Code, Anforderungen]
+Aufgabe: [Was soll gemacht werden]
+Constraints: [Einschraenkungen, Stil-Vorgaben]
+\stopbashcode
+
+{\bf 3. Chain-of-Thought:}
+\startbashcode
+Erklaere Schritt fuer Schritt, wie du die Loesung entwickelst.
+Zeige deine Ueberlegungen.
+\stopbashcode
+
+{\bf 4. Few-Shot Learning:}
+\startbashcode
+Hier sind 2 Beispiele fuer die gewuenschte Funktion:
+[Beispiel 1]
+[Beispiel 2]
+Jetzt mache das Gleiche fuer: [neue Anforderung]
+\stopbashcode
+
+\subsubsection{Prompt-Template}
+
+\startbashcode
+[Rolle]: Du bist ein erfahrener Python-Entwickler.
+
+[Kontext]: Ich arbeite an einer Web-API mit FastAPI.
+Der bestehende Code verwendet Pydantic-Models.
+
+[Aufgabe]: Erstelle einen Endpoint fuer User-Registrierung.
+
+[Anforderungen]:
+- Email-Validierung
+- Passwort-Hashing mit bcrypt
+- Duplikat-Pruefung
+- Aussagekraeftige Fehlermeldungen
+
+[Beispiel]:
+Eingabe: {"email": "test@example.com", "password": "Secure123!"}
+Ausgabe: {"id": 1, "email": "test@example.com", "created_at": "..."}
+
+[Constraints]:
+- Type Hints verwenden
+- Docstrings auf Deutsch
+- Keine print-Statements
+\stopbashcode
+
+\subsection{Lektion 2: Test-Driven Development mit KI}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{TDD-Workflow}
+
+\startitemize[n,packed]
+    \item {\bf Red:} Test schreiben, der fehlschlägt
+    \item {\bf Green:} Minimalen Code schreiben, der Test besteht
+    \item {\bf Refactor:} Code verbessern, Tests müssen weiter bestehen
+\stopitemize
+
+\subsubsection{Tests zuerst mit KI}
+
+\startpythoncode
+# Prompt: "Schreibe pytest-Tests fuer eine Funktion
+# die Primzahlen prueft"
+
+import pytest
+from primzahl import ist_primzahl
+
+def test_zwei_ist_primzahl():
+    assert ist_primzahl(2) == True
+
+def test_eins_ist_keine_primzahl():
+    assert ist_primzahl(1) == False
+
+def test_negative_zahl():
+    assert ist_primzahl(-5) == False
+
+def test_grosse_primzahl():
+    assert ist_primzahl(97) == True
+
+def test_grosse_nicht_primzahl():
+    assert ist_primzahl(100) == False
+\stoppythoncode
+
+\subsubsection{Implementation generieren}
+
+\startpythoncode
+# Prompt: "Implementiere ist_primzahl() so dass
+# alle Tests bestehen"
+
+def ist_primzahl(n: int) -> bool:
+    """Prueft, ob n eine Primzahl ist."""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+\stoppythoncode
+
+
+\subsection{Lektion 3: Code Review \& Refactoring}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{KI als Code Reviewer}
+
+\startbashcode
+Analysiere folgenden Code auf:
+- Code Smells
+- Moegliche Bugs
+- Performance-Probleme
+- Sicherheitsluecken
+- Verbesserungsvorschlaege
+
+[Code hier einfuegen]
+\stopbashcode
+
+\subsubsection{Refactoring-Beispiel}
+
+{\bf Vorher:}
+\startpythoncode
+def f(x, y):
+    r = []
+    for i in x:
+        if i > y:
+            r.append(i * 2)
+    return r
+\stoppythoncode
+
+{\bf Nachher (nach KI-Refactoring):}
+\startpythoncode
+def filter_and_double(
+    numbers: list[int],
+    threshold: int
+) -> list[int]:
+    """
+    Filtert Zahlen groesser als threshold
+    und verdoppelt sie.
+    """
+    return [n * 2 for n in numbers if n > threshold]
+\stoppythoncode
+
+\subsubsection{Refactoring-Checkliste}
+
+\startitemize[packed]
+    \item Aussagekräftige Namen für Variablen/Funktionen
+    \item Type Hints hinzufügen
+    \item Docstrings schreiben
+    \item Komplexe Logik vereinfachen
+    \item Duplikate entfernen (DRY)
+    \item Magic Numbers durch Konstanten ersetzen
+\stopitemize
+
+\subsection{Lektion 4: Dokumentation \& Best Practices}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Docstrings generieren}
+
+\startbashcode
+Generiere Google-Style Docstrings fuer alle
+Funktionen in folgendem Code:
+[Code]
+\stopbashcode
+
+\startpythoncode
+def berechne_rabatt(
+    preis: float,
+    rabatt_prozent: float
+) -> float:
+    """Berechnet den rabattierten Preis.
+
+    Args:
+        preis: Der urspruengliche Preis in CHF.
+        rabatt_prozent: Der Rabatt in Prozent (0-100).
+
+    Returns:
+        Der reduzierte Preis nach Abzug des Rabatts.
+
+    Raises:
+        ValueError: Wenn rabatt_prozent < 0 oder > 100.
+
+    Example:
+        >>> berechne_rabatt(100.0, 20.0)
+        80.0
+    """
+    if not 0 <= rabatt_prozent <= 100:
+        raise ValueError("Rabatt muss zwischen 0 und 100 sein")
+    return preis * (1 - rabatt_prozent / 100)
+\stoppythoncode
+
+\subsubsection{README generieren}
+
+\startbashcode
+Erstelle eine README.md fuer folgendes Projekt:
+- Projektname: [Name]
+- Beschreibung: [Beschreibung]
+- Hauptfeatures: [Features]
+- Struktur: [Dateien/Ordner]
+
+Verwende Badges, Inhaltsverzeichnis,
+Installation, Verwendung, Beispiele.
+\stopbashcode
+
+% =============================================================================
+% ÜBUNGEN
+% =============================================================================
+
+\section{Übungen}
+
+\startaufgabenbox
+{\bf Übung 1: Komplexe Feature-Implementierung} {\it (20 Min.)}
+
+Mit KI-Unterstützung implementieren:
+\startitemize[packed]
+    \item URL-Shortener mit Statistiken
+    \item Passwort-Generator mit Konfiguration
+    \item Markdown-zu-HTML-Konverter
+\stopitemize
+
+Dokumentieren Sie Ihren Prompt-Iterationsprozess!
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 2: TDD-Challenge} {\it (20 Min.)}
+
+TDD-Workflow durchführen:
+\startitemize[n,packed]
+    \item Tests für Taschenrechner schreiben lassen
+    \item Implementation generieren
+    \item Edge Cases ergänzen
+    \item Refactoring durchführen
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 3: Legacy Code Refactoring} {\it (15 Min.)}
+
+Schlechten Code analysieren und verbessern:
+\startitemize[packed]
+    \item Code Smells identifizieren
+    \item Verbesserungen vorschlagen lassen
+    \item Refactoring durchführen
+    \item Tests ergänzen
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 4: Vollständige Dokumentation} {\it (15 Min.)}
+
+Für ein Mini-Projekt erstellen:
+\startitemize[packed]
+    \item Docstrings für alle Funktionen
+    \item README.md mit Installation
+    \item CHANGELOG.md
+    \item Inline-Kommentare
+\stopitemize
+\stopaufgabenbox
+
+% =============================================================================
+% NACHBEARBEITUNG
+% =============================================================================
+
+\section{Nachbearbeitung}
+
+{\it Hausaufgaben: 6-8 Stunden vor Modul 5}
+
+\subsection{Aufgabe 1: Vollständiges CLI-Tool}
+
+Entwickeln Sie ein CLI-Tool mit KI-Unterstützung:
+
+\startbashcode
+python todo-cli.py add "Einkaufen gehen"
+python todo-cli.py list
+python todo-cli.py done 1
+python todo-cli.py delete 1
+\stopbashcode
+
+\startitemize[packed]
+    \item TDD-Workflow anwenden
+    \item Vollständige Dokumentation
+    \item Fehlerbehandlung
+    \item Persistenz (JSON-Datei)
+\stopitemize
+
+\subsection{Aufgabe 2: Code-Qualitäts-Analyse}
+
+Analysieren Sie ein Open-Source-Projekt:
+\startitemize[packed]
+    \item 3 Code Smells identifizieren
+    \item Verbesserungsvorschläge dokumentieren
+    \item Refactoring-Plan erstellen
+\stopitemize
+
+\subsection{Aufgabe 3: Portfolio-Projekt}
+
+Beginnen Sie Ihr Abschlussprojekt:
+\startitemize[packed]
+    \item Projektidee definieren
+    \item README.md erstellen
+    \item Grundstruktur mit KI entwickeln
+    \item Erste Tests schreiben
+\stopitemize
+
+% =============================================================================
+% MATERIALIEN
+% =============================================================================
+
+\section{Materialien}
+
+\subsection{Code Review Checkliste}
+
+\startitemize[packed]
+    \item[$\square$] Funktioniert der Code wie erwartet?
+    \item[$\square$] Sind alle Edge Cases behandelt?
+    \item[$\square$] Gibt es ausreichend Tests?
+    \item[$\square$] Sind Variablennamen aussagekräftig?
+    \item[$\square$] Ist der Code DRY (keine Duplikate)?
+    \item[$\square$] Sind Funktionen klein und fokussiert?
+    \item[$\square$] Gibt es Docstrings/Kommentare?
+    \item[$\square$] Werden Fehler sinnvoll behandelt?
+    \item[$\square$] Gibt es Sicherheitsrisiken?
+    \item[$\square$] Ist der Code performant?
+\stopitemize
+
+\subsection{Prompt Engineering Patterns}
+
+\starttabulate[|l|p(8cm)|]
+\HL
+\NC {\bf Pattern} \NC {\bf Beschreibung} \NC\NR
+\HL
+\NC Role-Based \NC KI eine Expertenrolle zuweisen \NC\NR
+\NC Context-Rich \NC Viel Kontext und Constraints geben \NC\NR
+\NC Chain-of-Thought \NC Schrittweise Erklärung verlangen \NC\NR
+\NC Few-Shot \NC Beispiele zeigen, dann generalisieren \NC\NR
+\NC Iterative \NC Schrittweise verfeinern \NC\NR
+\HL
+\stoptabulate
+
+\subsubsection{Wissenschaftliche Prompting-Patterns}
+
+Die obigen grundlegenden Patterns bilden die Basis für effektives Prompt Engineering. Darüber hinaus hat die aktuelle Forschung -- insbesondere «The Prompt Report: A Systematic Survey of Prompt Engineering Techniques» (Schulhoff et al., 2024) -- 21 wissenschaftlich fundierte Prompting-Patterns identifiziert, die sich in der Praxis bewährt haben.
+
+\startinfobox
+{\bf Warum sind wissenschaftliche Prompting-Patterns wichtig?}
+
+Grosse Sprachmodelle (LLMs) sind keine einfachen Frage-Antwort-Systeme. Sie verarbeiten Kontext, imitieren Denkmuster und können durch strategische Prompts zu deutlich besseren Ergebnissen gebracht werden. Die richtigen Patterns zu kennen bedeutet:
+
+\startitemize[packed]
+    \item Höhere Antwortqualität und Genauigkeit
+    \item Transparente und nachvollziehbare Denkprozesse
+    \item Systematische Problemlösung statt «Trial \& Error»
+    \item Effektivere Nutzung von KI als Co-Creation-Partner
+\stopitemize
+\stopinfobox
+
+\subsubsubsection{Kategorie 1: Grundlegende Patterns}
+
+{\bf Pattern A: Persona}
+
+Das Modell wird angewiesen, in der Rolle einer bestimmten Person oder Berufsgruppe zu antworten («Handle als…»). Dies ermöglicht spezifischere, stilistisch und inhaltlich passendere Antworten.
+
+{\it Warum wirkt dieses Pattern?} LLMs sind besonders gut darin, sprachliche Muster und Rollenbilder zu imitieren. Durch die Zuweisung einer Persona wird das Modell in einen kontextsensitiven Modus versetzt -- es passt Tonalität, Argumentation und Fokus entsprechend an.
+
+{\it Geeignet für:} Perspektivwechsel, Rollenspiele (z.B. Coach, Jurist, Historikerin), Kreatives Schreiben
+
+\startbashcode
+Beispiel-Prompt:
+Du bist ein erfahrener HR-Coach. Wie wuerdest du eine junge
+Fuehrungskraft auf ein schwieriges Mitarbeitergespraech vorbereiten?
+\stopbashcode
+
+{\bf Pattern B: Reverse Interaction}
+
+Das Modell übernimmt die aktive Rolle, indem es Fragen an die Benutzerin oder den Benutzer stellt, um ein Ziel besser zu verstehen oder gemeinsam zu erarbeiten.
+
+{\it Warum wirkt dieses Pattern?} Reverse Interaction bringt LLMs in eine dialogische Haltung und ermöglicht eine fokussierte Exploration eines Themas -- interaktiv und iterativ.
+
+{\it Geeignet für:} Beratungssituationen, Explorative Analyse, Gemeinsame Lösungsfindung
+
+\startbashcode
+Beispiel-Prompt:
+Ich moechte eine neue Geschaeftsidee entwickeln. Stelle mir bitte
+Fragen, um meine Gedanken zu strukturieren und das Potenzial zu
+bewerten.
+\stopbashcode
+
+\subsubsubsection{Kategorie 2: Few-Shot / Zero-Shot-Prompting Patterns}
+
+{\bf Pattern C: Few-Shot-Prompting}
+
+Dem Modell werden ein bis wenige Beispiele mitgegeben, um den gewünschten Stil oder die Struktur zu zeigen. Das Modell lernt am Beispiel.
+
+{\it Warum wirkt dieses Pattern?} LLMs imitieren stark die ihnen gezeigten Muster. Wenige gut gewählte Beispiele können reichen, um das Modell in eine gewünschte Richtung zu lenken. Das unterscheidet LLMs und generative KI deutlich vom «klassischen» Machine Learning, wo man i.A. hunderte oder tausende Beispiele braucht.
+
+{\it Geeignet für:} Formatierte Ausgaben (z.B. Tabellen, Bullet-Points), Textsorten mit klarer Struktur, Klassifikationen
+
+\startbashcode
+Beispiel-Prompt (Klassifikation):
+Text: "Ich liebe diesen Film!" -> Sentiment: Positiv
+Text: "Die Lieferung kam verspaetet." -> Sentiment: Negativ
+Text: "Das Hotel war fantastisch!" -> Sentiment: ?
+\stopbashcode
+
+{\bf Pattern D: System-2 Attention}
+
+Fordere das Modell auf, irrelevante Informationen im Prompt zu entfernen, bevor es mit der eigentlichen Aufgabe beginnt. Dadurch wird die Aufmerksamkeit auf das Wesentliche gelenkt.
+
+{\it Warum wirkt dieses Pattern?} LLMs reagieren empfindlich auf Kontextfülle. Die aktive Reduktion auf relevante Informationen aktiviert fokussierteres «Denken» im Modell.
+
+{\it Geeignet für:} Lange, unstrukturierte Inputs, Komplexe Fragen mit Nebenaspekten, Analyse von Informationsdichte
+
+{\bf Pattern E: Rephrase \& Respond (R\&R)}
+
+Das Modell wird gebeten, den Input zuerst umzuformulieren und zu erweitern, bevor es eine Antwort generiert.
+
+{\it Warum wirkt dieses Pattern?} Durch die Umformulierung klärt das Modell implizite Lücken, strukturiert Gedanken vor und verbessert so oft die Qualität der Antwort.
+
+{\it Geeignet für:} Unklare, vage Fragen, Optimierung bestehender Prompts, Co-Prompting
+
+{\bf Pattern F: Re-Read (RE2)}
+
+Füge dem Prompt die explizite Anweisung hinzu, die Frage nochmals zu lesen («Lies die Frage nochmals, bevor du antwortest»).
+
+{\it Warum wirkt dieses Pattern?} Diese einfache Metakognition steigert die Antwortgenauigkeit, besonders bei komplexen oder mehrteiligen Aufgaben.
+
+{\it Geeignet für:} Prüfungsähnliche Fragestellungen, Missverständliche Prompts, Mehrstufige Probleme
+
+{\bf Pattern G: Self-Ask}
+
+Das Modell wird angewiesen, selbst zu entscheiden, ob Zwischenfragen nötig sind. Falls ja, generiert es diese Fragen, beantwortet sie und kehrt dann zur Hauptfrage zurück.
+
+{\it Warum wirkt dieses Pattern?} Self-Ask aktiviert mehrstufiges Denken und reflektierte Problemzerlegung -- das Modell wird zum «selbstkritischen» Bearbeiter.
+
+{\it Geeignet für:} Komplexe, mehrdeutige Aufgabenstellungen, Analyse- und Argumentationsprozesse, Exploratives Schreiben
+
+\subsubsubsection{Kategorie 3: Thought Generation Patterns}
+
+{\bf Pattern H: Chain-of-Thought Prompting (CoT)}
+
+Dieses Pattern fordert das Modell dazu auf, seine Antwort schrittweise herzuleiten, anstatt sofort eine Lösung oder Aussage zu präsentieren. Dies kann entweder mit Beispielen (Few-Shot) oder durch einleitende Formulierungen wie «Lass uns Schritt für Schritt denken» (Zero-Shot) erreicht werden.
+
+{\it Warum wirkt dieses Pattern?} Gemäss Schulhoff et al. (2024) aktiviert CoT die Fähigkeit von LLMs, mehrere Denkoperationen in Serie auszuführen. Anstatt eine «Black Box»-Antwort zu liefern, durchläuft das Modell einen argumentativen Pfad, wodurch Transparenz, Genauigkeit und Nachvollziehbarkeit steigen -- besonders bei logischen, mathematischen oder komplexen Aufgabenstellungen.
+
+{\it Geeignet für:} Mathematische Probleme, Logik- und Argumentationsaufgaben, Aufgaben mit mehreren Teilaspekten
+
+\startbashcode
+Beispiel-Prompt:
+Lass uns die folgende Frage Schritt fuer Schritt durchdenken:
+Wie hoch ist die jaehrliche Rendite bei 5% Zinsen ueber 3 Jahre
+mit Zinseszins?
+\stopbashcode
+
+{\bf Pattern I: Step-Back Prompting}
+
+Das Modell wird zunächst gebeten, eine übergeordnete oder kontextualisierende Frage zu beantworten, bevor es sich der eigentlichen Aufgabe widmet. So entsteht ein «geistiger Anlauf» zur Lösung.
+
+{\it Warum wirkt dieses Pattern?} Diese Technik nutzt die Fähigkeit von LLMs zur Top-down-Dekonstruktion: Wenn ein Problem zunächst in ein abstrakteres Konzept oder einen allgemeineren Rahmen gestellt wird, kann das Modell systematischer und reflektierter antworten.
+
+{\it Geeignet für:} Theoretische oder konzeptionelle Themen, Lernunterstützung, Transferaufgaben
+
+{\bf Pattern J: Automatic Chain-of-Thought (Auto-CoT)}
+
+Das Modell wird ohne Beispiele angewiesen, automatisch eine schrittweise Argumentation zu generieren, die einem Chain-of-Thought ähnelt. Der CoT-Prozess wird also direkt durch einen Prompt ausgelöst -- meist mit einfachen Signalphrasen.
+
+{\it Warum wirkt dieses Pattern?} Gemäss der Analyse von Schulhoff et al. nutzt Auto-CoT die Tendenz von LLMs, auf sprachliche Muster wie «Lass uns gemeinsam darüber nachdenken…» mit strukturierten Gedankengängen zu reagieren. Das ermöglicht Zero-Shot-Reasoning mit hoher Effizienz -- besonders dann, wenn keine Beispiele verfügbar sind.
+
+{\it Geeignet für:} Schnelle Anwendung ohne Few-Shot-Beispiele, Spontane Problemlösung, Exploratives Denken in offenen Aufgaben
+
+{\bf Pattern K: Thread-of-Thought (ThoT) Prompting}
+
+Dieses Pattern leitet das Modell an, einen langen oder komplexen Kontext in kleinen Portionen zu verarbeiten, dabei jeweils kurz zusammenzufassen und gedanklich weiterzuentwickeln. So entsteht ein «Denkfaden» durch den Text.
+
+{\it Warum wirkt dieses Pattern?} Laut Schulhoff et al. (2024) ist ThoT besonders wirksam, wenn grosse Mengen an Kontextinformation vorhanden sind. Die sequentielle Verarbeitung in überschaubaren Einheiten fördert die Kohärenz des Verständnisses und führt zu höherer Texttreue und Präzision.
+
+{\it Geeignet für:} Lange Texte oder Dokumente, Recherche- oder Analyseaufgaben, Kontextualisierte Frage-Antwort-Systeme
+
+\subsubsubsection{Kategorie 4: Decomposition Patterns}
+
+{\bf Pattern L: Least-to-Most Prompting}
+
+Das Modell wird zunächst aufgefordert, ein Problem in kleinere Teilprobleme zu zerlegen, ohne sie sofort zu lösen. Anschliessend werden die Teilprobleme nacheinander abgearbeitet.
+
+{\it Warum wirkt dieses Pattern?} Diese Technik zwingt das Modell dazu, explizite Problemanalyse und Planung zu betreiben -- ein Vorgehen, das sich besonders in symbolischen, mathematischen und logischen Kontexten als effektiv erwiesen hat. Die sequentielle Bearbeitung verhindert zudem, dass der Kontext verloren geht oder vorschnelle Schlüsse gezogen werden.
+
+{\it Geeignet für:} Mathematische Aufgaben, Algorithmische Probleme, Strategische Entscheidungsfindung
+
+\startbashcode
+Beispiel-Prompt:
+Zerlege folgendes Problem in kleinere Schritte, ohne sie zu loesen:
+[Problem]. Danach: Loese die Teilaufgaben Schritt fuer Schritt.
+\stopbashcode
+
+{\bf Pattern M: DECOMP}
+
+Das Modell erhält anhand einiger Beispiele gezeigt, wie es ein grösseres Problem mithilfe bestimmter Hilfsfunktionen oder Werkzeuge (z.B. String-Splitting, Suchabfragen) in Teilaufgaben aufteilt und diese bearbeitet.
+
+{\it Warum wirkt dieses Pattern?} DECOMP erweitert die Fähigkeiten des Modells durch die explizite Anbindung an Methoden oder «Funktionen» -- entweder implizit über Sprachmuster oder explizit durch Tool-Use (in agentischen Systemen). Laut Prompt Report fördert dies die funktionale Modularisierung komplexer Aufgaben.
+
+{\it Geeignet für:} Aufgaben mit mehreren Methodenanteilen, Prompt-Ketten oder Tool-gestützte Antworten, Kontextsensitive Analysen
+
+{\bf Pattern N: Plan-and-Solve Prompting}
+
+Das Modell wird zunächst gebeten, einen Plan zur Lösung eines Problems zu erstellen, bevor es diesen systematisch umsetzt.
+
+{\it Warum wirkt dieses Pattern?} Dieses Pattern erhöht die Kohärenz und Zielgerichtetheit des Antwortprozesses. Anstatt direkt zu «raten», wird ein strukturierter Denkprozess angestossen -- vergleichbar mit einer Selbstanleitung. Besonders bei reasoning-intensiven Aufgaben zeigt sich ein Performancegewinn.
+
+{\it Geeignet für:} Komplexe Entscheidungsfragen, Argumentationen, Multistep-Fragen
+
+\startbashcode
+Beispiel-Prompt:
+Lass uns das Problem gemeinsam loesen. Zuerst: Entwickle einen
+Plan zur Loesung. Dann: Fuehre diesen Plan Schritt fuer Schritt aus.
+\stopbashcode
+
+{\bf Pattern O: Tree-of-Thought (ToT) Prompting}
+
+Das Modell wird angeleitet, mehrere gedankliche Lösungswege gleichzeitig zu entwickeln. Diese bilden einen baumartigen Entscheidungsraum, in dem nach und nach der beste Pfad ausgewählt wird.
+
+{\it Warum wirkt dieses Pattern?} ToT ist eine Weiterentwicklung von CoT und nutzt laut Prompt Report die Fähigkeit von LLMs zur Simultansimulation mehrerer Pfade. Statt linearer Argumentation entstehen verzweigte Denkstrukturen, was sich besonders bei kreativen, offenen oder suchbasierten Aufgaben als leistungsfähig erwiesen hat.
+
+{\it Geeignet für:} Entscheidungsfindung mit Alternativen, Kreative Problemlösungen, Strategieentwicklung
+
+{\bf Pattern P: Recursion-of-Thought}
+
+Dieses Pattern erlaubt es dem Modell, Teilprobleme innerhalb einer CoT-Struktur erneut einem eigenen Denkprozess zu unterziehen -- eine Art «verschachteltes Denken».
+
+{\it Warum wirkt dieses Pattern?} Recursion-of-Thought ist besonders bei komplexen oder verschachtelten Aufgaben hilfreich, da es erlaubt, gedanklich zurückzutreten und gezielt Subfragen zu behandeln. Laut Schulhoff et al. führt diese rekursive Tiefe zu besserer Lösungsqualität, auch bei längeren Kontexten oder algorithmischen Herausforderungen.
+
+{\it Geeignet für:} Mehrstufige Logikprobleme, Algorithmen und technische Aufgaben, Aufgaben mit hoher Komplexität
+
+{\bf Pattern Q: Program-of-Thoughts}
+
+Das Modell wird aufgefordert, Code als Denkwerkzeug zu nutzen. Es schreibt dabei kurze Programme oder Anweisungen, um Probleme zu analysieren oder zu lösen -- besonders effektiv bei numerischen und logischen Aufgaben.
+
+{\it Warum wirkt dieses Pattern?} Laut Schulhoff et al. aktivieren LLMs bei dieser Technik eine formalisierte Form der Argumentation. Durch die Transformation von Gedanken in Programmcode entstehen präzise, nachvollziehbare und wiederholbare Lösungswege -- ideal für Aufgaben, bei denen Klarheit und Struktur dominieren.
+
+{\it Geeignet für:} Mathematische und technische Probleme, Rechenoperationen, Logik und Simulation
+
+\startbashcode
+Beispiel-Prompt:
+Schreibe ein kleines Python-Programm, das folgende Fragestellung
+bearbeitet: Wie viel kostet ein Darlehen von 10'000 CHF bei 3%
+Zins ueber 5 Jahre mit jaehrlicher Rueckzahlung?
+\stopbashcode
+
+\subsubsubsection{Kategorie 5: Ensembling Patterns}
+
+{\bf Pattern R: Self-Consistency}
+
+Das Modell wird mehrfach mit demselben Prompt (oder leicht variierten Versionen) angesprochen. Die daraus resultierenden Antworten werden anschliessend miteinander verglichen, um einen Mehrheitsentscheid zu bilden.
+
+{\it Warum wirkt dieses Pattern?} LLMs sind nicht deterministisch -- sie generieren je nach Temperatureinstellung unterschiedliche, aber plausible Antworten. Dieses Pattern nutzt diese Eigenschaft produktiv: Durch die Erzeugung mehrerer Denkpfade (meist im CoT-Stil) und anschliessende Konsolidierung lässt sich eine robustere, weniger zufällige Antwort erzeugen.
+
+{\it Geeignet für:} Aufgaben mit hohem Unsicherheitsfaktor, Kritische Entscheidungsprozesse, Stabilisierung von CoT-Antworten
+
+{\bf Pattern S: Prompt Paraphrasing}
+
+Der ursprüngliche Prompt wird in mehreren Varianten umformuliert, ohne die inhaltliche Intention zu verändern. Diese Varianten werden alle verwendet, um das Modell zu befragen, und die Resultate werden verglichen oder aggregiert.
+
+{\it Warum wirkt dieses Pattern?} Prompt Paraphrasing wirkt wie eine Data-Augmentation-Technik: Durch leicht unterschiedliche Formulierungen wird die Antwortrobustheit verbessert und das Modell weniger anfällig für Prompt-Sensitivität. Gemäss Schulhoff et al. reduziert diese Methode das Risiko von Missverständnissen durch sprachliche Nuancen.
+
+{\it Geeignet für:} Evaluierung von Prompt-Stabilität, Kombination mit Self-Consistency, Nutzung im Prompt-Testing
+
+\subsubsubsection{Kategorie 6: Selbstkritik Patterns}
+
+{\bf Pattern T: Self-Calibration}
+
+Das Modell wird gebeten, seine eigene Antwort kritisch zu überprüfen. Dazu wird die ursprüngliche Aufgabe samt generierter Antwort in einen neuen Prompt eingebettet, in dem das Modell bewertet, ob die Antwort korrekt und sinnvoll ist.
+
+{\it Warum wirkt dieses Pattern?} LLMs verfügen über ein gewisses Mass an Meta-Urteilsvermögen. Durch Self-Calibration kann das Modell gezielt zur Reflexion gebracht werden, was die Verlässlichkeit und Selbsteinschätzung verbessert. Laut Prompt Report hilft dies nicht nur zur Fehlersuche, sondern auch zur Kalibrierung von Unsicherheit.
+
+{\it Geeignet für:} Qualitätskontrolle von Modellantworten, Nachbearbeitung sensibler Inhalte, Prüfungs- oder Feedbackszenarien
+
+{\bf Pattern U: Self-Refine}
+
+Das Modell wird nach einer ersten Antwort aufgefordert, Feedback zu geben und darauf basierend eine verbesserte Version zu erstellen. Dieser Zyklus kann bei Bedarf mehrfach wiederholt werden.
+
+{\it Warum wirkt dieses Pattern?} Self-Refine kombiniert Kritikfähigkeit und Überarbeitung -- ähnlich wie menschliches Redigieren. In Experimenten (Schulhoff et al.) führte dies zu deutlichen Leistungssteigerungen bei Textgenerierung, Argumentation und sogar Programmcode. Der iterative Prozess erlaubt eine feinere Justierung als einmalige Prompts.
+
+{\it Geeignet für:} Optimierung längerer Texte, Argumentations- oder Schreibaufgaben, Programmieraufgaben mit Fehleranfälligkeit
+
+\startbashcode
+Beispiel-Prompt:
+Lies bitte deine vorherige Antwort nochmals durch. Gib dir selbst
+ein kurzes Feedback dazu. Verbessere anschliessend den Text basierend
+auf diesem Feedback.
+\stopbashcode
+
+\subsubsubsection{Anwendungsleitfaden: Wann welches Pattern?}
+
+\starttabulate[|l|p(7cm)|]
+\HL
+\NC {\bf Situation} \NC {\bf Empfohlene Patterns} \NC\NR
+\HL
+\NC Mathematik/Logik \NC Chain-of-Thought, Least-to-Most, Program-of-Thoughts \NC\NR
+\NC Komplexe Analyse \NC Tree-of-Thought, Step-Back, Recursion-of-Thought \NC\NR
+\NC Unsichere Aufgaben \NC Self-Consistency, Prompt Paraphrasing \NC\NR
+\NC Lange Dokumente \NC Thread-of-Thought, System-2 Attention \NC\NR
+\NC Kreatives Schreiben \NC Persona, Self-Refine, Few-Shot \NC\NR
+\NC Planung/Strategie \NC Plan-and-Solve, DECOMP, Tree-of-Thought \NC\NR
+\NC Qualitätskontrolle \NC Self-Calibration, Self-Refine \NC\NR
+\HL
+\stoptabulate
+
+\starttippbox
+{\bf Wissenschaftliche Grundlage}
+
+Alle hier vorgestellten Patterns basieren auf «The Prompt Report: A Systematic Survey of Prompt Engineering Techniques» (Schulhoff et al., 2024) und zentralen Erkenntnissen der letzten Jahre über Prompting-Techniken (Wei et al., 2022; Kojima et al., 2022; Yao et al., 2023; Wang et al., 2023; Madaan et al., 2023).
+
+Diese Patterns sind keine starren Regeln, sondern flexible Werkzeuge. Experimentieren Sie mit verschiedenen Kombinationen und passen Sie sie an Ihre spezifischen Anwendungsfälle an.
+\stoptippbox
+
+\blank[big]
+
+\starttippbox
+{\bf Erfolgskriterien für Modul 4}
+
+Sie haben das Modul erfolgreich abgeschlossen, wenn Sie:
+\startitemize[packed]
+    \item Komplexe Prompts für Code-Generierung schreiben können
+    \item TDD-Workflow mit KI-Unterstützung durchführen können
+    \item Code-Reviews mit KI durchführen können
+    \item Vollständige Dokumentation erstellen können
+    \item Die Grenzen von KI-generiertem Code verstehen
+\stopitemize
+\stoptippbox
+
+\stopcomponent
+

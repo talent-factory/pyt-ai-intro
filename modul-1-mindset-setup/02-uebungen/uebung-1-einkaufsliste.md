@@ -1,7 +1,7 @@
 # Übung 1: Einkaufsliste durchdenken
 
-**Dauer:** 15 Minuten  
-**Lektion:** 1  
+**Dauer:** 15 Minuten
+**Lektion:** 1
 **Sozialform:** Einzel → Gruppe → Plenum
 
 ## 🎯 Lernziel
@@ -149,30 +149,36 @@ einkaufsliste = {"Milch": 2, "Brot": 1, "Eier": 12}
 **Artikel hinzufügen:**
 
 ```text
+
 1. Artikel-Name vom Benutzer einlesen
 2. Prüfen: Ist Artikel schon in Liste?
    - Ja: Menge erhöhen ODER Meldung "Schon vorhanden"
    - Nein: Artikel hinzufügen
 3. Bestätigung ausgeben
+
 ```
 
 **Artikel entfernen:**
 
 ```text
+
 1. Artikel-Name vom Benutzer einlesen
 2. Prüfen: Ist Artikel in Liste?
    - Ja: Artikel entfernen
    - Nein: Fehlermeldung
 3. Bestätigung ausgeben
+
 ```
 
 **Artikel anzeigen:**
 
 ```text
+
 1. Prüfen: Ist Liste leer?
    - Ja: "Liste ist leer"
    - Nein: Alle Artikel durchgehen und ausgeben
 2. Optional: Nummerierung, Formatierung
+
 ```
 
 ## ✅ Checkliste

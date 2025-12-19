@@ -1,0 +1,15 @@
+# ConTeXt generierte Dateien
+*.pdf
+*.tuc
+*.tua
+*.log
+*.tmp
+*.aux
+*.bbl
+*.blg
+
+# vim-Modul temporäre Dateien (Syntax-Highlighting)
+*.vimout
+
+# Minted Cache (LaTeX)
+_minted-*

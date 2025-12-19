@@ -174,7 +174,7 @@ def statistik_anzeigen(todos: list) -> None:
         prioritaeten[prio] = prioritaeten.get(prio, 0) + 1
 
     # Ausgabe
-    print(f"\n📊 STATISTIK")
+    print("\n📊 STATISTIK")
     print("=" * 30)
     print(f"Gesamt:    {gesamt}")
     print(f"Offen:     {offen}")
@@ -189,7 +189,7 @@ def statistik_anzeigen(todos: list) -> None:
         balken_leer = 10 - balken_voll
         print(f"[{'█' * balken_voll}{'░' * balken_leer}]")
 
-    print(f"\nPrioritäten:")
+    print("\nPrioritäten:")
     for prio, anzahl in sorted(prioritaeten.items(), reverse=True):
         emoji = {"hoch": "🔴", "normal": "🟡", "niedrig": "🟢"}
         print(f"  {emoji.get(prio, '⚪')} {prio.capitalize()}: {anzahl}")
@@ -200,7 +200,7 @@ def main() -> None:
     todos = []
 
     # Demo-Daten
-    todos.append(erstelle_todo("Python Modul 2 abschließen", "hoch"))
+    todos.append(erstelle_todo("Python Modul 2 abschliessen", "hoch"))
     todos[0]["id"] = 1
     todos.append(erstelle_todo("Einkaufen gehen", "normal"))
     todos[1]["id"] = 2

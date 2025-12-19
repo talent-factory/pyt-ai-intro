@@ -27,17 +27,20 @@ Erstelle ein robustes Datei-Verarbeitungs-Programm:
 Funktion: process_files(file_list)
 
 Für jede Datei:
+
 1. Versuche zu öffnen und zu lesen
 2. Zähle Zeilen und Wörter
 3. Gib Statistik aus
 
 Exception Handling:
+
 - FileNotFoundError: "Datei nicht gefunden"
 - PermissionError: "Keine Leserechte"
 - UnicodeDecodeError: "Encoding-Problem"
 - Andere: Generische Fehlermeldung
 
 Nach allen Dateien:
+
 - Erfolgreiche: X
 - Fehler: Y
 - Gesamt: Z
@@ -97,12 +100,14 @@ Implementieren Sie ein Logging-System für Datei-Operationen:
 Erstelle ein Datei-Verarbeitungs-Programm mit Logging:
 
 Setup:
+
 - logging-Modul konfigurieren
 - Log-Datei: "app.log"
 - Format: "[ZEIT] LEVEL - Nachricht"
 - Level: INFO und höher
 
 Programm:
+
 - Liest mehrere CSV-Dateien
 - Loggt jeden Schritt:
   * INFO: "Verarbeite datei.csv"
@@ -111,8 +116,10 @@ Programm:
   * ERROR: "Fehler beim Lesen"
 
 Nach Verarbeitung:
+
 - Zeige Log-Datei-Inhalt
 - Statistik (INFO/WARNING/ERROR)
+
 ```
 
 #### Erwartetes Log
@@ -144,17 +151,20 @@ Implementieren Sie einen Retry-Mechanismus für fehleranfällige Operationen:
 Erstelle eine retry_operation Funktion:
 
 Parameter:
+
 - operation: Funktion die ausgeführt wird
 - max_retries: Maximale Versuche (default: 3)
 - delay: Start-Verzögerung in Sekunden (default: 1)
 
 Verhalten:
+
 - Versucht operation() auszuführen
 - Bei Fehler: Wartet delay Sekunden
 - Verdoppelt delay bei jedem Versuch (Exponential Backoff)
 - Nach max_retries: Wirft Exception
 
 Beispiel-Anwendung:
+
 - Datei von URL herunterladen
 - Bei Netzwerkfehler: Retry
 - Loggt jeden Versuch

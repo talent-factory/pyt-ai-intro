@@ -5,23 +5,27 @@
 ## 📋 Übersicht
 
 ### [Übung 1: Einkaufsliste durchdenken](./uebung-1-einkaufsliste.md)
-**Dauer:** 15 Minuten  
-**Lektion:** 1  
+
+**Dauer:** 15 Minuten
+**Lektion:** 1
 **Ziel:** Problemdekomposition üben
 
 ### [Übung 2: Git-Repository erstellen](./uebung-2-git-repository.md)
-**Dauer:** 20 Minuten  
-**Lektion:** 2  
+
+**Dauer:** 20 Minuten
+**Lektion:** 2
 **Ziel:** Erste praktische Erfahrung mit Git
 
 ### [Übung 3: Prompting-Challenge](./uebung-3-prompting-challenge.md)
-**Dauer:** 20 Minuten  
-**Lektion:** 3  
+
+**Dauer:** 20 Minuten
+**Lektion:** 3
 **Ziel:** Effektive Prompts formulieren lernen
 
-### [Übung 4: Einfacher Taschenrechner](./uebung-4-taschenrechner/)
-**Dauer:** 25 Minuten  
-**Lektion:** 4  
+### [Übung 4: Einfacher Taschenrechner](./uebung-4-taschenrechner.md)
+
+**Dauer:** 25 Minuten
+**Lektion:** 4
 **Ziel:** Erste vollständige Anwendung mit KI entwickeln
 
 ## 🎯 Lernziele
@@ -52,6 +56,7 @@ Nach allen Übungen können die Studierenden:
 ## 📎 Materialien
 
 Alle Übungen enthalten:
+
 - Klare Aufgabenstellung
 - Schritt-für-Schritt-Anleitung
 - Hilfestellungen

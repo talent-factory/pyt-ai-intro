@@ -1,6 +1,6 @@
 # Persönliche Reflexion - Modul 5
 
-**Zeitaufwand:** 30 Minuten | **Punkte:** 15%  
+**Zeitaufwand:** 30 Minuten | **Punkte:** 15%
 **Mindestlänge:** 400 Wörter
 
 ## Frage 1: LLM APIs (ca. 70 Wörter)

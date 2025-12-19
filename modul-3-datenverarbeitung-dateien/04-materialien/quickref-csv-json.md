@@ -10,6 +10,7 @@ Schnellreferenz für CSV und JSON in Python.
 import csv
 
 # Mit csv.reader
+
 with open('daten.csv', 'r') as f:
     reader = csv.reader(f)
     header = next(reader)  # Erste Zeile
@@ -17,6 +18,7 @@ with open('daten.csv', 'r') as f:
         print(row)  # Liste
 
 # Mit DictReader (empfohlen)
+
 with open('daten.csv', 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -26,13 +28,16 @@ with open('daten.csv', 'r') as f:
 ### Schreiben
 
 ```python
+
 # Mit csv.writer
+
 with open('output.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(['Name', 'Alter'])
     writer.writerow(['Anna', 25])
 
 # Mit DictWriter (empfohlen)
+
 with open('output.csv', 'w', newline='') as f:
     fieldnames = ['name', 'alter']
     writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -48,10 +53,12 @@ with open('output.csv', 'w', newline='') as f:
 import json
 
 # Aus Datei
+
 with open('daten.json', 'r') as f:
     data = json.load(f)
 
 # Aus String
+
 json_string = '{"name": "Anna", "alter": 25}'
 data = json.loads(json_string)
 ```
@@ -59,12 +66,15 @@ data = json.loads(json_string)
 ### Schreiben
 
 ```python
+
 # In Datei
+
 data = {'name': 'Anna', 'alter': 25}
 with open('output.json', 'w') as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
 # Als String
+
 json_string = json.dumps(data, indent=2)
 ```
 
@@ -76,26 +86,33 @@ json_string = json.dumps(data, indent=2)
 import pandas as pd
 
 # Lesen
+
 df = pd.read_csv('daten.csv')
 
 # Anzeigen
+
 print(df.head())
 print(df.info())
 
 # Filtern
+
 erwachsene = df[df['alter'] >= 18]
 
 # Schreiben
+
 df.to_csv('output.csv', index=False)
 ```
 
 ### JSON
 
 ```python
+
 # Lesen
+
 df = pd.read_json('daten.json')
 
 # Schreiben
+
 df.to_json('output.json', orient='records', indent=2)
 ```
 
@@ -127,13 +144,16 @@ data = {
 }
 
 # Sicher zugreifen
+
 city = data.get('user', {}).get('address', {}).get('city')
 ```
 
 ### Type Conversion
 
 ```python
+
 # String zu anderen Typen
+
 alter = int(row['alter'])
 preis = float(row['preis'])
 aktiv = row['aktiv'].lower() == 'true'

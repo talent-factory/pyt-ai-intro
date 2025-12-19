@@ -1,6 +1,6 @@
 # Lektion 2: Kontrollstrukturen
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Ziel:** Bedingungen und Schleifen in Python beherrschen
 
 ## 🎯 Lernziele
@@ -65,20 +65,25 @@ else:
 **Ternärer Operator (Kurzform):**
 
 ```python
+
 # Langform
+
 if alter >= 18:
     status = "Erwachsen"
 else:
     status = "Kind"
 
 # Kurzform
+
 status = "Erwachsen" if alter >= 18 else "Kind"
 ```
 
 ### Vergleichsoperatoren
 
 ```python
+
 # Vergleiche
+
 x == y   # Gleich
 x != y   # Ungleich
 x > y    # Grösser
@@ -87,6 +92,7 @@ x >= y   # Grösser oder gleich
 x <= y   # Kleiner oder gleich
 
 # Logische Verknüpfungen
+
 alter >= 18 and hat_ausweis  # Beide müssen True sein
 ist_student or ist_senior    # Mindestens eines True
 not ist_gesperrt             # Negation
@@ -106,15 +112,19 @@ for name in namen:
 **Mit range():**
 
 ```python
+
 # 0 bis 4
+
 for i in range(5):
     print(i)
 
 # 1 bis 5
+
 for i in range(1, 6):
     print(i)
 
 # Mit Schrittweite
+
 for i in range(0, 10, 2):  # 0, 2, 4, 6, 8
     print(i)
 ```
@@ -222,6 +232,7 @@ def klassifiziere_note(punkte: int) -> str:
         return "F - Nicht bestanden"
 
 # Testen
+
 test_punkte = [95, 85, 75, 65, 55]
 
 for punkte in test_punkte:
@@ -234,10 +245,12 @@ for punkte in test_punkte:
 ```python
 """
 FizzBuzz: Klassisches Programmier-Problem
+
 - Bei Vielfachen von 3: "Fizz"
 - Bei Vielfachen von 5: "Buzz"
 - Bei Vielfachen von 3 und 5: "FizzBuzz"
 - Sonst: Die Zahl
+
 """
 
 for zahl in range(1, 31):
@@ -261,32 +274,37 @@ Passwort-Validator mit mehreren Kriterien
 def validiere_passwort(passwort: str) -> tuple[bool, list[str]]:
     """
     Validiert ein Passwort.
-    
+
     Returns:
         (ist_gueltig, fehler_liste)
     """
     fehler = []
-    
+
     # Mindestlänge
+
     if len(passwort) < 8:
         fehler.append("Mindestens 8 Zeichen erforderlich")
-    
+
     # Grossbuchstabe
+
     if not any(c.isupper() for c in passwort):
         fehler.append("Mindestens ein Grossbuchstabe erforderlich")
-    
+
     # Kleinbuchstabe
+
     if not any(c.islower() for c in passwort):
         fehler.append("Mindestens ein Kleinbuchstabe erforderlich")
-    
+
     # Zahl
+
     if not any(c.isdigit() for c in passwort):
         fehler.append("Mindestens eine Zahl erforderlich")
-    
+
     ist_gueltig = len(fehler) == 0
     return ist_gueltig, fehler
 
 # Testen
+
 test_passwoerter = [
     "schwach",
     "Besser123",
@@ -316,15 +334,15 @@ def zahlenraten():
     """Zahlenratespiel 1-100."""
     ziel = random.randint(1, 100)
     versuche = 0
-    
+
     print("Ich habe eine Zahl zwischen 1 und 100 gewählt.")
     print("Versuche sie zu erraten!")
-    
+
     while True:
         try:
             tipp = int(input("\nDein Tipp: "))
             versuche += 1
-            
+
             if tipp < ziel:
                 print("Zu niedrig!")
             elif tipp > ziel:
@@ -336,7 +354,9 @@ def zahlenraten():
             print("Bitte gib eine gültige Zahl ein!")
 
 # Spiel starten (auskommentiert für Demo)
+
 # zahlenraten()
+
 ```
 
 ## ✏️ Übung (15 Min.)
@@ -380,6 +400,7 @@ Auf Wiedersehen!
 
 ```text
 === MENÜ ===
+
 1. Begrüssung
 2. Datum anzeigen
 3. Beenden
@@ -403,6 +424,7 @@ Hallo! Willkommen!
 
 ```text
 Fibonacci-Folge (erste 10 Zahlen):
+
 1. 0
 2. 1
 3. 1
@@ -412,6 +434,7 @@ Fibonacci-Folge (erste 10 Zahlen):
 7. 8
 8. 13
 9. 21
+
 10. 34
 ```
 
@@ -423,6 +446,7 @@ Fibonacci-Folge (erste 10 Zahlen):
 Erstelle ein Python-Programm: [Ihre gewählte Option]
 
 Anforderungen:
+
 - [Spezifische Anforderungen]
 - Fehlerbehandlung für ungültige Eingaben
 - Benutzerfreundliche Ausgabe
@@ -443,7 +467,7 @@ Beispiel:
 - **continue:** Iteration überspringen
 - **range():** Zahlensequenzen generieren
 
-### Wann was verwenden?
+### Wann was verwenden
 
 **for-Schleife:**
 
@@ -482,17 +506,17 @@ Beispiel:
 
 ### Häufige Fragen
 
-#### Frage 1: for vs. while?
+#### Frage 1: for vs. while
 
 - for: Anzahl bekannt, über Sequenz
 - while: Anzahl unbekannt, bis Bedingung
 
-#### Frage 2: Wann break vs. return?
+#### Frage 2: Wann break vs. return
 
 - break: Nur Schleife beenden
 - return: Ganze Funktion beenden
 
-#### Frage 3: range(5) vs. range(1, 6)?
+#### Frage 3: range(5) vs. range(1, 6)
 
 - range(5): 0, 1, 2, 3, 4
 - range(1, 6): 1, 2, 3, 4, 5
@@ -506,5 +530,5 @@ Beispiel:
 
 ---
 
-**Weiter zu:** [Lektion 3 - Listen & Dictionaries](./lektion-3-listen-dictionaries.md)  
+**Weiter zu:** [Lektion 3 - Listen & Dictionaries](./lektion-3-listen-dictionaries.md)
 **Zurück zu:** [Lektion 1 - Variablen & Datentypen](./lektion-1-variablen-datentypen.md)

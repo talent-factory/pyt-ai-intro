@@ -1,6 +1,6 @@
 # Lektion 1: Variablen, Datentypen & Operatoren
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Ziel:** Grundlegende Python-Datentypen verstehen und anwenden
 
 ## 🎯 Lernziele
@@ -22,7 +22,9 @@ Nach dieser Lektion können Sie:
 Variablen sind "Behälter" für Werte.
 
 ```python
+
 # Variable erstellen
+
 name = "Anna"
 alter = 25
 groesse = 1.75
@@ -32,12 +34,15 @@ ist_student = True
 **Naming Conventions (PEP 8):**
 
 ```python
+
 # ✅ Gut
+
 benutzer_name = "Anna"
 max_versuche = 3
 ist_aktiv = True
 
 # ❌ Schlecht
+
 BenutzerName = "Anna"  # CamelCase nur für Klassen
 maxVersuche = 3        # camelCase nicht in Python
 ist-aktiv = True       # Bindestriche nicht erlaubt
@@ -81,12 +86,14 @@ ein mehrzeiliger
 String"""
 
 # String-Operationen
+
 vorname = "Anna"
 nachname = "Müller"
 vollname = vorname + " " + nachname  # Konkatenation
 wiederholung = "Ha" * 3  # "HaHaHa"
 
 # F-Strings (modern)
+
 alter = 25
 text = f"Ich bin {alter} Jahre alt"
 berechnung = f"2 + 2 = {2 + 2}"
@@ -99,6 +106,7 @@ ist_aktiv = True
 ist_fertig = False
 
 # Boolean aus Vergleichen
+
 ist_erwachsen = alter >= 18
 ist_leer = len(name) == 0
 ```
@@ -112,13 +120,16 @@ ergebnis = None  # Kein Wert
 ### Type Hints
 
 ```python
+
 # Type Hints für bessere Lesbarkeit
+
 name: str = "Anna"
 alter: int = 25
 groesse: float = 1.75
 ist_student: bool = True
 
 # Bei Funktionen (später mehr)
+
 def begruessung(name: str) -> str:
     return f"Hallo {name}"
 ```
@@ -128,13 +139,16 @@ def begruessung(name: str) -> str:
 #### Arithmetische Operatoren
 
 ```python
+
 # Grundrechenarten
+
 summe = 5 + 3        # 8
 differenz = 10 - 4   # 6
 produkt = 7 * 6      # 42
 quotient = 20 / 4    # 5.0 (immer float)
 
 # Spezielle Operatoren
+
 ganzzahl_division = 20 // 3  # 6 (ohne Rest)
 rest = 20 % 3                # 2 (Modulo)
 potenz = 2 ** 8              # 256
@@ -143,7 +157,9 @@ potenz = 2 ** 8              # 256
 #### Vergleichsoperatoren
 
 ```python
+
 # Vergleiche (Ergebnis: bool)
+
 gleich = 5 == 5           # True
 ungleich = 5 != 3         # True
 groesser = 10 > 5         # True
@@ -155,7 +171,9 @@ kleiner_gleich = 3 <= 7   # True
 #### Logische Operatoren
 
 ```python
+
 # and, or, not
+
 ist_erwachsen = alter >= 18
 hat_ausweis = True
 
@@ -167,23 +185,28 @@ ist_nicht_aktiv = not ist_aktiv                 # Negation
 ### Type Conversion (Casting)
 
 ```python
+
 # String zu Zahl
+
 alter_str = "25"
 alter_int = int(alter_str)      # 25
 preis_str = "19.99"
 preis_float = float(preis_str)  # 19.99
 
 # Zahl zu String
+
 zahl = 42
 text = str(zahl)  # "42"
 
 # Zu Boolean
+
 bool(1)      # True
 bool(0)      # False
 bool("")     # False
 bool("text") # True
 
 # Fehlerbehandlung
+
 try:
     zahl = int("abc")  # ValueError!
 except ValueError:
@@ -208,6 +231,7 @@ def fahrenheit_zu_celsius(fahrenheit: float) -> float:
     return (fahrenheit - 32) * 5/9
 
 # Verwendung
+
 temp_c = 25.0
 temp_f = celsius_zu_fahrenheit(temp_c)
 print(f"{temp_c}°C = {temp_f}°F")
@@ -240,6 +264,7 @@ def interpretiere_bmi(bmi: float) -> str:
         return "Adipositas"
 
 # Verwendung
+
 gewicht = 75.0  # kg
 groesse = 1.80  # m
 
@@ -260,6 +285,7 @@ Textverarbeitung mit Strings
 text = "  Python ist TOLL!  "
 
 # String-Methoden
+
 print(f"Original: '{text}'")
 print(f"Lowercase: '{text.lower()}'")
 print(f"Uppercase: '{text.upper()}'")
@@ -267,12 +293,14 @@ print(f"Stripped: '{text.strip()}'")
 print(f"Replaced: '{text.replace('TOLL', 'super')}'")
 
 # String-Analyse
+
 email = "anna.mueller@example.com"
 print(f"Enthält @: {email.count('@')}")
 print(f"Startet mit 'anna': {email.startswith('anna')}")
 print(f"Endet mit '.com': {email.endswith('.com')}")
 
 # String-Zerlegung
+
 name = "Anna Müller"
 teile = name.split()
 print(f"Vorname: {teile[0]}")
@@ -350,6 +378,7 @@ Zeichen (ohne Leerzeichen): 9
 Erstelle ein Python-Programm: [Ihre gewählte Option]
 
 Anforderungen:
+
 - [Anforderung 1]
 - [Anforderung 2]
 - [Anforderung 3]
@@ -359,9 +388,11 @@ Eingabe: ...
 Ausgabe: ...
 
 Einschränkungen:
+
 - Kommentare auf Deutsch
 - Type Hints verwenden
 - Benutzerfreundliche Ausgabe
+
 ```
 
 ## 🎓 Zusammenfassung
@@ -399,19 +430,19 @@ Einschränkungen:
 
 ### Häufige Fragen
 
-#### Frage 1: Wann int vs. float?
+#### Frage 1: Wann int vs. float
 
 - int: Ganze Zahlen (Alter, Anzahl)
 - float: Dezimalzahlen (Preis, Messwerte)
 
-#### Frage 2: Warum Type Hints?
+#### Frage 2: Warum Type Hints
 
 - Bessere Lesbarkeit
 - IDE-Unterstützung
 - Dokumentation
 - Aber: Nicht erzwungen!
 
-#### Frage 3: // vs. / ?
+#### Frage 3: // vs. / 
 
 - `/`: Normale Division (Ergebnis immer float)
 - `//`: Ganzzahlige Division (ohne Rest)
@@ -425,5 +456,5 @@ Einschränkungen:
 
 ---
 
-**Weiter zu:** [Lektion 2 - Kontrollstrukturen](./lektion-2-kontrollstrukturen.md)  
+**Weiter zu:** [Lektion 2 - Kontrollstrukturen](./lektion-2-kontrollstrukturen.md)
 **Zurück zu:** [Praxis README](./README.md)

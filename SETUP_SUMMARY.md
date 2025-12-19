@@ -36,16 +36,10 @@ Das Projekt ist jetzt vollständig für GitHub Codespaces konfiguriert als **Bac
 
 #### `modul-1-mindset-setup/00-vorbereitung/codespaces-setup.md`
 
-- Detaillierte Anleitung für Codespaces
-- GitHub Student Pack Aktivierung
-- Kostenlose Limits erklärt
-- Troubleshooting
-
-#### `modul-1-mindset-setup/00-vorbereitung/CODESPACES_QUICK_START.md`
-
-- 5-Minuten Quick Start
-- Schritt-für-Schritt Anleitung
-- Häufige Probleme & Lösungen
+- Vollständige Anleitung für Codespaces
+- Kostenlose Limits mit GitHub Free Account (ohne .edu E-Mail)
+- Schnellstart + detaillierte Schritte
+- Stunden-Management & Troubleshooting
 
 #### `modul-1-mindset-setup/00-vorbereitung/README.md` (aktualisiert)
 

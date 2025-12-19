@@ -2,11 +2,11 @@
 
 Einführung in die Versionskontrolle mit Git.
 
-## 🎯 Was ist Git?
+## 🎯 Was ist Git
 
 Git ist ein **Versionskontrollsystem**, das Änderungen an Dateien über die Zeit hinweg speichert.
 
-### Warum Git?
+### Warum Git
 
 - ✅ **Sicherheit:** Keine Angst, Code zu verlieren
 - ✅ **Historie:** Alle Änderungen nachvollziehbar
@@ -73,18 +73,24 @@ feature:      E → F
 ### Schritt 1: Repository initialisieren
 
 ```bash
+
 # Neues Repository erstellen
+
 git init
 
 # Oder: Bestehendes klonen
+
 git clone <url>
 ```
 
 ### Schritt 2: Änderungen machen
 
 ```bash
+
 # Dateien erstellen/ändern
-# ... in VS Code arbeiten ...
+
+# ... in VS Code arbeiten 
+
 ```
 
 ### Schritt 3: Status prüfen
@@ -92,19 +98,26 @@ git clone <url>
 ```bash
 git status
 
-# Zeigt:
+# Zeigt
+
 # - Geänderte Dateien
+
 # - Neue Dateien
+
 # - Gelöschte Dateien
+
 ```
 
 ### Schritt 4: Dateien zum Staging hinzufügen
 
 ```bash
+
 # Einzelne Datei
+
 git add dateiname.py
 
 # Alle Dateien
+
 git add .
 ```
 
@@ -118,7 +131,9 @@ git commit -m "Beschreibung der Änderung"
 
 ```bash
 git log
-# Oder kompakt:
+
+# Oder kompakt
+
 git log --oneline
 ```
 
@@ -127,13 +142,17 @@ git log --oneline
 ### Repository-Befehle
 
 ```bash
+
 # Repository initialisieren
+
 git init
 
 # Status anzeigen
+
 git status
 
 # Konfiguration
+
 git config --global user.name "Ihr Name"
 git config --global user.email "ihre.email@example.com"
 ```
@@ -141,49 +160,60 @@ git config --global user.email "ihre.email@example.com"
 ### Änderungen verwalten
 
 ```bash
+
 # Dateien hinzufügen
+
 git add dateiname.py
 git add .
 
 # Commit erstellen
+
 git commit -m "Nachricht"
 
 # Änderungen anzeigen
+
 git diff
 ```
 
 ### Historie
 
 ```bash
+
 # Commits anzeigen
+
 git log
 git log --oneline
 git log --graph
 
 # Bestimmten Commit anzeigen
+
 git show <commit-id>
 ```
 
 ### Änderungen rückgängig machen
 
 ```bash
+
 # Datei aus Staging entfernen
+
 git reset dateiname.py
 
 # Änderungen an Datei verwerfen
+
 git checkout -- dateiname.py
 
 # Letzten Commit rückgängig
+
 git reset --soft HEAD~1
 ```
 
 ## 🎯 .gitignore
 
-### Was ist .gitignore?
+### Was ist .gitignore
 
 Eine Datei, die Git sagt, welche Dateien ignoriert werden sollen.
 
-### Warum wichtig?
+### Warum wichtig
 
 - Temporäre Dateien nicht committen
 - Secrets nicht hochladen
@@ -193,7 +223,9 @@ Eine Datei, die Git sagt, welche Dateien ignoriert werden sollen.
 ### Beispiel .gitignore für Python
 
 ```gitignore
+
 # Python
+
 __pycache__/
 *.py[cod]
 *.so
@@ -202,30 +234,37 @@ venv/
 env/
 
 # IDE
+
 .vscode/
 .idea/
 
 # OS
+
 .DS_Store
 Thumbs.db
 
 # Secrets
+
 .env
 *.key
 config.ini
-```
+```text
 
 ### .gitignore erstellen
 
 ```bash
+
 # Datei erstellen
+
 touch .gitignore
 
 # Inhalt hinzufügen
+
 echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
 
 # Committen
+
 git add .gitignore
 git commit -m "chore: gitignore hinzugefügt"
 ```
@@ -270,7 +309,7 @@ git commit -m "Fix"                 # ❌ Was wurde gefixt?
 - `test:` - Tests
 - `chore:` - Wartungsarbeiten
 
-### Wann committen?
+### Wann committen
 
 #### Gute Zeitpunkte
 
@@ -289,7 +328,7 @@ git commit -m "Fix"                 # ❌ Was wurde gefixt?
 
 ```text
 ❌ Zu gross:
-"feat: Komplette Anwendung mit Login, Dashboard, 
+"feat: Komplette Anwendung mit Login, Dashboard,
 Datenbank, API und Frontend"
 
 ✅ Richtig:
@@ -318,10 +357,13 @@ git config --global user.email "ihre.email@example.com"
 **Lösung:**
 
 ```bash
+
 # Prüfen Sie den Ordner
+
 pwd
 
 # Git initialisieren
+
 git init
 ```
 
@@ -332,13 +374,17 @@ git init
 **Lösung:**
 
 ```bash
+
 # Letzten Commit rückgängig (Änderungen behalten)
+
 git reset --soft HEAD~1
 
 # Änderungen korrigieren
-# ...
+
+# 
 
 # Neu committen
+
 git commit -m "Korrigierte Nachricht"
 ```
 
@@ -349,10 +395,13 @@ git commit -m "Korrigierte Nachricht"
 **Lösung:**
 
 ```bash
+
 # Aus Staging entfernen
+
 git reset dateiname.py
 
 # Oder alle Dateien
+
 git reset
 ```
 
@@ -361,61 +410,79 @@ git reset
 ### Übung 1: Erstes Repository
 
 ```bash
+
 # 1. Ordner erstellen
+
 mkdir git-uebung
 cd git-uebung
 
 # 2. Git initialisieren
+
 git init
 
 # 3. Datei erstellen
+
 echo "# Mein erstes Repo" > README.md
 
 # 4. Status prüfen
+
 git status
 
 # 5. Datei hinzufügen
+
 git add README.md
 
 # 6. Commit erstellen
+
 git commit -m "docs: Initial README"
 
 # 7. Historie anzeigen
+
 git log
 ```
 
 ### Übung 2: Mehrere Commits
 
 ```bash
+
 # 1. Neue Datei erstellen
+
 echo "print('Hello')" > hello.py
 
 # 2. Committen
+
 git add hello.py
 git commit -m "feat: Hello-Programm"
 
 # 3. Datei ändern
+
 echo "print('World')" >> hello.py
 
 # 4. Committen
+
 git add hello.py
 git commit -m "feat: World hinzugefügt"
 
 # 5. Historie anzeigen
+
 git log --oneline
 ```
 
 ### Übung 3: .gitignore
 
 ```bash
+
 # 1. .gitignore erstellen
+
 echo "__pycache__/" > .gitignore
 
 # 2. Committen
+
 git add .gitignore
 git commit -m "chore: gitignore hinzugefügt"
 
 # 3. Prüfen
+
 git status
 ```
 

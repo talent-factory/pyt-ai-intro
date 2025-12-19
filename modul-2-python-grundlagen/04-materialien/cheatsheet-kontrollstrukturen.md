@@ -8,27 +8,39 @@ Schnellreferenz für if/elif/else und Schleifen.
 
 ```python
 if bedingung:
+
     # Code wenn True
+
 ```
 
 ### if-else
 
 ```python
 if bedingung:
+
     # Code wenn True
+
 else:
+
     # Code wenn False
+
 ```
 
 ### if-elif-else
 
 ```python
 if bedingung1:
+
     # Code wenn bedingung1 True
+
 elif bedingung2:
+
     # Code wenn bedingung2 True
+
 else:
+
     # Code wenn alle False
+
 ```
 
 ### Ternärer Operator
@@ -82,7 +94,9 @@ for key, value in dict.items():
 
 ```python
 while bedingung:
+
     # Code
+
 ```
 
 ### Mit Zähler

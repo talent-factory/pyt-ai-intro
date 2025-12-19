@@ -6,7 +6,7 @@
 
 ### [Lektion 1: Variablen, Datentypen & Operatoren](./lektion-1-variablen-datentypen.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Variablen und Naming Conventions
@@ -23,7 +23,7 @@
 
 ### [Lektion 2: Kontrollstrukturen](./lektion-2-kontrollstrukturen.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - if/elif/else Bedingungen
@@ -41,7 +41,7 @@
 
 ### [Lektion 3: Datenstrukturen - Listen & Dictionaries](./lektion-3-listen-dictionaries.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Listen: Erstellung, Indexierung, Slicing
@@ -58,7 +58,7 @@
 
 ### [Lektion 4: Funktionen & Module](./lektion-4-funktionen-module.md)
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Themen:**
 
 - Funktionen definieren

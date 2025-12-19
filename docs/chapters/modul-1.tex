@@ -1,0 +1,628 @@
+% modul-1.tex - Modul 1: Programmier-Mindset & KI-Tools Setup
+
+\startcomponent modul-1
+
+\chapter{Programmier-Mindset \& KI-Tools Setup}
+
+{\tfx\it Dauer: 1 Tag (4 Lektionen à 50 Minuten) · Voraussetzung: Keine}
+
+\blank[big]
+
+\startlernziele
+{\bf Lernziele}
+
+Nach diesem Modul können Sie:
+\startitemize[n,packed]
+    \item Erklären, was Programmieren im Kern bedeutet und wie sich KI-gestütztes Programmieren unterscheidet
+    \item Eine vollständige Entwicklungsumgebung (Python, Git, VS Code, uv) eigenständig installieren
+    \item KI-Assistenten (GitHub Copilot, ChatGPT, Claude) effektiv für einfache Programmieraufgaben nutzen
+    \item Die Qualität von KI-generiertem Code auf grundlegende Fehler überprüfen
+    \item Mit Hilfe von Prompts einfache Python-Programme generieren lassen
+    \item Beurteilen, wann der Einsatz von KI-Tools sinnvoll ist
+    \item Den typischen Workflow moderner Softwareentwicklung mit Git beschreiben
+    \item Effektive Prompts für KI-Coding-Assistenten formulieren und iterativ verbessern
+\stopitemize
+\stoplernziele
+
+% =============================================================================
+% VORBEREITUNG
+% =============================================================================
+
+\section{Vorbereitung}
+
+{\it Zeitaufwand: 2--3 Stunden · Deadline: Vor der ersten Präsenzveranstaltung}
+
+\blank[medium]
+
+Bevor wir mit dem Präsenzunterricht starten, bereiten Sie bitte Ihre Entwicklungsumgebung vor und machen sich mit den Grundkonzepten vertraut.
+
+\subsection{Entwicklungsumgebung wählen}
+
+Wählen Sie {\bf EINE} der folgenden Optionen:
+
+\subsubsection{Option A: GitHub Codespaces (empfohlen)}
+
+\startitemize[packed]
+    \item Keine Installation nötig -- läuft im Browser
+    \item GitHub Student Developer Pack aktivieren
+    \item Zeitaufwand: ca. 15 Minuten
+    \item Voraussetzung: .edu E-Mail-Adresse
+    \item Kosten: Kostenlos (60 Stunden/Monat)
+\stopitemize
+
+\subsubsection{Option B: Lokale Installation}
+
+\startitemize[packed]
+    \item Python installiert und getestet
+    \item Git installiert und konfiguriert
+    \item VS Code installiert und eingerichtet
+    \item uv installiert
+    \item GitHub Copilot oder Alternative eingerichtet
+    \item Zeitaufwand: ca. 90 Minuten
+    \item Voraussetzung: Admin-Rechte auf Ihrem Computer
+\stopitemize
+
+\startinfobox
+{\bf Tipp: Hybrid-Ansatz}
+
+Nutzen Sie beide Optionen! Codespaces für Kursmaterialien und Übungen, lokal für grössere Projekte und Experimente. So sparen Sie Codespaces-Stunden und haben maximale Flexibilität.
+\stopinfobox
+
+\subsection{Installationsanleitung}
+
+{\it Zeitaufwand: ca. 90 Minuten}
+
+\subsubsection{1. Python installieren}
+
+{\bf Windows:}
+\startitemize[packed]
+    \item Besuchen Sie python.org/downloads
+    \item Laden Sie Python 3.11 oder höher herunter
+    \item {\bf WICHTIG:} Aktivieren Sie "Add Python to PATH" während der Installation
+\stopitemize
+
+{\bf macOS (mit Homebrew):}
+\startbashcode
+# Homebrew installieren (falls noch nicht vorhanden)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Python installieren
+brew install python@3.11
+\stopbashcode
+
+{\bf Linux (Ubuntu/Debian):}
+\startbashcode
+sudo apt update
+sudo apt install python3.11 python3.11-venv python3-pip
+\stopbashcode
+
+{\bf Testen:}
+\startbashcode
+python --version   # oder python3 --version
+# Sollte ausgeben: Python 3.11.x oder höher
+\stopbashcode
+
+\subsubsection{2. Git installieren}
+
+{\bf Windows:} Laden Sie den Installer von git-scm.com herunter.
+
+{\bf macOS:}
+\startbashcode
+brew install git
+# ODER: Xcode Command Line Tools
+xcode-select --install
+\stopbashcode
+
+{\bf Linux:}
+\startbashcode
+sudo apt install git
+\stopbashcode
+
+{\bf Git konfigurieren (alle Systeme):}
+\startbashcode
+git config --global user.name "Ihr Name"
+git config --global user.email "ihre.email@example.com"
+\stopbashcode
+
+\subsubsection{3. VS Code installieren}
+
+\startitemize[n,packed]
+    \item Besuchen Sie code.visualstudio.com
+    \item Laden Sie die Version für Ihr Betriebssystem herunter
+    \item Installieren Sie VS Code
+\stopitemize
+
+{\bf Empfohlene Extensions:}
+\startitemize[packed]
+    \item {\bf Python} (Microsoft) -- Extension ID: \code{ms-python.python}
+    \item {\bf GitHub Copilot} -- Extension ID: \code{GitHub.copilot}
+    \item {\bf GitLens} (optional) -- Extension ID: \code{eamodio.gitlens}
+\stopitemize
+
+\subsubsection{4. uv installieren}
+
+{\bf uv} ist ein modernes, schnelles Tool für Python-Paketverwaltung.
+
+{\bf Windows (PowerShell):}
+\startbashcode
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+\stopbashcode
+
+{\bf macOS/Linux:}
+\startbashcode
+curl -LsSf https://astral.sh/uv/install.sh | sh
+\stopbashcode
+
+\subsubsection{5. KI-Assistent einrichten}
+
+{\bf Option A: GitHub Copilot (empfohlen)}
+\startitemize[packed]
+    \item GitHub-Account erstellen (falls noch nicht vorhanden)
+    \item Studenten: Kostenloser Zugang über education.github.com/pack
+    \item In VS Code anmelden (GitHub-Symbol unten links)
+\stopitemize
+
+{\bf Option B: Alternative KI-Tools}
+\startitemize[packed]
+    \item {\bf ChatGPT:} Kostenloser Account auf chat.openai.com
+    \item {\bf Claude:} Kostenloser Account auf claude.ai
+\stopitemize
+
+\subsection{Erste Schritte mit KI}
+
+{\it Zeitaufwand: 30 Minuten}
+
+Nutzen Sie ChatGPT oder Claude, um Ihre ersten Python-Programme zu erstellen.
+
+\subsubsection{Schritt 1: "Hello World" generieren}
+
+{\bf Ihr Prompt:}
+\startbashcode
+Erstelle ein einfaches "Hello World" Programm in Python.
+\stopbashcode
+
+Kopieren Sie den generierten Code und speichern Sie ihn als \code{hello.py}. Führen Sie ihn aus mit: \code{python hello.py}
+
+\subsubsection{Schritt 2: Variante mit Benutzereingabe}
+
+{\bf Ihr Prompt:}
+\startbashcode
+Erstelle eine Variante, die den Benutzer nach seinem Namen fragt
+und dann "Hello, [Name]!" ausgibt.
+\stopbashcode
+
+{\bf Erwartetes Ergebnis:}
+\startpythoncode
+name = input("Wie ist dein Name? ")
+print(f"Hello, {name}!")
+\stoppythoncode
+
+\subsubsection{Reflexion}
+
+Beantworten Sie folgende Fragen:
+\startitemize[packed]
+    \item Wie genau waren die KI-Antworten? Hat der Code auf Anhieb funktioniert?
+    \item Wie hilfreich waren die Erklärungen?
+    \item Wie würden Sie die Prompts verbessern?
+\stopitemize
+
+\subsection{Leseauftrag}
+
+{\it Zeitaufwand: 45 Minuten}
+
+\subsubsection{Materialien}
+
+\startitemize[n,packed]
+    \item {\bf Artikel:} "What is Programming?" (15 Min.) -- freeCodeCamp oder KI-Erklärung
+    \item {\bf Video:} "How AI is Changing Programming" (15 Min.) -- YouTube-Suche
+    \item {\bf Blog-Post:} "Effective Prompting for Code Generation" (15 Min.) -- OpenAI Prompt Engineering Guide
+\stopitemize
+
+\subsubsection{Reflexionsfragen}
+
+\startitemize[n,packed]
+    \item Was überrascht Sie am meisten an der modernen Programmierung?
+    \item Welche Bedenken haben Sie bezüglich KI-gestütztem Programmieren?
+    \item Was erwarten Sie von diesem Kurs zu lernen?
+    \item Warum möchten Sie programmieren lernen?
+\stopitemize
+
+% =============================================================================
+% PRAXIS
+% =============================================================================
+
+\section{Praxis}
+
+{\it Präsenzunterricht: 4 Lektionen à 50 Minuten}
+
+\subsection{Lektion 1: Einführung und Mindset}
+
+{\it Dauer: 50 Minuten}
+
+\startinfobox
+{\bf Kernbotschaft}
+
+Programmieren ist Problemlösung, nicht Syntax-Memorierung!
+\stopinfobox
+
+\subsubsection{Die 4 Säulen des Programmierens}
+
+{\bf 1. Problemdekomposition}
+
+Grosse Probleme in kleinere, lösbare Teilprobleme zerlegen.
+
+{\it Beispiel: "Kaffee kochen"}
+\startitemize[n,packed]
+    \item Wasser holen
+    \item Wasser in Maschine füllen
+    \item Kaffeepulver einfüllen
+    \item Maschine einschalten
+    \item Warten
+    \item Kaffee einschenken
+\stopitemize
+
+{\bf 2. Algorithmisches Denken}
+
+Schritt-für-Schritt-Anweisungen erstellen -- klare, eindeutige Abfolge, wiederholbare Prozesse.
+
+{\bf 3. Abstraktion}
+
+Unwichtige Details weglassen, auf das Wesentliche fokussieren.
+
+{\it Beispiel: "Auto fahren"} -- Sie müssen nicht wissen, wie der Motor funktioniert. Sie müssen nur wissen: Gas, Bremse, Lenkrad.
+
+{\bf 4. Musterkennung}
+
+Ähnliche Probleme erkennen, bekannte Lösungen wiederverwenden.
+
+\subsubsection{Die Rolle von KI}
+
+{\bf KI als Werkzeug:}
+\startitemize[packed]
+    \item Generiert Code basierend auf Beschreibungen
+    \item Erklärt komplexen Code
+    \item Schlägt Verbesserungen vor
+    \item Hilft beim Debugging
+\stopitemize
+
+{\bf Was KI NICHT ersetzt:}
+\startitemize[packed]
+    \item Problemverständnis
+    \item Kreative Lösungsansätze
+    \item Entscheidungen treffen
+    \item Code-Qualität bewerten
+\stopitemize
+
+\subsection{Lektion 2: Setup-Vertiefung und Git Basics}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{VS Code Grundlagen}
+
+{\bf Die wichtigsten Bereiche:}
+\startitemize[packed]
+    \item {\bf Explorer} (links): Dateien und Ordner
+    \item {\bf Editor} (Mitte): Code schreiben
+    \item {\bf Terminal} (unten): Befehle ausführen
+    \item {\bf Extensions} (links): Erweiterungen installieren
+\stopitemize
+
+{\bf Wichtige Shortcuts:}
+
+\starttabulate[|l|l|l|]
+\HL
+\NC {\bf Aktion} \NC {\bf Windows/Linux} \NC {\bf macOS} \NC\NR
+\HL
+\NC Command Palette \NC Ctrl+Shift+P \NC Cmd+Shift+P \NC\NR
+\NC Terminal öffnen \NC Ctrl+ö \NC Ctrl+ö \NC\NR
+\NC Datei suchen \NC Ctrl+P \NC Cmd+P \NC\NR
+\NC Speichern \NC Ctrl+S \NC Cmd+S \NC\NR
+\HL
+\stoptabulate
+
+\subsubsection{Git-Grundlagen}
+
+{\bf Was ist Git?}
+
+Versionskontrolle -- speichert Änderungen an Dateien über Zeit, ermöglicht Zusammenarbeit, macht Änderungen rückgängig.
+
+{\bf Grundlegende Git-Befehle:}
+
+\startbashcode
+git init                    # Neues Repository erstellen
+git status                  # Status prüfen
+git add dateiname.py        # Datei zum Staging hinzufügen
+git add .                   # Alle Dateien hinzufügen
+git commit -m "Nachricht"   # Commit erstellen
+git log --oneline           # Historie anzeigen
+\stopbashcode
+
+{\bf Der typische Workflow:}
+\startbashcode
+# 1. Dateien ändern
+# 2. Status prüfen
+git status
+# 3. Dateien zum Staging hinzufügen
+git add .
+# 4. Commit erstellen
+git commit -m "feat: Neue Funktion hinzugefügt"
+# 5. Wiederholen
+\stopbashcode
+
+\subsection{Lektion 3: Effektives Prompting}
+
+{\it Dauer: 50 Minuten}
+
+\startinfobox
+{\bf Kernbotschaft}
+
+Ein guter Prompt ist der Schlüssel zu gutem Code!
+\stopinfobox
+
+\subsubsection{Die 5 Elemente eines guten Prompts}
+
+{\bf 1. Klarheit} -- Eindeutige, präzise Formulierung
+\startitemize[packed]
+    \item Schlecht: "Sortiere die Liste"
+    \item Gut: "Sortiere die Liste von Zahlen aufsteigend"
+\stopitemize
+
+{\bf 2. Kontext} -- Hintergrundinformationen bereitstellen
+\startitemize[packed]
+    \item Schlecht: "Erstelle eine Funktion zum Validieren"
+    \item Gut: "Erstelle eine Python-Funktion, die eine E-Mail-Adresse validiert..."
+\stopitemize
+
+{\bf 3. Spezifität} -- Genaue Anforderungen, erwartete Ein-/Ausgaben
+
+{\bf 4. Beispiele} -- Konkrete Beispiele für Ein- und Ausgaben
+
+{\bf 5. Einschränkungen} -- Was NICHT gemacht werden soll
+
+\subsubsection{Prompt-Template}
+
+\startbashcode
+[Aufgabe]: Was soll gemacht werden?
+[Kontext]: Warum? Wofür?
+[Anforderungen]: Spezifische Details
+[Beispiel]: Ein- und Ausgabe
+[Einschränkungen]: Was zu beachten ist
+\stopbashcode
+
+\subsubsection{Häufige Fehler}
+
+\startitemize[packed]
+    \item {\bf Zu vage:} "Schreib mir was mit Daten"
+    \item {\bf Zu komplex:} Alles auf einmal wollen -- zerlegen Sie grosse Aufgaben!
+    \item {\bf Fehlender Kontext:} "Wie sortiere ich das?" (Was? Welche Sprache?)
+    \item {\bf Keine Beispiele:} "Formatiere den String" (Wie genau?)
+\stopitemize
+
+\subsection{Lektion 4: Von der Idee zur App}
+
+{\it Dauer: 50 Minuten}
+
+\subsubsection{Der Entwicklungsworkflow}
+
+\startitemize[n,packed]
+    \item Problem verstehen
+    \item In Teilprobleme zerlegen
+    \item Für jedes Teilproblem: Prompt → Code → Verstehen → Testen → Anpassen
+    \item Teillösungen zusammenführen
+    \item Gesamtes Programm testen
+    \item Code committen (Git)
+\stopitemize
+
+\subsubsection{Code-Review: Was prüfen?}
+
+{\bf 1. Funktionalität} -- Macht der Code, was er soll?
+
+{\bf 2. Lesbarkeit} -- Sind Variablennamen aussagekräftig?
+\startpythoncode
+# Schlecht
+def f(x, y):
+    return x * y * 0.19
+
+# Gut
+def calculate_tax(price, quantity):
+    tax_rate = 0.19
+    return price * quantity * tax_rate
+\stoppythoncode
+
+{\bf 3. Fehlerbehandlung} -- Werden Fehler abgefangen?
+\startpythoncode
+# Ohne Fehlerbehandlung
+age = int(input("Alter: "))  # Crash bei "abc"
+
+# Mit Fehlerbehandlung
+try:
+    age = int(input("Alter: "))
+except ValueError:
+    print("Bitte eine Zahl eingeben!")
+    age = 0
+\stoppythoncode
+
+\subsubsection{Debugging-Strategien}
+
+\startitemize[n,packed]
+    \item {\bf Print-Debugging:} Werte an kritischen Stellen ausgeben
+    \item {\bf Fehler lesen:} Fehlermeldungen verstehen lernen
+    \item {\bf Schrittweise testen:} Kleine Teile einzeln prüfen
+    \item {\bf KI um Hilfe fragen:} Code + Fehlermeldung an KI senden
+\stopitemize
+
+% =============================================================================
+% ÜBUNGEN
+% =============================================================================
+
+\section{Übungen}
+
+\startaufgabenbox
+{\bf Übung 1: Einkaufsliste durchdenken} {\it (15 Min.)}
+
+Zerlegen Sie das Problem "Einkaufsliste verwalten" in Teilprobleme:
+\startitemize[packed]
+    \item Welche Daten müssen gespeichert werden?
+    \item Wie funktioniert "Artikel hinzufügen"?
+    \item Was passiert beim "Artikel entfernen", wenn der Artikel nicht existiert?
+    \item In welcher Reihenfolge werden Artikel angezeigt?
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 2: Git-Repository erstellen} {\it (20 Min.)}
+
+\startitemize[n,packed]
+    \item Projekt-Ordner erstellen: \code{mkdir mein-python-projekt}
+    \item Git initialisieren: \code{git init}
+    \item README.md mit KI erstellen
+    \item .gitignore für Python erstellen
+    \item Ersten Commit machen: \code{git commit -m "docs: Initiales Setup"}
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 3: Prompting-Challenge} {\it (20 Min.)}
+
+Formulieren Sie vollständige Prompts für:
+\startitemize[n,packed]
+    \item {\bf Einkaufsliste:} Artikel hinzufügen, entfernen, anzeigen
+    \item {\bf Temperatur-Umrechner:} Celsius ↔ Fahrenheit
+    \item {\bf Wort-Zähler:} Wörter, Zeichen, längstes Wort
+\stopitemize
+\stopaufgabenbox
+
+\blank[medium]
+
+\startaufgabenbox
+{\bf Übung 4: Einfacher Taschenrechner} {\it (25 Min.)}
+
+Erstellen Sie einen Taschenrechner mit:
+\startitemize[packed]
+    \item Grundrechenarten (+, -, *, /)
+    \item Benutzereingabe für zwei Zahlen
+    \item Division durch Null abfangen
+    \item Beenden mit 'quit'
+\stopitemize
+
+{\bf Testfälle:} 5+3=8, 10/0→Fehler, "abc"→Fehler
+\stopaufgabenbox
+
+% =============================================================================
+% NACHBEARBEITUNG
+% =============================================================================
+
+\section{Nachbearbeitung}
+
+{\it Hausaufgaben vor Modul 2}
+
+\subsection{Aufgabe 1: Prompt-Portfolio}
+
+Sammeln Sie 10 effektive Prompts:
+\startitemize[packed]
+    \item Dokumentieren Sie, was funktioniert hat
+    \item Notieren Sie Verbesserungen
+    \item Kategorisieren Sie nach Aufgabentyp
+\stopitemize
+
+\subsection{Aufgabe 2: Persönliches Projekt-Setup}
+
+Erstellen Sie ein Git-Repository für Ihr Lernprojekt:
+\startitemize[packed]
+    \item README.md mit Projektbeschreibung
+    \item .gitignore für Python
+    \item Erste Python-Datei mit "Hello World"
+    \item Mindestens 3 Commits
+\stopitemize
+
+\subsection{Aufgabe 3: Code-Review-Übung}
+
+Überprüfen Sie KI-generierten Code auf:
+\startitemize[packed]
+    \item Funktionalität (funktioniert er?)
+    \item Lesbarkeit (verständlich?)
+    \item Fehlerbehandlung (was kann schiefgehen?)
+\stopitemize
+
+\subsection{Reflexion}
+
+Beantworten Sie schriftlich:
+\startitemize[n,packed]
+    \item Was war die wichtigste Erkenntnis aus Modul 1?
+    \item Was hat gut funktioniert beim Arbeiten mit KI?
+    \item Welche Herausforderungen sind aufgetreten?
+    \item Was möchten Sie in Modul 2 vertiefen?
+\stopitemize
+
+% =============================================================================
+% MATERIALIEN
+% =============================================================================
+
+\section{Materialien}
+
+\subsection{Handout: Programmier-Mindset}
+
+Die 4 Säulen des Programmierens:
+\startitemize[n,packed]
+    \item {\bf Problemdekomposition} -- Grosse Probleme zerlegen
+    \item {\bf Algorithmisches Denken} -- Schritt-für-Schritt-Anweisungen
+    \item {\bf Abstraktion} -- Auf das Wesentliche fokussieren
+    \item {\bf Musterkennung} -- Bekannte Lösungen wiederverwenden
+\stopitemize
+
+\subsection{Git Cheatsheet}
+
+\starttabulate[|l|p(8cm)|]
+\HL
+\NC {\bf Befehl} \NC {\bf Beschreibung} \NC\NR
+\HL
+\NC \code{git init} \NC Neues Repository erstellen \NC\NR
+\NC \code{git status} \NC Änderungen anzeigen \NC\NR
+\NC \code{git add .} \NC Alle Änderungen stagen \NC\NR
+\NC \code{git commit -m "..."} \NC Commit mit Nachricht \NC\NR
+\NC \code{git log --oneline} \NC Kompakte Historie \NC\NR
+\NC \code{git diff} \NC Änderungen anzeigen \NC\NR
+\HL
+\stoptabulate
+
+\subsection{Prompt Engineering Cheatsheet}
+
+{\bf Template:}
+\startbashcode
+Erstelle [Was] in [Sprache/Framework].
+
+Kontext: [Warum/Wofür]
+
+Anforderungen:
+- [Anforderung 1]
+- [Anforderung 2]
+
+Beispiel:
+Eingabe: [Beispiel]
+Ausgabe: [Beispiel]
+
+Einschränkungen:
+- [Was zu beachten ist]
+\stopbashcode
+
+\blank[big]
+
+\starttippbox
+{\bf Erfolgskriterien für Modul 1}
+
+Sie haben das Modul erfolgreich abgeschlossen, wenn Sie:
+\startitemize[packed]
+    \item Eine funktionierende Entwicklungsumgebung haben
+    \item Einfache Programme mit KI-Unterstützung erstellen können
+    \item Den Entwicklungsworkflow mit Git verstehen
+    \item Effektive Prompts für Code-Generierung formulieren können
+    \item KI-generierten Code auf Qualität überprüfen können
+\stopitemize
+\stoptippbox
+
+\stopcomponent
+

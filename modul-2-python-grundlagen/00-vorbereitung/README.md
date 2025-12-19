@@ -1,6 +1,6 @@
 # Vorbereitung - Modul 2
 
-**Zeitaufwand:** 2-3 Stunden  
+**Zeitaufwand:** 2-3 Stunden
 **Deadline:** Vor Beginn von Modul 2
 
 ## 🎯 Ziel

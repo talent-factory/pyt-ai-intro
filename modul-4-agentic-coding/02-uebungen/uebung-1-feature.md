@@ -26,6 +26,7 @@ Erstellen Sie einen Email-Validator mit:
 Du bist ein Senior Python-Entwickler mit Fokus auf Input-Validierung.
 
 Kontext:
+
 - Web-Anwendung für Benutzerregistrierung
 - Python 3.11, keine externen Libraries ausser re
 - Muss robust und performant sein
@@ -50,6 +51,7 @@ Erstelle eine EmailValidator-Klasse mit:
    - Gibt Statistik zurück
 
 Constraints:
+
 - Type Hints für alle Funktionen
 - Docstrings im Google-Style
 - Unit Tests mit pytest
@@ -57,20 +59,27 @@ Constraints:
 
 Beispiel:
 ```python
+
 validator = EmailValidator()
 is_valid, errors = validator.validate("test@gmial.com")
+
 # is_valid = True (Format OK)
+
 # errors = []
 
 suggestion = validator.suggest_correction("test@gmial.com")
+
 # suggestion = "test@gmail.com"
+
 ```
 
 Format:
+
 1. Klassen-Definition
 2. Unit Tests
 3. Verwendungsbeispiel
-```
+
+```text
 
 #### Erwartetes Ergebnis
 
@@ -93,12 +102,13 @@ Parser der URLs in Komponenten zerlegt:
 
 #### Prompt-Vorlage
 
-```text
+```
 Du bist ein erfahrener Python-Entwickler für Web-Technologien.
 
 Erstelle eine URLParser-Klasse die URLs in Komponenten zerlegt.
 
 Anforderungen:
+
 1. parse(url: str) -> URLComponents
    - Zerlegt URL in Komponenten
    - Gibt Dataclass zurück
@@ -114,21 +124,30 @@ Anforderungen:
 
 Beispiel:
 ```python
+
 parser = URLParser()
 components = parser.parse("https://example.com/path?key=value#section")
+
 # components.schema = "https"
+
 # components.domain = "example.com"
+
 # components.path = "/path"
+
 # components.query = {"key": "value"}
+
 # components.fragment = "section"
+
 ```
 
 Mit:
+
 - Type Hints
 - Docstrings
 - Unit Tests
 - Error Handling
-```
+
+```text
 
 ### Option C: JSON-Schema-Validator
 
@@ -144,10 +163,11 @@ Validator für JSON gegen Schema:
 
 #### Prompt-Vorlage
 
-```text
+```
 Erstelle einen JSON-Schema-Validator in Python.
 
 Features:
+
 1. Definiere Schema mit Types
 2. Validiere JSON gegen Schema
 3. Detaillierte Fehlerberichte
@@ -155,21 +175,25 @@ Features:
 
 Beispiel-Schema:
 ```python
+
 schema = {
     "name": {"type": "string", "required": True},
     "age": {"type": "int", "min": 0, "max": 150},
     "email": {"type": "string", "validator": "email"}
 }
+
 ```
 
 Beispiel-Verwendung:
 ```python
+
 validator = JSONValidator(schema)
 is_valid, errors = validator.validate(data)
+
 ```
 
 Mit vollständiger Implementierung und Tests.
-```
+```text
 
 ## 💡 Tipps
 

@@ -228,7 +228,7 @@ def demo_datums_operationen() -> None:
     heute = aktuelles_datum()
     jetzt = aktuelle_zeit()
 
-    print(f"\n📆 AKTUELLES DATUM & ZEIT")
+    print("\n📆 AKTUELLES DATUM & ZEIT")
     print("─" * 40)
     print(f"Datum:           {formatiere_datum(heute)}")
     print(f"ISO-Format:      {heute}")
@@ -240,7 +240,7 @@ def demo_datums_operationen() -> None:
     print(f"Ist Wochenende:  {'Ja' if ist_wochenende(heute) else 'Nein'}")
 
     # Datum-Berechnungen
-    print(f"\n📊 BERECHNUNGEN")
+    print("\n📊 BERECHNUNGEN")
     print("─" * 40)
 
     # Wichtige Daten
@@ -254,13 +254,13 @@ def demo_datums_operationen() -> None:
 
     # Wochentage
     wochentage = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
-    print(f"\nNächste Wochentage:")
+    print("\nNächste Wochentage:")
     for i, tag in enumerate(wochentage):
         naechster = naechster_wochentag(heute, i)
         print(f"  {tag:12} {formatiere_datum(naechster)}")
 
     # Datum-Arithmetik
-    print(f"\n📈 DATUM-ARITHMETIK")
+    print("\n📈 DATUM-ARITHMETIK")
     print("─" * 40)
     print(f"Heute:             {formatiere_datum(heute)}")
     print(f"Vor 7 Tagen:       {formatiere_datum(addiere_tage(heute, -7))}")
@@ -279,7 +279,7 @@ def demo_datums_operationen() -> None:
     print(f"\nArbeitstage im {heute.strftime('%B')}: {arbeitstage}")
 
     # Alter berechnen
-    print(f"\n🎂 ALTERSBERECHNUNG")
+    print("\n🎂 ALTERSBERECHNUNG")
     print("─" * 40)
     test_geburtstage = [
         date(1990, 5, 15),
@@ -292,7 +292,7 @@ def demo_datums_operationen() -> None:
         print(f"{formatiere_datum(geburtsdatum)} → {alter} Jahre")
 
     # Schaltjahre
-    print(f"\n📅 SCHALTJAHRE")
+    print("\n📅 SCHALTJAHRE")
     print("─" * 40)
     for jahr in range(heute.year - 2, heute.year + 3):
         symbol = "✓" if ist_schaltjahr(jahr) else "✗"

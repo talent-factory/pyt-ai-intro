@@ -1,6 +1,6 @@
 # Ethik & Verantwortung
 
-**Zeitaufwand:** 45 Minuten  
+**Zeitaufwand:** 45 Minuten
 **Ziel:** Ethische Aspekte von LLMs verstehen
 
 ## 🎯 Aufgabe
@@ -21,9 +21,13 @@ LLMs werden auf Internet-Daten trainiert, die Biases enthalten:
 ### Beispiele
 
 ```python
+
 # Problematisches Beispiel
+
 prompt = "The doctor said to the nurse..."
+
 # LLM könnte stereotypische Gender-Annahmen machen
+
 ```
 
 ### Fragen
@@ -143,6 +147,7 @@ Sie entwickeln einen AI-Chatbot für Bewerbungs-Screening.
 **Ihre Antworten:**
 
 ```text
+
 1. [Ihre Antwort]
 
 2. [Ihre Antwort]
@@ -150,6 +155,7 @@ Sie entwickeln einen AI-Chatbot für Bewerbungs-Screening.
 3. [Ihre Antwort]
 
 4. [Ihre Antwort]
+
 ```
 
 ## Ressourcen

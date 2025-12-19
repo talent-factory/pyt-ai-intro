@@ -1,6 +1,6 @@
 # Lektion 3: Effektives Prompting
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Ziel:** Lernen, wie man effektive Prompts für KI-Coding-Assistenten formuliert
 
 ## 📋 Ablauf
@@ -51,7 +51,7 @@ Nach dieser Lektion können die Studierenden:
 
 ## 📚 Teil 2: Prompt Engineering Grundlagen (15 Min.)
 
-### Was ist ein Prompt?
+### Was ist ein Prompt
 
 **Definition:**
 
@@ -61,7 +61,7 @@ Ein Prompt ist die Anweisung oder Frage, die Sie an eine KI stellen.
 
 ```text
 Schlechter Prompt: "Mach ein Programm"
-Guter Prompt: "Erstelle ein Python-Programm, das zwei Zahlen vom 
+Guter Prompt: "Erstelle ein Python-Programm, das zwei Zahlen vom
 Benutzer einliest und deren Summe berechnet und ausgibt."
 ```
 
@@ -94,8 +94,8 @@ Benutzer einliest und deren Summe berechnet und ausgibt."
 
 ```text
 ❌ Ohne Kontext: "Erstelle eine Funktion zum Validieren"
-✅ Mit Kontext: "Erstelle eine Python-Funktion, die eine E-Mail-Adresse 
-validiert. Die Funktion soll True zurückgeben, wenn die E-Mail gültig 
+✅ Mit Kontext: "Erstelle eine Python-Funktion, die eine E-Mail-Adresse
+validiert. Die Funktion soll True zurückgeben, wenn die E-Mail gültig
 ist (enthält @ und .), sonst False."
 ```
 
@@ -111,7 +111,7 @@ ist (enthält @ und .), sonst False."
 
 ```text
 ❌ Unspezifisch: "Lies eine Datei"
-✅ Spezifisch: "Lies eine CSV-Datei namens 'daten.csv' ein und gib 
+✅ Spezifisch: "Lies eine CSV-Datei namens 'daten.csv' ein und gib
 die erste Spalte als Liste zurück"
 ```
 
@@ -145,6 +145,7 @@ Ausgabe: "ollaH"
 
 ```text
 Erstelle ein Programm zur Passwort-Generierung.
+
 - Verwende KEINE externen Bibliotheken
 - Passwort soll 12 Zeichen lang sein
 - Muss Gross- und Kleinbuchstaben, Zahlen und Sonderzeichen enthalten
@@ -170,6 +171,7 @@ Erstelle ein Programm zur Passwort-Generierung.
 [Kontext]: Ich möchte die Durchschnittsnote meiner Prüfungen berechnen
 
 [Anforderungen]:
+
 - Funktion heisst calculate_average
 - Nimmt eine Liste von Zahlen als Parameter
 - Gibt den Durchschnitt als Float zurück
@@ -180,6 +182,7 @@ Eingabe: [5, 4, 6, 5]
 Ausgabe: 5.0
 
 [Einschränkungen]:
+
 - Keine externen Bibliotheken
 - Kommentare auf Deutsch
 ```
@@ -190,14 +193,14 @@ Ausgabe: 5.0
 
 ```text
 ❌ "Schreib mir was mit Daten"
-✅ "Erstelle ein Python-Programm, das eine CSV-Datei einliest und 
+✅ "Erstelle ein Python-Programm, das eine CSV-Datei einliest und
 die Anzahl der Zeilen ausgibt"
 ```
 
 #### Fehler 2: Zu komplex
 
 ```text
-❌ "Erstelle eine vollständige Webanwendung mit Login, Datenbank, 
+❌ "Erstelle eine vollständige Webanwendung mit Login, Datenbank,
 API, Frontend und Backend"
 ✅ "Erstelle eine einfache Flask-Route, die 'Hello World' zurückgibt"
 ```
@@ -208,7 +211,7 @@ Tipp: Grosse Aufgaben in kleine Schritte zerlegen!
 
 ```text
 ❌ "Wie sortiere ich das?"
-✅ "Wie sortiere ich eine Liste von Dictionaries in Python nach dem 
+✅ "Wie sortiere ich eine Liste von Dictionaries in Python nach dem
 Wert des Keys 'name'?"
 ```
 
@@ -377,7 +380,7 @@ Ihr Prompt sollte enthalten:
 **Der Prozess:**
 
 ```text
-Prompt schreiben → Code generieren → Testen → 
+Prompt schreiben → Code generieren → Testen →
 Probleme finden → Prompt verbessern → Wiederholen
 ```
 
@@ -398,6 +401,7 @@ Erstelle [Was] in [Sprache/Framework].
 Kontext: [Warum/Wofür]
 
 Anforderungen:
+
 - [Anforderung 1]
 - [Anforderung 2]
 - [Anforderung 3]
@@ -407,6 +411,7 @@ Eingabe: [Beispiel]
 Ausgabe: [Beispiel]
 
 Einschränkungen:
+
 - [Was zu beachten ist]
 ```
 
@@ -420,7 +425,7 @@ Einschränkungen:
 
 Mehr Details in der Nachbearbeitung!
 
-### Fragen?
+### Fragen
 
 ---
 
@@ -434,19 +439,19 @@ Mehr Details in der Nachbearbeitung!
 
 ### Häufige Fragen
 
-#### Frage 1: Wie lang sollte ein Prompt sein?
+#### Frage 1: Wie lang sollte ein Prompt sein
 
 - So lang wie nötig, so kurz wie möglich
 - Lieber zu viel Information als zu wenig
 - Bei komplexen Aufgaben: Schrittweise vorgehen
 
-#### Frage 2: Kann ich Prompts wiederverwenden?
+#### Frage 2: Kann ich Prompts wiederverwenden
 
 - Ja! Bauen Sie eine Bibliothek auf
 - Passen Sie sie an neue Situationen an
 - Teilen Sie gute Prompts mit anderen
 
-#### Frage 3: Was, wenn die KI nicht versteht?
+#### Frage 3: Was, wenn die KI nicht versteht
 
 - Prompt umformulieren
 - Mehr Kontext geben

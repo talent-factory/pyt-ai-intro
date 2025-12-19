@@ -16,18 +16,22 @@
 import json
 
 # String → Python
+
 json_string = '{"name": "Anna", "alter": 25}'
 daten = json.loads(json_string)
 
 # Python → String
+
 daten = {"name": "Anna", "alter": 25}
 json_string = json.dumps(daten, indent=2)
 
 # Datei lesen
+
 with open("config.json", "r") as f:
     config = json.load(f)
 
 # Datei schreiben
+
 with open("output.json", "w") as f:
     json.dump(daten, f, indent=2)
 ```
@@ -38,11 +42,13 @@ with open("output.json", "w") as f:
 import requests
 
 # GET Request
+
 response = requests.get("https://api.example.com/data")
 if response.status_code == 200:
     daten = response.json()
 
 # POST Request
+
 daten = {"name": "Anna"}
 response = requests.post("https://api.example.com/users", json=daten)
 ```
@@ -64,19 +70,21 @@ def hole_wetter(stadt: str) -> dict:
         "appid": "YOUR_API_KEY",
         "units": "metric"
     }
-    
+
     response = requests.get(url, params=params)
-    
+
     if response.status_code == 200:
         return response.json()
     else:
         raise Exception(f"Fehler: {response.status_code}")
 
 # Verwenden
+
 wetter = hole_wetter("Zürich")
 print(f"Temperatur: {wetter['main']['temp']}°C")
 
 # Speichern
+
 with open("wetter.json", "w") as f:
     json.dump(wetter, f, indent=2)
 ```

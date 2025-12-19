@@ -8,7 +8,9 @@ Umfassender Guide für Exception Handling in Python.
 
 ```python
 try:
+
     # Code der Fehler werfen könnte
+
     datei = open('daten.txt', 'r')
     inhalt = datei.read()
 except FileNotFoundError:
@@ -16,7 +18,9 @@ except FileNotFoundError:
 except IOError as e:
     print(f"IO-Fehler: {e}")
 finally:
+
     # Wird immer ausgeführt
+
     if 'datei' in locals():
         datei.close()
 ```
@@ -29,7 +33,9 @@ try:
         inhalt = datei.read()
 except FileNotFoundError:
     print("Datei nicht gefunden")
+
 # Datei wird automatisch geschlossen
+
 ```
 
 ## Häufige Exceptions
@@ -42,7 +48,9 @@ try:
         data = f.read()
 except FileNotFoundError:
     print("Datei existiert nicht")
+
     # Erstelle Datei oder verwende Default
+
 ```
 
 ### PermissionError
@@ -80,15 +88,22 @@ except json.JSONDecodeError as e:
 ### 1. Spezifische Exceptions zuerst
 
 ```python
+
 # ❌ Schlecht
+
 try:
+
     # Code
+
 except Exception:
     print("Fehler")
 
 # ✅ Gut
+
 try:
+
     # Code
+
 except FileNotFoundError:
     print("Datei nicht gefunden")
 except PermissionError:
@@ -100,7 +115,9 @@ except Exception as e:
 ### 2. Nicht zu viel in try
 
 ```python
+
 # ❌ Schlecht
+
 try:
     datei = open('daten.txt', 'r')
     inhalt = datei.read()
@@ -110,6 +127,7 @@ except Exception:
     print("Irgendwas ging schief")
 
 # ✅ Gut
+
 try:
     datei = open('daten.txt', 'r')
     inhalt = datei.read()
@@ -127,11 +145,14 @@ except ValueError:
 ### 3. Informative Fehlermeldungen
 
 ```python
+
 # ❌ Schlecht
+
 except Exception:
     print("Fehler")
 
 # ✅ Gut
+
 except FileNotFoundError as e:
     print(f"Datei '{filename}' nicht gefunden")
     print(f"Gesucht in: {os.getcwd()}")
@@ -143,7 +164,9 @@ except FileNotFoundError as e:
 datei = None
 try:
     datei = open('daten.txt', 'r')
+
     # Verarbeitung
+
 except Exception as e:
     print(f"Fehler: {e}")
 finally:
@@ -174,10 +197,14 @@ except DatenValidierungsFehler as e:
 
 ```python
 try:
+
     # Ursprünglicher Fehler
+
     daten = json.loads(text)
 except json.JSONDecodeError as e:
+
     # Neuer Fehler mit Kontext
+
     raise ValueError("Konfiguration ungültig") from e
 ```
 
@@ -189,7 +216,9 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 try:
+
     # Code
+
 except FileNotFoundError as e:
     logging.error(f"Datei nicht gefunden: {e}")
 except Exception as e:
@@ -222,11 +251,11 @@ class DateiManager:
     def __init__(self, filename):
         self.filename = filename
         self.file = None
-    
+
     def __enter__(self):
         self.file = open(self.filename, 'r')
         return self.file
-    
+
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.file:
             self.file.close()

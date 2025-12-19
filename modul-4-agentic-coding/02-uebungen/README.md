@@ -6,19 +6,20 @@
 
 ### [Übung 1: Komplexe Feature-Implementierung](./uebung-1-feature.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 1 - Advanced Prompt Engineering  
+**Dauer:** 15 Minuten
+**Lektion:** 1 - Advanced Prompt Engineering
 **Schwierigkeit:** ⭐⭐⭐
 
 Optionen:
+
 - Email-Validator mit erweiterten Features
 - URL-Parser mit Komponenten-Extraktion
 - JSON-Schema-Validator
 
 ### [Übung 2: TDD String-Utilities](./uebung-2-tdd.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 2 - Test-Driven Development  
+**Dauer:** 15 Minuten
+**Lektion:** 2 - Test-Driven Development
 **Schwierigkeit:** ⭐⭐⭐
 
 - Tests zuerst schreiben
@@ -27,8 +28,8 @@ Optionen:
 
 ### [Übung 3: Legacy Code Refactoring](./uebung-3-refactoring.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 3 - Code Review & Refactoring  
+**Dauer:** 15 Minuten
+**Lektion:** 3 - Code Review & Refactoring
 **Schwierigkeit:** ⭐⭐⭐
 
 - Code reviewen
@@ -37,8 +38,8 @@ Optionen:
 
 ### [Übung 4: Projekt-Dokumentation](./uebung-4-dokumentation.md)
 
-**Dauer:** 15 Minuten  
-**Lektion:** 4 - Dokumentation  
+**Dauer:** 15 Minuten
+**Lektion:** 4 - Dokumentation
 **Schwierigkeit:** ⭐⭐☆
 
 - README erstellen

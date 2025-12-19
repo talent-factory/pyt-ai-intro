@@ -1,7 +1,7 @@
 # Aufgabe 1: Prompt-Portfolio
 
-**Zeitaufwand:** 60 Minuten  
-**Abgabe:** Vor Modul 2  
+**Zeitaufwand:** 60 Minuten
+**Abgabe:** Vor Modul 2
 **Punkte:** 25% der Nachbearbeitung
 
 ## 🎯 Ziel
@@ -29,6 +29,7 @@ Erstellen Sie eine Sammlung von 10 effektiven Prompts, die Sie während des Modu
 Nutzen Sie folgendes Template für jeden Prompt:
 
 ```markdown
+
 ## Prompt [Nummer]: [Titel]
 
 ### Kategorie
@@ -42,41 +43,48 @@ Nutzen Sie folgendes Template für jeden Prompt:
 ### Vollständiger Prompt
 
 ```text
+
 [Hier den kompletten Prompt einfügen]
+
 ```
 
 ### Generierter Code (Auszug)
 
 ```python
+
 # Zeigen Sie einen relevanten Ausschnitt des generierten Codes
+
 ```
 
-### Funktioniert?
+### Funktioniert
 
 - [ ] Ja, auf Anhieb
 - [ ] Ja, nach Anpassungen
 - [ ] Nein, musste neu formuliert werden
 
-### Was hat gut funktioniert?
+### Was hat gut funktioniert
 
 [Ihre Beobachtungen]
 
-### Was könnte verbessert werden?
+### Was könnte verbessert werden
 
 [Verbesserungsvorschläge für den Prompt]
 
 ### Verbesserter Prompt (optional)
 
 ```text
+
 [Falls Sie den Prompt verbessert haben]
+
 ```
 
 ---
-```
+```text
 
 ## 💡 Beispiel
 
 ```markdown
+
 ## Prompt 1: Temperatur-Umrechner
 
 ### Kategorie
@@ -89,10 +97,12 @@ Ein Programm erstellen, das Temperaturen zwischen Celsius und Fahrenheit umrechn
 
 ### Vollständiger Prompt
 
-```text
+```
+
 Erstelle ein Python-Programm zur Temperatur-Umrechnung:
 
 Anforderungen:
+
 - Benutzer wählt Richtung (C→F oder F→C)
 - Temperatur eingeben
 - Ergebnis auf 2 Dezimalstellen runden
@@ -105,13 +115,16 @@ Temperatur in Celsius: 25
 Ergebnis: 25°C = 77.00°F
 
 Einschränkungen:
+
 - Keine externen Bibliotheken
 - Kommentare auf Deutsch
-```
+
+```text
 
 ### Generierter Code (Auszug)
 
 ```python
+
 def celsius_to_fahrenheit(celsius):
     return (celsius * 9/5) + 32
 
@@ -121,23 +134,25 @@ def fahrenheit_to_celsius(fahrenheit):
 while True:
     print("\n=== Temperatur-Umrechner ===")
     choice = input("Richtung (1=C→F, 2=F→C, quit): ")
+
     # ... rest des Codes
+
 ```
 
-### Funktioniert?
+### Funktioniert
 
 - [x] Ja, auf Anhieb
 - [ ] Ja, nach Anpassungen
 - [ ] Nein, musste neu formuliert werden
 
-### Was hat gut funktioniert?
+### Was hat gut funktioniert
 
 - Klare Anforderungen
 - Beispiel-Interaktion gezeigt
 - Einschränkungen genannt
 - Code war sofort lauffähig
 
-### Was könnte verbessert werden?
+### Was könnte verbessert werden
 
 - Fehlerbehandlung für ungültige Auswahl könnte expliziter sein
 - Könnte Formatierung der Ausgabe detaillierter beschreiben
@@ -145,13 +160,16 @@ while True:
 ### Verbesserter Prompt (optional)
 
 ```text
+
 [Gleicher Prompt, aber mit zusätzlicher Anforderung:]
+
 - Bei ungültiger Auswahl: Fehlermeldung und erneut fragen
 - Ausgabe formatiert mit Rahmen
+
 ```
 
 ---
-```
+```text
 
 ## 📂 Kategorien
 
@@ -210,7 +228,9 @@ Verteilen Sie Ihre 10 Prompts auf mindestens 4 verschiedene Kategorien:
 ### Struktur
 
 ```markdown
+
 # Mein Prompt-Portfolio
+
 ## Modul 1: Programmier-Mindset & KI-Tools
 
 **Name:** [Ihr Name]
@@ -222,17 +242,20 @@ Verteilen Sie Ihre 10 Prompts auf mindestens 4 verschiedene Kategorien:
 
 1. [Prompt 1: Titel](#prompt-1-titel)
 2. [Prompt 2: Titel](#prompt-2-titel)
+
 ...
 10. [Prompt 10: Titel](#prompt-10-titel)
 
 ---
 
 ## Prompt 1: [Titel]
+
 [Template hier einfügen]
 
 ---
 
 ## Prompt 2: [Titel]
+
 [Template hier einfügen]
 
 ...
@@ -241,7 +264,7 @@ Verteilen Sie Ihre 10 Prompts auf mindestens 4 verschiedene Kategorien:
 
 ## Zusammenfassung
 
-### Was habe ich gelernt?
+### Was habe ich gelernt
 
 [Ihre Erkenntnisse über Prompt Engineering]
 
@@ -300,19 +323,19 @@ Je detaillierter Ihre Reflexion, desto mehr lernen Sie.
 
 ## 🆘 Häufige Fragen
 
-### Frage 1: Müssen alle Prompts erfolgreich gewesen sein?
+### Frage 1: Müssen alle Prompts erfolgreich gewesen sein
 
 Nein! Auch Prompts, die nicht funktioniert haben, sind wertvoll. Wichtig ist die Reflexion darüber, warum nicht.
 
-### Frage 2: Kann ich Prompts aus den Übungen verwenden?
+### Frage 2: Kann ich Prompts aus den Übungen verwenden
 
 Ja, aber zeigen Sie, wie Sie sie verbessert oder angepasst haben.
 
-### Frage 3: Wie lang sollte die Reflexion sein?
+### Frage 3: Wie lang sollte die Reflexion sein
 
 Pro Prompt: 2-3 Sätze für "Was hat gut funktioniert?" und "Was könnte verbessert werden?"
 
-### Frage 4: Kann ich KI nutzen, um meine Prompts zu verbessern?
+### Frage 4: Kann ich KI nutzen, um meine Prompts zu verbessern
 
 Ja! Aber dokumentieren Sie den Prozess und Ihre eigenen Überlegungen.
 

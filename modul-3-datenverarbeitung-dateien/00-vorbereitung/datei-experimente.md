@@ -1,6 +1,6 @@
 # Datei-Experimente
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** Praktische Erfahrung mit Datei-Operationen sammeln
 
 ## 🎯 Aufgabe
@@ -22,6 +22,7 @@ Erstellen Sie eine Python-Datei, die:
 
 ```text
 Erstelle ein Python-Skript das:
+
 - Eine Text-Datei "notizen.txt" erstellt
 - 5 Zeilen mit verschiedenen Notizen schreibt
 - Die Datei wieder einliest
@@ -55,7 +56,7 @@ name,alter,stadt
 Anna,25,Zürich
 Bob,30,Bern
 Clara,28,Basel
-```
+```text
 
 Schreiben Sie dann ein Python-Skript, das:
 
@@ -65,24 +66,25 @@ Schreiben Sie dann ein Python-Skript, das:
 
 ### Mit KI
 
-```text
+```
 Ich habe eine CSV-Datei "personen.csv" mit Spalten: name, alter, stadt
 
 Erstelle ein Python-Skript das:
+
 - Die CSV-Datei mit dem csv-Modul einliest
 - Alle Personen über 25 Jahre filtert
 - Name und Stadt dieser Personen ausgibt
 
 Verwende DictReader für bessere Lesbarkeit.
-```
+```text
 
 ### Dokumentation
 
 **Wie funktioniert csv.DictReader?**
 
-```text
-[Ihre Notizen]
 ```
+[Ihre Notizen]
+```text
 
 ## Experiment 3: JSON parsen (15 Min.)
 

@@ -92,6 +92,7 @@ def chat(messages: list) -> str:
     return response.choices[0].message.content
 
 # Chat-Loop
+
 messages = [
     {"role": "system", "content": "Du bist ein Python-Tutor."}
 ]
@@ -100,11 +101,11 @@ while True:
     user_input = input("Du: ")
     if user_input.lower() == "quit":
         break
-    
+
     messages.append({"role": "user", "content": user_input})
     response = chat(messages)
     messages.append({"role": "assistant", "content": response})
-    
+
     print(f"Bot: {response}\n")
 ```
 

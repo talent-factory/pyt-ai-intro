@@ -2,7 +2,7 @@
 
 Leitfaden für effektive Prompts beim KI-gestützten Programmieren.
 
-## 🎯 Was ist Prompt Engineering?
+## 🎯 Was ist Prompt Engineering
 
 Prompt Engineering ist die Kunst, klare und effektive Anweisungen für KI-Tools zu formulieren, um optimale Ergebnisse zu erzielen.
 
@@ -27,8 +27,8 @@ Prompt Engineering ist die Kunst, klare und effektive Anweisungen für KI-Tools 
 
 ```text
 ❌ Ohne Kontext: "Erstelle eine Funktion zum Validieren"
-✅ Mit Kontext: "Erstelle eine Python-Funktion, die eine E-Mail-Adresse 
-validiert. Die Funktion soll True zurückgeben, wenn die E-Mail gültig 
+✅ Mit Kontext: "Erstelle eine Python-Funktion, die eine E-Mail-Adresse
+validiert. Die Funktion soll True zurückgeben, wenn die E-Mail gültig
 ist (enthält @ und .), sonst False."
 ```
 
@@ -40,7 +40,7 @@ ist (enthält @ und .), sonst False."
 
 ```text
 ❌ Unspezifisch: "Lies eine Datei"
-✅ Spezifisch: "Lies eine CSV-Datei namens 'daten.csv' ein und gib 
+✅ Spezifisch: "Lies eine CSV-Datei namens 'daten.csv' ein und gib
 die erste Spalte als Liste zurück"
 ```
 
@@ -66,9 +66,11 @@ Ausgabe: "ollaH"
 
 ```text
 Erstelle ein Programm zur Passwort-Generierung.
+
 - Verwende KEINE externen Bibliotheken
 - Passwort soll 12 Zeichen lang sein
 - Muss Gross- und Kleinbuchstaben, Zahlen und Sonderzeichen enthalten
+
 ```
 
 ## 📝 Prompt-Template
@@ -81,6 +83,7 @@ Erstelle ein Programm zur Passwort-Generierung.
 [Kontext]: Warum? Wofür?
 
 [Anforderungen]:
+
 - Anforderung 1
 - Anforderung 2
 - Anforderung 3
@@ -90,19 +93,22 @@ Eingabe: ...
 Ausgabe: ...
 
 [Einschränkungen]:
+
 - Was zu beachten ist
+
 ```
 
 ### Ausgefülltes Beispiel
 
 ```text
-[Aufgabe]: 
+[Aufgabe]:
 Erstelle eine Python-Funktion zur Berechnung des Durchschnitts
 
-[Kontext]: 
+[Kontext]:
 Ich möchte die Durchschnittsnote meiner Prüfungen berechnen
 
 [Anforderungen]:
+
 - Funktion heisst calculate_average
 - Nimmt eine Liste von Zahlen als Parameter
 - Gibt den Durchschnitt als Float zurück
@@ -113,8 +119,10 @@ Eingabe: [5, 4, 6, 5]
 Ausgabe: 5.0
 
 [Einschränkungen]:
+
 - Keine externen Bibliotheken
 - Kommentare auf Deutsch
+
 ```
 
 ## ❌ Häufige Fehler
@@ -123,14 +131,14 @@ Ausgabe: 5.0
 
 ```text
 ❌ "Schreib mir was mit Daten"
-✅ "Erstelle ein Python-Programm, das eine CSV-Datei einliest und 
+✅ "Erstelle ein Python-Programm, das eine CSV-Datei einliest und
 die Anzahl der Zeilen ausgibt"
 ```
 
 ### Fehler 2: Zu komplex
 
 ```text
-❌ "Erstelle eine vollständige Webanwendung mit Login, Datenbank, 
+❌ "Erstelle eine vollständige Webanwendung mit Login, Datenbank,
 API, Frontend und Backend"
 ✅ "Erstelle eine einfache Flask-Route, die 'Hello World' zurückgibt"
 ```
@@ -141,7 +149,7 @@ API, Frontend und Backend"
 
 ```text
 ❌ "Wie sortiere ich das?"
-✅ "Wie sortiere ich eine Liste von Dictionaries in Python nach dem 
+✅ "Wie sortiere ich eine Liste von Dictionaries in Python nach dem
 Wert des Keys 'name'?"
 ```
 
@@ -160,7 +168,7 @@ Beispiel: 'hallo' → 'Hallo'"
 **Prozess:**
 
 ```text
-Erster Versuch → Testen → Probleme identifizieren → 
+Erster Versuch → Testen → Probleme identifizieren →
 Prompt verbessern → Erneut testen
 ```
 
@@ -174,10 +182,12 @@ Version 2: "Erstelle ein Zahlenraten-Spiel in Python"
 → Besser, aber Details fehlen
 
 Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
+
 - Computer wählt Zahl zwischen 1-100
 - Benutzer rät
 - Hinweise: zu hoch/niedrig
 - Anzahl Versuche zählen"
+
 → Perfekt!
 ```
 
@@ -220,10 +230,12 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 
 ```text
 "Erstelle eine Funktion mit folgenden Anforderungen:
+
 - Type Hints verwenden
 - Docstrings im Google-Stil
 - Kommentare auf Deutsch
 - PEP 8 konform"
+
 ```
 
 ## 🔄 Prompt-Iteration Beispiel
@@ -250,6 +262,7 @@ Version 3: "Erstelle ein Zahlenraten-Spiel in Python:
 
 ```text
 "Erstelle ein Python-Programm, das:
+
 - Text vom Benutzer einliest
 - Anzahl Wörter zählt
 - Ergebnis ausgibt
@@ -267,6 +280,7 @@ Ausgabe: 'Der Text enthält 6 Wörter.'"
 "Erstelle ein Python-Programm zur Textanalyse:
 
 Anforderungen:
+
 - Text vom Benutzer einlesen
 - Anzahl Wörter zählen
 - Anzahl Zeichen zählen (mit und ohne Leerzeichen)
@@ -282,8 +296,10 @@ Ausgabe:
   Längstes Wort: 'Hallo' (5 Zeichen)
 
 Einschränkungen:
+
 - Keine externen Bibliotheken
 - Kommentare auf Deutsch"
+
 ```
 
 ## 💡 Prompt-Bibliothek aufbauen
@@ -293,24 +309,28 @@ Einschränkungen:
 **Erstellen Sie eine Datei `prompts.md`:**
 
 ```markdown
+
 # Meine Prompt-Bibliothek
 
 ## Datenverarbeitung
 
 ### CSV einlesen
+
 Erstelle eine Python-Funktion, die...
 [Vollständiger Prompt]
 
 ### JSON parsen
+
 Erstelle eine Python-Funktion, die...
 [Vollständiger Prompt]
 
 ## Benutzerinteraktion
 
 ### Eingabe validieren
+
 Erstelle eine Python-Funktion, die...
 [Vollständiger Prompt]
-```
+```text
 
 ### Kategorien
 

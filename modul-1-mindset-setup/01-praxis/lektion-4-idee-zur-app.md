@@ -1,6 +1,6 @@
 # Lektion 4: Von der Idee zur App
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Ziel:** Den kompletten Entwicklungsworkflow mit KI durchlaufen
 
 ## 📋 Ablauf
@@ -27,7 +27,7 @@ Nach dieser Lektion können die Studierenden:
 
 ## 🔄 Teil 1: Recap & Workflow-Übersicht (5 Min.)
 
-### Was haben wir gelernt?
+### Was haben wir gelernt
 
 **Modul 1 Zusammenfassung:**
 
@@ -40,29 +40,41 @@ Nach dieser Lektion können die Studierenden:
 **Von der Idee zum fertigen Programm:**
 
 ```text
+
 1. Problem verstehen
+
    ↓
+
 2. In Teilprobleme zerlegen
+
    ↓
+
 3. Für jedes Teilproblem:
    - Prompt formulieren
    - Code generieren
    - Code verstehen
    - Code testen
    - Bei Bedarf: Anpassen
+
    ↓
+
 4. Teilösungen zusammenführen
+
    ↓
+
 5. Gesamtes Programm testen
+
    ↓
+
 6. Code committen (Git)
+
 ```
 
 ---
 
 ## 🔍 Teil 2: Code-Review & Debugging (10 Min.)
 
-### Code-Review: Was prüfen?
+### Code-Review: Was prüfen
 
 #### 1. Funktionalität
 
@@ -75,11 +87,14 @@ Nach dieser Lektion können die Studierenden:
 **Beispiel:**
 
 ```python
+
 # Funktion zum Teilen von Zahlen
+
 def divide(a, b):
     return a / b
 
-# Problem: Was passiert bei b = 0?
+# Problem: Was passiert bei b = 0
+
 ```
 
 **Besser:**
@@ -102,11 +117,14 @@ def divide(a, b):
 **Beispiel:**
 
 ```python
+
 # Schlecht
+
 def f(x, y):
     return x * y * 0.19
 
 # Gut
+
 def calculate_tax(price, quantity):
     tax_rate = 0.19
     return price * quantity * tax_rate
@@ -123,10 +141,13 @@ def calculate_tax(price, quantity):
 **Beispiel:**
 
 ```python
+
 # Ohne Fehlerbehandlung
+
 age = int(input("Alter: "))  # Crash bei "abc"
 
 # Mit Fehlerbehandlung
+
 try:
     age = int(input("Alter: "))
 except ValueError:
@@ -145,7 +166,9 @@ except ValueError:
 **Beispiel:**
 
 ```python
+
 # Kompliziert
+
 numbers = [1, 2, 3, 4, 5]
 even = []
 for n in numbers:
@@ -153,6 +176,7 @@ for n in numbers:
         even.append(n)
 
 # Einfacher
+
 numbers = [1, 2, 3, 4, 5]
 even = [n for n in numbers if n % 2 == 0]
 ```
@@ -176,9 +200,13 @@ def calculate_total(prices):
 **Fehlermeldungen verstehen:**
 
 ```python
+
 # Fehler: NameError: name 'x' is not defined
+
 # Bedeutung: Variable x wurde nicht definiert
+
 # Lösung: Variable definieren oder Tippfehler korrigieren
+
 ```
 
 #### Strategie 3: Schrittweise testen
@@ -186,10 +214,13 @@ def calculate_total(prices):
 **Kleine Teile einzeln testen:**
 
 ```python
-# Statt alles auf einmal:
+
+# Statt alles auf einmal
+
 result = complex_function(data)
 
-# Schritt für Schritt:
+# Schritt für Schritt
+
 step1 = prepare_data(data)
 print(f"Nach Schritt 1: {step1}")
 step2 = process_data(step1)
@@ -227,6 +258,7 @@ Was ist das Problem und wie kann ich es beheben?
 ### Schritt 1: Problem zerlegen
 
 ```text
+
 1. Noten eingeben (Schleife)
 2. Noten speichern (Liste)
 3. Durchschnitt berechnen
@@ -360,16 +392,21 @@ Erstellen Sie einen Taschenrechner mit KI-Unterstützung.
 #### Schritt 5: Git Commit (5 Min.)
 
 ```bash
+
 # Repository erstellen (falls noch nicht vorhanden)
+
 git init
 
 # .gitignore erstellen
+
 echo "__pycache__/" > .gitignore
 
 # Dateien hinzufügen
+
 git add taschenrechner.py .gitignore
 
 # Commit erstellen
+
 git commit -m "feat: Einfacher Taschenrechner mit Grundrechenarten"
 ```
 
@@ -428,7 +465,7 @@ Verstehen → Zerlegen → Prompts → Code → Testen → Verbessern → Commit
 3. Schrittweise testen
 4. KI um Hilfe fragen
 
-### Was haben wir erreicht?
+### Was haben wir erreicht
 
 **Modul 1 abgeschlossen!**
 
@@ -454,7 +491,7 @@ Verstehen → Zerlegen → Prompts → Code → Testen → Verbessern → Commit
 - Funktionen und Module
 - Mehr komplexe Programme
 
-### Fragen?
+### Fragen
 
 ---
 
@@ -480,7 +517,7 @@ Verstehen → Zerlegen → Prompts → Code → Testen → Verbessern → Commit
 - Ersten kleinen Schritt identifizieren
 - Prompt gemeinsam formulieren
 
-#### Problem 3: Ist mein Code gut genug?
+#### Problem 3: Ist mein Code gut genug
 
 - Code-Review Checkliste durchgehen
 - Funktioniert es? → Ja = gut genug für jetzt

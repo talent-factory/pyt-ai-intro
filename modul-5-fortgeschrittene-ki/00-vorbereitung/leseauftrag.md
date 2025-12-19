@@ -1,6 +1,6 @@
 # Leseauftrag - Modul 5
 
-**Zeitaufwand:** 60 Minuten  
+**Zeitaufwand:** 60 Minuten
 **Ziel:** LLMs, RAG und AI Agents verstehen
 
 ## 📚 Aufgabe 1: LLM Basics (15 Min.)
