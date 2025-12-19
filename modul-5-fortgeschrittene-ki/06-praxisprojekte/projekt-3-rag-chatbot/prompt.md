@@ -1,13 +1,15 @@
 # RAG-ChatBot mit Streamlit - Entwicklungsauftrag
 
 ## Projektziel
-Entwickle eine produktionsreife Streamlit-Anwendung, die es Nutzern ermöglicht, PDF-Dokumente hochzuladen und mittels Retrieval-Augmented Generation (RAG) mit deren Inhalt zu interagieren.
+Entwickle eine produktionsreife Streamlit-Anwendung, die es Nutzern ermöglicht,
+PDF-Dokumente hochzuladen und mittels Retrieval-Augmented Generation (RAG) mit
+deren Inhalt zu interagieren.
 
 ## Technische Anforderungen
 
 ### Tech-Stack
 - **Frontend/UI**: Streamlit (neueste stabile Version)
-- **LLM-Integration**: Anthropic Claude API (empfohlen: Claude 3.5 Sonnet)
+- **LLM-Integration**: Anthropic Claude API (empfohlen: aktuellste Version von Claude Sonnet)
 - **Vector Database**:  ChromaDB (für lokale Entwicklung/kleinere Projekte)
 - **Embeddings**: Verwende sentence-transformers (z.B. all-MiniLM-L6-v2) oder OpenAI Embeddings
 - **PDF-Verarbeitung**: pymupdf (fitz)
@@ -27,7 +29,7 @@ Verwende 'uv' für alle notwendigen Pakete inklusive Versionsangaben.
 
 ### 2. Dokumentenverarbeitung
 - **Text-Extraktion**: Extrahiere vollständigen Text aus dem PDF
-- **Text-Chunking**: 
+- **Text-Chunking**:
   - Chunk-Größe: ~500-1000 Tokens
   - Overlap: 100-200 Tokens
   - Behalte Kontext über Chunk-Grenzen hinweg
@@ -36,11 +38,11 @@ Verwende 'uv' für alle notwendigen Pakete inklusive Versionsangaben.
 - Zeige Verarbeitungs-Status mit Progress-Bar
 
 ### 3. Chat-Interface
-- **Chat-UI**: 
+- **Chat-UI**:
   - Übersichtlicher Chat-Verlauf (User/Assistant Messages)
   - Eingabefeld für User-Fragen
   - Chat-History persistieren während der Session
-- **Retrieval**: 
+- **Retrieval**:
   - Suche die Top-K relevantesten Chunks (K=3-5)
   - Verwende Similarity Search mit konfigurierbarem Threshold
 - **Response-Generierung**:
@@ -50,7 +52,7 @@ Verwende 'uv' für alle notwendigen Pakete inklusive Versionsangaben.
 - **Streaming**: Implementiere Streaming-Responses für bessere UX
 
 ### 4. Zusätzliche Features
-- **Session-Management**: 
+- **Session-Management**:
   - Möglichkeit, neue Chat-Session zu starten
   - Upload-Historie anzeigen
 - **Quellenangaben**: Zeige bei jeder Antwort, aus welchen PDF-Abschnitten die Information stammt
@@ -120,9 +122,9 @@ rag-chatbot/
 
 ## Beispiel-Prompt für Claude API
 ```python
-system_prompt = """Du bist ein hilfreicher Assistent, der Fragen zu hochgeladenen 
-PDF-Dokumenten beantwortet. Basiere deine Antworten ausschließlich auf dem 
-bereitgestellten Kontext. Falls die Information nicht im Kontext enthalten ist, 
+system_prompt = """Du bist ein hilfreicher Assistent, der Fragen zu hochgeladenen
+PDF-Dokumenten beantwortet. Basiere deine Antworten ausschließlich auf dem
+bereitgestellten Kontext. Falls die Information nicht im Kontext enthalten ist,
 sage dies deutlich."""
 
 user_prompt = f"""
@@ -131,7 +133,7 @@ Kontext aus dem Dokument:
 
 Frage: {user_question}
 
-Beantworte die Frage präzise basierend auf dem Kontext. Gib wenn möglich 
+Beantworte die Frage präzise basierend auf dem Kontext. Gib wenn möglich
 Seitenzahlen an.
 """
 ```

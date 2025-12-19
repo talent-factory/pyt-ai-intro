@@ -30,7 +30,7 @@ class Config:
     EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
 
     # LLM-Einstellungen
-    LLM_MODEL: str = os.getenv("LLM_MODEL", "claude-3-5-sonnet-20241022")
+    LLM_MODEL: str = os.getenv("LLM_MODEL", "claude-sonnet-4-20250514")
     LLM_MAX_TOKENS: int = int(os.getenv("LLM_MAX_TOKENS", "4096"))
     LLM_TEMPERATURE: float = float(os.getenv("LLM_TEMPERATURE", "0.7"))
 
@@ -40,7 +40,7 @@ class Config:
 
     # Retrieval-Einstellungen
     TOP_K_RESULTS: int = int(os.getenv("TOP_K_RESULTS", "5"))
-    SIMILARITY_THRESHOLD: float = float(os.getenv("SIMILARITY_THRESHOLD", "0.7"))
+    SIMILARITY_THRESHOLD: float = float(os.getenv("SIMILARITY_THRESHOLD", "0.2"))
 
     # Upload-Einstellungen
     MAX_FILE_SIZE_MB: int = int(os.getenv("MAX_FILE_SIZE_MB", "50"))
@@ -64,8 +64,8 @@ class Config:
 
 
 # System-Prompt für Claude
-SYSTEM_PROMPT = """Du bist ein hilfreicher Assistent, der Fragen zu hochgeladenen 
-PDF-Dokumenten beantwortet. Basiere deine Antworten ausschliesslich auf dem 
+SYSTEM_PROMPT = """Du bist ein hilfreicher Assistent, der Fragen zu hochgeladenen
+PDF-Dokumenten beantwortet. Basiere deine Antworten ausschliesslich auf dem
 bereitgestellten Kontext aus den Dokumenten.
 
 Wichtige Regeln:
@@ -101,6 +101,5 @@ def get_user_prompt(retrieved_chunks: list[dict], user_question: str) -> str:
 
 Frage: {user_question}
 
-Beantworte die Frage präzise basierend auf dem Kontext. Gib wenn möglich 
+Beantworte die Frage präzise basierend auf dem Kontext. Gib wenn möglich
 Seitenzahlen und Quellenangaben an."""
-

@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 import fitz  # PyMuPDF
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from .config import Config
 
@@ -168,4 +168,3 @@ def validate_pdf_file(
         return False, f"PDF kann nicht geöffnet werden: {str(e)}"
 
     return True, ""
-
